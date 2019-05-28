@@ -1,4 +1,4 @@
-Now let’s replace each element with the square of each element to get the sum of the squares of the elements.
+Now let’s replace each element `x` with the square of each element `x**2` to get the sum of the squares of the elements.
 
 ```
  def checksumsq(int_list):
@@ -24,4 +24,4 @@ Now that the function is defined, let's test that it works.
 Click `checksumsq([3,4,10])`{{execute}}. The output should be 125.
 
 
-You can test out the sum of squares of other list arguments as well. When you are finished, click Continue.
+You can try using the function to calculate the sum of squares of other integer lists. When you are finished, click Continue.
