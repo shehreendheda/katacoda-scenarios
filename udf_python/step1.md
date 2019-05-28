@@ -1,7 +1,7 @@
 Before we begin, click `python`{{execute}} to start the python shell.
 
 
-Let's first start by defining our version of the built-in sum function that will return a sum value.
+Let’s first start by defining our version of the built-in sum() function that returns a sum value.
 
 
 ```
@@ -16,7 +16,7 @@ Because the expected arguments are lists, we will include an iterator in the cod
 ```for x in int_list:```
 
 
-So at this point, our function looks like
+So our function now looks like
 
 
 ```
@@ -26,16 +26,7 @@ def checksumsq(int_list):
 ```
 
 
-Now, to include the addition part of the code block, each element is added to the element after it. One approach is to start with a sum of zero and add each element `x` to that sum.
-
-
-```
-s=0
-s+=x
-```
-
-
-Adding that to the code block, the function is now complete.
+To calculate the sum of all elements in `int_list`, each element `x` is added to the sum `s` of the prior elements. We can start with a sum of zero `s=0` and, in the for loop, add each element `x` to that sum `s+=x`. Adding that to the code block, the function is now complete.
 
 
 ```
@@ -49,7 +40,6 @@ def checksumsq(int_list):
 
 Click the function below, then click in the terminal and click enter to define the function.
 
-
 ```
 def checksumsq(int_list):
     s = 0
@@ -59,11 +49,10 @@ def checksumsq(int_list):
 ```{{execute}}
 
 
-
 Now that the function is defined, let's test that it works.
 
 
 Click `checksumsq([3,4,10])`{{execute}}. The output should be 17.
 
 
-You can test out the sum of other list arguments as well. When you are finished, click Continue.
+You can try using the function to calculate the sum of other integer lists. When you are finished, click **Continue**.
