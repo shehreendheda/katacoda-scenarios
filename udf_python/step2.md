@@ -24,4 +24,4 @@ Now that the function is defined, let's test that it works.
 Click `checksumsq([3,4,10])`{{execute}}. The output should be 125.
 
 
-You can try using the function to calculate the sum of squares of other integer lists. When you are finished, click Continue.
+You can try using the function to calculate the sum of squares of other integer lists. When you are finished, click **Continue**.
