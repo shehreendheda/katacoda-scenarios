@@ -1,7 +1,6 @@
-In the last step, we need add a conditional to check whether the sum is even or odd. We can use the modulus of the sum and 2 to do this. The modulus is the remainder of the sum divided by 2 `s%2=0`. If the modulus is zero, then the sum is even. If the modulus is not zero, then the sum is odd.
+The last step is to add a conditional to check whether the sum is even or odd. We can use the modulus `%` of the sum and 2, which is the remainder of the sum divided by 2 `s%2`, to do this. If the sum is even, the modulus is zero. If the sum is odd, the modulus is not zero.
 
-
-This is represented by the code snippet:
+The conditional statement below checks if the modulus is zero.
 
 
 ```
@@ -12,7 +11,7 @@ else:
 ```
 
 
-Adding the conditional to the function,
+Adding the conditional statement, completes the function.
 
 
 ```
@@ -48,4 +47,4 @@ Now that the function is defined, let's test that it works.
 Click `checksumsq([3,4,10])`{{execute}}. The output should be "The sum of squares is odd."
 
 
-You can test out the sum of squares of other list arguments as well. When you are finished, click Continue.
+You can try using the function to check the sum of squares of other integer lists. When you are finished, click **Continue**.
