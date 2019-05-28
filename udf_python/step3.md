@@ -11,7 +11,7 @@ else:
 ```
 
 
-Adding the conditional statement, completes the function.
+Adding the conditional statement, completes the **checksumsq()** function.
 
 
 ```
@@ -43,8 +43,6 @@ def checksumsq(int_list):
 
 Now that the function is defined, let's test that it works.
 
-
 Click `checksumsq([3,4,10])`{{execute}}. The output should be "The sum of squares is odd."
-
 
 You can try using the function to check the sum of squares of other integer lists. When you are finished, click **Continue**.
