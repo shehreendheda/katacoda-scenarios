@@ -48,13 +48,15 @@ Click `checksumsq([3,4,10])`{{execute}}. The output should be "The sum of square
 
 ## Task
 
-Define a new function **checksumsq3()** that checks if the sum of squares is a multiple of 3. The function should _return_ "The sum of squares is a mutiple of 3." or should be _return_ "The sum of squares is not a multiple of 3." Use **checksumsq3()** to check if the sum of squares of 38, 94, and 113 is a multiple of 3 and store the output in the variable **mysumsq3**.
+Define a new function **checksumsq3()** that checks if the sum of squares of integers in a list is a multiple of 3. The function should _return_ "The sum of squares is a mutiple of 3." or should be _return_ "The sum of squares is not a multiple of 3." 
+
+Use **checksumsq3()** to check if the sum of squares of 38, 94, and 113 is a multiple of 3 and store the output in the variable **mysumsq3**.
 
 Click the code below to check if your answer is correct.
 
 ```
 from tasks import step3task
-step3task(mysum)
+step3task(mysumsq3)
 ```{{execute}}
 
 If you have the correct answer, click **Continue**.
