@@ -23,6 +23,14 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host": [
+        {
+        "file": "tasks.py",
+        "target": "~/"
+        }
+      ]
     }
   },
   "environment": {
