@@ -54,7 +54,7 @@ Now that the function is defined, let's test that it works.
 
 Click `checksumsq([3,4,10])`{{execute}}. The output should be 17.
 
-## Tasks
+## Task
 Use the **checksumsq()** function you just created to calculate the sum of 14, 7, 17, and 5 and store that sum in the variable **mysum**.
 
 Click the code below to check if your answer is correct.
@@ -64,4 +64,4 @@ from tasks import step1task
 step1task(mysum)
 ```{{execute}}
 
-You can try using the function to calculate the sum of other integer lists. When you are finished, click **Continue**.
+If you have the correct answer, click **Continue**.
