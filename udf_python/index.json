@@ -28,7 +28,7 @@
       "client": [
         {
         "file": "tasks.py",
-        "target": "~/"
+        "target": "/root"
         }
       ]
     }
