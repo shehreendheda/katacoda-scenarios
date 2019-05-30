@@ -3,6 +3,6 @@ def checkenv():
 
 def step1task(mysum):
     if mysum == 43:
-        print("Correct!)
+        print("Correct!")
     else:
         print("Please try again!")
