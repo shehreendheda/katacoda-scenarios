@@ -54,7 +54,7 @@ Now that the function is defined, let's test that it works.
 
 Click `checksumsq([3,4,10])`{{execute}}. The output should be 17.
 
-##Tasks
+## Tasks
 Use the **checksumsq()** function you just created to calculate the sum of 14, 7, 17, and 5 and store that sum in the variable **mysum**.
 
 Click the code below to check if your answer is correct.
