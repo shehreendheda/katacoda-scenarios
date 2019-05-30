@@ -6,3 +6,9 @@ def step1task(mysum):
         print("Correct!")
     else:
         print("Please try again!")
+        
+def step2task(mysumcube):
+    if mysumcube == 22609:
+        print("Correct!")
+    else:
+        print("Please try again!")
