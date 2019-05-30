@@ -34,4 +34,4 @@ from tasks import step2task
 step2task(mysumcube)
 ```{{execute}}
 
-You can try using the function to calculate the sum of squares of other integer lists. When you are finished, click **Continue**.
+If you have the correct answer, click **Continue**.
