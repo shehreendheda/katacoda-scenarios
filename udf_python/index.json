@@ -25,7 +25,7 @@
       "text": "finish.md"
     },
     "assets": {
-      "host": [
+      "client": [
         {
         "file": "tasks.py",
         "target": "~/"
