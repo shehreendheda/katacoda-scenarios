@@ -8,7 +8,7 @@ Now let’s replace each element `x` with the square of each element `x**2` to g
      return s;
 ```
 
-Click the function below, then click in the terminal and click enter to define the function.
+Click the function below, then click in the terminal and press Enter to define the function.
 
 ```
 def checksumsq(int_list):
