@@ -1,4 +1,4 @@
-The last step in creating **checksumsq()** is to add a conditional to check whether the sum is even or odd. We can use the modulus `%` of the sum and 2, which is the remainder of the sum divided by 2 `s%2`, to do this. If the sum is even, the modulus is zero. If the sum is odd, the modulus is not zero.
+The last step in creating **checksumsq()** is to add a conditional to check whether the sum is even or odd. To do this, we can use the modulus `%` of the sum and 2, which is the remainder of the sum divided by 2, `s%2`. If the sum is even, the modulus is zero. If the sum is odd, the modulus is not zero.
 
 The conditional statement below checks if the modulus is zero.
 
@@ -26,7 +26,7 @@ def checksumsq(int_list):
     return s;
 ```
 
-Click the function below, then click in the terminal and click enter to define the function.
+Click the function below, then click in the terminal and press Enter to define the function.
 
 ```
 def checksumsq(int_list):
