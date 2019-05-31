@@ -46,8 +46,6 @@ def checksumsq(int_list):
     for x in int_list:
         s += x
     return s;
-    
-
 ```{{execute}}
 
 
