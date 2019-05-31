@@ -38,7 +38,7 @@ def checksumsq(int_list):
 ```
 
 
-Click the function below, then click in the terminal and click enter to define the function.
+Click the function below, then click in the terminal and press Enter to define the function.
 
 ```
 def checksumsq(int_list):
