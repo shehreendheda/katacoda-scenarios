@@ -1,7 +1,7 @@
 Before we begin, click `python`{{execute}} to start the python shell.
 
 
-Let’s first start by defining our version of the built-in sum() function that returns a sum value.
+To create **checksumsq()**, let’s first start by defining our version of the built-in sum() function that returns a sum of the integers in a list.
 
 
 ```
@@ -10,13 +10,13 @@ def checksumsq(int_list):
 ```
 
 
-Because the expected arguments are lists, we will include an iterator in the code block.
+Because the expected argument is list, we will include an iterator in the code block.
 
 
 ```for x in int_list:```
 
 
-So our function now looks like
+Our function now looks like
 
 
 ```
@@ -26,7 +26,7 @@ def checksumsq(int_list):
 ```
 
 
-To calculate the sum of all elements in `int_list`, each element `x` is added to the sum `s` of the prior elements. We can start with a sum of zero `s=0` and, in the for loop, add each element `x` to that sum `s+=x`. Adding that to the code block, the function is now complete.
+To calculate the sum of all elements in `int_list`, each element `x` is added to the sum `s` of the prior elements. We can start with a sum of zero `s=0` and, in the for loop, add each element `x` to that sum `s+=x`. Adding that to the code block, the sum() function is now complete.
 
 
 ```
