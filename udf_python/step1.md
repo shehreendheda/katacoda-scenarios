@@ -10,7 +10,7 @@ def checksumsq(int_list):
 ```
 
 
-Because the expected argument is list, we will include an iterator in the code block.
+Because the expected argument is a list, we will include an iterator in the code block.
 
 
 ```for x in int_list:```
