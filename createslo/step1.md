@@ -14,7 +14,7 @@ Once docker-compose has finished, click the **storedog** tab to the right to vie
 Let’s simulate some live user activity in the app so that you can capture all the relevant metrics in Datadog. Click the following to run the commands in a new terminal.
 
 ```
-cd /ecommerce-observability
+cd /create-slo
 ./gor --input-file-loop --input-file requests_0.gor --output-http "http://localhost:3000"
 ```{{execute T2}}
 
