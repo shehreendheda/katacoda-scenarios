@@ -13,7 +13,7 @@ Once docker-compose has finished, click the **storedog** tab to the right to vie
 
 Let’s simulate some live user activity in the app so that you can capture all the relevant metrics in Datadog. 
 
-1. Click the **+** sign next to the **storedog** tab on the right and select **New Terminal**. 
+1. Click the **+** sign next to the **storedog** tab on the right and select **Open New Terminal**. 
 2. Click the following to run the commands in the new terminal.
 
 ```
