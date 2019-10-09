@@ -7,7 +7,7 @@ docker-compose up
 ```{{execute T1}}
 
 
-Wait for `docker-compose up` in the terminal to finish running. This may take a few minutes. The docker-compose.yml instruments the Datadog agent and app build for monitoring with Datadog. Click the docker-compose.yml file in the directory to the right to learn more. To learn more about the app build, browse the store-frontend, ads-service and the discount-service folder in the directory. 
+Wait for `docker-compose up` in the erminal to finish running. This may take a few minutes. The docker-compose.yml instruments the Datadog agent and app build for monitoring with Datadog. Click the docker-compose.yml file in the directory to the right to learn more. To learn more about the app build, browse the store-frontend, ads-service and the discount-service folder in the directory. 
 
 Once docker-compose has finished, click the **storedog** tab to the right to view the app. As you can see, the user journey for the app includes viewing the home page and clicking and viewing products, advertisements, discounts, and the cart.
 
@@ -23,4 +23,4 @@ cd /create-slo
 
 To confirm that the environment is read, in Datadog, click **APM** > **Services**. You should see the services below in the list. You may need to wait and refresh the page until all these services are available.
 
-![Service List](https://katacoda.com/datadog/scenarios/service-level-objectives/assets/services-list.png)
+![Service List](createslo/assets/services-list.png)
