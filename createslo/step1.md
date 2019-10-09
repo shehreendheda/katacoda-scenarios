@@ -11,7 +11,10 @@ Wait for `docker-compose up` in Terminal 1 to finish running. This may take a fe
 
 Once docker-compose has finished, click the **storedog** tab to the right to view the app. As you can see, the user journey for the app includes viewing the home page and clicking and viewing products, advertisements, discounts, and the cart.
 
-Let’s simulate some live user activity in the app so that you can capture all the relevant metrics in Datadog. Click the following to run the commands in a new terminal.
+Let’s simulate some live user activity in the app so that you can capture all the relevant metrics in Datadog. 
+
+1. Click the **+** sign next to the **storedog** tab on the right and select **New Terminal**. 
+2. Click the following to run the commands in the new terminal.
 
 ```
 cd /create-slo
