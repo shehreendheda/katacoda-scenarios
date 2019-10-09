@@ -1,0 +1,43 @@
+{
+  "title": "Creating SLOs",
+  "description": "Creating Service Level Objectives with Datadog",
+  "details": {
+    "steps": [
+      {
+        "title": "Instrumenting the App with Datadog",
+        "text": "step1.md"
+      },
+      {
+        "title": "Exploring Metrics for SLIs",
+        "text": "step2.md"
+      },
+      {
+        "title": "Creating an APM Monitor",
+        "text": "step3.md"
+      },
+      {
+        "title": "Creating a Monitor Based SLO",
+        "text": "step4.md"
+      },
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "courseData": "background.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/create-slo",
+    "showdashboard": true,
+    "dashboards": [{"name": "storedog", "port": 3000}]
+  },
+  "backend": {
+    "imageid": "ubuntu",
+    "reuseConnection": true,
+    "livetime": "3h"
+  }
+}
