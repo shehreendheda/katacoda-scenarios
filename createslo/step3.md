@@ -2,7 +2,7 @@
 
 To create the monitor for the SLI, 
 
-1. In Datadog, click **Monitor** > **New Monitor** in the main menu bar.
+1. In Datadog, click **Monitor** > **New Monitor** in the main menu.
 2. Select the **APM** monitor.
 3. Expand **Select monitor scope**. Select **APM Metrics** and set **Service:** to **store-frontend**, and **Resource:** to **Spree::HomeController#index**.
 4. Expand **Set alert conditions**. Select **Threshold Alert** and set the alert criteria to **Alert when the *p99 latency* is *above* *6* over the last *5 minutes***. Then save the monitor.  
@@ -12,4 +12,4 @@ To create the monitor for the SLI,
 
 [Add grademe for monitor]
 
-The monitor you created will be the SLI that for the SLO. To create the SLO, click **Continue**.
+The monitor you created will be the SLI for the SLO. To create the SLO, click **Continue**.
