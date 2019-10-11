@@ -14,8 +14,13 @@ Now that you’ve created a monitor for the p99 latency of viewing the home page
 
 Because your app was just instrumented with Datadog and your monitor is new, more metrics need to be collected before the SLO status and history provide insightful information about the SLO. If the app ran for 7 days or more, the history bar would be a solid.
 
+&nbsp;
+
 Example of new Monitor Based SLO
 ![new SLO](createslo/assets/monitor-slo-new.png)
+
+&nbsp;
+
 
 Example of >7 days Monitor Based SLO
 ![old SLO](createslo/assets/monitor-slo-7-days.png)
