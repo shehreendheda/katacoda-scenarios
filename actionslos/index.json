@@ -1,0 +1,55 @@
+{
+  "title": "Making SLOs Actionable",
+  "description": "Making SLOs Actionable with Error Budgets",
+  "difficulty": "Intermediate",
+  "time": "20 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Creating An Event Based SLO",
+        "text": "step1.md"
+      },
+      {
+        "title": "Disrupting the App Service",
+        "text": "step2.md"
+      },
+      {
+        "title": "Making the SLO Actionable",
+        "text": "step3.md"
+      },
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "courseData": "background.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "traffic",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "disrupt",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/create-slo",
+    "showdashboard": true,
+    "dashboards": [{"name": "storedog", "port": 3000}]
+  },
+  "backend": {
+    "imageid": "ubuntu",
+    "reuseConnection": true,
+    "livetime": "3h"
+  }
+}
