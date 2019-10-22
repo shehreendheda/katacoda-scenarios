@@ -43,7 +43,7 @@
   },
   "environment": {
     "uilayout": "editor-terminal",
-    "uieditorpath": "/create-slo",
+    "uieditorpath": "/action-slo",
     "showdashboard": true,
     "dashboards": [{"name": "storedog", "port": 3000}]
   },
