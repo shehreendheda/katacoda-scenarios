@@ -1,3 +1,3 @@
 #! /usr/bin/env bash
 
-docker kill actionslo_advertisements_1
+dis_app = docker kill actionslo_advertisements_1
