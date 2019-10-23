@@ -47,8 +47,6 @@
     "dashboards": [{"name": "storedog", "port": 3000}]
   },
   "backend": {
-    "imageid": "ubuntu",
-    "reuseConnection": true,
-    "livetime": "3h"
+    "imageid": "ubuntu"
   }
 }
