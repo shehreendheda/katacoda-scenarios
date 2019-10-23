@@ -1,5 +1,3 @@
-# Exploring Metrics for SLIs
-
 Before creating SLIs for SLOs, you can explore and search the metrics available for the app in Metrics, Notebooks, Monitors, Dashboards, and APM in Datadog. 
 
 Let’s look at some metrics in APM that can be used to create SLIs for viewing the homepage. 

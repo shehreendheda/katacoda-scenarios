@@ -1,5 +1,3 @@
-# Instrumenting the App with Datadog
-
 To get started, 
 
 1. Run the following command in the terminal:

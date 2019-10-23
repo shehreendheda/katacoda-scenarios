@@ -1,5 +1,3 @@
-# Creating a Monitor Based SLO
-
 Now that you’ve created a monitor for the p99 latency of viewing the home page, you can create the SLO to track that, 99% of time, the p99 latency of viewing the home page should be lower than 6 seconds.
 
 1. In <a href="https://app.datadoghq.com/slo" target="_datadog">**Monitor** > **Service Level Objectives** in Datadog</a>, click **New SLO**. 
