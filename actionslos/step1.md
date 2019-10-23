@@ -13,4 +13,4 @@ Click `traffic`{{execute T2}} to create traffic to app in an infite loop using G
 
 To confirm that the environment is ready, navigate to <a href="https://app.datadoghq.com/apm/services" target="_datadog">**APM** > **Services** in Datadog</a>. You should see the services below in the list. You may need to wait about 2 minutes after running the `traffic` command and refresh the page until all these services are available.
 
-![Service List](actionslo/assets/service-list.png)
+![Service List](actionslos/assets/service-list.png)
