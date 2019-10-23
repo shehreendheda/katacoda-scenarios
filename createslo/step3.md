@@ -1,5 +1,3 @@
-# Creating an APM Monitor
-
 To create the monitor for the SLI, 
 
 1. In <a href="https://app.datadoghq.com/monitors#/create" target="_datadog">**Monitor** > **New Monitor** in Datadog</a>, select the **APM** monitor.

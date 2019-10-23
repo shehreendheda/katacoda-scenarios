@@ -1,5 +1,3 @@
-# Instrumenting the App with Datadog
-
 To get started, 
 
 1. Click `instrument`{{execute T1}} to instrument the Datadog agent and storedog app for monitoring with Datadog using a docker-compose.yml. 
