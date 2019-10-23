@@ -45,9 +45,6 @@
     "uilayout": "terminal",
     "terminals": [
       {
-        "name": "Terminal 1"
-      }, 
-      {
         "name": "Terminal 2"
       },
       {
