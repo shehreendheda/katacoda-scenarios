@@ -42,14 +42,22 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal",
-    "uieditorpath": "/action-slo",
+    "uilayout": "terminal",
+    "terminals": [
+      {
+        "name": "Terminal 1"
+      }, 
+      {
+        "name": "Terminal 2"
+      },
+      {
+        "name": "Terminal 3"
+      }
+    ],
     "showdashboard": true,
     "dashboards": [{"name": "storedog", "port": 3000}]
   },
   "backend": {
-    "imageid": "ubuntu",
-    "reuseConnection": true,
-    "livetime": "3h"
+    "imageid": "ubuntu"
   }
 }
