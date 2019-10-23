@@ -47,7 +47,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "terminal-iframe",
     "terminals": [
       {
         "name": "Terminal 2"
