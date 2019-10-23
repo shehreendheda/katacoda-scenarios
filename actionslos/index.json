@@ -29,6 +29,11 @@
     "assets": {
       "host01": [
         {
+          "file": "instrument",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
           "file": "traffic",
           "target": "/usr/local/bin/",
           "chmod": "+x"
