@@ -1,20 +1,21 @@
 # Instrumenting the App with Datadog
 
-To get started, run the following command in the terminal:
+To get started, 
 
+1. Run the following command in the terminal:
 ```
 docker-compose up
 ```{{execute T1}}
+2. Wait for `docker-compose up` to finish running. 
 
-
-Wait for `docker-compose up` to finish running. This may take about 3 minutes. The docker-compose.yml instruments the Datadog agent and app build for monitoring with Datadog. Click the docker-compose.yml file in the directory to the right to learn more. To learn more about the app build, browse the store-frontend, ads-service and discount-service folders in the directory. 
+This may take about 3 minutes. The docker-compose.yml instruments the Datadog agent and app build for monitoring with Datadog. Click the docker-compose.yml file in the directory to the right to learn more. To learn more about the app build, browse the store-frontend, ads-service and discount-service folders in the directory. 
 
 Once docker-compose has finished, click the **storedog** tab to the right to view the app. As you can see, the user journey for the app includes viewing the home page and clicking and viewing products, advertisements, discounts, and the cart.
 
 Let’s simulate some live user activity in the app so that you can capture all the relevant metrics in Datadog. 
 
 1. Click the **+** sign next to the **storedog** tab on the right and select **Open New Terminal**. 
-2. Click the following to run the commands in the new terminal.
+2. Click the following to run the commands in the new terminal. The `.gor` command creates traffic in an infite loop using GoReplay. 
 
 ```
 cd /create-slo
