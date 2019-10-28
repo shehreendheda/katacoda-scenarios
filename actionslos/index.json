@@ -6,16 +6,20 @@
   "details": {
     "steps": [
       {
-        "title": "Creating An Event Based SLO",
+        "title": "Instrumenting the App with Datadog",
         "text": "step1.md"
       },
       {
-        "title": "Disrupting the App Service",
+        "title": "Creating An Event Based SLO",
         "text": "step2.md"
       },
       {
-        "title": "Making the SLO Actionable",
+        "title": "Disrupting the App Service",
         "text": "step3.md"
+      },
+      {
+        "title": "Making the SLO Actionable",
+        "text": "step4.md"
       }
     ],
     "intro": {
