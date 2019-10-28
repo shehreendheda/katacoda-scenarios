@@ -16,7 +16,7 @@ Now, let’s create the Event Based SLO that 99.9% of requests to view the home 
 
 Note: As shown below, click **avg by** to update to **sum by** for each. Click Advanced and then Add Query to add the second metric.
 
-![Events Selection](actionslos/assets/ebslo-goodevents.gif)
+![Events Selection](actionslos/assets/ebslo-goodevents2.gif)
 
 4. Under **Set your targets**, click **Set Target +** and set **Target:** to **99%** and **Time Window:** to **30 Days**.
 5. Under **Add names and tags**, enter **Home Page Views** for **Name:** and **99% of home page view requests are successful over 30 days** for **Description**.
