@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+cd /create-slo
+./gor --input-file-loop --input-file requests_0.gor --output-http "http://localhost:3000" >> /dev/null 2>&1

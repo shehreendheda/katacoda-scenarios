@@ -9,8 +9,8 @@ Once docker-compose has finished, click the **storedog** tab to the right to vie
 
 Let’s simulate some live user activity in the app so that you can capture all the relevant metrics in Datadog. 
 
-Click `traffic`{{execute T2}} to create traffic to the app in an infite loop using GoReplay. 
+Click `traffic`{{execute T2}} to create traffic to the app in an infite loop using GoReplay. (This command runs in Terminal 2.)
 
-To confirm that the environment is ready, navigate to <a href="https://app.datadoghq.com/apm/services" target="_datadog">**APM** > **Services** in Datadog</a>. You should see the services below in the list. You may need to wait about 2 minutes after running the `traffic` command and refresh the page until all these services are available.
+To confirm that the environment is ready, navigate to <a href="https://app.datadoghq.com/apm/resource/storefrontend/rack.request/" target="_datadog">**APM** > **Services > storefrontend > HomeController_Index** in Datadog</a>. You should see the services below in the list. You may need to wait about 2 minutes after running the `traffic` command and refresh the page until all these services are available.
 
 ![Service List](actionslos/assets/service-list.png)

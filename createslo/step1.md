@@ -1,25 +1,16 @@
 To get started, 
 
-1. Run the following command in the terminal:
-```
-docker-compose up
-```{{execute T1}}
-2. Wait for `docker-compose up` to finish running. 
+1. Click `instrument`{{execute T1}} to instrument the Datadog agent and storedog app for monitoring with Datadog using a docker-compose.yml. 
+2. Wait for the docker-compose.yml to finish running. 
 
-This may take about 3 minutes. The docker-compose.yml instruments the Datadog agent and app build for monitoring with Datadog. Click the docker-compose.yml file in the directory to the right to learn more. To learn more about the app build, browse the store-frontend, ads-service and discount-service folders in the directory. 
+This may take about 3 minutes. 
 
 Once docker-compose has finished, click the **storedog** tab to the right to view the app. As you can see, the user journey for the app includes viewing the home page and clicking and viewing products, advertisements, discounts, and the cart.
 
 Let’s simulate some live user activity in the app so that you can capture all the relevant metrics in Datadog. 
 
-1. Click the **+** sign next to the **storedog** tab on the right and select **Open New Terminal**. 
-2. Click the following to run the commands in the new terminal. The `.gor` command creates traffic in an infite loop using GoReplay. 
+Click `traffic`{{execute T2}} to create traffic to the app in an infite loop using GoReplay. (This command runs in Terminal 2.)
 
-```
-cd /create-slo
-./gor --input-file-loop --input-file requests_0.gor --output-http "http://localhost:3000"
-```{{execute T2}}
+To confirm that the environment is ready, navigate to <a href="https://app.datadoghq.com/apm/" target="_datadog">**APM** > **Services** in Datadog</a>. You should see the services below in the list. You may need to wait about 2 minutes after running the `traffic` command and refresh the page until all these services are available.
 
-To confirm that the environment is ready, in Datadog, click **APM** > **Services**. You should see the services below in the list. You may need to wait about 2 minutes after running the previous command and refresh the page until all these services are available.
-
-![Service List](createslo/assets/services-list.png)
+![Service List](createslo/assets/service-list.png)
