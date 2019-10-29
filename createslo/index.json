@@ -43,6 +43,14 @@
   "environment": {
     "uilayout": "editor-terminal",
     "uieditorpath": "/create-slo",
+    "terminals": [
+      {
+        "name": "Terminal 2"
+      },
+      {
+        "name": "Terminal 3"
+      }
+    ],
     "showdashboard": true,
     "dashboards": [{"name": "storedog", "port": 3000}]
   },
