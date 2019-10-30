@@ -3,7 +3,7 @@ Before creating SLIs for SLOs, you can explore and search the metrics available 
 Let’s look at some metrics in APM that can be used to create SLIs for viewing the homepage. 
 
 ## APM
-1. In <a href="https://app.datadoghq.com/apm/services" target="_datadog">**APM** > **Services** in Datadog</a>, click the **store-frontend** service.
+1. In <a href="https://app.datadoghq.com/apm/services" target="_datadog">**APM** > **Services** in Datadog</a>, click the **storefrontend** service.
 2. Scroll down to the list of **Endpoints** and click **Spree::HomeController#index**.
 3. Scroll through and explore the data for **Spree::HomeController#index**.
 4. Expand the graphs to see which metrics are visualized in each graph.
