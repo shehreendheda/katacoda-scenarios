@@ -24,7 +24,6 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "foreground.sh",
       "courseData": "background.sh"
     },
     "finish": {
@@ -62,8 +61,7 @@
     ],
     "showdashboard": true,
     "dashboards": [
-      {"name": "storedog", "port": 3000},
-      {"name": "Datadog", "href": "https://app.datadoghq.com"}
+      {"name": "storedog", "port": 3000}
     ]
   },
   "backend": {
