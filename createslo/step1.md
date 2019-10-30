@@ -16,5 +16,3 @@ Let’s simulate live user activity in the app so that you can capture all the r
 You should see the services below in the list. You may need to wait about 2 minutes after running the `traffic` command and refresh the page until all these services are available.
 
 ![Service List](createslo/assets/service-list.png)
-
-When ready to create the SLO, click **Continue**.
