@@ -37,6 +37,11 @@
     "assets": {
       "host01": [
         {
+          "file": "grademe",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
           "file": "instrument",
           "target": "/usr/local/bin/",
           "chmod": "+x"
