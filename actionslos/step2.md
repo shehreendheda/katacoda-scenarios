@@ -1,20 +1,19 @@
 Before you create the SLO for successful views of the home page, let’s view the metrics for the requests to view the home page.
 
-1. In <a href="https://app.datadoghq.com/apm/services" target="_datadog">**APM** > **Services** in Datadog</a>, click the **store-frontend** service.
-2. Scroll down to the list of **Endpoints** and click **Spree::HomeController#index**.
-3. Expand the graphs for **Total Requests** and **Total Errors**. Below the graph, note the metrics listed below each graph.
+1. In <a href="https://app.datadoghq.com/apm/resource/storefrontend/rack.request/69d105fa043dba7f" target="_datadog">**APM** > **Services** > **storefrontend** > **Spree::HomeController#index**</a>, expand the graphs for **Total Requests** and **Total Errors**. 
+2. Below the graph, note the metrics listed below each graph.
 
-If there are no request errors, the metric that relates to request errors to view the home page may not be listed. As you will see in the following step, the metric is *trace.rack.request.errors*.
+If there are no request errors, the metric for request errors to view the home page may not be listed. As you will see in the following step, the metric is *trace.rack.request.errors*.
 
 Now, let’s create the Event Based SLO that 99.9% of requests to view the home page over 30 days are successful.
 
 1. In <a href="https://app.datadoghq.com/slo" target="_datadog">**Monitor** > **Service Level Objectives** in Datadog</a>, click **New SLO**. 
 2. Under **Define the source**, select **Event Based**.
-3. Update the fields under Good Events and Total Events as shown below. 
+3. Update the fields under **Good Events** and **Total Events** as shown below. 
 
 ![Events List](actionslos/assets/ebslo-homepage.png)
 
-Note: As shown below, click **avg by** to update to **sum by** for each. Click Advanced and then Add Query to add the second metric.
+Note: As shown below, click **avg by** to update to **sum by** for each. Click **Advanced** and then **Add Query** to add the second metric.
 
 ![Events Selection](actionslos/assets/ebslo-goodevents.gif)
 
@@ -23,4 +22,4 @@ Note: As shown below, click **avg by** to update to **sum by** for each. Click A
 6. Click **Save**.
 7. In the **Service Level Objectives** list, click the SLO you just created to view the details, status and history.
 
-Notice that the error budget is green and >99.9% requests to view the home page are currently successful.
+Notice that the error budget is green and >99% requests to view the home page are currently successful.
