@@ -1,4 +1,4 @@
-In this activity, you will create an SLO for the fictional ecommerce app, Storedog, to track the SLI that, 99% of time, the p99 latency of viewing the home page should be lower than 6 seconds. Because latency is a time-based metric, you will create a Monitor Based SLO.
+In this activity, you will create an SLO for the fictional ecommerce app, Storedog, to track the SLO that, 99% of time, the p99 latency of viewing the home page should be lower than 6 seconds. Because the SLI is time-based, you will create a Monitor Based SLO.
 
 Monitor Based SLOs can be created from one or more Monitors. In Step 1, you will explore and search the metrics available for the app to create the SLI. In Step 2, you will create a Monitor as the SLI for the SLO, and in Step 3, you will create the Monitor Based SLO.
 

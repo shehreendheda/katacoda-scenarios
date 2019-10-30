@@ -7,9 +7,7 @@ Now that you’ve created a monitor for the p99 latency of viewing the home page
 5. Click **Save**.
 6. In the **Service Level Objectives** list, click the SLO you just created to view the details, status and history.
 
-[Add grademe for slo]
-
-Because your app was just instrumented with Datadog and your monitor is new, more metrics need to be collected before the SLO status and history provide insightful information about the SLO. If the app ran for 7 days or more, the history bar would be a solid.
+Because your app was just instrumented with Datadog and your monitor is new, more metrics need to be collected before the SLO status and history provide insightful information about the SLO. If the app ran for 7 days or more, the history bar would be solid.
 
 &nbsp;
 
