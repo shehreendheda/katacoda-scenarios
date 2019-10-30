@@ -7,6 +7,4 @@ To create the monitor for the SLI,
 5. Click **Save**. 
 6. In the **Manage Monitors** list, click the monitor that you just created to view its details.
 
-[Add grademe for monitor]
-
 The monitor you created will be the SLI for the SLO. To create the SLO, click **Continue**.
