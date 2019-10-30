@@ -1,0 +1,14 @@
+{
+  "title": "Introduction to Service Level Objectives",
+  "description": "",
+  "icon": "fa-katacoda",
+  "courses": [
+    {
+      "pathway_id": "sdheda/",
+      "course_id": "actionslo",
+      "id": "actionslo",
+      "title": "Making SLOs Actionable",
+      "description": "Making SLOs Actionable with Error Budgets"
+    }
+  ]
+}
