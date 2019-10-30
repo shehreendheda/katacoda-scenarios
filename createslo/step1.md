@@ -4,6 +4,8 @@ To get started,
 2. Wait for the docker-compose.yml to finish running. This may take about 3 minutes. 
 3. Click the **storedog** tab to the right. You should be able to view the app once docker-compose has finished.
 
+To learn more about the Datadog instrumentation and Storedog app build, you can browse the docker-compose.yml file and store-frontend, ads-service and the discount-service folders in the directory to the right. 
+
 As you can see, the user journey for the app includes viewing the home page and clicking and viewing products, advertisements, discounts, and the cart.
 
 Let’s simulate some live user activity in the app so that you can capture all the relevant metrics in Datadog. 
