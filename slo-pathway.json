@@ -5,8 +5,15 @@
   "courses": [
     {
       "pathway_id": "sdheda/",
-      "course_id": "actionslo",
-      "id": "actionslo",
+      "course_id": "createslo",
+      "id": "createslo",
+      "title": "Creating an SLO",
+      "description": "Creating a Monitor Based SLO"
+    },
+    {
+      "pathway_id": "sdheda/",
+      "course_id": "actionslos",
+      "id": "actionslos",
       "title": "Making SLOs Actionable",
       "description": "Making SLOs Actionable with Error Budgets"
     }
