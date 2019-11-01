@@ -10,3 +10,6 @@ Assume that you share your findings with the relevant team--the team that decide
 8. Navigate to <a href="https://app.datadoghq.com/slo" target="_datadog">**Monitor** > **Service Level Objectives**</a> and select the SLO you created in Step 2.
 
 With time, the error budget will start to recover. You may have to wait a few minutes to see the change. 
+
+### **Assessment**
+Click `grademe`{{execute T3}} to receive a grade for this activity. (This command runs in Terminal 3.)
