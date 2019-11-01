@@ -60,8 +60,7 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal",
-    "uieditorpath": "/action-slo",
+    "uilayout": "terminal",
     "terminals": [
       {
         "name": "Terminal 2"
