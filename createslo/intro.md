@@ -4,6 +4,6 @@ Monitor Based SLOs can be created from one or more Monitors. In Step 1, you will
 
 The app is built using a Spree (Ruby on Rails) framework along with Flask (Python) microservices for handling coupon codes and ad services and is brought online using a docker container image.
 
-Before you begin, open in a new window/tab the Datadog account/organization that was created for you by learn.datadoghq.com. (To open the correct Datadog organization, you can click **Join Account** in the email you received in The Learning Environment lesson.)
+Before you begin, open in a new window/tab the Datadog account/organization that was created for you by learn.datadoghq.com. (To open the correct Datadog organization, you can click **Join Account** in the email you received from learn.datadoghq.com.)
 
 When you are ready to start, click **Start Scenario**.
