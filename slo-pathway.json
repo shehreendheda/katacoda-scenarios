@@ -4,14 +4,14 @@
   "icon": "fa-katacoda",
   "courses": [
     {
-      "pathway_id": "sdheda/slo-course",
+      "pathway_id": "sdheda/slo",
       "course_id": "createslo",
       "id": "createslo",
       "title": "Creating an SLO",
       "description": "Creating a Monitor Based SLO"
     },
     {
-      "pathway_id": "sdheda/slo-course",
+      "pathway_id": "sdheda/slo",
       "course_id": "actionslos",
       "id": "actionslos",
       "title": "Making SLOs Actionable",
