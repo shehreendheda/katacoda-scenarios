@@ -60,7 +60,8 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-iframe",
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/action-slo",
     "terminals": [
       {
         "name": "Terminal 2"
