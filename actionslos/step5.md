@@ -1,6 +1,6 @@
-Assume that you share your findings with the relevant team--the team that decided the SLO. The team decides and gets approval to temporarily shut down all services and then bring them all back online to restore the advertisement service.
+Assume that you share your findings with the relevant team--the team that decided the SLO. The team decides and gets approval to temporarily shut down all services and then bring them all back online to restore the advertisements service.
 
-1. In the **Terminal** tab on the right, enter `ctrl+C` for PC or `control+C` for Mac.
+1. In the **Terminal** tab on the right, enter `ctrl+C` (PC) or `control+C`(Mac).
 2. Wait for the services to shut down and the terminal prompt to appear `$`.
 3. Click `docker-compose up`{{execute T1}} to bring the services back online.
 4. Wait for `docker-compose up` to complete. 
