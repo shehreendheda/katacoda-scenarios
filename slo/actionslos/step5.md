@@ -11,5 +11,5 @@ Assume that you share your findings with the relevant team--the team that decide
 
 With time, the error budget will start to recover. You may have to wait a few minutes to see the change. 
 
-### **Assessment**
+### Assessment
 Click `grademe`{{execute T3}} to receive a grade for this activity. (This command runs in Terminal 3.)
