@@ -12,4 +12,4 @@ Let’s look at some metrics in APM that can be used to create SLIs for viewing 
 
 You can continue to explore and search the different services and metrics for the app. 
 
-In the next step, you will create a monitor as an SLI for tracking latency of viewing the app home page. When ready, click **Continue**.
+In the next step, you will create a monitor as an SLI for tracking latency of viewing the app home page.
