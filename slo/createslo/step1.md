@@ -11,7 +11,7 @@ As you can see, the user journey for the app includes viewing the home page and 
 Let’s simulate live user activity in the app so that you can capture all the relevant metrics in Datadog. 
 
 4. Click `traffic`{{execute T2}} to create traffic to the app in an infite loop using GoReplay. (This command runs in Terminal 2.)
-5. Navigate to <a href="https://app.datadoghq.com/apm/" target="_datadog">**APM** > **Services** in Datadog</a>. If you are working in a new Datadog Organization, click **Get Started** where prompted and then refresh the APM Services page to see the list of Services.
+5. Navigate to <a href="https://app.datadoghq.com/apm/" target="_datadog">**APM** > **Services** in Datadog</a>. (Make sure you are in the correct Organization.) If you are working in a new Datadog Organization, click **Get Started** where prompted and then click the **APM > Services** in the main menu to see the list of Services.
 
 You should see the services below in the list. You may need to wait about 2 minutes after running the `traffic` command and refresh the page until all these services are available.
 
