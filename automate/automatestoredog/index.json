@@ -17,6 +17,15 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "instrumenting-the-app",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+      ]
     }
   },
   "environment": {
