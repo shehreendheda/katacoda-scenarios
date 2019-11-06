@@ -1,5 +1,6 @@
 #!/bin/bash
-printf 'starting...'
+
+echo starting...
 export POSTGRES_USER=postgres
 export POSTGRES_PASSWORD=postgres
 cd /create-slo
