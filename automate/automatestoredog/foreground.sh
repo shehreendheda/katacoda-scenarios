@@ -1,1 +1,6 @@
 #!/bin/bash
+
+export POSTGRES_USER=postgres
+export POSTGRES_PASSWORD=postgres
+cd /create-slo
+docker-compose up -d
