@@ -1,4 +1,4 @@
-To create the monitor for the SLI, 
+Now, let's create the monitor for the SLI.
 
 1. In <a href="https://app.datadoghq.com/monitors#/create" target="_datadog">**Monitor** > **New Monitor**</a> in Datadog, select the **APM** monitor.
 2. Expand **Select monitor scope** and select **APM Metrics**. Set **Service:** to **storefrontend**, and **Resource:** to **Spree::HomeController#index**.

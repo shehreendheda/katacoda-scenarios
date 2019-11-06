@@ -7,7 +7,7 @@ Using the monitor, let's now create the SLO to track that, 99% of time, the p99 
 5. Click **Save**.
 6. In the **Service Level Objectives** list, click the SLO you just created to view the details, status, and history.
 
-Because your app was just instrumented with Datadog, more metrics need to be collected before the SLO status and history provide insightful information about the SLO. If the app ran for 7 days or more, the history bar would be solid.
+Because the app was just instrumented with Datadog, more metrics need to be collected before the SLO status and history provide insightful information about the SLO. If the app ran for 7 days or more, the history bar would be solid.
 
 &nbsp;
 
