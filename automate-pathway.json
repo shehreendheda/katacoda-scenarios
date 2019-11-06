@@ -4,8 +4,8 @@
   "icon": "fa-katacoda",
   "courses": [
     {
-      "course_id": "automate_storedog",
-      "id": "automate_storedog",
+      "course_id": "automatestoredog",
+      "id": "automatestoredog",
       "title": "Automating Storedog App",
       "description": "Automating Storedog App Instrumentation with Datadog"
     }
