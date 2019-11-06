@@ -4,6 +4,7 @@
   "icon": "fa-katacoda",
   "courses": [
     {
+      "pathway_id": "automate",
       "course_id": "automatestoredog",
       "id": "automatestoredog",
       "title": "Automating Storedog App",
