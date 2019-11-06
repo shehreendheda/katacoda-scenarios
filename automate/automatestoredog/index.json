@@ -24,7 +24,7 @@
           "file": "instrumenting-the-app",
           "target": "/usr/local/bin/",
           "chmod": "+x"
-        },
+        }
       ]
     }
   },
