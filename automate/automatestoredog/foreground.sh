@@ -1,4 +1,5 @@
 #!/bin/bash
 
-while [ ! -f /usr/local/bin/instrumenting-the-app ]; do sleep 1; done
+sleep 1
+clear
 instrumenting-the-app
