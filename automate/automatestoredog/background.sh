@@ -5,8 +5,8 @@ cd /create-slo
 git checkout instrumented-fixed
 docker-compose pull
 
-while [ ! -f /root/.kcrc ]; do sleep 1; done
-source /root/.kcrc
+#while [ ! -f /root/.kcrc ]; do sleep 1; done
+#source /root/.kcrc
 
 export POSTGRES_USER=postgres
 export POSTGRES_PASSWORD=postgres
