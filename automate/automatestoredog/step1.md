@@ -7,3 +7,5 @@ until $(curl -o /dev/null -s -I -f http://localhost:3000); do
 done
 printf '\n\nThe app is instrumented!\n\n'
 ```{{execute}}
+
+`break-app`{{execute}}
