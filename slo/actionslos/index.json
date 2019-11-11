@@ -52,7 +52,7 @@
           "chmod": "+x"
         },
         {
-          "file": "disrupt",
+          "file": "break",
           "target": "/usr/local/bin/",
           "chmod": "+x"
         }
