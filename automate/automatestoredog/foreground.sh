@@ -1,5 +1,6 @@
 #!/bin/bash
 
-sleep 1
+sleep 10
+docker-compose up -d
 clear
-instrumenting-the-app
+prepping-the-environment

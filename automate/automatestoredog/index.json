@@ -21,7 +21,12 @@
     "assets": {
       "host01": [
         {
-          "file": "instrumenting-the-app",
+          "file": "prepping-the-environment",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "break-app",
           "target": "/usr/local/bin/",
           "chmod": "+x"
         }
