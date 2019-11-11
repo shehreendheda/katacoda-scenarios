@@ -7,4 +7,6 @@ Now, let's create the monitor for the SLI.
 5. Click **Save**. 
 6. In the **Manage Monitors** list, click the monitor that you just created to view its details.
 
+(If you'd like to learn more about APM Monitors in Datadog, click <a href="https://docs.datadoghq.com/monitors/monitor_types/apm/?tab=apmmetrics#overview" target="_blank">here</a>.)
+
 The monitor you created will be used to create the Monitor Based SLO.
