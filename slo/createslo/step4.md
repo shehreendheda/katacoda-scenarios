@@ -1,4 +1,4 @@
-Using the monitor, let's now create the SLO to track that, 99% of time, the p99 latency of viewing the home page should be lower than 6 seconds.
+Using the monitor, let's now create the SLO to track that, 99% of the time, the p99 latency of viewing the home page should be lower than six seconds.
 
 1. In <a href="https://app.datadoghq.com/slo" target="_datadog">**Monitor** > **Service Level Objectives**</a>  in Datadog, click **New SLO**. 
 2. Under **Define the source**, select **Monitor Based**, then select the monitor you created in the previous step from the menu.
@@ -7,7 +7,7 @@ Using the monitor, let's now create the SLO to track that, 99% of time, the p99 
 5. Click **Save**.
 6. In the **Service Level Objectives** list, click the SLO you just created to view the details, status, and history.
 
-Because the app was just instrumented with Datadog, more metrics need to be collected before the SLO status and history provide insightful information about the SLO. If the app ran for 7 days or more, the history bar would be solid.
+Because the app was just instrumented with Datadog, more metrics need to be collected before the SLO status and history provide insightful information about the SLO. If the app ran for >7 days, the history bar would be solid.
 
 &nbsp;
 
