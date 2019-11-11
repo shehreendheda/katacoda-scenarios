@@ -1,6 +1,4 @@
 #!/bin/bash
-export POSTGRES_USER=postgres
-export POSTGRES_PASSWORD=postgres
 mkdir /create-slo
 git clone https://github.com/burningion/ecommerce-observability /create-slo
 cd /create-slo
