@@ -2,7 +2,7 @@ Assume that you share your findings with the relevant team--the team that decide
 
 1. In the **Terminal** tab on the right, enter `ctrl+C` (PC) or `control+C`(Mac).
 2. Wait for the services to shut down and the terminal prompt to appear `$`.
-3. Click `docker-compose up`{{execute T1}} to bring the services back online.
+3. Click `cd /action-slo; docker-compose up`{{execute T1}} to bring the services back online.
 4. Wait for `docker-compose up` to complete. 
 5. Navigate to <a href="https://app.datadoghq.com/apm/resource/storefrontend/rack.request/69d105fa043dba7f" target="_datadog">**APM** > **Services** > **storefrontend** > **Spree::HomeController#index**</a>  in Datadog. 
 6. Wait for about 2 minutes. You may need to refresh the page.

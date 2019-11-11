@@ -1,6 +1,6 @@
 Let’s interrupt a service in the app to see how the SLO Status and History are affected.
 
-1. Click `break`{{execute T3}} to interrupt the app service. (This command runs in **Terminal 3**.)
+1. Click `break-app`{{execute T3}} to interrupt the app service. (This command runs in **Terminal 3**.)
 2. In <a href="https://app.datadoghq.com/slo" target="_datadog">**Monitor** > **Service Level Objectives**</a>  in Datadog, click the SLO you created in the previous step.
 3. Wait for about two minutes. Refresh the SLO view, if needed.
 
