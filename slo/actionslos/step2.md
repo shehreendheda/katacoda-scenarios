@@ -10,4 +10,4 @@ Before you create the SLO for successful views of the home page, let’s view th
 6. Under **Set your targets**, click **Set Target +** and set **Target:** to **99%** and **Time Window:** to **30 Days**.
 7. Under **Add names and tags**, enter **Home Page Views** for **Name:** and **99% of home page view requests are successful over 30 days** for **Description**.
 8. Click **Save**.
-9. In the **Service Level Objectives** list, click the SLO you just created to view the details, status and history. <p> Note that the status of the SLI and the remaining error budget.
+9. In the **Service Level Objectives** list, click the SLO you just created to view the details, status, and history. <p> Note that the status of the SLI and the remaining error budget.

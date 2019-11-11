@@ -2,7 +2,7 @@ Assume that a few days have passed and the SLO is still in the ALERT status, ind
 
 Let’s explore the data in Datadog for the Spree::HomeController#index resource to try and find the source of the problem.
 1. Navigate to <a href="https://app.datadoghq.com/apm/resource/storefrontend/rack.request/69d105fa043dba7f" target="_datadog">**APM** > **Services** > **storefrontend** > **Spree::HomeController#index**</a>  in Datadog.
-3. Wait for about 2 minutes for the data to come in. You may need to refresh the page. 
+3. Wait for about two minutes for the data to come in. You may need to refresh the page. 
 4. Notice that the graph for **Total Requests** and **Total Errors** are now receiving error data only, indicated by red bars. 
 3. Expand the graphs for **Total Requests** and **Total Errors**. 
 4. In the expanded **Total Errors** graph, hover over the red bar. You will see the *http.status_code:500* message for the errors. <p> ![Total Errors](actionslos/assets/totalerrors.png)
