@@ -1,7 +1,7 @@
 Before you create the SLO for successful views of the home page, let’s view the metrics for the requests to view the home page.
 
 1. In <a href="https://app.datadoghq.com/apm/resource/storefrontend/rack.request/69d105fa043dba7f" target="_datadog">**APM** > **Services** > **storefrontend** > **Spree::HomeController#index**</a>, expand the graphs for **Total Requests** and **Total Errors**. 
-2. Below the graph, note the metrics listed below each graph. <p> Note: If there are no request errors, the metric for request errors to view the home page, *trace.rack.request.errors*,  may not be listed. <p> Now, let’s create the Event Based SLO that 99% of requests to view the home page over 30 days are successful.
+2. Below the graph, note the metrics listed below each graph. <p> Note: The metric for errors to view the home page, *trace.rack.request.errors*,  may not be listed if there have been no errors yet. <p> Now, let’s create the Event Based SLO that 99% of requests to view the home page over 30 days are successful.
 
 3. In <a href="https://app.datadoghq.com/slo" target="_datadog">**Monitor** > **Service Level Objectives**</a> in Datadog, click **New SLO**. 
 4. Under **Define the source**, select **Event Based**.
