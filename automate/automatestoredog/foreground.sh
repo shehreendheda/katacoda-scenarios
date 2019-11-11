@@ -2,8 +2,8 @@
 
 export POSTGRES_USER=postgres
 export POSTGRES_PASSWORD=postgres
-cd /create-slo
 sleep 15
+cd /create-slo
 docker-compose up -d
 clear
 prepping-the-environment
