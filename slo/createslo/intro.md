@@ -8,7 +8,7 @@ The activity includes the following steps:
 
 The app is built using a Spree (Ruby on Rails) framework along with Flask (Python) microservices for handling coupon codes and ad services and is brought online using a docker container image.
 
-### Before you begin
+#### Before you begin
 In a new window/tab, open the Datadog account/organization that was created for you by learn.datadoghq.com. (To open the correct Datadog organization, you can click **Join Account** in the email you received from learn.datadoghq.com.)
 
 When you are ready to start, click **Start Scenario**.
