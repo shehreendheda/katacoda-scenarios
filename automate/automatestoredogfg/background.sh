@@ -1,7 +1,7 @@
 #!/bin/bash
-mkdir /create-slo
-git clone https://github.com/burningion/ecommerce-observability /create-slo
-cd /create-slo
+mkdir /app-files
+git clone https://github.com/burningion/ecommerce-observability /app-files
+cd /app-files
 git checkout instrumented-fixed
 docker-compose pull
 
