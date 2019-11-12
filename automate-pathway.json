@@ -5,10 +5,17 @@
   "courses": [
     {
       "pathway_id": "automate",
-      "course_id": "automatestoredog",
-      "id": "automatestoredog",
-      "title": "Automating Storedog App",
-      "description": "Automating Storedog App Instrumentation with Datadog"
+      "course_id": "automatestoredogfg",
+      "id": "automatestoredogfg",
+      "title": "Automating Storedog App from Foreground",
+      "description": "Automating Storedog App Instrumentation with Datadog from Foreground"
+    },
+    {
+      "pathway_id": "automate",
+      "course_id": "automatestoredogbg",
+      "id": "automatestoredogbg",
+      "title": "Automating Storedog App from Background",
+      "description": "Automating Storedog App Instrumentation with Datadog from Background"
     }
   ]
 }
