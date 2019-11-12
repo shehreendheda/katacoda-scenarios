@@ -16,6 +16,13 @@
       "id": "automatestoredogbg",
       "title": "Automating Storedog App from Background",
       "description": "Automating Storedog App Instrumentation with Datadog from Background"
+    },
+    {
+      "pathway_id": "automate",
+      "course_id": "test",
+      "id": "test",
+      "title": "Test Environment",
+      "description": "Test Environment for Storedog App Instrumentation with Datadog"
     }
   ]
 }
