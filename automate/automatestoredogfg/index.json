@@ -21,12 +21,17 @@
     "assets": {
       "host01": [
         {
-          "file": "prepping-the-environment",
+          "file": "prep-environment",
           "target": "/usr/local/bin/",
           "chmod": "+x"
         },
         {
           "file": "break-app",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "check-file",
           "target": "/usr/local/bin/",
           "chmod": "+x"
         }

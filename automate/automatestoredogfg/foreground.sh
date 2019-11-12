@@ -2,9 +2,9 @@
 
 export POSTGRES_USER=postgres
 export POSTGRES_PASSWORD=postgres
-#sleep 15
-while [ ! -f /create-slo/docker-compose.yml ]; do sleep 1; done
-cd /create-slo
+clear
+check-file
+cd /app-files
 docker-compose up -d
 clear
 prepping-the-environment
