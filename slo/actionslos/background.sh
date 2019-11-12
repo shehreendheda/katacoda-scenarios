@@ -1,6 +1,8 @@
 #!/bin/bash
-mkdir /action-slo
-git clone https://github.com/burningion/ecommerce-observability /action-slo
-cd /action-slo
+mkdir /app-files
+git clone https://github.com/burningion/ecommerce-observability /app-files
+cd /app-files
 git checkout instrumented-fixed
 docker-compose pull
+
+./gor --input-file-loop --input-file requests_0.gor --output-http "http://localhost:3000" >> /dev/null 2>&1

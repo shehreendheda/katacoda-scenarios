@@ -13,4 +13,4 @@ While you wait for the environment to be prepared, you can explore the APM page 
 
 ![Service List](createslo/assets/service-list.png)
 
-Now that the environment is ready, let’s get started with creating SLOs.
+Now that the environment is ready, let’s start exploring the metrics to create the SLO.
