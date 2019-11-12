@@ -4,3 +4,4 @@ while [ ! -f /app-files/docker-compose.yml ]; do
     printf '.'
     sleep 2; 
 done
+printf '\n'

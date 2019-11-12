@@ -8,4 +8,4 @@ check-file
 cd /app-files
 docker-compose up -d
 clear
-prepping-the-environment
+prep-environment
