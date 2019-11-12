@@ -22,5 +22,5 @@ Example of >7 days Monitor Based SLO
 
 &nbsp;
 
-### Assessment
-Click `grademe`{{execute T3}} to receive a grade for this activity. (This command runs in Terminal 3.)
+#### Assessment
+Click `grademe`{{execute}} to receive a grade for this activity.
