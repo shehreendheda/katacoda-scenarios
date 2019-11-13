@@ -1,6 +1,6 @@
 Assume that you share your findings with the relevant team--the team that decided the SLO. The team decides and gets approval to restart all services to restore the advertisements service.
 
-1. Click `cd /action-slo; docker-compose up -d`{{execute T1}} to bring the services back online.
+1. Click `cd /app-files; docker-compose up -d`{{execute T1}} to bring the services back online.
 2. Wait for `docker-compose up` to complete. 
 3. Navigate to <a href="https://app.datadoghq.com/apm/resource/storefrontend/rack.request/69d105fa043dba7f" target="_datadog">**APM** > **Services** > **storefrontend** > **Spree::HomeController#index**</a> in Datadog. 
 4. Wait for about 2 minutes. You may need to refresh the page.
