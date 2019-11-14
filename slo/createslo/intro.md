@@ -6,4 +6,4 @@ The activity includes the following steps:
 3. Creating a Monitor for the SLI for the SLO
 4. Creating the Monitor Based SLO
 
-The app is built using a Spree (Ruby on Rails) framework along with Flask (Python) microservices for handling coupon codes and ad services and is brought online using a docker container image.
+The Storedog app is built using a Spree (Ruby on Rails) framework along with Flask (Python) microservices for handling coupon codes and ad services and is brought online using a docker container image.
