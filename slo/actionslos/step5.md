@@ -1,6 +1,6 @@
 Assume that you share your findings with the relevant team--the team that decided the SLO. The team decides and gets approval to restart all services to restore the advertisements service.
 
-1. Click `cd /app-files; docker-compose up -d`{{execute T1}} to bring the services back online.
+1. Click `cd /app-files; docker-compose up -d`{{execute T1}} to restart the app services.
 
 2. Wait for `docker-compose up` to complete.
 
