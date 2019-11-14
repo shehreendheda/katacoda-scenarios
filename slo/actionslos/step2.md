@@ -12,7 +12,7 @@ Let’s view the metrics for the requests to view the home page. Then, create th
 
 6. Under **Set your targets**, click **Set Target +**. Set **Target:** to `99%` and **Time Window:** to `30 Days`.
 
-7. Under **Add names and tags**, enter `Home Page Latency` for **Name:**, `99% of time, the p99 latency of viewing the home page should be lower than 6 seconds` for the description, and  `service:storefrontend` and `resource_name:spree::homecontroller_index` for **Tags:**.
+7. Under **Add names and tags**, enter `Home Page Latency` for **Name:**, `99% of requests to view the home page are successful` for the description, and  `service:storefrontend` and `resource_name:spree::homecontroller_index` for **Tags:**.
 
 8. Click **Save**.
 
