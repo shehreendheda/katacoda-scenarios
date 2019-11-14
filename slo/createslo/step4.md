@@ -4,9 +4,9 @@ Using the monitor, let's now create the SLO to track that, 99% of the time, the 
 
 2. Under **Define the source**, select **Monitor Based**, then select the monitor you created in the previous step from the menu.
 
-3. Under **Set your targets**, click **New Target +**. Set **Target:** to **99%** and **Time Window:** to **7 Days**.
+3. Under **Set your targets**, click **New Target +**. Set **Target:** to `99%` and **Time Window:** to `7 Days`.
 
-4. Under **Add names and tags**, enter **Home Page Latency** for **Name:**, **99% of time, the p99 latency of viewing the home page should be lower than 6 seconds** for the description, and  **service:storefrontend** and **resource_name:spree::homecontroller_index** for **Tags:**.
+4. Under **Add names and tags**, enter `Home Page Latency` for **Name:**, `99% of time, the p99 latency of viewing the home page should be lower than 6 seconds` for the description, and  `service:storefrontend` and `resource_name:spree::homecontroller_index` for **Tags:**.
 
 5. Click **Save**.
 

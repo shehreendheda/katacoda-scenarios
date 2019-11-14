@@ -7,7 +7,7 @@ While you wait for the environment to be prepared, you can explore the APM page 
 
 2. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> in Datadog to view the list of traces that are coming in. <p> If you are working in a new Datadog Organization, click **Get Started** in the APM page. Then, in the main menu, click the **APM > Traces** to see the list of traces. You may need to refresh the page.
 
-3. In the search field above the Trace list, enter **Env:ruby-shop** if it is not listed. 
+3. In the search field above the Trace list, enter `Env:ruby-shop` if it is not listed. 
 
 4. If no traces are coming in, wait until you see traces coming in.
 
@@ -15,7 +15,7 @@ While you wait for the environment to be prepared, you can explore the APM page 
 
 6. After you see the "environment is prepared" message in the terminal, click the **storedog** tab on the right to view the Storedag app. <p> As you can see, the user journey for the app includes viewing the home page and clicking and viewing products, advertisements, discounts, and the cart. *Can you see traces for these in the **Traces** list in Datadog?*
 
-7. Navigate to <a href="https://app.datadoghq.com/apm/" target="_datadog">**APM** > **Services**</a> in Datadog. <p> On the right of the search field above the Services list, if you see a menu for different environments, select the **ruby-shop** environment. <p> Make sure you see the following services in the list before you continue. 
+7. Navigate to <a href="https://app.datadoghq.com/apm/" target="_datadog">**APM** > **Services**</a> in Datadog. <p> On the right of the search field above the Services list, if you see a menu for different environments, select the `ruby-shop` environment. <p> Make sure you see the following services in the list before you continue. 
 
 ![Service List](createslo/assets/service-list.png)
 
