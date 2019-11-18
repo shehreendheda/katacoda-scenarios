@@ -5,7 +5,7 @@ Once the app is instrumented, you will see the following message in the Terminal
 While you wait for the environment to be prepared, you can explore the APM page in Datadog to see what data comes in for the app.
 1. In a new window/tab, log in to the Datadog account/organization that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Join Account** in the email you received from learn.datadoghq.com.
 
-2. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> in Datadog to view the list of traces that are coming in. <p> If you are working in a new Datadog Organization, click **Get Started** in the APM page. Then, in the main menu, click the **APM > Traces** to see the list of traces. You may need to refresh the page.
+2. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> in Datadog to view the list of traces that are coming in. <p> If you are working in a new Datadog Organization, the link will be redirected to the **APM** > **Introduction** page. You will need to wait about two minutes as Datadog's autodiscovery feature picks up the traces that are coming in. In the main menu, when the option appears, click the **APM > Traces** to see the list of traces.
 
 3. In the search field above the Trace list, enter `Env:ruby-shop` if it is not listed. 
 
