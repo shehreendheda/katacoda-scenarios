@@ -3,7 +3,7 @@
 export POSTGRES_USER=postgres
 export POSTGRES_PASSWORD=postgres
 clear
-sleep 1
+sleep 2
 check-file
 cd /app-files
 clear
