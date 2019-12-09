@@ -1,0 +1,29 @@
+{
+  "title": "Test Environment",
+  "description": "Test Environment for Storedog App",
+  "difficulty": "Intermediate",
+  "time": "20 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "courseData": "background.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal", 
+    "uieditorpath": "taggingk8s"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
