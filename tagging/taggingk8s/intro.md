@@ -1,1 +1,1 @@
-testing automation of storedog app build and datadog instrumentation
+In this activity, you will assign and use tags to build container maps and dashboards in Datadog for a Kubernetes deployment.
