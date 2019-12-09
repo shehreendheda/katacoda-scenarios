@@ -1,27 +1,8 @@
-test environment
 
-**branch**
+First do `export DD_API_KEY`
+
 ```
-mkdir /create-slo
-git clone https://github.com/burningion/ecommerce-observability /create-slo
-cd /create-slo
-git checkout instrumented-fixed
-docker-compose pull
-export POSTGRES_USER=postgres
-export POSTGRES_PASSWORD=postgres
-docker-compose up -d
-
-```{{execute}}
-
-
-**commit**
-```
-mkdir /create-slo
-git clone https://github.com/burningion/ecommerce-observability /create-slo
-cd /create-slo
-git checkout e87fb337a9990fdf9c979ff4a2dafae701204c8b
-docker-compose pull
-export POSTGRES_USER=postgres
-export POSTGRES_PASSWORD=postgres
-docker-compose up -d
+kubectl create secret generic datadog-api --from-literal=token=$DD_API_KEY
+kubectl apply -f k8s-yaml-files/lotsofpods.yaml
+kubectl apply -f k8s-yaml-files/datadog.yaml
 ```{{execute}}
