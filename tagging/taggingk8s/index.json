@@ -22,11 +22,15 @@
       "host01": [
         {
           "file": "lotsofpods.yaml",
-          "target": "/root/k8s-yaml-files/"
+          "target": "/root/taggingk8s/"
         },
         {
           "file": "datadog.yaml",
-          "target": "/root/k8s-yaml-files/"
+          "target": "/root/taggingk8s/"
+        },
+        {
+          "file": "couplemore.yaml",
+          "target": "/root/taggingk8s/"
         }
       ]
     }
