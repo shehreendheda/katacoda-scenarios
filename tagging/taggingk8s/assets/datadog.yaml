@@ -55,7 +55,7 @@ spec:
           - name: DD_DOGSTATSD_NON_LOCAL_TRAFFIC
             value: "true"
           - name: DD_TAGS
-            value: "env:k8s-apm-workshop"
+            value: "env:k8s-tagging"
           - name: DD_KUBELET_TLS_VERIFY
             value: "false"
           - name: DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL
