@@ -36,6 +36,8 @@
     "uieditorpath": "taggingk8s"
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "datadog-kubernetes-cluster-running",
+    "reuseConnection": "true",
+    "livetime": "1h"
   }
 }
