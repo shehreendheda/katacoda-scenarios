@@ -1,0 +1,21 @@
+{
+  "title": "Tagging Best Practices",
+  "description": "",
+  "icon": "fa-katacoda",
+  "courses": [
+    {
+      "pathway_id": "tagging",
+      "course_id": "taggingk8s",
+      "id": "taggingk8s",
+      "title": "Tagging Kubernetes",
+      "description": "Tagging for Kubernetes"
+    },
+    {
+      "pathway_id": "tagging",
+      "course_id": "apptagging",
+      "id": "apptagging",
+      "title": "Tagging an App",
+      "description": "Tagging a docker-based app service"
+    }
+  ]
+}
