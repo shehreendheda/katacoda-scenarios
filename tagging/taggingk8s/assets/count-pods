@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+apt install datamash >> /dev/null 2>&1
+kubectl get pods --no-headers | awk {'print $3'}| datamash -s -g 1 count 1

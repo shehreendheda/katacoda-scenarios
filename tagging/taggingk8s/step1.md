@@ -10,3 +10,5 @@ kubectl apply -f taggingk8s/datadog.yaml
 
 
 `kubectl apply -f taggingk8s/couplemore.yaml`{{execute}}
+
+`count-pods`{{execute}}
