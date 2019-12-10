@@ -31,6 +31,11 @@
         {
           "file": "couplemore.yaml",
           "target": "/root/taggingk8s/"
+        },
+        {
+          "file": "count-pods",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
         }
       ]
     }
