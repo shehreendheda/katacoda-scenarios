@@ -40,6 +40,6 @@ Let’s introduce another dimension to the tags by adding pods with the tag key 
 
 6. Select `owner` for **group by**. How many uniques values for the owner tag are there? (Hint: **no owner** is not a tag value.)
 
-With tags such as `environment`, `office`, `team`, etc, consider the different business questions you could ask and answer about the deployment.
+With inherited tags like `kube_container_name` and custom tags like `environment`, `office`, `team`, etc, think of the different business questions you could ask and answer about the deployment.
  
 When you assign tags, remember to consider the scope, functions, and ownership of your deployments. With strategic tagging, you can use the tags to filter and group containers (and hosts) based on your business use cases.
