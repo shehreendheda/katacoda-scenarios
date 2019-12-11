@@ -13,7 +13,7 @@ In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for 
 
 1. Click `datadog.yaml`{{open}} to view the file in the editor on the right.
 
-2. Scroll to line 33 and 34. **DD_KUBERNETES_POD_LABELS_AS_TAGS** is set to **true** under **env** for the datadog agent, which means the deployed pods/containers will have custom tags assigned to them via this <a href="https://docs.datadoghq.com/tagging/assigning_tags/?tab=agentv6#environment-variables" target="_datadog">environment variable</a>.
+2. Scroll to line 33 and 34. `DD_KUBERNETES_POD_LABELS_AS_TAGS` is set to `true` under `env` for the datadog agent, which means the deployed pods/containers will have custom tags assigned to them via this <a href="https://docs.datadoghq.com/tagging/assigning_tags/?tab=agentv6#environment-variables" target="_datadog">environment variable</a>.
 
 3. Click `lostofpods.yaml`{{open}} to view the file in the editor.
 
@@ -23,7 +23,7 @@ In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for 
 
 6. In a new window/tab, log in to the Datadog account/organization that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization.
 
-7. Navigate to <a href="https://app.datadoghq.com/infrastructure/map?fillby=avg%3Acpuutilization&sizeby=avg%3Anometric&groupby=none&nameby=name&nometrichosts=false&tvMode=false&nogrouphosts=true&palette=green_to_orange&paletteflip=false&node_type=host" target="_datadog">**Infrastructure** > **Host Maps**</a>.
+7. Navigate to <a href="https://app.datadoghq.com/infrastructure/map?fillby=avg%3Acpuutilization&sizeby=avg%3Anometric&groupby=none&nameby=name&nometrichosts=false&tvMode=false&nogrouphosts=true&palette=green_to_orange&paletteflip=false&node_type=host" target="_datadog">**Infrastructure**>**Host Maps**</a>.
 
 8. In the menu at the top, change **Hosts** to **Containers** and delete `availability-zone` from the group by field.
 
