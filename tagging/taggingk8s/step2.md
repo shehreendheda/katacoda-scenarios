@@ -13,7 +13,7 @@ Note: For any question asked in this section, you can click **Solution** below t
 
 4. Unselect `kube_container_name` and take turns selecting the other `kube_*` tag keys to see how the containers map.
 
-5. In the **filter by** field, type **kube** to see the list of tags for the `kube_*` keys. 
+5. In the **filter by** field, type `kube` to see the list of tags for the `kube_*` keys. 
 
 ## Using custom tags
 Now, let’s start using the custom tags assigned via the pod labels. 
