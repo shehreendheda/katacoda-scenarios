@@ -1,7 +1,7 @@
 ### Answers
 
 #### Using inherited tags
-Step 3. How many containers are in the `my-container` group? **49 containers**
+3) How many containers are in the my-container group? **49 containers**
 
 &nbsp; 
 
@@ -10,8 +10,8 @@ Step 3. How many containers are in the `my-container` group? **49 containers**
 &nbsp; 
 
 #### Using custom tags
-Step 1. How many containers have no `environment` tag? **1 container** 
-<p>   Which `team`(s) do they belong to? **dev**
+1) How many containers have no environment tag? **1 container** 
+<p>   Which team(s) do they belong to? **dev**
 
 &nbsp; 
 
@@ -19,7 +19,7 @@ Step 1. How many containers have no `environment` tag? **1 container**
 
 &nbsp; 
 
-Step 2. Which `office` is running the most `production` containers? **nyc** 
+2) Which office is running the most production containers? **nyc** 
 <p>   How many containers are they running? **6 containers**
 
 &nbsp; 
@@ -28,8 +28,8 @@ Step 2. Which `office` is running the most `production` containers? **nyc**
 
 &nbsp; 
 
-Step 3. How many roles are associated with the `qa` environment? **4 roles**
-<p>   Which `role` is at the most offices? **web**
+3) How many roles are associated with the qa environment? **4 roles**
+<p>   Which *role* is at the most offices? **web**
 
 &nbsp; 
 
@@ -39,7 +39,7 @@ Step 3. How many roles are associated with the `qa` environment? **4 roles**
 
 #### Adding new tags to a deployment
 
-Step 2. Do you see the `owner` tag in the group by list? **No**
+2) Do you see the owner tag in the group by list? **No**
 
 &nbsp; 
 
@@ -47,7 +47,7 @@ Step 2. Do you see the `owner` tag in the group by list? **No**
 
 &nbsp; 
 
-Step 4. Do you see the `owner` tag in the group by list? **Yes**
+4) Do you see the owner tag in the group by list? **Yes**
 
 &nbsp; 
 
@@ -55,7 +55,7 @@ Step 4. Do you see the `owner` tag in the group by list? **Yes**
 
 &nbsp; 
 
-Step 6. How many unique values for the `owner` tag are there? **2 values**
+6) How many unique values for the owner tag are there? **2 values**
 
 &nbsp; 
 
