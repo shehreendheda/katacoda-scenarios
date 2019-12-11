@@ -11,7 +11,7 @@
 
 #### Using custom tags
 1) How many containers have no *environment* tag? **1 container** 
-    Which team(s) do they belong to? **dev**
+<p>   Which team(s) do they belong to? **dev**
 
 &nbsp; 
 
@@ -20,7 +20,7 @@
 &nbsp; 
 
 2) Which office is running the most containers? **nyc** 
-    How many containers are they running? **6 containers**
+<p>   How many containers are they running? **6 containers**
 
 &nbsp; 
 
@@ -29,7 +29,7 @@
 &nbsp; 
 
 3) How many roles are associated with the qa environment? **4 roles**
-    Which role is at the most offices? **web**
+<p>   Which role is at the most offices? **web**
 
 &nbsp; 
 
