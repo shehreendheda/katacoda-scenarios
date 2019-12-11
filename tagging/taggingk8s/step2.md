@@ -21,7 +21,7 @@ Now, let’s start using the custom tags assigned via the pod labels.
 
 2. Now, assume you want to know how many containers are running in the `production` environment for each office. <p> Select `environment:production` for **filter by** and `office` for **group by**. <p> Which office is running the most containers? How many containers are they running?
 
-3. Or, assume you want to know more about the container roles for each office in the `qa` environment. <p> Select `environment:qa` for **filter by** and `office`, `role` for **group by**.  <p> How many roles are associated with the qa environment? Which role is at the most offices?
+3. Or, assume you want to know more about the container roles for each office in the `qa` environment. <p> Select `environment:qa` for **filter by** and `role`, `office` for **group by**.  <p> How many roles are associated with the qa environment? Which role is at the most offices?
 
 
 ## Adding new tags to a deployment 
@@ -34,7 +34,9 @@ Let’s introduce another dimension to the tags by adding pods with the tag key 
 
 3. Click `kubectl apply -f taggingk8s/couplemore.yaml`{{execute}} to add more pods/containers to the deployment.
 
-4. Wait until the container map in the UI updates with the new containers. Once the containers are running, you should see 51 containers when there are no filters in the container map.
+4. Wait until the container map in the UI updates with the new containers. Once the containers are running, you should see 55 containers when there are no filters in the container map.
+
+![newcontainers](taggingk8s/assets/new-containers-running.png)
 
 5. Click the **group by** field and search the list. <p> Do you see the owner tag in the group by list?
 
