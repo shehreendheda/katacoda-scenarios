@@ -8,6 +8,11 @@
       {
         "title": "Assigning Tags to the Deployment",
         "text": "step1.md"
+      },
+      {
+        "title": " Container Mapping using Tags",
+        "text": "step2.md",
+        "answer": "answer2.md"
       }
     ],
     "intro": {
