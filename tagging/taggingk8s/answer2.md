@@ -1,7 +1,7 @@
 ### Answers
 
 #### Using inherited tags
-3- How many containers are in this group? **49 containers**
+3) How many containers are in this group? **49 containers**
 
 &nbsp; 
 
@@ -10,7 +10,7 @@
 &nbsp; 
 
 #### Using custom tags
-1- How many containers have no *environment* tag? **1 container** 
+1) How many containers have no *environment* tag? **1 container** 
     Which team(s) do they belong to? **dev**
 
 &nbsp; 
