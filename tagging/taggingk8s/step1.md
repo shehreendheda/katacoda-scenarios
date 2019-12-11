@@ -25,7 +25,7 @@ In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for 
 
 7. Navigate to <a href="https://app.datadoghq.com/infrastructure/map?fillby=avg%3Acpuutilization&sizeby=avg%3Anometric&groupby=none&nameby=name&nometrichosts=false&tvMode=false&nogrouphosts=true&palette=green_to_orange&paletteflip=false&node_type=host" target="_datadog">**Infrastructure** > **Host Maps**</a>.
 
-8. In the menu at the top, change **Hosts** to **Containers** and delete `availability-zone` from the group by field.
+8. In the menu at the top, change **Hosts** to **Containers** and delete `availability-zone` from the **Group hosts by Tags** field.
 
 9. Hover over the containers. In the bottom right, you should see that there are 53 containers running in the deployment. <p>![containers](taggingk8s/assets/containers-running.png)
 
