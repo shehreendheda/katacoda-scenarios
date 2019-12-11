@@ -13,22 +13,24 @@ In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for 
 
 1. Click `datadog.yaml`{{open}} to view the file in the editor on the right.
 
-2. Scroll to line 33 and 34. `DD_KUBERNETES_POD_LABELS_AS_TAGS` is set to `true` under `env` for the datadog agent, which means the deployed pods/containers will have custom tags assigned to them via this <a href="https://docs.datadoghq.com/tagging/assigning_tags/?tab=agentv6#environment-variables" target="_datadog">environment variable</a>.
+2. Scroll to line 33 and 34. `DD_KUBERNETES_POD_LABELS_AS_TAGS` is set to `true` under `env` for the datadog agent, which means the deployed pods/containers will have custom tags assigned via the <a href="https://docs.datadoghq.com/tagging/assigning_tags/?tab=agentv6#environment-variables" target="_datadog">environment variable</a>.
 
 3. Click `lostofpods.yaml`{{open}} to view the file in the editor.
 
-4. Scroll through the file and look for lines similar to line 6 and 18. These lines define the tags for each pod. <p> As you can see, the tags add some scope, function, and ownership to the containers using keys like `environment` and `office`. <p> Let’s confirm that the pods are online before continuing.
+4. Scroll through the file and look for lines similar to lines 6 and 18. These lines define the tags for each pod. <p> As you can see, the tags add some scope, function, and ownership to the containers using keys like `environment` and `office`.
 
-5. Click `count-pods`{{execute}}. You should see that 50 pods are online.
+5. To confirm the pods are online, click `count-pods`{{execute}}. You should see that 50 pods are online. <p> Now that all the pods are running, let's view the infrastructure in Datadog. 
 
 6. In a new window/tab, log in to the Datadog account/organization that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization.
 
-7. Navigate to <a href="https://app.datadoghq.com/infrastructure/map?fillby=avg%3Acpuutilization&sizeby=avg%3Anometric&groupby=none&nameby=name&nometrichosts=false&tvMode=false&nogrouphosts=true&palette=green_to_orange&paletteflip=false&node_type=host" target="_datadog">**Infrastructure**>**Host Maps**</a>.
+7. Navigate to <a href="https://app.datadoghq.com/infrastructure/map?fillby=avg%3Acpuutilization&sizeby=avg%3Anometric&groupby=none&nameby=name&nometrichosts=false&tvMode=false&nogrouphosts=true&palette=green_to_orange&paletteflip=false&node_type=host" target="_datadog">**Infrastructure** > **Host Maps**</a>.
 
 8. In the menu at the top, change **Hosts** to **Containers** and delete `availability-zone` from the group by field.
 
 9. Hover over the containers. In the bottom right, you should see that there are 53 containers running in the deployment.
 
-9. Click one of the containers with `my-container-` in the name and view the tags. <p>Some of the tags are the custom tags assigned to the pods in the lotsofpods.yaml, while others such as `host` are assigned by Datadog or such as `kube-container-name` are assigned through integration inheritance.
+![containers](taggingk8s/assets/containers-running.png)
+
+10. Click one of the containers with `my-container-*` in the name and view the tags. <p>Some of the tags are the custom tags assigned to the pods in the lotsofpods.yaml, while others such as `host` are assigned by Datadog or such as `kube-container-name` are assigned through integration inheritance.
 
 Now that the containers are up and running, let’s start mapping the containers using the tags.
