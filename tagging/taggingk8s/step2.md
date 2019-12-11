@@ -34,9 +34,7 @@ Let’s introduce another dimension to the tags by adding pods with the tag key 
 
 3. Click `kubectl apply -f taggingk8s/couplemore.yaml`{{execute}} to add more pods/containers to the deployment.
 
-4. Wait until the container map in the UI updates with the new containers. Once the containers are running, you should see 55 containers when there are no filters in the container map.
-
-![newcontainers](taggingk8s/assets/new-containers-running.png)
+4. Wait until the container map in the UI updates with the new containers. Once the containers are running, you should see 55 containers when there are no filters in the container map. <p>![newcontainers](taggingk8s/assets/new-containers-running.png)
 
 5. Click the **group by** field and search the list. <p> Do you see the owner tag in the group by list?
 
