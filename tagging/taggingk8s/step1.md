@@ -27,9 +27,7 @@ In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for 
 
 8. In the menu at the top, change **Hosts** to **Containers** and delete `availability-zone` from the group by field.
 
-9. Hover over the containers. In the bottom right, you should see that there are 53 containers running in the deployment.
-
-![containers](taggingk8s/assets/containers-running.png)
+9. Hover over the containers. In the bottom right, you should see that there are 53 containers running in the deployment. <p>![containers](taggingk8s/assets/containers-running.png)
 
 10. Click one of the containers with `my-container-*` in the name and view the tags. <p>Some of the tags are the custom tags assigned to the pods in the lotsofpods.yaml, while others such as `host` are assigned by Datadog or such as `kube-container-name` are assigned through integration inheritance.
 
