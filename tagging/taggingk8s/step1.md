@@ -1,5 +1,5 @@
 
-To get started, in the terminal, enter you Datadog API key `export DD_API_KEY={DD_API_KEY}`, and click the following.
+To get started, in the terminal, enter your Datadog API key `export DD_API_KEY={DD_API_KEY}`, and click the following.
 
 ```
 kubectl create secret generic datadog-api --from-literal=token=$DD_API_KEY
@@ -7,15 +7,15 @@ kubectl apply -f taggingk8s/lotsofpods.yaml
 kubectl apply -f taggingk8s/datadog.yaml
 ```{{execute}}
 
-The Kubernetes deployment for this activity is being brought online and the Datadog Agent is being instrumented. This may take up to 5 minutes. Using its Autodiscovery feature, Datadog is able to detect that the deployment uses Kubernetes and Docker, so Datadog will install the Kubernetes and Docker Integrations for you as data starts coming in. 
+The Kubernetes deployment for this activity is being brought online and the Datadog Agent is being instrumented. This may take up to 5 minutes. Using Autodiscovery, Datadog is able to detect that the deployment uses Kubernetes and Docker, so Datadog will install the Kubernetes and Docker Integrations for you as data starts coming in. 
 
 In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for the deployment. The datadog.yaml file is the datadog agent configuration file, while the lotsofpods.yaml file defines the number and details of the pods that are being brought online.
 
 1. Click `datadog.yaml`{{open}} to view the file in the editor on the right.
 
-2. Scroll to line 33 and 34. `DD_KUBERNETES_POD_LABELS_AS_TAGS` is set to `true` under `env` for the datadog agent, which means the deployed pods/containers will have custom tags assigned via the <a href="https://docs.datadoghq.com/tagging/assigning_tags/?tab=agentv6#environment-variables" target="_datadog">environment variable</a>.
+2. Scroll to line 33 and 34. `DD_KUBERNETES_POD_LABELS_AS_TAGS` is set to `true` under `env` for the datadog agent, which means the deployed containers will have custom tags assigned via the <a href="https://docs.datadoghq.com/tagging/assigning_tags/?tab=agentv6#environment-variables" target="_blank">environment variable</a>.
 
-3. Click `lostofpods.yaml`{{open}} to view the file in the editor.
+3. Click `lotsofpods.yaml`{{open}} to view the file in the editor.
 
 4. Scroll through the file and look for lines similar to lines 6 and 18. These lines define the tags for each pod. <p> As you can see, the tags add some scope, function, and ownership to the containers. The tag keys are `environment`, `office`, `team`, `role` and `color`.
 
@@ -29,6 +29,6 @@ In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for 
 
 9. Hover over the containers. In the bottom right, you should see that there are 53 containers running in the deployment. <p>![containers](taggingk8s/assets/containers-running.png)
 
-10. Click one of the containers with `my-container-*` in the name and view the tags. <p>Some of the tags are the custom tags assigned to the pods in the lotsofpods.yaml, while others such as `host` are assigned by Datadog or such as `kube-container-name` are assigned through integration inheritance.
+10. Click one of the containers labeled `my-container-*` and view its tags. <p>Some of the tags are the custom tags assigned in the lotsofpods.yaml, while others are assigned by Datadog such as `host` or through integration inheritance such as `kube-container-name`.
 
 Now that the containers are up and running, let’s start mapping the containers using the tags.
