@@ -30,7 +30,7 @@ Let’s introduce another dimension to the tags by adding pods with the tag key 
 
 1. Clear the **Filter by** and **Group hosts by Tags** fields above the container map.
 
-2. Click the **Group hosts by Tags** field and search the list. <p> Do you see the `owner` tag in the **Group hosts by Tags** list? *Note: The list is in alphabetical order. Actually, you will find that all list of tags in Datadog is in alphabetical order.*
+2. Click the **Group hosts by Tags** field and search the list. <p> Do you see the `owner` tag in the **Group hosts by Tags** list? *Note: The list is in alphabetical order. Actually, you will find that the list of tags for any host, container, service, etc. in the Datadog UI is in alphabetical order.*
 
 3. Click `kubectl apply -f taggingk8s/couplemore.yaml`{{execute}} to add more pods/containers to the deployment.
 
