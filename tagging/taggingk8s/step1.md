@@ -1,12 +1,3 @@
-
-To get started, in the terminal, enter your Datadog API key `export DD_API_KEY={DD_API_KEY}`, and click the following.
-
-```
-kubectl create secret generic datadog-api --from-literal=token=$DD_API_KEY
-kubectl apply -f taggingk8s/lotsofpods.yaml
-kubectl apply -f taggingk8s/datadog.yaml
-```{{execute}}
-
 The Kubernetes deployment for this activity is being brought online and the Datadog Agent is being instrumented. This may take up to 5 minutes. Using Autodiscovery, Datadog is able to detect that the deployment uses Kubernetes and Docker, so Datadog will install the Kubernetes and Docker Integrations for you as data starts coming in. 
 
 In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for the deployment. The datadog.yaml file is the datadog agent configuration file, while the lotsofpods.yaml file defines the number and details of the pods that are being brought online.
