@@ -1,7 +1,5 @@
 #!/bin/bash
 
-apt install datamash
-clear
 while [ ! -f /root/taggingk8s/lotsofpods.yaml ]; do sleep 1; done
 while [ ! -f /root/taggingk8s/datadog.yaml ]; do sleep 1; done
 clear
