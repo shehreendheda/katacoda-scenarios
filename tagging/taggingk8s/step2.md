@@ -42,6 +42,6 @@ Let’s introduce another dimension to the tags by adding pods with the tag key 
 
 6. Select `owner` for **Group hosts by Tags**. <p>How many uniques values for the owner tag are there? (Hint: `no owner` is not a tag value.)
 
-These are just a few examples of how you can use the tags to filter and group the containers to learn valuable information about the infrastructure.
+These are just a few examples of how you can use tags to filter and group containers to learn valuable information about the infrastructure.
 
  When you assign tags, remember to consider the scope, functions, and ownership of your deployments. With strategic tagging, you can use the tags to filter and group your containers (and hosts) based on your business use cases.

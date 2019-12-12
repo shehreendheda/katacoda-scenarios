@@ -1,7 +1,6 @@
 <a href="https://docs.datadoghq.com/graphing/dashboards/Dashboards" target="_blank">Dashboards</a> in Datadog allow you to visually track, analyze, and display key performance metrics to help you monitor the health of your infrastructure.
 
-You can use assigned tags to create a variety of graphs and dashboards, with each focusing on certain metrics or resources in your infrastructure.
-
+You can use assigned tags to create a variety of graphs and dashboards, with each focusing on certain metrics or resources in your infrastructure. Let's start creating a dashboard for this deployment.
  
 1. In Datadog, navigate to <a href="https://app.datadoghq.com/dashboard/lists" target="_datadog">**Dashboards** > **Dashboard List**</a> and click **New Dashboard** in the top right.
 
@@ -19,11 +18,11 @@ You can use assigned tags to create a variety of graphs and dashboards, with eac
 
 6. Click and drag the **Table** tile to the dashboard area. 
 
-7. Fill the template as shown in the image below. Notice that `$team` in now available as an option in your tags filter/group by. Click **Done**.<p> ![community-environment-timeseries](taggingk8s/assets/teams-color-table.png) 
+7. Fill the template as shown in the image below. Notice that `$team` is now available as an option in your tags filter by and group by lists. Click **Done**.<p> ![community-environment-timeseries](taggingk8s/assets/teams-color-table.png) 
 
 8. At the top of the dashboard, select the different `$team` variable options and see the results for each team in the table you just created.
 
-Consider other metrics that you may want to visualize and track for this kubernetes deployment. You can continue creating other template variables and graphs for the dashboard using the different tags. 
+Consider other metrics that you may want to visualize and track for this kubernetes deployment and continue creating other template variables and graphs in the dashboard using the different tags. 
 
 #### Assessment
 When you are finished, click `grademe`{{execute}} to receive a grade for this activity.
