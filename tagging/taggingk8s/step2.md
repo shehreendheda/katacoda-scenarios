@@ -1,11 +1,11 @@
 Containers Maps give you a big picture of the health of your containers. You can detect outliers, identify usage patterns, avoid resource problems, and make decisions about how to best manage your containers. 
 
-To look at a specific collection of containers, you can use the filter by and group by fields to map the containers based on their assigned tags. 
+To look at a specific collection of containers, you can use the filter by and group by fields to map the containers based on their assigned tags. With inherited tags like `kube_container_name` and custom tags like `environment`, `office`, `team`, etc, think of the different business questions you could ask and answer about the deployment.
 
 Note: For any question asked in this section, you can click **Solution** below the instructions to view the answer.
 
 ## Using inherited tags
-1. In the **Group hosts by Tags** field above the <a href=”https://app.datadoghq.com/infrastructure/map?fillby=avg%3Aprocess.stat.container.io.wbps&sizeby=avg%3Anometric&groupby=none&nameby=name&nometrichosts=false&tvMode=false&nogrouphosts=true&palette=green_to_orange&paletteflip=false&node_type=container” target="_datadog">container map</a>, type **kube**. Three tag keys appear in the list (pictured below).
+1. In the **Group hosts by Tags** field above the container map, type **kube**. Three tag keys appear in the list (pictured below).
 
 2. View the `lostofpods.yaml`{{open}} file again. As you can see, the `kube_*` tags were not assigned via the pod labels, but were inherited through the Kubernetes Integration. 
 
@@ -38,8 +38,6 @@ Let’s introduce another dimension to the tags by adding pods with the tag key 
 
 5. Click the **Group hosts by Tags** field and search the list. <p> Do you see the owner tag in the group by list?
 
-6. Select `owner` for **Group hosts by Tags**. How many uniques values for the owner tag are there? (Hint: `no owner` is not a tag value.)
+6. Select `owner` for **Group hosts by Tags**. <p>How many uniques values for the owner tag are there? (Hint: `no owner` is not a tag value.)
 
-With inherited tags like `kube_container_name` and custom tags like `environment`, `office`, `team`, etc, think of the different business questions you could ask and answer about the deployment.
- 
 When you assign tags, remember to consider the scope, functions, and ownership of your deployments. With strategic tagging, you can use the tags to filter and group containers (and hosts) based on your business use cases.
