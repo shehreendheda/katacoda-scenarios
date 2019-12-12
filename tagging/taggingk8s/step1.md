@@ -17,7 +17,7 @@ In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for 
 
 3. Click `lostofpods.yaml`{{open}} to view the file in the editor.
 
-4. Scroll through the file and look for lines similar to lines 6 and 18. These lines define the tags for each pod. <p> As you can see, the tags add some scope, function, and ownership to the containers using keys like `environment` and `office`.
+4. Scroll through the file and look for lines similar to lines 6 and 18. These lines define the tags for each pod. <p> As you can see, the tags add some scope, function, and ownership to the containers. The tag keys are `environment`, `office`, `team`, `role` and `color`.
 
 5. To confirm the pods are online, click `count-pods`{{execute}}. You should see that 50 pods are online. <p> Now that all the pods are running, let's view the infrastructure in Datadog. 
 
