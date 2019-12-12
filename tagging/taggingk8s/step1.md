@@ -19,7 +19,7 @@ In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for 
 
 4. Scroll through the file and look for lines similar to lines 6 and 18. These lines define the tags for each pod. <p> As you can see, the tags add some scope, function, and ownership to the containers. The tag keys are `environment`, `office`, `team`, `role` and `color`.
 
-5. To confirm the pods are online, click `count-pods`{{execute}}. You should see that 50 pods are online. <p> Now that all the pods are running, let's view the infrastructure in Datadog. 
+5. To confirm the pods are running, click `count-pods`{{execute}}. Make sure that 50 pods are running. If not, wait and repeat this step. <p> Once all the pods are running, let's view the infrastructure in Datadog. 
 
 6. In a new window/tab, log in to the Datadog account/organization that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization.
 

@@ -9,7 +9,7 @@ Note: For any question asked in this section, you can click **Solution** below t
 ## Using inherited tags
 1. For the container map in the previous step, type **kube** in the **Group hosts by Tags** field. Three tag keys appear in the list (pictured below).
 
-2. View the `lostofpods.yaml`{{open}} file again. As you can see, the `kube_*` tags were not assigned via the pod labels, but were inherited through the Kubernetes Integration. 
+2. View the tags in `lotsofpods.yaml`{{open}} file again. As you can see, the `kube_*` tags were not assigned via the pod labels, but were inherited through the Kubernetes Integration. 
 
 3. Select `kube_container_name` in the **Group hosts by Tags** list and hover over the `my-container` group. <p> How many containers are in this group?
 
