@@ -55,7 +55,8 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "editor-terminal", 
+    "uieditorpath": "app-files",
     "showdashboard": true,
     "dashboards": [{"name": "storedog", "port": 3000}]
   },
