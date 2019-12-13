@@ -1,3 +1,3 @@
-Congratulations! You've assigned and used tags to build container maps and dashboards in Datadog for a Kubernetes deployment.
+Congratulations! In this activity, you worked with a variety of tags to correlate metric, logs, and trace data and create a targeted alert.
 
 To continue, click **Next Module**.
