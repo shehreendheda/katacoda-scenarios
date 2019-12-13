@@ -1,14 +1,30 @@
 {
-  "title": "Test Environment",
-  "description": "Test Environment for Storedog App",
+  "title": "Tagging for a Docker-based App",
+  "description": "Tagging for a Docker-based App Service",
   "difficulty": "Intermediate",
   "time": "20 minutes",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Instrumenting the App with Datadog",
         "text": "step1.md"
-      }
+      },
+      {
+        "title": "Exploring the Assigned Tags",
+        "text": "step2.md"
+      },
+      {
+        "title": "Correlating Metrics, Logs, and Trace Data",
+        "text": "step3.md"
+      },
+      {
+        "title": "Assigning new tags",
+        "text": "step4.md"
+      },
+      {
+        "title": "Using the new tag to creating an alert",
+        "text": "step5.md"
+      },
     ],
     "intro": {
       "text": "intro.md",
@@ -17,11 +33,29 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "grademe",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "prep-environment",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "check-file",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        }
+      ]
     }
   },
   "environment": {
-    "uilayout": "editor-terminal",
-    "uieditorpath": "apptagging",
+    "uilayout": "terminal",
     "showdashboard": true,
     "dashboards": [{"name": "storedog", "port": 3000}]
   },
