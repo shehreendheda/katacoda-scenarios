@@ -6,24 +6,20 @@
   "details": {
     "steps": [
       {
-        "title": "Instrumenting the App with Datadog",
+        "title": "Assigning Tags to the App",
         "text": "step1.md"
       },
       {
-        "title": "Exploring the Assigned Tags",
+        "title": "Correlating Metrics, Logs, and Trace Data",
         "text": "step2.md"
       },
       {
-        "title": "Correlating Metrics, Logs, and Trace Data",
+        "title": "Updating Assigned Tags",
         "text": "step3.md"
       },
       {
-        "title": "Assigning new tags",
+        "title": "Using Tags to Create Targeted Alerts",
         "text": "step4.md"
-      },
-      {
-        "title": "Using the new tag to creating an alert",
-        "text": "step5.md"
       }
     ],
     "intro": {

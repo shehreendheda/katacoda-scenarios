@@ -2,20 +2,14 @@ In the terminal on the right, the Storedog app is being instrumented for monitor
 
 Once the app is instrumented, you will see the following message in the Terminal: `The environment is prepared! You can now start the activity.`
 
-While you wait for the environment to be prepared, you can explore the APM page in Datadog to see what data comes in for the app.
-1. In a new window/tab, log in to the Datadog account/organization that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Join Account** in the email you received from learn.datadoghq.com.
+While you wait for the environment to be prepared, you can explore the tags that are assigned for application.
 
-2. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> in Datadog to view the list of traces that are coming in. <p> If you are working in a new Datadog Organization, the link will be redirected to the **APM** > **Introduction** page. You will need to wait about two minutes as Datadog's autodiscovery feature picks up the traces that are coming in. In the main menu, when the option appears, click the **APM > Traces** to see the list of traces.
+1. Click `docker-compose.yml`{{open}} to view the file in the editor on the right. <p>The docker-compose.yml instruments the Datadog agent and app build for monitoring with Datadog.
 
-3. In the search field above the Trace list, enter `Env:ruby-shop` if it is not listed. 
+2. Scroll through the file to view the file configuration and how tags are designated. <p>**Line 11** assigns the `env:` tag to the application. By assigning this tag, you are able to filter your data in Datadog to just the data related to the storedog application. <p> **Lines 19, 40, 60, 81, and 89** assign tags to the logs for the datadog agent, discount service, frontend service, advertisements services, and postgres, respectively. (To learn more, view the the <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#activate-log-integrations" target="_blank">Docker Log Collection</a> documentation.)<p>**Lines 26 and 67** assign the `service:` tag to the discount and advertisements services. (To learn more, view the the <a href="https://docs.datadoghq.com/tracing/setup/python/#environment-variable" target="_blank">Tracing Python Applications</a> documentation.)
 
-4. If no traces are coming in, wait until you see traces coming in.
+3. Click `/store-frontend/config/initializers/datadog.rb`{{open}} file to view the file that instruments rails for tracing ruby applications. <p>The `service` tags for the the `storefrontend`, `storefrontendcache`, and `storefrontendsqlite` are assigned here. (To learn more, view the the Tracing Ruby Applications <a href="https://docs.datadoghq.com/tracing/setup/ruby/#rails" target="_blank">Tracing Ruby Applications</a> documentation.)
 
-5. Click some of the traces to see their details. 
+3. After you see the "environment is prepared" message in the terminal, click the **storedog** tab on the right to view the Storedag app. <p> As you can see, the the app includes a home page, product pages, advertisements, discounts, and a cart.
 
-6. After you see the "environment is prepared" message in the terminal, click the **storedog** tab on the right to view the Storedag app. <p> As you can see, the the app includes a home page, product pages, advertisements, discounts, and a cart. You  can see traces for these in the **Traces** list in Datadog.
-
-7. Navigate to <a href="https://app.datadoghq.com/apm/" target="_datadog">**APM** > **Services**</a> in Datadog. <p> On the right of the search field above the Services list, if you see a menu for different environments, select the `ruby-shop` environment. <p> Make sure you see the following services in the list before you continue. 
-
-![Service List](tagging/apptagging/service-list.png)
-
+<p>Now that the app is ready, let's start exploring the data coming into Datadog.
