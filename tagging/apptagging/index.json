@@ -10,16 +10,12 @@
         "text": "step1.md"
       },
       {
-        "title": "Correlating Metrics, Logs, and Trace Data",
+        "title": "Exploring Correlated Data using Tags",
         "text": "step2.md"
       },
       {
-        "title": "Updating Assigned Tags",
-        "text": "step3.md"
-      },
-      {
         "title": "Using Tags to Create Targeted Alerts",
-        "text": "step4.md"
+        "text": "step3.md"
       }
     ],
     "intro": {
