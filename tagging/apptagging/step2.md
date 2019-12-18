@@ -1,4 +1,6 @@
-Based on how tags are assigned, you can search the data using the tags and can jump between related metrics, log, and traces data, which are now correlated.
+Based on how the tags have been assigned, you can search the data using the tags and can jump between correlated metrics, logs, and traces data.
+
+Let's explore the data for the Storedog app service
 
 1. In a new window/tab, log in to the Datadog account/organization that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization.
 
