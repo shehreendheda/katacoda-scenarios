@@ -12,15 +12,15 @@ With tags, you can create <a href="https://docs.datadoghq.com/monitors/notificat
 
 6. Expand **Set the alert condition**. For **Alert Threshold**, enter 5. Leave all other fields as is. <p>![alert-condition](apptagging/assets/alert-condition.png)
 
-7. Expand **Say what's happening**. Fill in each field as shown below. <p>When you start typing `{{service.`, select `service.name` from the list appears. <p>To replace `<YOUR EMAIL ADDRESS>`, when you type `@` select your name from the list that appears. <p>![alert-message](apptagging/assets/alert-message.png)
+7. Expand **Say what's happening**. Fill in each field as shown below. <p>When you start typing `{{service.`, select `service.name` from the list that appears. <p>To replace `<YOUR EMAIL ADDRESS>`, when you type `@` select your name from the list that appears. <p>Remember to assign the tags below the message. <p>![alert-message](apptagging/assets/alert-message2.png)
 
-8. Expand **Notify your team**. The field is already populated with the `@` selections in **Say what's happening**. <p>![alert-notifications](apptagging/assets/alert-notifications.png)
+8. Expand **Notify your team**. The field is already populated with the `@` selections in **Say what's happening**. <p>![alert-notifications](apptagging/assets/alert-notifications.png) <p> Before you save the monitor, let's see an example alert.
 
-9. To see a test notification, in the bottom right, click **Test Notifications**. 
+9. In the bottom right, click **Test Notifications**. 
 
 10. In the pop-up window that appears, select the **Alert** tile and click **Run Test**. <p> A message appears in the window: `Test notifications sent with group service:<service name>`. <p>![alert-tested](apptagging/assets/alert-tested.png)
 
-11. Check your email at the address that included in **Notify your team**. You should see an email with the subject `[Monitor Alert] Triggered: [TEST] The <service name> is running slowly!`.
+11. Check your email at the address included in **Notify your team**. You should see an email with the subject `[Monitor Alert] Triggered: [TEST] The <service name> is running slowly!`.
 
 12. Open the email to view its details. You will see that the `{{service.name}}` has been replaced with the actual service name throughout the email. <p>![alert-testemail](apptagging/assets/alert-testemail.png)
 
@@ -30,4 +30,4 @@ With tags, you can create <a href="https://docs.datadoghq.com/monitors/notificat
 
 15. Above the graphs, you will see a banner **1 Monitor ##**. Click the banner to view the list of monitors associated with and suggested for the service
 
-Because of the tags assigned to the metrics, you were able to assign the same tags to the monitor in step 7 and link the monitor to the service in the APM page.
+Because of the tags you assigned to the monitor in step 7, the monitor is linked the monitor to the respective services in the APM page.
