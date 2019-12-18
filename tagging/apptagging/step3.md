@@ -30,4 +30,4 @@ With tags, you can create <a href="https://docs.datadoghq.com/monitors/notificat
 
 15. Above the graphs, you will see a banner **1 Monitor ##**. Click the banner to view the list of monitors associated with and suggested for the service
 
-Because of the tags you assigned to the monitor in step 7, the monitor is linked the monitor to the respective services in the APM page.
+Because of the tags you assigned to the monitor in step 7, the monitor is linked to the respective services in the APM page.
