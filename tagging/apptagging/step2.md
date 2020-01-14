@@ -20,9 +20,9 @@ Let's explore the data for the Storedog app.
 
 9. Click any of the logs. A new tab will open for the **Log Explorer** and the details for the log you clicked. <p>Notice the tag selected in the search field above the lists of logs is the `trace_id` for the specific trace. The `trace_id` tag is assigned by Datadog. To learn more, view the <a href="https://docs.datadoghq.com/logs/processing/#trace-id-attribute" target="_blank">Log Manangement Processing</a> documentation. 
 
-10. Clear the search field in the Logs Explorer. All the logs will appear in the list.
+10. Clear the search field in the Log Explorer. All the logs will appear in the list.
 
-11. In the Logs Explorer search field, add `env:ruby-shop` and `service:discount-service`.
+11. In the Log Explorer search field, add `env:ruby-shop` and `service:discount-service`.
 
 12. Click any log in the list to view its details.
 

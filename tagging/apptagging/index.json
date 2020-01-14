@@ -16,6 +16,10 @@
       {
         "title": "Using Tags to Create Targeted Alerts",
         "text": "step3.md"
+      },
+      {
+        "title": "Searching and Correlating Synthetics Tests",
+        "text": "step4.md"
       }
     ],
     "intro": {
