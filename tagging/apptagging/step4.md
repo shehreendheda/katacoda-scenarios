@@ -1,4 +1,4 @@
-Let's also set up a synthetics test for the Storedog home page.  
+Let's also set up a Synthetic test for the Storedog home page.  
 
 1. In Datadog, navigate to the <a href="https://app.datadoghq.com/synthetics/list" target="_datadog">**UX Monitoring** > **Synthetics Tests**</a>.
 
@@ -6,7 +6,7 @@ Let's also set up a synthetics test for the Storedog home page.
 
 3. Under **Choose Request Type**, select **HTTP**.
 
-4. Under **Make a request**, fill in each field as shown below. <p> **Note**: For **URL**, enter your Storedog URL. Click the **storedog** tab above the terminal on the right and copy the URL for the storedog page. Paste this URL in the sythentics test URL field.<p>![syn-makerequest](apptagging/assets/syn-makerequest.png)
+4. Under **Make a request**, fill in each field as shown below. <p> **Note**: For **URL**, enter your Storedog URL. Click the **storedog** tab above the terminal on the right and copy the URL for the storedog page. Paste this URL in the sythentic test URL field.<p>![syn-makerequest](apptagging/assets/syn-makerequest.png)
 
 5. Click **Alert conditions** to expand the section. Fill in each field as shown below. <p>![syn-alertconditions](apptagging/assets/syn-alertconditions.png)
 
@@ -26,8 +26,8 @@ Let's also set up a synthetics test for the Storedog home page.
 
 13.  In the search field above the list of facets, enter `env:"ruby-shop"`. Only the `Test on Storedog` test is listed.<p>
 
-14. Navigate to <a href="https://app.datadoghq.com/apm/service/storefrontend/rack.request" target="_datadog">**APM** > **Service** > **storefrontend**</a>.
+14. Now, navigate to <a href="https://app.datadoghq.com/apm/service/storefrontend/rack.request" target="_datadog">**APM** > **Service** > **storefrontend**</a>.
 
-15. Click the banner near the top labeled **2 ALERT** / **View Monitors -->**. The two synthetics tests you created are listed.
+15. Click the banner near the top labeled **2 ALERT** / **View Monitors -->**. <p>The two synthetics tests you created are listed because both have the `service:storefrontend` tag.
 
 By assigning relevant tags to your Monitors, Synthetics tests, and RUM applications, you are able to easily search for these monitor in lists and connect these monitors to related data. 
