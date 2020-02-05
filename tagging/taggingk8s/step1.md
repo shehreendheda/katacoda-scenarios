@@ -1,6 +1,6 @@
 The Kubernetes deployment for this activity is being brought online and the Datadog Agent is being instrumented. This may take up to 5 minutes. Using Autodiscovery, Datadog is able to detect that the deployment uses Kubernetes and Docker, so Datadog will install the Kubernetes and Docker Integrations for you as data starts coming in. 
 
-In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for the deployment. The datadog.yaml file is the datadog agent configuration file, while the lotsofpods.yaml file defines the number and details of the pods that are being brought online.
+In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for the deployment. The datadog.yaml file is the datadog agent configuration file, and the lotsofpods.yaml file defines the number and details of the pods that are being brought online.
 
 1. Click `datadog.yaml`{{open}} to view the file in the editor on the right.
 

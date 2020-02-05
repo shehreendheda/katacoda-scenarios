@@ -1,6 +1,6 @@
-<a href="https://docs.datadoghq.com/graphing/infrastructure/containermap/" target="_blank">Containers Maps</a> give you a big picture of the health of your containers. You can detect outliers, identify usage patterns, avoid resource problems, and make decisions about how to best manage your containers. 
+<a href="https://docs.datadoghq.com/graphing/infrastructure/containermap/" target="_blank">Containers Maps</a> give you the big picture about the health of your containers. You can detect outliers, identify usage patterns, avoid resource problems, and make decisions about how to best manage your containers. 
 
-To look at a specific collection of containers, you can use the filter by and group by fields to map the containers based on their assigned tags. 
+To look at a specific collection of containers, you can use the **Filter by** and **Group hosts by Tags** fields to map the containers based on their assigned tags. 
 
 With inherited tags like `kube_container_name` and custom tags like `environment`, `office`, `team`, etc, think of the different business questions you could ask and answer about this deployment. Let's explore how we can filter and group the containers using these tags.
 
@@ -13,13 +13,13 @@ Note: For any question asked in this section, you can click **Solution** below t
 
 3. Select `kube_container_name` in the **Group hosts by Tags** list and hover over the `my-container` group. <p> How many containers are in this group?
 
-4. Unselect `kube_container_name` and take turns selecting the other `kube_*` tag keys to see how the containers map.
+4. Unselect `kube_container_name` and take turns selecting the other `kube_*` tag keys to see how the container map changes.
 
 5. In the **Filter by** field, type `kube` to see the list of tags for the `kube_*` keys. 
 
 ## Using custom tags
 Now, let’s start using the custom tags assigned via the pod labels. 
-1. Assume this is a deployment for your organization and it is required that any container with the `my-container-*` name be assigned an `environment`. Let’s see if any of the containers are not meeting the requirement. <p> Select `kube_container_name:my-container` for **Filter by**and `environment` for **Group hosts by Tags**.<p> How many containers have `no environment`? Which team(s) do they belong to? Hint: Click the containers with `no environment` and view their tags. 
+1. Assume this is a deployment for your organization and it is required that any container with the `my-container-*` name be assigned an `environment`. Let’s see if any of the containers are not meeting the requirement. <p> Select `kube_container_name:my-container` for **Filter by** and `environment` for **Group hosts by Tags**.<p> How many containers have `no environment`? Which team(s) do they belong to? Hint: Click the containers with `no environment` and view their tags. 
 
 2. Now, assume you want to know how many containers are running in the `production` environment for each office. <p> Select `environment:production` for **Filter by** and `office` for **Group hosts by Tags**. <p> Which office is running the most containers? How many containers are they running?
 
@@ -44,4 +44,4 @@ Let’s introduce another dimension to the tags by adding pods with the tag key 
 
 These are just a few examples of how you can use tags to filter and group containers to learn valuable information about the infrastructure.
 
- When you assign tags, remember to consider the scope, functions, and ownership of your deployments. With strategic tagging, you can use the tags to filter and group your containers (and hosts) based on your business use cases.
+ When you assign tags, remember to consider the scopes, functions, and ownerships of the different parts of your deployments. With strategic tagging, you can use the tags to filter and group your containers (and hosts) based on your use cases and end users.
