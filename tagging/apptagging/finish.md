@@ -1,3 +1,3 @@
-Congratulations! Using a variety of tags, you explored correlated metric, log, and trace data for an docker-based application. You also created a targeted alert so that you can use one monitor to alert on a specific metric for multiple services and send notifications to specific individuals and teams.
+Congratulations! With a variety of tags, you explored correlated data for an application. You also created a targeted multi alert for services that support the app and you created synthethic tests with tags that linked the tests to the associated service.
 
 To continue, click **Next Module**.
