@@ -31,3 +31,6 @@ Tags are also filter facets for various lists throughout Datadog. Let's create t
 15. Click the banner near the top labeled **2 ALERT** / **View Monitors -->**. <p>The two synthetic tests you created are listed because both have the `service:storefrontend` tag.
 
 By assigning relevant tags to your Monitors, Synthetics tests, and RUM applications, you can easily search for these in lists and connect these to related data. 
+
+#### Assessment
+When you are finished, click `grademe`{{execute}} to receive a grade for this activity. 
