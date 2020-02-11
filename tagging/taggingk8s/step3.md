@@ -4,7 +4,7 @@ You can use assigned tags to create a variety of graphs and dashboards, with eac
  
 1. In Datadog, navigate to <a href="https://app.datadoghq.com/dashboard/lists" target="_datadog">**Dashboards** > **Dashboard List**</a> and click **New Dashboard** in the top right.
 
-2. Enter `My Kubernetes Deployment` for the **Dashboard Name** and select **New Timeboard**. <p>Let's graph the filesystem.usage for the community team in each environment. 
+2. Enter `Kubernetes Deployment`{{copy}} for the **Dashboard Name** and select **New Timeboard**. <p>Let's graph the filesystem.usage for the community team in each environment. 
 
 3. In the dashboard area, click **Add graph**. Then, click and drag the **Timeseries** tile to the dashboard area.
 
@@ -25,4 +25,4 @@ You can use assigned tags to create a variety of graphs and dashboards, with eac
 Consider other metrics that you may want to visualize and track for this kubernetes deployment and continue creating other template variables and graphs in the dashboard using the different tags. 
 
 #### Assessment
-When you are finished, click `grademe`{{execute}} to receive a grade for this activity.
+When you are finished, click `grademe`{{execute}} to receive a grade for this activity. 
