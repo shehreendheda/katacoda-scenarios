@@ -4,6 +4,8 @@ Let's explore the data for the Storedog app.
 
 1. In a new window/tab, log in to the Datadog account/organization that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization.
 
+2. If you have previously used the **Log Explorer** in the Datadog organization you are working in, you can move on to the next step. <p>If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. <p> Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Get Started —>**, then click **Start Trial** in the pop-up window. Select **Container**, then select the **docker** tile. Scroll to the bottom and click **Explore your Logs —>**.
+
 2. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> in Datadog to view the list of traces that are coming in. <p> If you are working in a new Datadog organization, the link will be redirected to the **APM** > **Introduction** page. You may need to wait about two minutes as Datadog's Autodiscovery feature picks up the traces that are coming in. In the main menu, when the option appears, click the **APM > Traces** to see the list of traces.
 
 3. In the search field above the list of traces, enter `Env:ruby-shop` if it is not listed to make sure that you are only viewing traces for the Storedog app.
