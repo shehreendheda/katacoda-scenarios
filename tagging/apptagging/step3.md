@@ -12,14 +12,13 @@ With tags, you can create <a href="https://docs.datadoghq.com/monitors/notificat
 
 6. Expand **Set the alert condition**. For **Alert Threshold**, enter 5. Leave all other fields as is. <p>![alert-condition](apptagging/assets/alert-condition.png)
 
-7. Expand **Say what's happening**. <p> In the **Example Monitor Name...** field, copy and paste `The {{service.name}} is running slowly!!`{{copy}}. <p> For **Example Monitor Message...**, copy and paste <p>```The {{service.name}} is running slowly!!
+7. Expand **Say what's happening**. <p> In the **Example Monitor Name...** field, copy and paste `The {{service.name}} is running slowly!!`{{copy}}. <p> For **Example Monitor Message...**, copy and paste `The {{service.name}} is running slowly!! Contact: Email - @{{service.name}}@mycompany.com, @<YOUR EMAIL ADDRESS> Slack - @slack-{{service.name}}`{{copy}}. <p> At Storedog, the email addresses and slack channels for the advertisements and discounts engineering teams are named for their respective services. <p> Delete `@<YOUR EMAIL ADDRESS>` and type `@`, then select your name from the list that appears. <p>For **Tags**, copy and paste `env:ruby-shop,service:discountsservice,service:advertisementsservice,team:discount,team:advertisements,`{{copy}}. <p>![alert-message](apptagging/assets/alert-message4.png)
 
+``The {{service.name}} is running slowly!!
 Contact:
 Email - @{{service.name}}@mycompany.com, @<YOUR EMAIL ADDRESS> 
 Slack - @slack-{{service.name}}
-```{{copy}}. <p> At Storedog, the email addresses and slack channels for the advertisements and discounts engineering teams are named for their respective services. <p> Delete `@<YOUR EMAIL ADDRESS>` and type `@`, then select your name from the list that appears. <p>For **Tags**, copy and paste `env:ruby-shop,service:discountsservice,service:advertisementsservice,team:discount,team:advertisements,`{{copy}}. <p>![alert-message](apptagging/assets/alert-message4.png)
-
-
+```{{copy}}
 
 8. Expand **Notify your team**. The field is already populated with the `@` selections in **Say what's happening**. <p>![alert-notifications](apptagging/assets/alert-notifications.png) <p> Before you save the monitor, let's see an example alert.
 
