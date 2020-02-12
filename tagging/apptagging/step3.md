@@ -12,7 +12,7 @@ With tags, you can create <a href="https://docs.datadoghq.com/monitors/notificat
 
 6. Expand **Set the alert condition**. For **Alert Threshold**, enter 5. Leave all other fields as is. <p>![alert-condition](apptagging/assets/alert-condition.png)
 
-7. Expand **Say what's happening**. Fill in each field as shown below. Internal teams at storedog are named for the service they work on. <p>When you start typing `{{service.`, select `service.name` from the list that appears. <p>To replace `<YOUR EMAIL ADDRESS>`, type `@` and select your name from the list that appears. <p>Remember to assign the tags below the message. <p>![alert-message](apptagging/assets/alert-message2.png)
+7. Expand **Say what's happening**. Fill in each field as shown below. <p> At Storedog, the email addresses and slack channels for the advertisements and discounts engineering teams are named for their respective services. <p> When you start typing `{{service.`, select `service.name` from the list that appears. <p>To replace `<YOUR EMAIL ADDRESS>`, type `@` and select your name from the list that appears. <p>Remember to assign the tags below the message. <p>![alert-message](apptagging/assets/alert-message4.png)
 
 8. Expand **Notify your team**. The field is already populated with the `@` selections in **Say what's happening**. <p>![alert-notifications](apptagging/assets/alert-notifications.png) <p> Before you save the monitor, let's see an example alert.
 
@@ -22,9 +22,13 @@ With tags, you can create <a href="https://docs.datadoghq.com/monitors/notificat
 
 11. Check your email at the address included in **Notify your team**. You should see an email with the subject `[Monitor Alert] Triggered: [TEST] The <service name> is running slowly!`.
 
-12. Open the email to view its details. You will see that the `{{service.name}}` has been replaced with the actual service name throughout the email. <p>![alert-testemail](apptagging/assets/alert-testemail.png)
+12. Open the email to view its details. You will see that the `{{service.name}}` has been replaced with the actual service name throughout the email. <p>![alert-testemail](apptagging/assets/alert-testemail2.png)
 
 13. In Datadog, close the test notifcation window and click **Save** to save the monitor. 
+
+14. Select **Manage Monitors** above the monitor to navigate to the monitors list.
+
+15. To the left of the monitors list, expand the different filter facets. <p> You will see that **Service**, **Tag**, **Env**, and **Team** have optons related to the tags you assigned to the monitor.
 
 14. Navigate to <a href="https://app.datadoghq.com/apm/service/discountsservice" target="_datadog">**APM** > **Services** > **discountsservice**</a>. 
 
