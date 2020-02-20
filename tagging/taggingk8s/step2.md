@@ -4,7 +4,7 @@ To look at a specific collection of containers, you can use the **Filter by** an
 
 With inherited tags like `kube_container_name` and custom tags like `environment`, `office`, `team`, etc, think of the different business questions you could ask and answer about this deployment. Let's explore how we can filter and group the containers using these tags.
 
-Note: For any question asked in this section, you can click **Solution** below the instructions to view the answer.
+Note: As you go through the steps below, you can note down your answers to the questions. At the bottom of the page, you can click **Solution** to view the answers.
 
 ## Using inherited tags
 1. For the container map in the previous step, type **kube** in the **Group hosts by Tags** field. Three tag keys appear in the list (pictured below).
@@ -23,7 +23,7 @@ Now, let’s start using the custom tags assigned via the pod labels.
 
 2. Now, assume you want to know how many containers are running in the `production` environment for each office. <p> Select `environment:production` for **Filter by** and `office` for **Group hosts by Tags**. <p> Which office is running the most containers? How many containers are they running?
 
-3. Or, assume you want to know which containers in the `qa` environment have a certain role at each office. <p> Select `environment:qa` for **Filter by** and `role`, `office` for **Group hosts by Tags**.  <p> How many roles are associated with the qa environment? Which role is at the most offices?
+3. Assume you want to know which containers in the `qa` environment have a certain role at each office. <p> Select `environment:qa` for **Filter by**. Select `role` then add `office` for **Group hosts by Tags**.  <p> How many roles are associated with the qa environment? Which role is at the most offices?
 
 
 ## Adding new tags to a deployment 

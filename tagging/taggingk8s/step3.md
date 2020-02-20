@@ -8,7 +8,7 @@ You can use assigned tags to create a variety of graphs and dashboards, with eac
 
 3. In the dashboard area, click **Add graph**. Then, click and drag the **Timeseries** tile to the dashboard area.
 
-4. Fill the template as shown in the image below and then click **Done**. Note: Click **Advanced** below the first query to add more queries. Under the queries, change **Display** to `Lines`.<p> ![community-environment-timeseries](taggingk8s/assets/community-environment-timeseries2.png)
+4. Fill the template as shown in the image below and then click **Done**. Note: Below the first metric, click **Metric** next to **Graph Additional** to add more metrics. Under each metric, change **Display** to `Lines`.<p> ![community-environment-timeseries](taggingk8s/assets/community-environment-timeseries3.png)
 
 5. In the new timeseries graph, click any of the lines and view the options. <p> Say, you want to see which containers the data is related to. 
 
