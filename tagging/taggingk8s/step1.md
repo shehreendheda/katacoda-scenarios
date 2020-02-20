@@ -12,7 +12,7 @@ In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for 
 
 5. To confirm the pods are running, click `count-pods`{{execute}}. Make sure that 50 pods are running. If not, wait and repeat this step. <p> Once all the pods are running, let's view the infrastructure in Datadog. 
 
-6. In a new window/tab, log in to the Datadog account/organization that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization.
+6. In a new browser window/tab, log in to the Datadog account/organization that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization.
 
 7. Navigate to <a href="https://app.datadoghq.com/infrastructure/map?fillby=avg%3Acpuutilization&sizeby=avg%3Anometric&groupby=none&nameby=name&nometrichosts=false&tvMode=false&nogrouphosts=true&palette=green_to_orange&paletteflip=false&node_type=host" target="_datadog">**Infrastructure** > **Host Maps**</a>.
 
