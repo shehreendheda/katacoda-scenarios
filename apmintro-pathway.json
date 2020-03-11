@@ -1,0 +1,21 @@
+{
+    "title": "Introduction to Application Perfomance Monitoring",
+    "description": "",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "pathway_id": "apmintro",
+        "course_id": "instrumentapp",
+        "id": "instrumentapp",
+        "title": "Intrumenting an App Service",
+        "description": "Intrumenting a docker, ruby, python app service"
+      },
+      {
+        "pathway_id": "apmintro",
+        "course_id": "fixapp",
+        "id": "fixapp",
+        "title": "Monitoring App Performance",
+        "description": "Monitoring App Performance"
+      }
+    ]
+  }
