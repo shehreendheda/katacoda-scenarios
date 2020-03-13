@@ -6,16 +6,20 @@
   "details": {
     "steps": [
       {
-        "title": "Enabling Trace Collection",
+        "title": "Bringing the Application Online",
         "text": "step1.md"
       },
       {
-        "title": "Intrumenting a Ruby App Service",
+        "title": "Enabling Trace Collection",
         "text": "step2.md"
       },
       {
-        "title": "Intrumenting Python App Services",
+        "title": "Intrumenting a Ruby App Service",
         "text": "step3.md"
+      },
+      {
+        "title": "Intrumenting Python App Services",
+        "text": "step4.md"
       }
     ],
     "intro": {
