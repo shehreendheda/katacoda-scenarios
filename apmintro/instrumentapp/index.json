@@ -10,16 +10,20 @@
         "text": "step1.md"
       },
       {
-        "title": "Enabling Trace Collection",
+        "title": "Enabling Trace Collection by the Datadog Agent",
         "text": "step2.md"
       },
       {
-        "title": "Intrumenting a Ruby App Service",
+        "title": "Intrumenting a Ruby-on-Rails App Service",
         "text": "step3.md"
       },
       {
-        "title": "Intrumenting Python App Services",
+        "title": "Intrumenting Python-Flask App Services",
         "text": "step4.md"
+      },
+      {
+        "title": "Searching Incoming Traces and related Logs",
+        "text": "step5.md"
       }
     ],
     "intro": {

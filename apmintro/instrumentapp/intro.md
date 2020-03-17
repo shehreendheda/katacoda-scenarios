@@ -1,5 +1,10 @@
-With the various resources and services that support your applications, it's important to be able to correlate your data across Datadog for faster troubleshooting, targeted alerting, and overall smoother workflows.
+The environment you will work with in this activity is a fictional ecommerce app, Storedog, that is built using a Ruby-on-Rails (Spree) framework along with Python(Flask) microservices for handling coupon codes and ad services, and is brought online using Docker container images.
+The app has been instrumented for APM with Datadog. This activity provides you with a walkthrough of the instrumentation using the following steps.
 
-In this activity, you will use tags assigned to a fictional e-commerce app, Storedog, to explore correlated metric, log, and trace data and to a create targeted alert. You will also create synthetics tests to work with tags as a facet for filters. 
+Bring the Application Online
+Enabling Trace and Related Log Collection for the Datadog Agent
+Instrumenting the Ruby-based Application Services
+Instrumenting the Python-based Application Services
+Checking Incoming Traces and related Logs
 
-The Storedog app is built using a Spree (Ruby on Rails) framework along with Flask (Python) microservices for handling coupon codes and ad services and is brought online using docker container images.
+When you are ready to continue,  click **Start Scenario**.
