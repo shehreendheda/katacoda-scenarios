@@ -10,6 +10,6 @@ The docker-compose.yml instruments the Datadog agent and app services for monito
 
 **Lines 12 and 13** set the ports for tracing between the agent container and other containers. Port `8126` is the default port for tracing. (To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/?tab=standard#environment-variables" target="_blank">Tracing Docker Applications</a> documentation.) 
 
-**Lines 18 and 19** allow Datadog to identify the log source for each container and automatically install the corresponding integration. This **Autodiscovery** feature speeds up the setup process for log collection. (To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#activate-log-integrations" target="_blank">Docker Log Collection</a> documentation.) 
+**Lines 18 and 19** allow Datadog to identify the log source for the container and automatically install the corresponding integration. This **Autodiscovery** feature speeds up the setup process for log collection. (To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#activate-log-integrations" target="_blank">Docker Log Collection</a> documentation.) 
 
 With tracing enabled for the Datadog agent, let's take a look at how the different services of the application are instrumented.

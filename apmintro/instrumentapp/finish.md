@@ -1,3 +1,3 @@
-Congratulations! With a variety of tags, you explored correlated data for an application. You also created a targeted multi alert for services that support the app and you created synthethic tests with tags that linked the tests to the associated service.
+Congratulations! You've gone through the instrumented Storedog app and seen how the app was instrumented for APM and related Log Management in Datadog.
 
-To continue, click **Next Module**.
+To learn about using the various features of APM such as the Service Map, Service Pages, and APP Analytics, click **Next Module** to continue with the course.
