@@ -6,7 +6,7 @@
   "details": {
     "steps": [
       {
-        "title": "Bringing the Application Online",
+        "title": "Preparing the Environment",
         "text": "step1.md"
       },
       {
@@ -22,7 +22,7 @@
         "text": "step4.md"
       },
       {
-        "title": "Searching Incoming Traces and related Logs",
+        "title": "Checking Incoming Traces and related Logs",
         "text": "step5.md"
       }
     ],
