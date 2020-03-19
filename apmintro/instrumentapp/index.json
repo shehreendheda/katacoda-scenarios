@@ -14,15 +14,15 @@
         "text": "step2.md"
       },
       {
-        "title": "Intrumenting a Ruby-on-Rails App Service",
+        "title": "Instrumenting a Ruby-on-Rails App Service",
         "text": "step3.md"
       },
       {
-        "title": "Intrumenting Python-Flask App Services",
+        "title": "Instrumenting Python-Flask App Services",
         "text": "step4.md"
       },
       {
-        "title": "Checking Incoming Traces and related Logs",
+        "title": "Checking Incoming Trace Data",
         "text": "step5.md"
       }
     ],
