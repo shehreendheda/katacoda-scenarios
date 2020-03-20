@@ -1,6 +1,6 @@
 {
-  "title": "Instrumenting an App Service",
-  "description": "Intrumenting a docker, ruby, python app service",
+  "title": "Instrumenting an App for APM",
+  "description": "Intrumenting a docker, ruby, python application",
   "difficulty": "Beginner",
   "time": "20 minutes",
   "details": {
