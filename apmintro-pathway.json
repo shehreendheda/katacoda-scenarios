@@ -7,8 +7,8 @@
         "pathway_id": "apmintro",
         "course_id": "instrumentapp",
         "id": "instrumentapp",
-        "title": "Intrumenting an App Service",
-        "description": "Intrumenting a docker, ruby, python app service"
+        "title": "Intrumenting an App for APM",
+        "description": "Intrumenting a docker, ruby, python application"
       },
       {
         "pathway_id": "apmintro",
