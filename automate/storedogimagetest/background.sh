@@ -1,3 +1,3 @@
 #!/bin/bash
 
-mkdir /create-slo
+mkdir /app-files
