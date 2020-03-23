@@ -19,8 +19,8 @@
     },
     {
       "pathway_id": "automate",
-      "course_id": "test",
-      "id": "test",
+      "course_id": "storedogimagetest",
+      "id": "storedogimagetest",
       "title": "Test Environment",
       "description": "Test Environment for Storedog App Instrumentation with Datadog"
     }
