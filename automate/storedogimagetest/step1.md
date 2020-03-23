@@ -2,9 +2,9 @@ test environment
 
 **branch**
 ```
-mkdir /create-slo
-git clone https://github.com/burningion/ecommerce-observability /create-slo
-cd /create-slo
+mkdir /app-files
+git clone https://github.com/burningion/ecommerce-observability /app-files
+cd /app-files
 git checkout instrumented-fixed
 docker-compose pull
 export POSTGRES_USER=postgres
@@ -16,9 +16,9 @@ docker-compose up -d
 
 **commit**
 ```
-mkdir /create-slo
-git clone https://github.com/burningion/ecommerce-observability /create-slo
-cd /create-slo
+mkdir /app-files
+git clone https://github.com/burningion/ecommerce-observability /app-files
+cd /app-files
 git checkout e87fb337a9990fdf9c979ff4a2dafae701204c8b
 docker-compose pull
 export POSTGRES_USER=postgres

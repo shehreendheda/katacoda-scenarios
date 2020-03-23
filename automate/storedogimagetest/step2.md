@@ -1,9 +1,9 @@
 
-`mkdir /create-slo`{{execute}}
+`mkdir /app-files`{{execute}}
 
-`git clone https://github.com/burningion/ecommerce-observability /create-slo`{{execute}}
+`git clone https://github.com/burningion/ecommerce-observability /app-files`{{execute}}
 
-`cd /create-slo`{{execute}}
+`cd /app-files`{{execute}}
 
 `git checkout instrumented-fixed`{{execute}}
 
