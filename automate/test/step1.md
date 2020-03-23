@@ -10,8 +10,8 @@ docker-compose pull
 export POSTGRES_USER=postgres
 export POSTGRES_PASSWORD=postgres
 docker-compose up -d
-
 ```{{execute}}
+
 
 
 **commit**
