@@ -1,3 +1,3 @@
 #!/bin/bash
 
-mkdir /app-files
+mkdir /root/app-files
