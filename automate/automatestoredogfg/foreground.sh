@@ -5,7 +5,7 @@ export POSTGRES_PASSWORD=postgres
 clear
 sleep 1
 check-file
-cd /app-files
+cd /root/app-files
 docker-compose up -d
 clear
 prep-environment
