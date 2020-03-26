@@ -1,5 +1,5 @@
 #!/bin/bash
-mkdir /app-files
+mkdir /root/app-files
 git clone https://github.com/burningion/ecommerce-observability /app-files
 cd /app-files
 git checkout instrumented-fixed
