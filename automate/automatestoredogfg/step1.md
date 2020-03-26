@@ -16,7 +16,7 @@ printf '\n\nThe app is instrumented!\n\n'
 
 `git clone https://github.com/burningion/ecommerce-observability /app-files`{{execute}}
 
-`cd /app-files`{{execute}}
+`cd /root/app-files`{{execute}}
 
 `git checkout instrumented-fixed`{{execute}}
 

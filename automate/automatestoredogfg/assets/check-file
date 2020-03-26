@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-while [ ! -f /app-files/docker-compose.yml ]; do
+while [ ! -f /root/app-files/docker-compose.yml ]; do
     printf '.'
     sleep 2; 
 done
