@@ -1,7 +1,7 @@
 #!/bin/bash
 mkdir /root/app-files
-git clone https://github.com/burningion/ecommerce-observability /app-files
-cd /app-files
+git clone https://github.com/burningion/ecommerce-observability /root/app-files
+cd /root/app-files
 git checkout instrumented-fixed
 docker-compose pull
 
