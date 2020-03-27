@@ -1,0 +1,66 @@
+{
+  "title": "APM of an App",
+  "description": "Using APM to investigate app performance ",
+  "difficulty": "Beginner",
+  "time": "20 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Preparing the Environment",
+        "text": "step1.md"
+      },
+      {
+        "title": "Exploring the App Trace Data",
+        "text": "step2.md"
+      },
+      {
+        "title": "Creating APM Monitors",
+        "text": "step3.md"
+      },
+      {
+        "title": "Investigating App Performance",
+        "text": "step4.md"
+      },
+      {
+        "title": "Fixing App Performance",
+        "text": "step5.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "courseData": "background.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "grademe",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "prep-environment",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "check-file",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal", 
+    "uieditorpath": "/root/app-files",
+    "showdashboard": true,
+    "dashboards": [{"name": "storedog", "port": 3000}]
+  },
+  "backend": {
+    "imageid": "datadog-ecommerce-observability"
+  }
+}
