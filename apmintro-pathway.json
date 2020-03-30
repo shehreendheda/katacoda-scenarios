@@ -7,8 +7,8 @@
         "pathway_id": "apmintro",
         "course_id": "instrumentapp",
         "id": "instrumentapp",
-        "title": "Intrumenting an App for APM",
-        "description": "Intrumenting a docker, ruby, python application"
+        "title": "Instrumenting a Docker App Deployment",
+        "description": "Intrumenting a Docker App Deployment"
       },
       {
         "pathway_id": "apmintro",
@@ -16,6 +16,13 @@
         "id": "fixapp",
         "title": "Monitoring App Performance",
         "description": "Monitoring App Performance"
+      },
+      {
+        "pathway_id": "apmintro",
+        "course_id": "instrumentk8s",
+        "id": "instrumentk8s",
+        "title": "Instrumenting a Kubernetes App Deployment",
+        "description": "Instrumenting a K8s App Deployment"
       }
     ]
   }
