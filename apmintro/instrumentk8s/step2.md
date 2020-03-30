@@ -25,4 +25,4 @@ Finally, we will deploy the Datadog agent. In the editor, open the file called `
 
 Deploy the Datadog agent DaemonSet applying the `datadog-agent.yaml` manifest: `kubectl apply -f datadog/datadog-agent.yaml`{{execute}}
 
-Wait until the Datadog agent is running before moving to the next step: `kubectl get pods -l app=datadog-agent -w`{{execute}}
+Wait until the Datadog agent is running before moving to the next step: `kubectl get pods -l app=datadog-agent`{{execute}}
