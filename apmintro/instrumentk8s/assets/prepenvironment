@@ -25,7 +25,7 @@ else
   printf "\n\nWelcome back to the training lab.\n\n"
 fi
 printf "Finalizing app deployment.\n\n"
-until $(curl -o /dev/null -s -I -f http://localhost:30001); do
+until $(curl -o /dev/null -s -I -f http://0.0.0.0:30001); do
   sleep 1
 done
 printf 'OK, the training environment is installed and ready to go.\n\n'
