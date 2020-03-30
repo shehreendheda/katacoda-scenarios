@@ -1,6 +1,6 @@
 touch status.txt
 echo ""> /root/status.txt
-wall -n "Creating ecommerce deployment"
+wall -n "Creating ecommerce deployment."
 
 git clone https://github.com/arapulido/autoscaling-workshop-files.git k8s-manifests
 

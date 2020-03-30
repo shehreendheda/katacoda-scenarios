@@ -20,8 +20,12 @@ done
 show_progress
 if [ ! -f "/root/provisioned" ]; then
   touch /root/provisioned
-  printf "\n\nOK, the training environment is installed and ready to go.\n\n"
+  printf "Provisioning complete.\n\n"
 else
   printf "\n\nWelcome back to the training lab.\n\n"
 fi
-printf "Provisioning Complete\n\n"
+printf "Finalizing app deployment.\n\n"
+until $(curl -o /dev/null -s -I -f http://localhost:3000); do
+  sleep 1
+done
+printf 'OK, the training environment is installed and ready to go.\n\n'
