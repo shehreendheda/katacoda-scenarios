@@ -12,6 +12,13 @@
       },
       {
         "pathway_id": "apmintro",
+        "course_id": "instrumentapp2",
+        "id": "instrumentapp2",
+        "title": "Instrumenting a Docker App Deployment",
+        "description": "Intrumenting a Docker App Deployment"
+      },
+      {
+        "pathway_id": "apmintro",
         "course_id": "fixapp",
         "id": "fixapp",
         "title": "Monitoring App Performance",

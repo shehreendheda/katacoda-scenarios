@@ -23,6 +23,13 @@
       "id": "storedogimagetest",
       "title": "Test Environment",
       "description": "Test Environment for Storedog App Instrumentation with Datadog"
+    },
+    {
+      "pathway_id": "automate",
+      "course_id": "storedogk8s",
+      "id": "storedogk8s",
+      "title": "Deploying App on Kubernetes",
+      "description": "Deploying App on K8s"
     }
   ]
 }
