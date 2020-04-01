@@ -8,12 +8,12 @@ For APM in Datadog, you need to enable trace collection by the Datadog agent. To
       - DD_LOGS_ENABLED=true
       - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true
 ```{{copy}}
-4. Below the **environments** list, copy/paste the following lines. Make sure `ports:` has the same indent as `environments:`. These lines to set the ports for tracing between the agent container and other containers. Port `8126` is the default port for tracing. To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/apm/?tab=java#tracing-from-the-host" target="_blank">Tracing Docker Applications</a> documentation.
+4. Below the **environments** list, copy/paste the following lines. <p> These lines to set the ports for tracing between the agent container and other containers. Port `8126` is the default port for tracing. To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/apm/?tab=java#tracing-from-the-host" target="_blank">Tracing Docker Applications</a> documentation. <p> Note: Make sure `ports:` has the same indent as `environments:`.
 ```
     ports:
       - "8126:8126"
 ```{{copy}}
-5. Below the **volumes** list, copy/paste the following lines. Make sure `labels:` has the same indent as `volumes:`. These lines allow Datadog to identify the log source for the container and automatically install the corresponding integration. This **Autodiscovery** feature speeds up the setup process for log collection. To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#activate-log-integrations" target="_blank">Docker Log Collection</a> documentation.
+5. Below the **volumes** list, copy/paste the following lines. <p> These lines allow Datadog to identify the log source for the container and automatically install the corresponding integration. This **Autodiscovery** feature speeds up the setup process for log collection. To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#activate-log-integrations" target="_blank">Docker Log Collection</a> documentation. <p> Note: Make sure `labels:` has the same indent as `volumes:`.
 ```
     labels:
       - com.datadoghq.ad.logs: '[{"source": "datadog-agent", "service": "agent"}]'
