@@ -7,5 +7,5 @@ while [ ! -f /root/app-files/docker-compose.yml ]; do sleep 2; done
 cd /root/app-files
 #clear
 #docker-compose up -d
-clear
-prep-environment
+#clear
+#prep-environment
