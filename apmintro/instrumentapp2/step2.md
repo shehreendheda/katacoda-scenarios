@@ -3,7 +3,8 @@ For APM in Datadog, you need to enable trace collection by the Datadog agent. To
 1.  Click `docker-compose.yml`{{open}} to view the file in the editor on the right. <p> The `docker-compose.yml` instruments the Datadog agent and app services for monitoring with Datadog. 
 2. Under **services** (**Line 2**), view the details for the **agent** (**Line 3**). <p> Let's add the code for enabling trace and log collection.
 3. Under **Line 8**, add a line break and copy/paste the following to the list of environment variables. <p> `DD_APM_ENABLED=true` enables trace collection. <p> `DD_LOGS_ENABLED=true` enables log collection from the agent container. <p> `DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true` enable log collection from the all other containers.
-<p>```
+
+```
       - DD_APM_ENABLED=true
       - DD_LOGS_ENABLED=true
       - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true
