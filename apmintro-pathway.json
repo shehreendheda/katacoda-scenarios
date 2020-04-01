@@ -8,14 +8,14 @@
         "course_id": "instrumentapp",
         "id": "instrumentapp",
         "title": "Instrumenting a Docker App Deployment",
-        "description": "Intrumenting a Docker App Deployment"
+        "description": "Instrumenting a Docker App Deployment"
       },
       {
         "pathway_id": "apmintro",
         "course_id": "instrumentapp2",
         "id": "instrumentapp2",
-        "title": "Instrumenting a Docker App Deployment",
-        "description": "Intrumenting a Docker App Deployment"
+        "title": "Instrumenting a Docker App Deployment v2",
+        "description": "Instrumenting a Docker App Deployment"
       },
       {
         "pathway_id": "apmintro",
