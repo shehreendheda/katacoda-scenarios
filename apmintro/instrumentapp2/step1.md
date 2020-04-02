@@ -1,7 +1,7 @@
 In the terminal on the right, the Storedog app is being deployed using Docker. Live traffic to the app is also being simulated. This may take up to 3 minutes. Once the app is instrumented, you will see the following message in the terminal: `The environment is prepared!`
 
-1. Wait for the `The environment is prepared!` message to appear.
+1. Click `docker-compose.yml`{{open}} to view the file in the editor on the right. <p> The `docker-compose.yml` instruments the Datadog agent and app services for monitoring with Datadog. <p> Browse the file to view the details of the deployment. As you can see, there are no specifications for apm or log collection. 
 
-2. Click the storedog tab above the terminal to view the Storedog app. <p> Clicking around inside the app, you can see it includes a home page, product pages, advertisements, discounts, and a shopping cart. <p> 
+2. Once you see the `The environment is prepared!` message, click the **storedog** tab above the terminal to view the Storedog app. <p> Clicking around inside the app, you can see it includes a home page, product pages, advertisements, discounts, and a shopping cart. <p> 
 
-In this activity, you will instrument the home page (store-frontend),  discounts, and advertisements services for apm in Datadog. But, lets first enabled trace collection by the Datadog Agent.
+In this activity, you will go through instrumentation of the home page (store-frontend), discounts, and advertisements services for apm in Datadog. But, first, lets enable trace and log collection for the Datadog Agent.
