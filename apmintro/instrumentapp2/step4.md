@@ -1,14 +1,21 @@
-The `discounts` and `advertisements` services have a Python-Flask framework, so the service has been instrumented using the Python tracing library `dd-trace`. First, the `dd-trace` library is added to the list of required libraries, and then, the docker-compose.yml is updated for trace injection, log injections and App Analytics for each service.
+Let’s log into Datadog to view the trace and log data from the app.
 
-#### Discounts Service
+1. In a new window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization. <p> Let’s first view the logs coming into the Log Explorer.
 
-1. Click `discounts-service/requirements.txt`{{open}} to view the `dd-trace` library (**Line 4**) in the list of required libraries that are installed for the service.
+2. If you have previously used the **Log Explorer** in the Datadog organization you are working in, navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs** in Datadog</a> and then move on to the next step. <p>If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Get Started**, then click **Start Trial** in the pop-up window. Select **Container**, then select the **docker** tile. Scroll to the bottom and click **Explore your Logs**.
 
-2. Click `docker-compose.yml`{{open}}. <p> **Line 27** defines the address of the Agent that the tracer submits to. <p>**Line 28** enables automatic injection of trace IDs into the logs from the supported logging libraries to correlate traces and logs. <p>**Line 29** enables App Analytics for the traces. <p> **Line 31** is the command that brings up the Flask server `flask run --port=5001 --host=0.0.0.0`. The command is wrapped with `ddtrace-run` to automate instrumentation. You can view more details for automatic and manual instrumentation using `ddtrace` in the <a href="http://pypi.datadoghq.com/trace/docs/web_integrations.html#flask" target="_blank">Datadog Python Trace and Profile Client</a> documentation. <p> **Lines 39 and 40** allow Datadog to identify the log source for the container and automatically install the corresponding integration.  
+3. In the list of Facets on the left, expand **Services** to view the services from the app that are injecting logs into Datadog. <p>![log-services](instrumentapp/assets/log-services.png) <p>These are the services that have logs enabled in the `docker-compose.yml`{{open}}.
 
-#### Advertisements Service
-1. Click `ads-service/requirements.txt`{{open}} to view the `dd-trace` library (**Line 4**)  in the list of required libraries that are installed for the service.
+4. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM > Traces** </a> in Datadog to view the list of traces that are coming in.
 
-2. Click `docker-compose.yml`{{open}}. <p> **Line 68** defines the address of the Agent that the tracer submits to. <p>**Line 69** enables automatic injection of trace IDs into the logs from the supported logging libraries. <p>**Line 70** enables App Analytics for the traces. <p> **Line 72** is the command that brings up the Flask server `flask run --port=5002 --host=0.0.0.0`. The command is wrapped with `ddtrace-run` to automate instrumentation. <p> **Lines 80 and 81** allow Datadog to identify the log source for the container and automatically install the corresponding integration. 
+5. In the list of Facets on the left, expand **Services** to view the services from the app that are injecting traces into Datadog. <p>![trace-services](instrumentapp/assets/trace-services.png) <p> In addition to `store-frontend` service, you see three other services: <p> `store-frontend-cache` and `store-frontend-sqlite` because of **Line 3** in `store-frontend/config/initializers/datadog.rb`{{open}} for the `store-frontend` service. <p>`active-record`, which is installed and automatically instrumented to support the Ruby-on-Rails `store-frontend` service using **Line 7** in `store-frontend/config/application.rb`{{open}}. You can view the <a href="https://docs.datadoghq.com/tracing/setup/ruby/#active-record" target="_blank"> Tracing Ruby Application</a> for more details.
 
-With these steps, the Python-based services are instrumented for APM with Datadog. By now, the environment should be prepared. Let's log in to Datadog to view the trace and logs for the app.
+6. Click on a trace for the `store-frontend` service to view the flame graph and span list. <p> The color of each span is based on the associated service, listed on the right of the flame graph.
+
+7. Below the flame graph, click each tab to see the Tags, related Hosts, and related Logs. <p> Under **Logs(#)**, you can see the `trace_id:###` tag assigned by Datadog to the trace and the list of logs that are correlated to the trace via the `trace_id:XXX` tag. To learn more, view the <a href="https://docs.datadoghq.com/tracing/connect_logs_and_traces/" target="_blank">Connect Logs and Traces</a> documentation
+ 
+8. Click any of the logs. A new tab will open for the **Log Explorer** and the details for the log. <p> Notice the tag selected in the search field above the lists of logs is the `trace_id` for the specific trace.
+
+As you can see, the agent and store-frontend service were successfully instrumented for APM and related log collection in Datadog. 
+
+Now, let's instrument the Python-based services of the app.

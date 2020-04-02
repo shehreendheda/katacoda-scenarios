@@ -1,6 +1,6 @@
-The `store-frontend` service has a Ruby-on-Rails framework. The first step for instrumentation is to install the required Ruby tracing and log collection libraries. Next, an initializer file is added to enable Rails instrumentation. A configuration file is also added to ship logs to Datadog in JSON format so that Datadog can filter the logs based on special parameters. Finally, the docker-compose.yml is updated to log injection and App Analytics for the frontend service. 
+The `store-frontend` service has a Ruby-on-Rails framework. The first step for instrumentation is to install the required Ruby tracing and log libraries. Next, an initializer file is added to enable Rails instrumentation, and a configuration file to ship logs to Datadog in JSON format so that Datadog can filter the logs based on special parameters. Finally, the docker-compose.yml is updated to log injection and App Analytics for the frontend service. 
 
-The service has been instrumented for you, but you will enable log collection and app analytics for the store-frontend.
+The store-frontend service has been instrumented for you, but you will update the docker-compose.yml.
 
 1. Click `store-frontend/Gemfile`{{open}} to view the Gemfile for the store-frontend. The Gemfile installs the required tracing and log collection libraries.<p> **Line 46** installs the `ddtrace` Gem, which is <a href="https://docs.datadoghq.com/tracing/setup/ruby/" target="_blank">Datadog’s tracing client for Ruby</a>. The `ddtrace` library traces requests as they flow across web servers, databases, and microservices so that developers have high visibility into bottlenecks and troublesome requests. <p>**Line 48** installs the `logging-rails` Gem, which is a railtie for integrating the Ruby logging framework into the Rails application. To learn more, view the <a href="https://github.com/TwP/logging-rails" target="_blank">logging-rails</a> documentation. <p>**Line 49** installs the `lograge` Gem to send logs to Datadog. To learn more, view the <a href="https://docs.datadoghq.com/logs/log_collection/ruby/#setup" target="_blank">Ruby on Rails log collection</a> documentation.
 
@@ -23,4 +23,4 @@ The service has been instrumented for you, but you will enable log collection an
 
 7. Click `docker-compose up -d`. <p> ![restarted-agent-frontend](instrumentapp2/assets/restarted-agent-frontend.png)
 
-Before instrumenting the discounts and advertisements services, let's log into Datadog and see Now, let's go over instrumentation for the Python-based services of the app.
+Before instrumenting the discounts and advertisements services, let's log in to Datadog to view the traces and logs being collected for the store-frontend service. 
