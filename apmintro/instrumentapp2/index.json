@@ -1,6 +1,6 @@
 {
-  "title": "Instrumenting an App for APM",
-  "description": "Intrumenting a docker, ruby, python application",
+  "title": "Instrumenting a Docker App Deployment",
+  "description": "Instrumenting a Docker App Deployment",
   "difficulty": "Beginner",
   "time": "20 minutes",
   "details": {
