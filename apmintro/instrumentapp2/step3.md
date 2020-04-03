@@ -23,7 +23,7 @@ The store-frontend service has been instrumented for you, but you will update th
 ```
     labels:
       - com.datadoghq.ad.logs: '[{"source": "ruby", "service": "store-frontend"}]'
-```{{copy}} <p> As for the Datadog Agent, these lines allow Datadog to identify the log source for the container and automatically install any corresponding integration. <p> The **frontend** portion of the `docker-compose.yml` should now look like  the screenshot below. <p> ![instrumented-frontend](instrumentapp2/assets/instrumented-frontend.png) <p> With these steps, the Ruby-on-Rails `store-frontend` service is instrumented for APM and Log management with Datadog. Let's restart the docker deployment to apply these changes.
+```{{copy}} <p> As for the Datadog Agent, these lines allow Datadog to identify the log source for the container and automatically install any corresponding integration. <p> The **frontend** portion of the `docker-compose.yml` should now look like  the screenshot below. <p> ![instrumented-frontend](instrumentapp2/assets/instrumented-frontend.png) <p> With these steps, the Ruby-on-Rails `store-frontend` service is instrumented for APM and Log management with Datadog. <p> Let's restart the docker deployment to apply these changes.
 
 9. Click `docker-compose up -d`{{execute}}. <p> ![restarted-agent-frontend](instrumentapp2/assets/restarted-agent-frontend.png)
 
