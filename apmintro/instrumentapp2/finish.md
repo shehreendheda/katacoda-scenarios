@@ -1,3 +1,3 @@
-Congratulations! You've gone through the instrumentation of the Storedog app.
+Congratulations! You've instrumentated of the Storedog app for APM with Datadog.
 
-To learn about using the various features of APM such as the Service Map, Service Pages, and App Analytics, click **Next Module** to continue with the course.
+To continute, click **Next Module**.
