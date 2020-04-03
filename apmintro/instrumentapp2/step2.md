@@ -1,6 +1,6 @@
 For APM in Datadog, you need to enable trace collection by the Datadog agent. To use the added feature of correlating trace and log data, you will also need to enable log collection. 
 
-1.  Click `docker-compose.yml`{{open}}.
+1. Click `docker-compose.yml`{{open}}.
 
 2. Under **services** (**Line 2**), view the details for the **agent** (**Line 3**). <p> Let's add the code for enabling trace and log collection.
 
