@@ -18,11 +18,11 @@
         "text": "step3.md"
       },
       {
-        "title": "Instrumenting Python-Flask App Services",
+        "title": "Viewing Incoming Trace Data",
         "text": "step4.md"
       },
       {
-        "title": "Viewing Incoming Trace Data",
+        "title": "Instrumenting Python-Flask App Services",
         "text": "step5.md"
       }
     ],
