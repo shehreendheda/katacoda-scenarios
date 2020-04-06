@@ -20,7 +20,7 @@ kubectl apply -f datadog/datadog-agent.yaml
 
 NPODS=$(kubectl get pods --field-selector=status.phase=Running | grep -v NAME | wc -l)
 
-while [ "$NPODS" != "6" ]; do
+while [ "$NPODS" != "5" ]; do
   sleep 0.3
   NPODS=$(kubectl get pods --field-selector=status.phase=Running | grep -v NAME | wc -l)
 done
