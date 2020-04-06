@@ -54,7 +54,6 @@
   },
   "environment": {
     "uilayout": "editor-terminal",
-    "uieditorpath": "/root/datadog",
     "showdashboard": true,
     "dashboards": [
       {
