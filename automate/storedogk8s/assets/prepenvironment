@@ -26,6 +26,7 @@ else
 fi
 printf "Finalizing app deployment.\n\n"
 until $(curl -o /dev/null -s -I -f http://0.0.0.0:30001); do
+  printf "."
   sleep 1
 done
 printf 'OK, the training environment is installed and ready to go.\n\n'
