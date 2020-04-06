@@ -2,7 +2,7 @@ touch status.txt
 echo ""> /root/status.txt
 wall -n "Creating ecommerce deployment."
 
-git clone https://github.com/arapulido/autoscaling-workshop-files.git k8s-manifests
+git clone https://github.com/arapulido/autoscaling-workshop-files.git /root/datadog/k8s-manifests
 
 NNODES=$(kubectl get nodes | grep Ready | wc -l)
 
@@ -13,8 +13,8 @@ done
 
 echo "Applying metrics server and commerce app"
 
-kubectl apply -f k8s-manifests/metrics-server/
-#kubectl apply -f k8s-manifests/ecommerce-app/
+kubectl apply -f /datadog/k8s-manifests/metrics-server/
+kubectl apply -f /datadog/k8s-manifests/ecommerce-app/
 kubectl apply -f datadog/serviceaccount.yaml
 #kubectl apply -f datadog/datadog-agent.yaml
 
