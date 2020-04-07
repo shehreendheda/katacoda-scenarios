@@ -3,6 +3,10 @@ echo ""> /root/status.txt
 wall -n "Creating ecommerce deployment."
 
 git clone https://github.com/arapulido/autoscaling-workshop-files.git /root/k8s-manifests
+git clone https://github.com/shehreendheda/ecommerce-observability /root/datadog/app-files
+cd /root/datadog/app-files
+git checkout no-apm-instrumentation
+cd /root
 
 NNODES=$(kubectl get nodes | grep Ready | wc -l)
 
