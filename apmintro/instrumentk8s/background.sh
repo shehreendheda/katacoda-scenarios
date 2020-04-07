@@ -6,9 +6,9 @@ git clone https://github.com/arapulido/autoscaling-workshop-files.git /root/data
 git clone https://github.com/shehreendheda/ecommerce-observability /root/app-files
 git checkout no-apm-instrumentation
 mkdir /root/datadog/app-files
-cp /root/app-files/store-frontend /root/datadog/app-files/store-frontend
-cp /root/app-files/ads-service /root/datadog/app-files/ads-service
-cp /root/app-files/discounts-service /root/datadog/app-files/discounts-service
+cp /root/app-files/store-frontend /root/datadog/app-files/store-frontend -r
+cp /root/app-files/ads-service /root/datadog/app-files/ads-service -r
+cp /root/app-files/discounts-service /root/datadog/app-files/discounts-service -r
 cd /root
 
 NNODES=$(kubectl get nodes | grep Ready | wc -l)
