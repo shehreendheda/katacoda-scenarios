@@ -34,6 +34,10 @@
         "target": "/root/datadog/"
       },
       {
+        "file": "datadog-agent-uninstrumented.yaml",
+        "target": "/root/datadog/"
+      },
+      {
         "file": "serviceaccount.yaml",
         "target": "/root/datadog/"
       },
