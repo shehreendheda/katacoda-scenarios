@@ -1,0 +1,1 @@
+In the terminal on the right, the Storedog app is being deployed with Kubernetes.  
