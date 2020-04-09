@@ -20,6 +20,4 @@ Now that the Datadog Agent is instrumented, let's start the Agent and explore th
 
 10. Repeat steps 7-9 for the discounts service and advertisements service.
 
-As you can see, the agent and store-frontend service were successfully instrumented for APM and log collection in Datadog. 
-
-Now, let's instrument the Python-Flask services of the app.
+As you can see, using the steps outlined in this activity, the Storedog app was successfully instrumented for APM and related log collection in Datadog. 
