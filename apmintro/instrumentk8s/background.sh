@@ -23,11 +23,11 @@ echo "Applying metrics server and commerce app"
 kubectl apply -f datadog/k8s-manifests/metrics-server/
 kubectl apply -f datadog/k8s-manifests/ecommerce-app/
 kubectl apply -f datadog/serviceaccount.yaml
-kubectl apply -f datadog/datadog-agent.yaml
+
 
 NPODS=$(kubectl get pods --field-selector=status.phase=Running | grep -v NAME | wc -l)
 
-while [ "$NPODS" != "5" ]; do
+while [ "$NPODS" != "4" ]; do
   sleep 0.3
   NPODS=$(kubectl get pods --field-selector=status.phase=Running | grep -v NAME | wc -l)
 done
