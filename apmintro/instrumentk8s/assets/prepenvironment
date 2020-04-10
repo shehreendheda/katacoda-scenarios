@@ -25,9 +25,7 @@ else
   printf "\n\nWelcome back to the training lab.\n\n"
 fi
 printf "Finalizing app deployment.\n\n"
-echo $host_name
-echo $sub_domain
-until $(curl -o /dev/null -s -I -f https://$sub_domain-30001-$host_name.environments.katacoda.com/); do
+until $(curl -o /dev/null -s -I -f https://${sub_domain}-30001-${host_name}.environments.katacoda.com/); do
   sleep 1
 done
 printf 'OK, the training environment is installed and ready to go.\n\n'
