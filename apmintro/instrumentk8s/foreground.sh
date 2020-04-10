@@ -7,6 +7,8 @@ sleep 0.3
 
 kubectl create secret generic datadog-secret --from-literal=api-key=$DD_API_KEY
 clear
-
-https://[[HOST_SUBDOMAIN]]-30001-[[KATACODA_HOST]].environments.katacoda.com/
+export host_name=[[KATACODA_HOST]]
+export sub_domain=[[HOST_SUBDOMAIN]]
+echo $host_name
+echo $sub_domain
 prepenvironment
