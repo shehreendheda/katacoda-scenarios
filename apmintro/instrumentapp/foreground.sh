@@ -8,5 +8,4 @@ cd /root/app-files
 clear
 docker-compose up -d
 clear
-https://[[HOST_SUBDOMAIN]]-30001-[[KATACODA_HOST]].environments.katacoda.com/
 prep-environment
