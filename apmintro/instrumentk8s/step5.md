@@ -2,7 +2,7 @@ Now that the Datadog Agent is instrumented, let's start the Agent and explore th
 
 1. Click `kubectl apply -f datadog/datadog-agent.yaml`{{execute}} to start the datadog agent.
 
-2. Click `kubectl get pods` to check if the datadog-agent pod is running. <p> If the agent pod is not running, wait a few seconds and click the command again. You may need to do this more than once until the pod is running.
+2. Click `kubectl get pods | grep -w agent`{{execute}} to check the status of the datadog-agent pod. <p> If the agent pod is `Running`, go to the next step. <p> If the agent pod is not `Running`, wait for 10 seconds and click the command again. You may need to do this more than once until the pod is running.
 
 3. In a new window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization.
 
