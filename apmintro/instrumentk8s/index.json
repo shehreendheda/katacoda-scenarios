@@ -52,6 +52,18 @@
       {
         "file": "serviceaccount.yaml",
         "target": "/root/datadog/"
+      },
+      {
+        "file": "datadog-agent-with-cluster-agent.yaml",
+        "target": "/root/datadog/"
+      },
+      {
+        "file": "datadog-cluster-agent.yaml",
+        "target": "/root/datadog/"
+      },
+      {
+        "file": "cluster-agent-external-metrics.yaml",
+        "target": "/root/datadog/"
       }
     ]
     }
