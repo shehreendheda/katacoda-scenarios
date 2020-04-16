@@ -20,7 +20,7 @@ done
 
 echo "Applying metrics server and commerce app"
 
-kubectl apply -f datadog/k8s-manifests/metrics-server/
+#kubectl apply -f datadog/k8s-manifests/metrics-server/
 kubectl apply -f datadog/k8s-manifests/ecommerce-app/
 kubectl apply -f datadog/serviceaccount.yaml
 
