@@ -22,6 +22,6 @@ While the monitors are gathering data, let's visit the storefrontend service and
 
 11. Click `store-frontend/app/views/spree/home/index.html.erb`{{open}} to open the second file. 
 
-12. Create a new line under **Line 22** and paste the line from step 8. Make sure to match the indent of the new line (**Line 23**) to that of the next line (**Line 24**).
+12. Create a new line under **Line 11** and paste the line from step 8. Make sure to match the indent of the new line (**Line 12**) to that of the next line (**Line 13**).
 
 Now that the error is fixed, you can restart the app to see if the error is removed. But, before you do, let's make sure that there are no other errors that need to be fixed.

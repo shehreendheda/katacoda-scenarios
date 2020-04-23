@@ -8,7 +8,7 @@ In the terminal on the right, the Storedog app is being instrumented for APM wit
 
 4. If you see no traces are listed, wait until you see traces listed. You can also refresh the page. 
 
-5. Expand **Services** under the **Facets** on the left to confirm that all the services shown below are reporting traces. <p> ![trace-services](instrumentapp/assets/trace-services.png)
+5. Expand **Services** under the **Facets** on the left to confirm that all the services shown below are reporting traces. <p> ![trace-services](fixapp/assets/trace-services.png)
 
 6. Navigate to <a href="https://app.datadoghq.com/apm/map?env=ruby-shop" target="_datadog">**APM** > **Service Map**</a> to visualize the services and their dependencies. <p> Hover over each service node to view the direction of the dependencies. <p> Click each node, then click **Inspect** to view the dependencies more clearly. <p> Notice that users primarily interact with the `storefrontend` service, which is to the left when you **Inspect** any service node linked to it.
 

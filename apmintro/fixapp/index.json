@@ -10,19 +10,19 @@
         "text": "step1.md"
       },
       {
-        "title": "Exploring the App Trace Data",
+        "title": "Creating APM Monitors",
         "text": "step2.md"
       },
       {
-        "title": "Creating APM Monitors",
+        "title": "Investigating Errors in Trace Data",
         "text": "step3.md"
       },
       {
-        "title": "Investigating App Performance",
+        "title": "Investigating Latency Issues in Trace Data",
         "text": "step4.md"
       },
       {
-        "title": "Fixing App Performance",
+        "title": "Analyzing Trace Data in App Analytics",
         "text": "step5.md"
       }
     ],
