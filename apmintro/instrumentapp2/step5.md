@@ -42,6 +42,6 @@ Follow steps 2-9 above for the advertisements service (**Line 61**). Note the fo
 
 With these steps, the Python-based services are also instrumented for APM with Datadog. The following **Services** should now in the listed under the **Facets** to the left of the Traces list. <p> The `postgres` service appears in the list because it is installed and automatically instrumented to support the discounts and advertisements services using **Line 12** in `discounts-service/requirements.txt`{{open}} and `ads-service/requirements.txt`{{open}}, respectively. You can view <a href="http://pypi.datadoghq.com/trace/docs/db_integrations.html#module-ddtrace.contrib.psycopg" target="_blank"> Datadog's Python tracing client</a> for more details. 
 
-![trace-services](instrumentapp/assets/trace-services.png)
+![trace-services](instrumentapp2/assets/trace-allservices.png)
 
 If you don't see the services listed above, you can click **Solution** below to check if you instrumented the `advertisements` service correctly.
