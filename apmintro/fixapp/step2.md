@@ -1,6 +1,6 @@
 In Datadog, you can create a variety of <a href="https://docs.datadoghq.com/monitors/" target="_datadog">**Monitors**</a> to track the health of your applications and to alert you if action is needed. 
 
-Let's create monitors to track the latency of the store-frontend, discounts, and advertisements service endpoints.
+Let's create monitors to track the latency of the store-frontend, discounts, and advertisements service endpoints. You will use these monitors later in the activity.
 
 #### Store-frontend service
 
