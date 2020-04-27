@@ -1,8 +1,8 @@
-While the monitors are gathering data, let's visit the store-frontend service and see how it is performing. 
+While the monitors are gathering data, let's see how the store-frontend service is performing. 
 
 1. Navigate to <a href="https://app.datadoghq.com/apm/services" target="_datadog">**APM** > **Services**</a>. <p> If there is a menu next to the **Search APM** field, make sure that `env:ruby-shop` is selected. A menu is available if you've monitored more than one environment in this Datadog organization.
 
-2. Select the **store-frontend** service and browse its details. <p> Notice that the monitor you created is linked to the service. <p> Also, notice that there is error data in the **Total Requests** and **Total Errors** graphs.
+2. Select the **store-frontend** service and browse its details. <p> Click the monitor banner to see that the monitor you created is linked to the service. <p> Notice that there is error data in the **Total Requests** and **Total Errors** graphs. *Looks like the store-frontend is not working correctly!*
 
 3. Click a red bar in the **Total Errors** graph. Select the **View Traces** option. <p> You will be redirected to the Traces page. The search field is populated with the related facets. 
 
@@ -16,10 +16,12 @@ While the monitors are gathering data, let's visit the store-frontend service an
 
 8. Click `store-frontend/app/views/spree/products/show.html.erb`{{open}} or manually open the file. 
 
-9. Scroll to the bottom of the file (**Line 48**). Paste the line from step 8.
+9. Scroll to the bottom of the file (**Line 48**). Paste the line from step 8. 
+```<br /><center><a href="<%= @ads['url'] %>"><img src="data:image/png;base64,<%= @ads['base64'] %>" /></a></center>```{{copy}}
 
 10. Click `store-frontend/app/views/spree/home/index.html.erb`{{open}} or manually open the file. 
 
-11. Create a new line under **Line 11** and paste the line from step 8. Make sure to match the indent of the new line (**Line 12**) to that of the next line (**Line 13**).
+11. Create a new line under **Line 11** and paste the line from step 8. 
+```<br /><center><a href="<%= @ads['url'] %>"><img src="data:image/png;base64,<%= @ads['base64'] %>" /></a></center>```{{copy}} Make sure to match the indent of the new line (**Line 12**) to that of the next line (**Line 13**).
 
-Now that the error is fixed, you can restart the app to see if the error is removed. But, before you do, let's make sure that there are no other errors that need to be fixed.
+Now that the error is fixed, you can restart the app to make sure the store-frontend is working correctly. But, before you do, let's make sure that there are no other errors that need to be fixed.

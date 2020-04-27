@@ -8,15 +8,15 @@ Let's create monitors to track the latency of the store-frontend, discounts, and
 
 2. Select **APM** from the list of monitor types.
 
-3. Under **Select monitor scope**, select **APM Metrics**. <p>Then, select `store-frontend` as the **Service**, and select `spree::homecontroller_index` as the **Resource**.
+3. Under **Select monitor scope**, select **APM Metrics**. <p>Then, select `store-frontend` as the **Service** and `spree::homecontroller_index` as the **Resource**.
 
 4. Under **Set alert conditions**, select **Threshold Alert**. <p>Set the alert as follows: **Alert when `Avg latency` is `above` `1` over the last `1 minute`**.
 
 5. Under **Say what's happening**, leave the message as is. 
 
-6. Under **Notify your team**, delete `@store-frontend`. You will notice that `@store-frontend` is automatically deleted from the message in step 5. In this case, we do not need to set any notifications.
+6. Under **Notify your team**, delete `@store-frontend`. You will notice that `@store-frontend` is automatically deleted from the message in step 5. In this case, we do not want to set any notifications.
 
-7. Click **Save** on the bottom right. <p> You will be redirected to the new monitor page. Browse the details. <p> Notice that **Tags** for the service and environment were automatically listed as tags for the monitor. These tags will correlate the monitor to the respective Service Page and Resource Page.
+7. Click **Save** on the bottom right. <p> You will be redirected to the new monitor page. Browse the details. <p> Notice that **Tags** for the resource, service, and environment were automatically assigned to the monitor. These tags will correlate the monitor to the respective Service Page and Resource Page.
 
 #### Discounts service
 
