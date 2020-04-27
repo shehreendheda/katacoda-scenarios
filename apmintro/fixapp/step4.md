@@ -18,20 +18,20 @@ The monitors you created should have gathered some data. Because the monitors ar
 
 9. Repeat steps 3 to 7 for the **advertisements-service**. <p> For step 6, click the **Get /ads** endpoint. This is the endpoint you created the monitor for. <p> Notice the **AVG LATENCY** for this endpoint is also about 2.5 seconds. *The **Get /ads** endpoint has the same latency as the **Get /discount** endpoint!* <p> There is something in the build for these endpoints that is causing a consistent latency. Let's check the applications files that define these endpoints to see what may be causing the issue. 
 
-9. Click `discounts-service/discounts.py`{{open}}.
+10. Click `discounts-service/discounts.py`{{open}}.
 
-10. Browse the file. Notice that two sleep commands (**Lines 27-28** and **Lines 41-42**) were left after testing. Delete these lines.
+11. Browse the file. Notice that two sleep commands (**Lines 27-28** and **Lines 41-42**) were left after testing. Delete these lines.
 
-11. Click `ads-service/ads.py`{{open}}.
+12. Click `ads-service/ads.py`{{open}}.
 
-12. Browse the file. Notice that two sleep commands (**Lines 41-42** and **Lines 55-56**) were left after testing. Delete these lines.
+13. Browse the file. Notice that two sleep commands (**Lines 41-42** and **Lines 55-56**) were left after testing. Delete these lines.
 
-13. Go back to the Service Map browser tab where you were inspecting the store-frontend.
+14. Go back to the Service Map browser tab where you were inspecting the store-frontend.
 
-14. Click the **store-frontend** node, then click **View service overview**. 
+15. Click the **store-frontend** node, then click **View service overview**. 
 
-15. Scroll to the **Endpoints** list and sort the list by **AVG LATENCY**. <p> Notice the `Spree::HomeController#index`, `Spree::ProductsController#show`, and `Spree::ProductsController#index` have latencies more than 2.5 seconds.
+16. Scroll to the **Endpoints** list and sort the list by **AVG LATENCY**. <p> Notice the `Spree::HomeController#index`, `Spree::ProductsController#show`, and `Spree::ProductsController#index` have latencies more than 2.5 seconds.
 
-16. For each endpoint listed in step 15, click the endpoint to view its page. <p> Scroll to the **Span Summary** and sort by **AVG DURATION**. <p> Scroll to the **Traces** list. Click any of the traces to view the details. <p> Notice from the **Span Summary** and **Traces** that the endpoint is dependent on the discounts and advertisements services. <p> For the `Spree::HomeController#index` endpoint, notice the monitor you created is in the alert status. (Note: To save time, you didn't create monitors for the other endpoints. You can also create monitors for the other two endpoints to see how they are affected by fixing the app.)
+17. For each endpoint listed in step 15, click the endpoint to view its page. <p> Scroll to the **Span Summary** and sort by **AVG DURATION**. <p> Scroll to the **Traces** list. Click any of the traces to view the details. <p> Notice from the **Span Summary** and **Traces** that the endpoint is dependent on the discounts and advertisements services. <p> For the `Spree::HomeController#index` endpoint, notice the monitor you created is in the alert status. (Note: To save time, you didn't create monitors for the other endpoints. You can also create monitors for the other two endpoints to see how they are affected by fixing the app.)
 
-Deleting the lines in step 10 and 12 that cause the 2.5 second latencies in the discounts and advertisements endpoints should also remove these latencies in the store-frontend endpoints.
+Deleting the lines in step 11 and 13 that cause the 2.5 second latencies in the discounts and advertisements endpoints should also remove these latencies in the store-frontend endpoints.
