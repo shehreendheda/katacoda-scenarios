@@ -1,16 +1,10 @@
-In the terminal on the right, the Storedog app is being deployed on Kubernetes. To deploy the app, the following yaml files are run. The yaml files for the  
+In the terminal on the right, the Storedog app is being deployed on Kubernetes. To deploy the app and monitor its performance using Datadog, several components need to be brought online in the Kubernetes environment. These components are being brought online using the following commands. 
 
-The metrics server is responsible for collecting resource metrics from kubelets and exposing them
+**Metrics Server** - The command `kubectl apply -f datadog/k8s-manifests/metrics-server/` brings the metrics server online using the files in the `k8s-manifests/metrics-server/` directory in the editor on the right. The metrics server is responsible for collecting resource metrics from kubelets and exposing them in Kubernetes Apiserver through the Kubernetes Metrics API. (You can learn more about the metrics server in the related <a href="https://github.com/kubernetes-sigs/metrics-server" target="_blank">Kubernetes</a> and <a href="https://github.com/kubernetes-sigs/metrics-server" target="_blank">Kubernetes</a> and <a href="https://github.com/kubernetes-sigs/metrics-server" target="_blank">Kubernetes</a> and <a href="https://docs.datadoghq.com/integrations/kube_metrics_server/#pagetitle" target="_blank">Datadog</a> documentation.)
 
+**Application** - The command `kubectl apply -f /root/datadog/k8s-manifests/ecommerce-app/`brings the ecommerce app online using the files in the `k8s-manifests/ecommerce-app/` directory. You'll go through these files in the later in the activity. 
 
-https://github.com/kubernetes-sigs/metrics-server 
-https://docs.datadoghq.com/integrations/kube_metrics_server/#pagetitle 
-https://github.com/DataDog/integrations-core/blob/master/kube_metrics_server/datadog_checks/kube_metrics_server/data/conf.yaml.example
-
-kubectl apply -f datadog/k8s-manifests/metrics-server/
-
-The command `kubectl apply -f /root/datadog/k8s-manifests/ecommerce-app/` is run to bring the ecommerce app online using the files in `k8s-manifests/ecommerce-app/`{{open}}. You'll go through these files in the later in the activity. 
-
-The command `kubectl apply -f /root/datadog/serviceaccount.yaml` is run to create a service account for the Datadog Agent and give it the right RBAC persmissions. Click `serviceaccount.yaml`{{open}} to browse the file.
+**Service Account** - The command `kubectl apply -f /root/datadog/serviceaccount.yaml` creates a service account for the Datadog Agent so that the container running the agent can communicate with the Kubernetes API. Click `serviceaccount.yaml`{{open}} to browse the file.
 
 
+Later in the activity, you will run the yaml file to deploy the Datadog Agent. For now, let's start with a quick overview of the files that are used to launch the deployment.
