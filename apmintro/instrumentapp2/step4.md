@@ -6,11 +6,11 @@ Let’s view the trace and log data being collected by Datadog from the app.
 
 3. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM > Traces** </a> in Datadog to view the list of traces that are coming in.
 
-4. In the list of **Facets** on the left, expand **Services** to view the services from the app that are injecting traces into Datadog. <p>![trace-frontendservices](instrumentapp2/assets/trace-frontendservices.png) <p> In addition to `store-frontend` service, you see three other services: <p> `store-frontend-cache` and `store-frontend-sqlite`, which are defined in **Line 3** in `store-frontend/config/initializers/datadog.rb`{{open}} for the `store-frontend` service. <p> `active-record`, which is installed and automatically instrumented to support the Ruby-on-Rails `store-frontend` service using **Line 7** in `store-frontend/config/application.rb`{{open}}. You can view the <a href="https://docs.datadoghq.com/tracing/setup/ruby/#active-record" target="_blank"> Tracing Ruby Application</a> for more details.
+4. In the list of **Facets** on the left, expand **Services** to view the services from the app that are injecting traces into Datadog. <p>![trace-frontendservices](instrumentapp2/assets/trace-frontendservices.png)
 
 5. Click on a trace for the `store-frontend` service to view the Flame Graph and Span List. <p> The color of each span is based on the associated service, listed on the right of the Flame Graph.
 
-6. Below the Flame Graph, click each tab to see the Tags, related Hosts, and related Logs. <p> Under **Logs(#)**, you can see the `trace_id:###` tag assigned by Datadog to the trace and the list of logs that are correlated to the trace via the `trace_id:###` tag. To learn more, view the <a href="https://docs.datadoghq.com/tracing/connect_logs_and_traces/" target="_blank">Connect Logs and Traces</a> documentation
+6. Below the Flame Graph, click each tab to see the Tags, related Hosts, and related Logs. <p> Under **Logs(#)**, you can see the `trace_id:###` tag assigned by Datadog to the trace and the list of logs that are correlated to the trace via the `trace_id:###` tag. Correlating traces with related logs allows you to see all details related to each trace so that you can quickly troubleshoot any issues. To learn more, view the <a href="https://docs.datadoghq.com/tracing/connect_logs_and_traces/" target="_blank">Connect Logs and Traces</a> documentation. 
  
 7. Click any of the logs. A new tab will open for the **Log Explorer** and the details for the log. <p> Notice the tag selected in the search field above the lists of logs is the `trace_id:###` for the specific trace.
 
