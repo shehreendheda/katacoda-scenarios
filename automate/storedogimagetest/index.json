@@ -33,6 +33,11 @@
           "file": "break-app",
           "target": "/usr/local/bin/",
           "chmod": "+x"
+        },
+        {
+          "file": "test.txt",
+          "target": "/root/app-files/",
+          "chmod": "+x"
         }
       ]
     }
