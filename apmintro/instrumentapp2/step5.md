@@ -23,7 +23,7 @@ The `discounts` and `advertisements` services have a Python-Flask framework, so 
 6. Copy/paste the following lines below the `volumes` list. <p> Note: Make sure `labels:` has the same indent as `volumes:`. 
 ```
     labels:
-      - com.datadoghq.ad.logs: '[{"source": "python", "service": "store-frontend"}]'
+      - com.datadoghq.ad.logs: '[{"source": "python", "service": "discounts-service"}]'
 ```{{copy}} <p> The **discounts** portion of the `docker-compose.yml` should now look like the screenshot below. <p> ![instrumented-discounts](instrumentapp2/assets/instrumented-discounts.png) <p> Let's restart the docker deployment to apply these changes.
 
 7. Click `docker-compose up -d`{{execute}}.
