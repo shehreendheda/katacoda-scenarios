@@ -46,9 +46,9 @@ command: ddtrace-run flask run --port=5002 --host=0.0.0.0</pre>
 3. Click **Copy to Editor** below to add labels to the logs. 
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# add ads log labels">
        labels:
-         - com.datadoghq.ad.logs: '[{"source": "python", "service": "advertisements-service"}]'</pre>
+         com.datadoghq.ad.logs: '[{"source": "python", "service": "advertisements-service"}]'</pre>
 
-The **advertisements** section of the `docker-compose.yml` should now look like the screenshot below. <p> ![instrumented-adverstisements](instrumentapp2/assets/instrumented-advertisements.png)
+4. Click `docker-compose up -d`{{execute}} to restart the docker deployment to apply these changes. <p> The **advertisements** section of the `docker-compose.yml` should now look like the screenshot below. <p> ![instrumented-adverstisements](instrumentapp2/assets/instrumented-advertisements.png)
 
 With these steps, the Python-based services are also instrumented for APM with Datadog. The following **Services** should now in the listed under the **Facets** to the left of the Traces list.
 
