@@ -6,10 +6,13 @@ services:
       - DD_API_KEY
       - DD_PROCESS_AGENT_ENABLED=true
       - DD_TAGS='env:ruby-shop'
+      # add agent env variables
+    # add agent trace port
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /proc/:/host/proc/:ro
       - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
+    # add agent log labels
   discounts:
     environment:
       - FLASK_APP=discounts.py
