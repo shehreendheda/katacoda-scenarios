@@ -45,7 +45,7 @@ command: ddtrace-run flask run --port=5002 --host=0.0.0.0</pre>
 
 3. Click **Copy to Editor** below to add labels to the logs. 
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# add ads log labels">
-    labels:
+       labels:
          - com.datadoghq.ad.logs: '[{"source": "python", "service": "advertisements-service"}]'</pre>
 
 The **advertisements** section of the `docker-compose.yml` should now look like the screenshot below. <p> ![instrumented-adverstisements](instrumentapp2/assets/instrumented-advertisements.png)
