@@ -23,8 +23,7 @@
       },
       {
         "title": "Instrumenting Python-Flask App Services",
-        "text": "step5.md",
-        "answer": "answer5.md"
+        "text": "step5.md"
       }
     ],
     "intro": {
