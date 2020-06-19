@@ -1,4 +1,16 @@
 
+
+
+<pre class="file" data-filename="test.txt">test2</pre>
+
+<pre class="file" data-filename="test.txt" data-target="prepend">test1</pre>
+
+<pre class="file" data-filename="test.txt" data-target="append">test3</pre>
+
+<pre class="file" data-filename="test.txt" data-target="insert" data-marker="test3">test4</pre>
+
+---
+
 `mkdir /app-files`{{execute}}
 
 `git clone https://github.com/burningion/ecommerce-observability /app-files`{{execute}}
