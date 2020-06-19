@@ -4,12 +4,11 @@ For APM in Datadog, you need to enable trace collection by the Datadog agent. To
 
 2. Under **services** (**Line 2**), view the details for the **agent** (**Line 3**). <p> Let's add the code for enabling trace and log collection.
 
-3. Under **Line 8**, add a line break and copy/paste the following to the list of environment variables. <p> Note: Make sure the new lines have the same indent as **Line 8**.
-```
+3. Click **Copy to Editor** in the block below to add the following to the list of environment variables for the agent. <p> `DD_APM_ENABLED=true` enables trace collection. (Note: This is enabled by default for Agent 6+.) <p> `DD_LOGS_ENABLED=true` enables log collection from the agent container. <p> `DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true` enable log collection from the all other containers. <p> To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/?tab=standard#optional-collection-agents" target="_blank">Tracing Docker Applications</a> and <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#one-step-install-to-collect-all-the-container-logs" target="_blank">Docker Log Collection</a> documentation.
+<pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# add agent env variables">
       - DD_APM_ENABLED=true
       - DD_LOGS_ENABLED=true
-      - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true
-```{{copy}} <p> `DD_APM_ENABLED=true` enables trace collection. (Note: This is enabled by default for Agent 6+.) <p> `DD_LOGS_ENABLED=true` enables log collection from the agent container. <p> `DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true` enable log collection from the all other containers. <p> To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/?tab=standard#optional-collection-agents" target="_blank">Tracing Docker Applications</a> and <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#one-step-install-to-collect-all-the-container-logs" target="_blank">Docker Log Collection</a> documentation.
+      - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true</pre> 
 
 4. Under the **environment** list, copy/paste the following lines. <p> Note: Make sure `ports:` has the same indent as `environments:`. 
 ```
