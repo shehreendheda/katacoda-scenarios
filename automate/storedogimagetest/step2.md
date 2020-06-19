@@ -39,7 +39,7 @@
 
 
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="command: flask run --port=5001 --host=0.0.0.0">
-    command: ddtrace-run flask run --port=5001 --host=0.0.0.0</pre>
+command: ddtrace-run flask run --port=5001 --host=0.0.0.0</pre>
 
 
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# add discounts log labels">
@@ -56,7 +56,7 @@
 
 
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="command: flask run --port=5002 --host=0.0.0.0">
-    command: ddtrace-run flask run --port=5002 --host=0.0.0.0</pre>
+command: ddtrace-run flask run --port=5002 --host=0.0.0.0</pre>
 
 
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# add ads log labels">
