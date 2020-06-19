@@ -3,8 +3,7 @@
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# add agent env variables">
       - DD_APM_ENABLED=true
       - DD_LOGS_ENABLED=true
-      - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true
-</pre>
+      - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true</pre>
 
 ---
 
