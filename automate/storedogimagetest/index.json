@@ -38,7 +38,12 @@
           "file": "test.txt",
           "target": "/root/",
           "chmod": "+x"
-        }
+        },
+        {
+          "file": "docker-compose.yml",
+          "target": "/root/",
+          "chmod": "+x"
+        },
       ]
     }
   },
