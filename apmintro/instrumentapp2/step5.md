@@ -6,7 +6,7 @@ The `discounts` and `advertisements` services have a Python-Flask framework, so 
 
 2. Click `docker-compose.yml`{{open}}. 
 
-3. Under **services** (**Line 2**), view the details for the **discounts** (**Line 20**). <p> Let's add the code for enabling trace and log collection.
+3. Under **services** (**Line 2**), view the details for **discounts**. <p> Let's add the code for enabling trace and log collection.
 
 4. Click **Copy to Editor** below to add the following to the list of environment variables for the service.
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# add discounts env variables">
@@ -14,7 +14,7 @@ The `discounts` and `advertisements` services have a Python-Flask framework, so 
          - DD_LOGS_INJECTION=true
          - DD_ANALYTICS_ENABLED=true</pre>
 
-5. Click **Copy to Editor** below to add the command that brings up the Flask server (**Line 31**) with the `ddtrace-run` wrapper. <p> `ddtrace-run` automates instrumentation for the service. You can view more details for automatic and manual instrumentation using `ddtrace` in the <a href="http://pypi.datadoghq.com/trace/docs/web_integrations.html#flask" target="_blank">Datadog Python Trace and Profile Client</a> documentation.
+5. Click **Copy to Editor** below to add the `ddtrace-run` wrapper to the command that brings up the Flask server. <p> `ddtrace-run` automates instrumentation of the service for Datadog APM. You can view more details for automatic and manual instrumentation using `ddtrace` in the <a href="http://pypi.datadoghq.com/trace/docs/web_integrations.html#flask" target="_blank">Datadog Python Trace and Profile Client</a> documentation.
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="command: flask run --port=5001 --host=0.0.0.0">
 command: ddtrace-run flask run --port=5001 --host=0.0.0.0</pre>  
 
@@ -39,7 +39,7 @@ Because the advertisements service also has a Python-Flask framework, the advert
          - DD_LOGS_INJECTION=true
          - DD_ANALYTICS_ENABLED=true</pre>
 
-2. Click **Copy to Editor** below to add the command that brings up the Flask server (**Line 31**) with the `ddtrace-run` wrapper. Note that the port for this service is 5002. 
+2. Click **Copy to Editor** below to add the `ddtrace-run` wrapper to the command that brings up the Flask server. Note that the port for this service is 5002. 
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="command: flask run --port=5002 --host=0.0.0.0">
 command: ddtrace-run flask run --port=5002 --host=0.0.0.0</pre>  
 
