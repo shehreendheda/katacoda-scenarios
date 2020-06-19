@@ -16,14 +16,14 @@ The store-frontend service has been instrumented for you, but you will update th
 
 7. Click **Copy to Editor** below to add the following to the list of environment variables for the service. These environment variables are required for each service in the app that will monitored. <p> `DATADOG_TRACE_AGENT_HOSTNAME=agent` defines the address of the Agent that the tracer submits to (similar to **Line 6** in `store-frontend/config/initializers/datadog.rb`{{open}}). <p> `DD_LOGS_INJECTION=true` enables automatic injection of trace IDs into the logs from the supported logging libraries to correlate traces and logs. <p> `DD_ANALYTICS_ENABLED=true` enables App Analytics for the traces.
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# add frontend env variables">
-      - DATADOG_TRACE_AGENT_HOSTNAME=agent
-      - DD_LOGS_INJECTION=true
-      - DD_ANALYTICS_ENABLED=true</pre> 
+         - DATADOG_TRACE_AGENT_HOSTNAME=agent
+         - DD_LOGS_INJECTION=true
+         - DD_ANALYTICS_ENABLED=true</pre> 
 
 8. Click **Copy to Editor** below to add labels to the logs.
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# add frontend log labels">
-    labels:
-      - com.datadoghq.ad.logs: '[{"source": "ruby", "service": "store-frontend"}]'</pre> 
+       labels:
+         - com.datadoghq.ad.logs: '[{"source": "ruby", "service": "store-frontend"}]'</pre> 
 
 With these steps, the Ruby-on-Rails `store-frontend` service is instrumented for APM and Log management with Datadog. The **frontend** section of the `docker-compose.yml` should now look like  the screenshot below. <p> ![instrumented-frontend](instrumentapp2/assets/instrumented-frontend.png) 
 
