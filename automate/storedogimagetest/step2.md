@@ -1,10 +1,12 @@
 
 **Agent**
 
-1. Click the follow to add the environment variables. <p> <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# add agent env variables">
+1. Click the follow to add the environment variables. 
+<p><pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# add agent env variables">
       - DD_APM_ENABLED=true
       - DD_LOGS_ENABLED=true
-      - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true</pre> <p> Descriptions...
+      - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true</pre>
+<p>Descriptions...
 2. here is some text...
 
 
