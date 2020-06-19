@@ -21,7 +21,7 @@ command: ddtrace-run flask run --port=5001 --host=0.0.0.0</pre>
 6. Click **Copy to Editor** below to add labels to the logs. 
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# add discounts log labels">
        labels:
-         - com.datadoghq.ad.logs: '[{"source": "python", "service": "discounts-service"}]'</pre>
+         com.datadoghq.ad.logs: '[{"source": "python", "service": "discounts-service"}]'</pre>
 
 7. Click `docker-compose up -d`{{execute}} to restart the docker deployment to apply these changes. <p> The **discounts** section of the `docker-compose.yml` should now look like the screenshot below. <p> ![instrumented-discounts](instrumentapp2/assets/instrumented-discounts.png)
 

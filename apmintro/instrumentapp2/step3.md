@@ -23,7 +23,7 @@ The store-frontend service has been instrumented for you, but you will update th
 8. Click **Copy to Editor** below to add labels to the logs.
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# add frontend log labels">
        labels:
-         - com.datadoghq.ad.logs: '[{"source": "ruby", "service": "store-frontend"}]'</pre> 
+         com.datadoghq.ad.logs: '[{"source": "ruby", "service": "store-frontend"}]'</pre> 
 
 With these steps, the Ruby-on-Rails `store-frontend` service is instrumented for APM and Log management with Datadog. The **frontend** section of the `docker-compose.yml` should now look like  the screenshot below. <p> ![instrumented-frontend](instrumentapp2/assets/instrumented-frontend.png) 
 

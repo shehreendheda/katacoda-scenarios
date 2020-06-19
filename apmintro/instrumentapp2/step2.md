@@ -18,7 +18,7 @@ For APM in Datadog, you need to enable trace collection by the Datadog agent. To
 5. Click **Copy to Editor** below to add labels to the logs. <p> The labels allow Datadog to identify the log source for the container and to automatically install corresponding integrations, if available. This **Autodiscovery** feature speeds up the setup process for log collection. To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#activate-log-integrations" target="_blank">Docker Log Collection</a> documentation. 
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# add agent log labels">
        labels:
-         - com.datadoghq.ad.logs: '[{"source": "datadog-agent", "service": "agent"}]'</pre>
+         com.datadoghq.ad.logs: '[{"source": "datadog-agent", "service": "agent"}]'</pre>
 
 The **agent** section of the `docker-compose.yml` should now look like the screenshot below. <p> ![instrumented-agent](instrumentapp2/assets/instrumented-agent.png)
 
