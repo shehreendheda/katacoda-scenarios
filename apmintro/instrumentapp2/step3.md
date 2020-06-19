@@ -14,7 +14,7 @@ The store-frontend service has been instrumented for you, but you will update th
 
 6. Under **services** (**Line 2**), view the details for the **frontend** (**Line 36**). <p> Let's add the code for enabling trace and log collection.
 
-7. Click **Copy to Editor** in the block below to add the following to the list of environment variables for the frontend. These environment variables are required for each service in the app that will monitored. <p> `DATADOG_TRACE_AGENT_HOSTNAME=agent` defines the address of the Agent that the tracer submits to (similar to **Line 6** in `store-frontend/config/initializers/datadog.rb`{{open}}). <p> `DD_LOGS_INJECTION=true` enables automatic injection of trace IDs into the logs from the supported logging libraries to correlate traces and logs. <p> `DD_ANALYTICS_ENABLED=true` enables App Analytics for the traces.
+7. Click **Copy to Editor** below to add the following to the list of environment variables for the service. These environment variables are required for each service in the app that will monitored. <p> `DATADOG_TRACE_AGENT_HOSTNAME=agent` defines the address of the Agent that the tracer submits to (similar to **Line 6** in `store-frontend/config/initializers/datadog.rb`{{open}}). <p> `DD_LOGS_INJECTION=true` enables automatic injection of trace IDs into the logs from the supported logging libraries to correlate traces and logs. <p> `DD_ANALYTICS_ENABLED=true` enables App Analytics for the traces.
 <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# add frontend env variables">
       - DATADOG_TRACE_AGENT_HOSTNAME=agent
       - DD_LOGS_INJECTION=true
