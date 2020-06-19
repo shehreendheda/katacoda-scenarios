@@ -41,7 +41,7 @@
         },
         {
           "file": "docker-compose.yml",
-          "target": "/root/",
+          "target": "/root/test/",
           "chmod": "+x"
         }
       ]
