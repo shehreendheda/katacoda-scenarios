@@ -1,6 +1,6 @@
 While the monitors are gathering data, let's see how the store-frontend service is performing. 
 
-1. Navigate to <a href="https://app.datadoghq.com/apm/services" target="_datadog">**APM** > **Services**</a>. <p> If there is a menu next to the **Search APM** field, make sure that `env:ruby-shop` is selected. A menu is available if you've monitored more than one environment in this Datadog organization.
+1. Navigate to <a href="https://app.datadoghq.com/apm/services" target="_datadog">**APM** > **Services**</a>. <p> If there is a menu next to the **Search APM** field, make sure that `env:ruby-shop` is selected. A menu is available if you've monitored more than one application environment in this Datadog organization.
 
 2. Select the **store-frontend** service and browse its details. <p> Click the monitor banner to see that the monitor you created is linked to the service. <p> Notice that there is error data in the **Total Requests** and **Total Errors** graphs. *Looks like the store-frontend is not working correctly!*
 
