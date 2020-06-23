@@ -33,6 +33,6 @@ Let's create monitors to track the latency of specific store-frontend, discounts
 
 #### Advertisements service
 
-1. Repeat the steps above, but for the advertisements service.
+1. Repeat the steps above for the advertisements service.
 
 When you view the monitors in <a href="https://app.datadoghq.com/monitors#/create" target="_datadog">**Monitor** > **Manage Monitors**</a>, you'll notice that their status is `No Data`. Because the monitors are new, it may take a few minutes for the status of the monitors to update. 
