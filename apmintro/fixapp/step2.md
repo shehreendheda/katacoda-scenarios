@@ -2,7 +2,7 @@ In Datadog, you can create a variety of <a href="https://docs.datadoghq.com/moni
 
 Let's create monitors to track the latency of specific store-frontend, discounts, and advertisements service resources. You will use these monitors later in the activity.
 
-#### Store-frontend service
+#### Store-frontend Service
 
 1. In the <a href="https://app.datadoghq.com/apm/map?env=ruby-shop" target="_datadog">**Service Map**</a>, click the **store-frontend** node and select **View service overview**.
 
@@ -21,7 +21,7 @@ Let's create monitors to track the latency of specific store-frontend, discounts
 8. Click **Save** on the bottom right. <p> You will be redirected to the new monitor page. Browse the details. <p> Notice that **Tags** for the resource, service, and environment were automatically assigned to the monitor. These tags will correlate the monitor to the respective Service Page and Resource Page.
 
 
-#### Discounts service
+#### Discounts Service
 
 1. Continuing from step 8 above, click **New Monitor +** in the top right.
 
@@ -31,8 +31,8 @@ Let's create monitors to track the latency of specific store-frontend, discounts
 
 4. Repeat steps 5 - 8 above, but with the following change. Delete `@discounts-service` in step 7.
 
-#### Advertisements service
+#### Advertisements Service
 
-1. Repeat the steps above for the advertisements service.
+1. Repeat the steps you completed for the discounts service monitor. <p>In step 3, select `advertisements-service`. <p>In step 4, delete `@advertisements-service`.
 
 When you view the monitors in <a href="https://app.datadoghq.com/monitors#/create" target="_datadog">**Monitor** > **Manage Monitors**</a>, you'll notice that their status is `No Data`. Because the monitors are new, it may take a few minutes for the status of the monitors to update. 
