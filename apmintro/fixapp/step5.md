@@ -17,3 +17,5 @@ Let's restart the fixed app and check the app performance.
 8. Navigate to <a href="https://app.datadoghq.com/apm/map" target="_datadog">**APM** > **Service Map**</a>. <p> The outline of the store-frontend, discounts-service, and advertisements-service nodes are now green, meaning the monitor for each service is in the `OK` status.
 
 With Datadog APM, you were able to monitor the performance of services and endpoints in the application, allowing you to investigate and diagnose issues that were affecting the app's performance.
+
+`grademe`{{execute}}
