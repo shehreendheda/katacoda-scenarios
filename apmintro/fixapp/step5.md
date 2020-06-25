@@ -18,4 +18,5 @@ Let's restart the fixed app and check the app performance.
 
 With Datadog APM, you were able to monitor the performance of services and endpoints in the application, allowing you to investigate and diagnose issues that were affecting the app's performance.
 
-`grademe`{{execute}}
+### Assessment
+Click `grademe`{{execute}} to receive a grade for this activity.
