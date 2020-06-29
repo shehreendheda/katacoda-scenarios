@@ -27,12 +27,12 @@ Let's create monitors to track the latency of specific store-frontend, discounts
 
 2. Select **APM** from the list of monitor types.
 
-3. Under **Select monitor scope**, select **APM Metrics**. <p>Then, select `discounts-service` as the **Service**. <p> Do not select a resource.
+3. Under **Select monitor scope**, select **APM Metrics**. <p>Then, select `discounts-service` as the **Service** and `get_/discount` as the **Resource**.
 
 4. Repeat steps 5 - 8 above, but with the following change. Delete `@discounts-service` in step 7.
 
 #### Advertisements Service
 
-1. Repeat the steps you completed for the discounts service monitor. <p>In step 3, select `advertisements-service`. <p>In step 4, delete `@advertisements-service`.
+1. Repeat the steps you completed for the discounts service monitor. <p>In step 3, select `advertisements-service` for the **Service** and `get_/ads` for the **Resource**. <p> In step 4, delete `@advertisements-service`.
 
 When you view the monitors in <a href="https://app.datadoghq.com/monitors#/create" target="_datadog">**Monitor** > **Manage Monitors**</a>, you'll notice that their status is `No Data`. Because the monitors are new, it may take a few minutes for the status of the monitors to update. 
