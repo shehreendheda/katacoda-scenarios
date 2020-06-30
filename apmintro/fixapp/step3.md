@@ -8,20 +8,20 @@ While the monitors are gathering data, let's see how the store-frontend service 
 
 4. Click any trace to view its details. <p> Notice the spans in the Flame Graph that have error flags.
 
-5. Below the Flame Graph, click the **Errors (#)** tab. <p> Browse the details for the errors titled `ActionView::Template::Error: undefined method [] for nil:NilClass`. <p> The first line in the details indicates `/spree/sandbox/app/views/spree/layouts/spree_application.html.erb:14`. The error is originating from line 14 of the spree_applications.html.erb file for the store-frontend service. <p> Let's fix the error.
+5. Below the Flame Graph, click the **Errors (#)** tab. <p> Browse the details for the errors titled `ActionView::Template::Error: undefined method [] for nil:NilClass`. <p> The first line in the details indicates `/spree/store-frontend/app/views/spree/layouts/spree_application.html.erb:24`. The error is originating from line 24 of the spree_applications.html.erb file for the store-frontend service. <p> Let's fix the error.
 
-6. Click `store-frontend/app/views/spree/layouts/spree_application.html.erb`{{open}} or manually open the file in the editor on the right, and locate **Line 14**.
+6. Click `store-frontend-broken-instrumented/store-frontend/app/views/spree/layouts/spree_application.html.erb`{{open}} or manually open the file in the editor on the right. <p> Browsing the file, you see that locate **Line 24**.
 
 7. Copy and delete (or cut) the text `<br /><center><a href="<%= @ads['url'] %>"><img src="data:image/png;base64,<%= @ads['base64'] %>" /></a></center>` from the line. <p> This line for banner ads should be in two other files for the store-frontend.
 
-8. Click `store-frontend/app/views/spree/products/show.html.erb`{{open}} or manually open the file. 
+8. Click `store-frontend-broken-instrumented/store-frontend/app/views/spree/products/show.html.erb`{{open}} or manually open the file. 
 
-9. Scroll to the bottom of the file (**Line 48**). Paste the line from step 8. 
+9. Scroll to the bottom of the file (**Line 48**). Paste the line from step 7. 
 ```<br /><center><a href="<%= @ads['url'] %>"><img src="data:image/png;base64,<%= @ads['base64'] %>" /></a></center>```{{copy}}
 
-10. Click `store-frontend/app/views/spree/home/index.html.erb`{{open}} or manually open the file. 
+10. Click `store-frontend-broken-instrumented/store-frontend/app/views/spree/home/index.html.erb`{{open}} or manually open the file. 
 
-11. Create a new line under **Line 11** and paste the line from step 8. 
+11. Create a new line under **Line 11** and paste the line from step 7. 
 ```<br /><center><a href="<%= @ads['url'] %>"><img src="data:image/png;base64,<%= @ads['base64'] %>" /></a></center>```{{copy}} Make sure to match the indent of the new line (**Line 12**) to that of the next line (**Line 13**).
 
 Now that the error is fixed, you can restart the app to make sure the store-frontend is working correctly. But, before you do, let's make sure that there are no other errors that need to be fixed.
