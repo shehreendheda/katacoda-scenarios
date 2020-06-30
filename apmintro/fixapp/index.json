@@ -14,16 +14,20 @@
         "text": "step2.md"
       },
       {
-        "title": "Investigating Errors in Trace Data",
+        "title": "Investigating Request Errors",
         "text": "step3.md"
       },
       {
-        "title": "Investigating Latency Issues in Trace Data",
+        "title": "Investigating Inefficient Database Queries",
         "text": "step4.md"
       },
       {
-        "title": "Analyzing Trace Data in App Analytics",
+        "title": "Investigating Latency Issues",
         "text": "step5.md"
+      },
+      {
+        "title": "Analyzing Trace Data in App Analytics",
+        "text": "step6.md"
       }
     ],
     "intro": {
