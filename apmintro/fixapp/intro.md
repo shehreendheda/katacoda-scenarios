@@ -3,7 +3,7 @@ In this activity, you'll continue to work with the fictional ecommerce app, Stor
 1. Preparing the Environment
 2. Creating APM Monitors
 3. Investigating Request Errors
-4. Investigating Latency Issuess
+4. Investigating Latency Issues
 5. Analyzing Trace Data in App Analytics
 6. Investigating Inefficient Database Queries
 
