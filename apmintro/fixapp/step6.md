@@ -1,22 +1,27 @@
-Let's restart the fixed app and check the app performance.
+Inefficient database querying can affect service performance. N+1 queries are a common example in which the database is queried multiple times to retrieve data that can be retrieved with just one database query. 
 
-1. Click `docker-compose up -d`{{execute}} to restart the app with the updated changes. Note the time that you run this command.
+In the Storedog app, the discount service is making N+1 queries to the postgres database. Let's identify the 
 
-2. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> and wait for new traces to start coming in.
+1. Navigate to <a href="https://app.datadoghq.com/apm/resource/store-frontend/rack.request/69d105fa043dba7f?end=1593549125250&env=ruby-shop&index=apm-search&paused=false&start=1593545525250&query=env%3Aruby-shop%20service%3Astore-frontend%20operation_name%3Arack.request%20resource_name%3A%22Spree%3A%3AHomeController%23index%22" target="_datadog">**APM** > **Services** > **store-frontend** > **Spree::HomeController#index**</a>.
 
-3. Navigate to <a href="https://app.datadoghq.com/apm/app-analytics/analytics" target="_datadog">**APM** > **App Analytics**</a>. Make sure that the Graph icon is selected on the left of the search field.
+2. In **Span Summary**, click the **AVG SPANS/TRACE** column header to sort the column in descending order. <p> Notice that the majority of traces have > 200 spans for types of queries to the postgres service. 
 
-4. In the graph metrics editor below the search field, select `Resource` for **group by**.
+3. In **Traces**, click any span. 
 
-5. In the **Facets** on the left, select `Error` under **Status**. `ERROR` appears in the search field as a filter. <p> Notice that the resources/endpoints that had the `ActionView::Template::Error: undefined method [] for nil:NilClass` error are the only resources in the graph. <p> Also, notice that there are no more errors since you restarted the app.
+4. In the **Flame Graph**, hover over the spans below the end of **discounts.status */discounts*** span and scroll to zoom in on the spans. <p> Notice that there are numerous spans of the two queries you saw listed in the Span Summary in step 2 above. <p> Let's replace the N+1 queries with one query that retrieves the same data.
 
-6. Delete `ERROR` from the search field. 
+5. Click `discounts-service/discounts.py`{{open}}.
 
-7. In the graph metrics editor, change `*` to `Duration`. (**Count** will automatically change to **Measure**.) <p> Notice the drop in durations for certain resources after you restarted the app. <p> Hover over each name in the legend below the graph to see which resources had improved performance after fixing the discounts and advertisements services.
+6. Update **line 29** based on the note in lines 27-28. <p> **Line 29** should now be `discounts = Discount.query.options(joinedload('*')).all()`. <p> Let's restart the app to apply the change.
 
-8. Navigate to <a href="https://app.datadoghq.com/apm/map" target="_datadog">**APM** > **Service Map**</a>. <p> The outline of the store-frontend, discounts-service, and advertisements-service nodes are now green, meaning the monitor for each service is in the `OK` status.
+7. Click `docker-compose -f docker-compose-broken-instrumented.yml up -d`{{execute}}.
 
-With Datadog APM, you were able to monitor the performance of services and endpoints in the application, allowing you to investigate and diagnose issues that were affecting the app's performance.
+8. In the Traces list in <a href="https://app.datadoghq.com/apm/resource/store-frontend/rack.request/69d105fa043dba7f?end=1593549125250&env=ruby-shop&index=apm-search&paused=false&start=1593545525250&query=env%3Aruby-shop%20service%3Astore-frontend%20operation_name%3Arack.request%20resource_name%3A%22Spree%3A%3AHomeController%23index%22" target="_datadog">**APM** > **Services** > **store-frontend** > **Spree::HomeController#index**</a>, wait to till you see new traces coming in.
+
+9. Click a new trace and zoom in on the span below the **discounts.status */discounts***. Notice that this is only one span now.
+
+With the variety of features in Datadog APM, you can investigate and diagnose issues that affect performance of services and endpoints in your applications.
+
 
 ### Assessment
 Click `grademe`{{execute}} to receive a grade for this activity.
