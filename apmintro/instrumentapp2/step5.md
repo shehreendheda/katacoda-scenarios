@@ -1,8 +1,8 @@
-The `discounts` and `advertisements` services have a Python-Flask framework, so the services are instrumented using the Python tracing library `dd-trace`. First, the `dd-trace` library is added to the list of required libraries, and then, the docker-compose.yml is updated for trace injection, log injection, and App Analytics.
+The `discounts` and `advertisements` services have a Python-Flask framework, so the services are instrumented using the Python tracing library `ddtrace`. First, the `ddtrace` library is added to the list of required libraries, and then, the docker-compose.yml is updated for trace injection, log injection, and App Analytics.
 
 #### Discounts Service
 
-1. Click `discounts-service/requirements.txt`{{open}} to view the list of required libraries that are installed for the service. The `dd-trace` library (**Line 4**) has already been included.
+1. Click `discounts-service/requirements.txt`{{open}} to view the list of required libraries that are installed for the service. The `ddtrace` library (**Line 4**) has already been included.
 
 2. Click `docker-compose-files/docker-compose-broken-no-apm-instrumentation.yml`{{open}}. 
 
@@ -31,7 +31,7 @@ command: ddtrace-run flask run --port=5001 --host=0.0.0.0</pre>
 
 #### Advertisements Service
 
-Because the advertisements service also has a Python-Flask framework, the advertisements service has the same instrumentation as the discounts service. The dd-trace library has already been installed for you for this service (**Line 4** in `ads-service/requirements.txt`{{open}}).
+Because the advertisements service also has a Python-Flask framework, the advertisements service has the same instrumentation as the discounts service. The ddtrace library has already been installed for you for this service (**Line 4** in `ads-service/requirements.txt`{{open}}).
 
 1. Click `docker-compose-files/docker-compose-broken-no-apm-instrumentation.yml`{{open}}. 
 
