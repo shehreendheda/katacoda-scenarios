@@ -15,7 +15,7 @@ The `discounts` and `advertisements` services have a Python-Flask framework, so 
          - DD_ANALYTICS_ENABLED=true
 ```{{copy}}
 
-5. Add the `ddtrace-run` wrapper to the command that brings the Flask server online. Locate the line `command: flask run --port=5001 --host=0.0.0.0"`. Update the command to `command: ddtrace-run flask run --port=5001 --host=0.0.0.0`. <p> `ddtrace-run` automates instrumentation of the service for Datadog APM. You can view more details for automatic and manual instrumentation using `ddtrace` in the <a href="http://pypi.datadoghq.com/trace/docs/web_integrations.html#flask" target="_blank">Datadog Python Trace and Profile Client</a> documentation.
+5. Add the `ddtrace-run` wrapper to the command that brings the Flask server online. Locate the line `command: flask run --port=5001 --host=0.0.0.0"` and update to `command: ddtrace-run flask run --port=5001 --host=0.0.0.0`. <p> `ddtrace-run` automates instrumentation of the service for Datadog APM. You can view more details for automatic and manual instrumentation using `ddtrace` in the <a href="http://pypi.datadoghq.com/trace/docs/web_integrations.html#flask" target="_blank">Datadog Python Trace and Profile Client</a> documentation.
 
 6. Add labels to the logs. Click the code block below to copy the code. In the `docker-compose` file, highlight the comment `# add discounts log labels` and paste the code over the comment. 
 ```
@@ -42,7 +42,7 @@ Because the advertisements service also has a Python-Flask framework, the advert
          - DD_ANALYTICS_ENABLED=true
 ```{{copy}}
 
-3. Add the `ddtrace-run` wrapper to the command that brings the Flask server online. Locate `command: flask run --port=5002 --host=0.0.0.0"` and update the command to `command: ddtrace-run flask run --port=5002 --host=0.0.0.0`.  
+3. Add the `ddtrace-run` wrapper to the command that brings the Flask server online. Locate `command: flask run --port=5002 --host=0.0.0.0"` and update to `command: ddtrace-run flask run --port=5002 --host=0.0.0.0`.  
 
 4. Add labels to the logs. Click the code block below to copy the code. In the `docker-compose` file, highlight the comment `# add ads log labels` and paste the code over the comment. 
 ```
