@@ -24,4 +24,4 @@ While the monitors are gathering data, let's see how the store-frontend service 
 11. Create a new line under **Line 11** and paste the line from step 7. 
 ```<br /><center><a href="<%= @ads['url'] %>"><img src="data:image/png;base64,<%= @ads['base64'] %>" /></a></center>```{{copy}} Make sure to match the indent of the new line (**Line 12**) to that of the next line (**Line 13**).
 
-Now that the error is fixed, you can restart the app to make sure the store-frontend is working correctly. But, before you do, let's make sure that there are no other errors that need to be fixed.
+These changes should fix the errors you are seeing in the store-frontend service. If you scroll to the trace statistics graphs for the service, notice that the latency is high (> 1s). Let's explore what may be causing this high latency.
