@@ -12,4 +12,6 @@ Let's analyze how the changes you made affected app performance.
 
 6. Navigate to <a href="https://app.datadoghq.com/apm/map" target="_datadog">**APM** > **Service Map**</a>. <p> The outline of the store-frontend, discounts-service, and advertisements-service nodes are now green, meaning the monitor for each service is in the `OK` status.
 
+7. Click the store-frontend service node and select **View service overview**. <p> Notice that the **Total Requests** and **Total Errors** graphs have no new error data since you fixed the store-frontend.
+
 Let's explore the store-frontend service more to see if the app has any other undesired behavior.
