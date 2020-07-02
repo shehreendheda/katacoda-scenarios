@@ -61,6 +61,8 @@
   "environment": {
     "uilayout": "editor-terminal", 
     "uieditorpath": "/root/app-files",
+    "hideHiddenFiles": true,
+    "exclusionPatterns": ["**/store-frontend/tmp/*", "**/store-frontend/log/*"],
     "showdashboard": true,
     "dashboards": [{"name": "storedog", "port": 3000}]
   },

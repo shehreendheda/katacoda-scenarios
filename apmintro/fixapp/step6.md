@@ -18,9 +18,9 @@ In the Storedog app, the discount service is making N+1 queries to the postgres 
 
 8. In the Traces list in <a href="https://app.datadoghq.com/apm/resource/store-frontend/rack.request/69d105fa043dba7f?end=1593549125250&env=ruby-shop&index=apm-search&paused=false&start=1593545525250&query=env%3Aruby-shop%20service%3Astore-frontend%20operation_name%3Arack.request%20resource_name%3A%22Spree%3A%3AHomeController%23index%22" target="_datadog">**APM** > **Services** > **store-frontend** > **Spree::HomeController#index**</a>, wait to till you see new traces coming in.
 
-9. Click a new trace and zoom in on the span below the **discounts.status */discounts***. Notice that this is only one span now.
+9. Click a new trace and zoom in on the `postgres.query` span below the **discounts.status */discounts***. Notice that this is only one span now.
 
-With the variety of features in Datadog APM, you can investigate and diagnose issues that affect performance of services and endpoints in your applications.
+As you've seen in this activity, Datadog APM enables you to investigate and diagnose a variety of issues that affect performance of services and endpoints in your applications.
 
 
 ### Assessment
