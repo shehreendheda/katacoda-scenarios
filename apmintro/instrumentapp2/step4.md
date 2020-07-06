@@ -4,11 +4,11 @@ First, you'll restart the docker deployment to apply the changes for monitoring 
 
 2. In a new window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization.
 
-3. If you have previously used the **Log Explorer** in the Datadog organization you are working in, move on to the next step. <p>If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Get Started**, then click **Start Trial** in the pop-up window. Select **Container**, then select the **docker** tile. Scroll to the bottom and click **Explore your Logs**.
+3. If you have previously used the **Log Explorer** in the Datadog organization you are working in, move on to the next step. <p>If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Start Trial** in the pop-up window. Select **Container**, then select the **docker** tile. Scroll to the bottom and click **Explore your Logs**.
 
-4. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM > Traces** </a> in Datadog to view the list of traces that are being ingested. <p> Make sure that the list is only displaying traces for the storedog app.
+4. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM > Traces** </a> in Datadog to view the list of traces that are being ingested. 
 
-5. In the search field, type `env:ruby-shop`. Or, in the list of **Facets** on the left, expand **Env** and select `ruby-shop`. 
+5. In the search field, type `env:ruby-shop` if it is not listed so that the traces list displays traces for the storedog app only.
 
 6. In **Facets** list, expand **Services** to view the services from the app that are injecting traces into Datadog. <p>![trace-frontendservices](instrumentapp2/assets/trace-frontendservices.png)
 
