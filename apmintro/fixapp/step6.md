@@ -1,6 +1,6 @@
-Inefficient database querying can affect service performance. N+1 queries are a common example in which the database is queried multiple times to retrieve data that can be retrieved with just one database query. 
+Inefficient database querying can affect service performance. N+1 queries are a common example in which a database is queried multiple times to retrieve data that can be retrieved with just a single query. 
 
-In the Storedog app, the discount service is making N+1 queries to the postgres database. Let's identify the 
+In the Storedog app, the discount service is making N+1 queries to the postgres database. Let's identify these queries and replace them with a single, efficient query. 
 
 1. In the **store-frontend service page**, scroll to the **Endpoints**  and click **Spree::HomeController#index** endpoint to navigate to <a href="https://app.datadoghq.com/apm/resource/store-frontend/rack.request/69d105fa043dba7f?end=1593549125250&env=ruby-shop&index=apm-search&paused=false&start=1593545525250&query=env%3Aruby-shop%20service%3Astore-frontend%20operation_name%3Arack.request%20resource_name%3A%22Spree%3A%3AHomeController%23index%22" target="_datadog">**APM** > **Services** > **store-frontend** > **Spree::HomeController#index**</a>.
 

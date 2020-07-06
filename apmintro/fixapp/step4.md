@@ -30,7 +30,7 @@ The monitors you created should have gathered some data. Because the monitors ar
 
 15. Click the **store-frontend** node, then click **View service overview**. 
 
-16. Scroll to the **Endpoints** list and sort the list by **AVG LATENCY**. <p> Notice the `Spree::HomeController#index`, `Spree::ProductsController#show`, and `Spree::ProductsController#index` have latencies more than 2.5 seconds. <p> Note: If the **AVG LATENCY** column is not displayed, click the **Options** icon next to the **Search Endpoints** field and select **AVG LANTECY**.
+16. Scroll to the **Endpoints** list and sort the list by **AVG LATENCY**. <p> Note: If the **AVG LATENCY** column is not displayed, click the **Options** icon next to the **Search Endpoints** field and select **AVG LANTECY**. <p> Notice the `Spree::HomeController#index`, `Spree::ProductsController#show`, and `Spree::ProductsController#index` have latencies more than 2.5 seconds. 
 
 17. For each endpoint listed in step 15, click the endpoint to view its page. <p> Scroll to the **Span Summary** and sort by **AVG DURATION**. <p> Scroll to the **Traces** list. Click any of the traces to view the details. <p> Notice from the **Span Summary** and **Traces** that the endpoint is dependent on the discounts and advertisements services. <p> For the `Spree::HomeController#index` endpoint, notice the monitor you created is in the alert status. (Note: To save time, you didn't create monitors for the other endpoints. You can also create monitors for the other two endpoints to see how they are affected by fixing the app.)
 

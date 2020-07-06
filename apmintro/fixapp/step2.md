@@ -6,9 +6,9 @@ Let's create monitors to track the latency of specific store-frontend, discounts
 
 1. In the <a href="https://app.datadoghq.com/apm/map?env=ruby-shop" target="_datadog">**Service Map**</a>, click the **store-frontend** node and select **View service overview**.
 
-2. Scroll to the **Endpooints** list and click **Spree::HomeController#index**.
+2. Scroll to the **Endpoints** list and click **Spree::HomeController#index**.
 
-3. Click the **Add Monitors** banner near the top and click **New Resource Monitor +** in the top right. You will be redirected to a new APM monitor page.
+3. Click the **No Monitors or Synthetics Tests** banner near the top and click **New Resource Monitor**. You will be redirected to a new APM monitor page.
 
 4. Notice that the **Select monitor scope** section is already filled out for the respective service and resource.
 
