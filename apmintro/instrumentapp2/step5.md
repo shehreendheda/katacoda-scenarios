@@ -44,11 +44,10 @@ Because the advertisements service also has a Python-Flask framework, the advert
 
 3. Add the `ddtrace-run` wrapper to the command that brings the Flask server online. Locate `command: flask run --port=5002 --host=0.0.0.0"` and update to `command: ddtrace-run flask run --port=5002 --host=0.0.0.0`.  
 
-4. Add labels to the logs. Click the code block below to copy the code. In the `docker-compose` file, highlight the comment `# add ads log labels` and paste the code over the comment. 
-```
+4. Click **Copy to Editor** below to add labels to the logs. 
+<pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add ads log labels">
        labels:
-         com.datadoghq.ad.logs: '[{"source": "python", "service": "advertisements-service"}]'
-```{{copy}}
+         com.datadoghq.ad.logs: '[{"source": "python", "service": "advertisements-service"}]'</pre>
 
 5. Click `docker-compose -f docker-compose-broken-no-apm-instrumentation.yml up -d`{{execute}} to restart the docker deployment to apply these changes. <p> The **advertisements** section of the `docker-compose` file should now look like the screenshot below. <p> ![instrumented-adverstisements](instrumentapp2/assets/instrumented-advertisements.png)
 
@@ -58,6 +57,3 @@ With these steps, the Python-based services are also instrumented for APM with D
 
 The `postgres` service appears in the list because it is installed and automatically instrumented to support the discounts and advertisements services using **Line 12** in `discounts-service/requirements.txt`{{open}} and `ads-service/requirements.txt`{{open}}, respectively. You can view <a href="http://pypi.datadoghq.com/trace/docs/db_integrations.html#module-ddtrace.contrib.psycopg" target="_blank"> Datadog's Python tracing client</a> for more details. 
 
-<pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add ads log labels">
-       labels:
-         com.datadoghq.ad.logs: '[{"source": "python", "service": "advertisements-service"}]'</pre>
