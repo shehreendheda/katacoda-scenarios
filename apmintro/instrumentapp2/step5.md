@@ -57,3 +57,7 @@ With these steps, the Python-based services are also instrumented for APM with D
 ![trace-services](instrumentapp2/assets/trace-allservices.png)
 
 The `postgres` service appears in the list because it is installed and automatically instrumented to support the discounts and advertisements services using **Line 12** in `discounts-service/requirements.txt`{{open}} and `ads-service/requirements.txt`{{open}}, respectively. You can view <a href="http://pypi.datadoghq.com/trace/docs/db_integrations.html#module-ddtrace.contrib.psycopg" target="_blank"> Datadog's Python tracing client</a> for more details. 
+
+<pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add ads log labels">
+       labels:
+         com.datadoghq.ad.logs: '[{"source": "python", "service": "advertisements-service"}]'</pre>
