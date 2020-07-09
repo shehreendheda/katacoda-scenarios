@@ -4,4 +4,4 @@ In the terminal on the right, the Storedog app is being deployed using Docker. L
 
 2. Once you see the `The environment is prepared!` message, click the **storedog** tab above the terminal to view the Storedog app. <p> Clicking around inside the app, you can see it includes a home page, product pages, advertisements, discounts, and a shopping cart. <p> 
 
-In this activity, you will go through instrumentation of the home page (store-frontend), discounts, and advertisements services for APM in Datadog. But first, let's enable trace and log collection for the Datadog Agent.
+In this activity, you will go through instrumentation of the  store-frontend (home page), discounts, and advertisements services for APM in Datadog. But first, let's enable trace and log collection for the Datadog Agent.

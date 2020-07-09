@@ -14,7 +14,7 @@
         "text": "step2.md"
       },
       {
-        "title": "Instrumenting a Ruby-on-Rails App Service",
+        "title": "Instrumenting a Rails App Service",
         "text": "step3.md"
       },
       {
@@ -22,7 +22,7 @@
         "text": "step4.md"
       },
       {
-        "title": "Instrumenting Python-Flask App Services",
+        "title": "Instrumenting Python Flask App Services",
         "text": "step5.md"
       }
     ],
