@@ -8,20 +8,28 @@ The store-frontend service has been instrumented for you, but you will update th
 
 3. Click `store-frontend-broken-instrumented/store-frontend/config/environments/development.rb`{{open}} to view the configuration file that converts the logs to the JSON format using **Lines 11-28**. To learn more, view the <a href="https://docs.datadoghq.com/tracing/connect_logs_and_traces/ruby/?tab=lograge#automatic-trace-id-injection" target="_blank">Connecting Ruby Logs and Traces</a> documentation. <p> With the service instrumented and trace collection automatically enabled via the `datadog.rb` initializer file, you can finish enabling trace  and log collection and App Analytics for the service.
 
-4. Click `store-frontend-broken-instrumented/store-frontend/config/application.rb`{{open}}.  **Line 7** installs and automatically instruments the `active-record` service to support Rails `store-frontend` service. You can view the <a href="https://docs.datadoghq.com/tracing/setup/ruby/#active-record" target="_blank"> Tracing Ruby Application</a> documentation for more details.
+4. Click `store-frontend-broken-instrumented/store-frontend/config/application.rb`{{open}}. **Line 7** installs and automatically instruments the `active-record` service to support Rails `store-frontend` service. You can view the <a href="https://docs.datadoghq.com/tracing/setup/ruby/#active-record" target="_blank"> Tracing Ruby Application</a> documentation for more details.
 
 5. Click `docker-compose-files/docker-compose-broken-no-apm-instrumentation.yml`{{open}}.
 
 6. Under **services**, view the details for **frontend**. <p> Let's add the code for enabling trace and log collection.
 
-7. Click **Copy to Editor** below to add the following to the list of environment variables for the service. These environment variables are required for each service in the app that will be monitored. <p> `DD_AGENT_HOST=agent` defines the address of the Agent that the tracer submits traces to. <p> `DD_LOGS_INJECTION=true` enables automatic injection of trace IDs into the logs from the supported logging libraries to correlate traces and logs. <p> `DD_ANALYTICS_ENABLED=true` enables App Analytics for the traces.
-<pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add frontend env variables">
+7. Click **Copy to Editor** below to add the following to the list of environment variables for the service. These environment variables are required for each service in the app that will be monitored. 
+
+    <pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add frontend env variables">
          - DD_AGENT_HOST=agent
          - DD_LOGS_INJECTION=true
          - DD_ANALYTICS_ENABLED=true</pre> 
 
+    `DD_AGENT_HOST=agent` defines the address of the Agent that the tracer submits traces to. 
+    
+    `DD_LOGS_INJECTION=true` enables automatic injection of trace IDs into the logs from the supported logging libraries to correlate traces and logs. 
+    
+    `DD_ANALYTICS_ENABLED=true` enables App Analytics for the traces.
+
 8. Click **Copy to Editor** below to add labels to enable logs.
-<pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add frontend log labels">
+
+    <pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add frontend log labels">
        labels:
          com.datadoghq.ad.logs: '[{"source": "ruby", "service": "store-frontend"}]'</pre> 
 

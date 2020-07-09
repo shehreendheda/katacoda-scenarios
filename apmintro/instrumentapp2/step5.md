@@ -9,17 +9,23 @@ The `discounts` and `advertisements` services have a Python Flask framework, so 
 3. Under **services**, view the details for **discounts**. <p> Let's add the code for enabling trace and log collection.
 
 4. Click **Copy to Editor** below to add the following to the list of environment variables for the service.
-<pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add discounts env variables">
+
+    <pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add discounts env variables">
          - DD_AGENT_HOST=agent
          - DD_LOGS_INJECTION=true
          - DD_ANALYTICS_ENABLED=true</pre>
 
-5. Click **Copy to Editor** below to add the `ddtrace-run` wrapper to the command that brings up the Flask server. <p> `ddtrace-run` automates instrumentation of the service for Datadog APM. You can view more details for automatic and manual instrumentation using `ddtrace` in the <a href="http://pypi.datadoghq.com/trace/docs/web_integrations.html#flask" target="_blank">Datadog Python Trace and Profile Client</a> documentation.
-<pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="command: flask run --port=5001 --host=0.0.0.0">
+5. Click **Copy to Editor** below to add the `ddtrace-run` wrapper to the command that brings up the Flask server. 
+
+    <pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="command: flask run --port=5001 --host=0.0.0.0">
 command: ddtrace-run flask run --port=5001 --host=0.0.0.0</pre>  
 
+    `ddtrace-run` automates instrumentation of the service for Datadog APM. You can view more details for automatic and manual instrumentation using `ddtrace` in the <a href="http://pypi.datadoghq.com/trace/docs/web_integrations.html#flask" target="_blank">Datadog Python Trace and Profile Client</a> documentation.
+
+
 6. Click **Copy to Editor** below to add labels to enable logs. 
-<pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add discounts log labels">
+
+    <pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add discounts log labels">
        labels:
          com.datadoghq.ad.logs: '[{"source": "python", "service": "discounts-service"}]'</pre>
 
@@ -36,17 +42,20 @@ Because the advertisements service also has a Python-Flask framework, the advert
 1. Click `docker-compose-files/docker-compose-broken-no-apm-instrumentation.yml`{{open}}. 
 
 2. Click **Copy to Editor** below to add the following to the list of environment variables for the service. 
-<pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add ads env variables">
+
+    <pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add ads env variables">
          - DD_AGENT_HOST=agent
          - DD_LOGS_INJECTION=true
          - DD_ANALYTICS_ENABLED=true</pre>
 
 3. Click **Copy to Editor** below to add the `ddtrace-run` wrapper to the command that brings up the Flask server. Note that the port for this service is 5002. 
-<pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="command: flask run --port=5002 --host=0.0.0.0">
+
+    <pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="command: flask run --port=5002 --host=0.0.0.0">
 command: ddtrace-run flask run --port=5002 --host=0.0.0.0</pre> 
 
 4. Click **Copy to Editor** below to add labels to enable logs. 
-<pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add ads log labels">
+
+    <pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add ads log labels">
        labels:
          com.datadoghq.ad.logs: '[{"source": "python", "service": "advertisements-service"}]'</pre>
 
@@ -54,7 +63,7 @@ command: ddtrace-run flask run --port=5002 --host=0.0.0.0</pre>
 
 6. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM > Traces** </a> in Datadog to view the list of traces that are coming in. <p> You should now see traces for the `advertisements` service in the list. This may take a couple of minutes.
 
-9. Click a trace for the `advertisements` service to view the Flame Graph, Span List, Tags, related Hosts, and related Logs.
+7. Click a trace for the `advertisements` service to view the Flame Graph, Span List, Tags, related Hosts, and related Logs.
 
 With these steps, the Python-based services are also instrumented for APM with Datadog. The final list for **Service** under **Facets** is shown below.
 
