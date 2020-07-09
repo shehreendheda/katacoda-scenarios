@@ -20,6 +20,6 @@ For APM in Datadog, you need to enable trace collection by the Datadog agent. To
        labels:
          com.datadoghq.ad.logs: '[{"source": "datadog-agent", "service": "agent"}]'</pre>
 
-The **agent** section of the `docker-compose` file should now look like the screenshot below. <p> ![instrumented-agent](instrumentapp2/assets/instrumented-agent.png)
+The **agent** section of the docker-compose file should now look like the screenshot below. <p> ![instrumented-agent](instrumentapp2/assets/instrumented-agent.png)
 
 With trace and log collection enabled for the Datadog Agent, let's go through instrumentation of one of the app services.
