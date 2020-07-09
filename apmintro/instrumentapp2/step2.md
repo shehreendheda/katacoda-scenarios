@@ -17,7 +17,6 @@ For APM in Datadog, you need to enable trace collection by the Datadog agent. To
     
     To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/?tab=standard#optional-collection-agents" target="_blank">Tracing Docker Applications</a> and <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#one-step-install-to-collect-all-the-container-logs" target="_blank">Docker Log Collection</a> documentation.
 
-
 4. Click **Copy to Editor** below to add the ports for tracing between the agent container and other containers. 
 
     <pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add agent trace port">
@@ -25,7 +24,6 @@ For APM in Datadog, you need to enable trace collection by the Datadog agent. To
          - "8126:8126"</pre> 
     
     Port `8126` is the default port for tracing. To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/apm/?tab=java#tracing-from-the-host" target="_blank">Tracing Docker Applications</a> documentation. 
-
 
 5. Click **Copy to Editor** below to add labels to the logs. 
 
