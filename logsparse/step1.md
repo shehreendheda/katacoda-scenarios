@@ -6,7 +6,6 @@
    
 2. Press **q** to quit the `more` command.
 
-
 3. Now telnet to that port on localhost:
 
    `telnet localhost 10520`{{execute T2}}
@@ -31,7 +30,7 @@
 
    ![New Pipeline](/sdheda/scenarios/logsparse/assets/newpipelinenew.png)
 
-7. Find the pipeline you created in the Pipelines list. Create a new processor in that pipeline. 
+7. Click the pipeline you created in the Pipelines list and **Add Processor** to the pipeline. 
 
    For **Select the processor type**, choose `Grok Parser` 
    
@@ -47,7 +46,7 @@
    
    ![New Grok Parser](/sdheda/scenarios/logsparse/assets/newgrokparser.png)
 
-8. Next we need a Status remapper to remap the value of the "level" attribute to the global log severity. Create a new processor in the pipeline. 
+8. Next we need a Status remapper to remap the value of the "level" attribute to the global log severity. **Add Processor** in the pipeline. 
 
    For **Select the processor type**, choose `Status Remapper` 
 
@@ -61,7 +60,7 @@
    
    Note: If you see `Connection closed by foreign host.` in **Terminal 2**, you will need to telnet to the port again using `telnet localhost 10520`{{execute T2}} before you enter the Error message.
 
-10. Navigate to the Log Explorer and search for **service:testtcp**.
+10. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Log Explorer**</a> and search for **service:testtcp**.
 
     ![Shows Error Status](/sdheda/scenarios/logsparse/assets/errorstatus.png)
     
