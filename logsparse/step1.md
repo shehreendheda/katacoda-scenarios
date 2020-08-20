@@ -18,7 +18,7 @@
 
 5. Open the <a href="https://app.datadoghq.com/logs" target="_datadog">**Log Explorer**</a> and search for `service:testtcp` to filter the list for the new log line.
    
-   ![Defaults to INFO](/sdheda/scenarios/logsparse/assets/defaultsinfonew.png)
+   ![Defaults to INFO](/sdheda/scenarios/logsparse/assets/defaultsinfo2.png)
 
    *Without updating severity, it defaults to INFO*
 
@@ -28,7 +28,7 @@
 
    Type `service:testtcp` for **Filter** and set the **Name** to `Getting Started with Pipelines`. Click **Save**.
 
-   ![New Pipeline](/sdheda/scenarios/logsparse/assets/newpipelinenew.png)
+   ![New Pipeline](/sdheda/scenarios/logsparse/assets/newpipeline2.png)
 
 7. Click the pipeline you created in the Pipelines list and **Add Processor** to the pipeline. 
 
@@ -69,7 +69,7 @@
 11. To see that it works even for JSON formatted logs, send the following line from telnet:
     `{"error.level":"warning","var1": 10,"error.message":"I told you it would work"}`{{execute T2}}
    
-    ![JSON logs](/sdheda/scenarios/logsparse/assets/jsonlogsnew.png)
+    ![JSON logs](/sdheda/scenarios/logsparse/assets/jsonlogs2.png)
     
     *If it doesn't seem to work, make sure that the log you sent has the correct JSON format. Sometimes copy and paste can introduce 'smart quotes' that aren't recognized by the JSON parser. You can try verifying the JSON with https://jsonlint.com/.*
 
