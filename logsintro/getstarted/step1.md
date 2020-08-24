@@ -32,7 +32,7 @@ Thanks to the Datadog auto-discovery feature, metrics are collected automaticall
 
 # Logs
 
-1. Navigate to Logs on the menu bar.
+1. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">Logs</a> on the menu bar.
 
 2. Observe that there are no logs displayed for the running containers.
 
