@@ -17,12 +17,12 @@ Datadog has a range of <a href="https://docs.datadoghq.com/integrations/#cat-log
 
     <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert redis labels here">
        labels:
-        com.datadoghq.ad.logs: '[{"source": "redis", "service": "redis"}]'</pre>
+         com.datadoghq.ad.logs: '[{"source": "redis", "service": "redis"}]'</pre>
 
 3. Add the following label to the nginx block in the same file:
 
     <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert nginx labels here">
-        com.datadoghq.ad.logs: '[{"source": "nginx", "service": "nginx"}]'</pre>
+         com.datadoghq.ad.logs: '[{"source": "nginx", "service": "nginx"}]'</pre>
 
 3. Restart your Docker containers using the following commands:
    `docker-compose stop && docker-compose rm -f && docker-compose up --build -d`{{execute}}
@@ -50,21 +50,21 @@ Our application is already instrumented for APM. Let's add log tags to the conta
 
     <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert api labels here">
        labels:
-        com.datadoghq.ad.logs: '[{"source": "webapp", "service": "thinker-api"}]'</pre>
+         com.datadoghq.ad.logs: '[{"source": "webapp", "service": "thinker-api"}]'</pre>
 
     <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert thinker labels here">
        labels:
-        com.datadoghq.ad.logs: '[{"source": "webapp", "service": "thinker-microservice"}]'</pre>
+         com.datadoghq.ad.logs: '[{"source": "webapp", "service": "thinker-microservice"}]'</pre>
 
 2. Restart the Docker containers as you did before. Then send a few more of the curl commands and look at the new logs showing up in the Logs view.
 
 The service attribute values are based on what has been assigned in our application's code.
 
-For the API service (`app/api.py`{{open}}):
+For the API service (line 16 in `app/api.py`{{open}}):
  
 <pre><code>traced_app = TraceMiddleware(app, tracer, service='thinker-api')</code></pre>
 
-And for the Thinker service (`app/thinker.py`{{open}}):
+And for the Thinker service (line 73 in `app/thinker.py`{{open}}):
 
 <pre><code>trace_app(app, tracer, service='thinker-microservice')</code></pre>
 
@@ -74,7 +74,7 @@ Thanks to the `source` attribute, Integration pipelines have been created within
 
 Thanks to the **service** attribute, we are now able to switch from metrics to traces to logs.
 
-1. Return to Dashboards. Select the **NGINX - Metrics** dashboard.
+1. Return to <a href="https://app.datadoghq.com/dashboard/lists" target="_datadog">Dashboards</a>. Select the **NGINX - Metrics** dashboard.
 1. Click on the graph for **Requests per second**. Look at the context menu that popped up.
 1. Choose **View related logs**.
 1. In the Search box at the top, remove **Source: nginx**.
