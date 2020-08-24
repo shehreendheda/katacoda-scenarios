@@ -70,15 +70,15 @@ And for the Thinker service (line 73 in `app/thinker.py`{{open}}):
 
 Thanks to the `source` attribute, Integration pipelines have been created within your Datadog application and are parsing your application logs from Redis and NGINX. To learn more about log parsing and pipelines, continue to the next exercise.
 
-![Integration pipelines](getstarted/assets/integration_pipelines.png)
+![Integration pipelines](getstarted/assets/integration_pipelines2.png)
 
 Thanks to the **service** attribute, we are now able to switch from metrics to traces to logs.
 
 1. Return to <a href="https://app.datadoghq.com/dashboard/lists" target="_datadog">Dashboards</a>. Select the **NGINX - Metrics** dashboard.
 1. Click on the graph for **Requests per second**. Look at the context menu that popped up.
-1. Choose **View related logs**.
+1. Choose **View related logs** to view the logs for `source:nginx`. (Hint: Change the time span to `Past 15 minutes` to see more logs.)
 1. In the Search box at the top, remove **Source: nginx**.
-1. Change the time span at the top right to **Past 4 Hours**. If it's been some time since you used this, expand the time window to something more appropriate.
+1. Change the time span at the top right to `Past 4 Hours`. If it's been some time since you used this, expand the time window to something more appropriate.
 1. Expand the **Service** facet on the left and click on **thinker-api**.
 1. Click on any of the log lines to expand the detail view.
 1. Click on **thinker-api** under **Service** at the top of the detail view.
