@@ -25,9 +25,9 @@ Datadog has a range of <a href="https://docs.datadoghq.com/integrations/#cat-log
          com.datadoghq.ad.logs: '[{"source": "nginx", "service": "nginx"}]'</pre>
 
 3. Restart your Docker containers using the following commands:
-   `docker-compose stop && docker-compose rm -f && docker-compose up --build -d`{{execute}}
+   `docker-compose stop && docker-compose rm -f && docker-compose up --build`{{execute}}
 
-4. Click the curl commands below to generate some requests to the application: 
+4. In **Terminal 2**, run the following commands again to generate some requests to the application: 
    
     `curl -X GET 'http://localhost:8080/think/?subject=technology'`{{execute}}
     `curl -X GET 'http://localhost:8080/think/?subject=religion'`{{execute}}
