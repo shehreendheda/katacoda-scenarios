@@ -8,17 +8,25 @@
 
 Thanks to the Datadog auto-discovery feature, metrics are collected automatically from the Redis and NGINX containers. Out of the box integrations dashboards have been created in your Datadog application.
 
-3. Navigate to Dashboards on the menu bar. 
+1. Navigate to <a href="https://app.datadoghq.com/dashboard/lists" target="_datadog">Dashboards</a> on the menu bar. 
    
    *Notice that we have some basic System dashboards, but there are also two NGINX dashboards (NGINX- overview and NGINX- metric), a Redis dashboard (Redis - Overview), and a Docker dashboard (Docker - Overview).*
 
-4. Click on each of the dashboards to see the information displayed.
+2. Click on each of the dashboards to see the information displayed.
   
   *You may have noticed that you didn't configure anything with these applications but they are populated with data. This is due to the auto discovery features of Datadog. Dashboards give you a clear state of the running system but don't show everything you need to know or why the system is behaving this way.*
 
 # Traces
 
-5. Navigate to APM on the menu bar. In the Services view, you will see at least two services: thinker-api, and thinker-microservice. Redis will appear here once we start making requests to the application.
+1. Select the **Terminal 2** tab to the right. Click the curl commands below to generate some requests to the application:
+
+    `curl -X GET 'http://localhost:8080/think/?subject=technology'`{{execute}}
+    `curl -X GET 'http://localhost:8080/think/?subject=religion'`{{execute}}
+    `curl -X GET 'http://localhost:8080/think/?subject=war'`{{execute}}
+    `curl -X GET 'http://localhost:8080/think/?subject=work'`{{execute}}
+    `curl -X GET 'http://localhost:8080/think/?subject=music'`{{execute}}
+
+2. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">APM</a> on the menu bar. In the **Traces** view, you will see traces from at least two services: thinker-api and thinker-microservice. 
 
   *The application was already instrumented to emit those traces. Refer to the Datadog documentation if you want to learn more on APM instrumentation. To learn more about APM, take the Introduction to Introduction to Application Performance Monitoring course in the Learning Center. Traces describe your system behavior but don't show its overall state or the reasons for its behavior.*
 
