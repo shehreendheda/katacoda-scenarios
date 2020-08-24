@@ -26,7 +26,7 @@ Thanks to the Datadog Autodiscovery feature, metrics are collected automatically
     `curl -X GET 'http://localhost:8080/think/?subject=work'`{{execute}}
     `curl -X GET 'http://localhost:8080/think/?subject=music'`{{execute}}
 
-2. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">APM</a> on the menu bar. In the **Traces** view, you will see traces from at least two services: thinker-api and thinker-microservice. 
+2. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">APM</a> on the menu bar. In the **Traces** view, update the time range to `Past 30 minutes`. You will see traces from three services: thinker-api, thinker-microservice, and redis. 
 
   *The application was already instrumented to emit those traces. Refer to the Datadog documentation if you want to learn more on APM instrumentation. To learn more about APM, take the Introduction to Introduction to Application Performance Monitoring course in the Learning Center. Traces describe your system behavior but don't show its overall state or the reasons for its behavior.*
 

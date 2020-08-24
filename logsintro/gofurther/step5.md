@@ -2,7 +2,7 @@
 
 The current pipelines should look like this:
 
-![pipelines](gofurther/assets/3_pipelines.png)
+![pipelines](gofurther/assets/3_pipelines2.png)
 
 Now that all the different sources of logs have a unified format, let's create a main processing pipeline to enhance all our logs:
 
