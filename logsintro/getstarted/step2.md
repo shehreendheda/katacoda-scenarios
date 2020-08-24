@@ -78,7 +78,7 @@ Thanks to the **service** attribute, we are now able to switch from metrics to t
 1. Click on the graph for **Requests per second**. Look at the context menu that popped up.
 1. Choose **View related logs**.
 1. In the Search box at the top, remove **Source: nginx**.
-1. Change the time span at the top right to **The Past 4 Hours**. If it's been some time since you used this, expand the time window to something more appropriate.
+1. Change the time span at the top right to **Past 4 Hours**. If it's been some time since you used this, expand the time window to something more appropriate.
 1. Expand the **Service** facet on the left and click on **thinker-api**.
 1. Click on any of the log lines to expand the detail view.
 1. Click on **thinker-api** under **Service** at the top of the detail view.
