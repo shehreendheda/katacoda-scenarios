@@ -6,13 +6,13 @@
 
 # Metrics
 
-Thanks to the Datadog auto-discovery feature, metrics are collected automatically from the Redis and NGINX containers. Out of the box integrations dashboards have been created in your Datadog application.
+Thanks to the Datadog Autodiscovery feature, metrics are collected automatically from the Redis and NGINX containers. Out-of-the-box integrations dashboards have been created in your Datadog application.
 
 1. Navigate to <a href="https://app.datadoghq.com/dashboard/lists" target="_datadog">Dashboards</a> on the menu bar. 
    
    *Notice that we have some basic System dashboards, but there are also two NGINX dashboards (NGINX- overview and NGINX- metric), a Redis dashboard (Redis - Overview), and a Docker dashboard (Docker - Overview).*
 
-2. Click on each of the dashboards to see the information displayed.
+2. Click each of the dashboards to see the information displayed.
   
   *You may have noticed that you didn't configure anything with these applications but they are populated with data. This is due to the auto discovery features of Datadog. Dashboards give you a clear state of the running system but don't show everything you need to know or why the system is behaving this way.*
 
