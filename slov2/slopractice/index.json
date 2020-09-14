@@ -53,6 +53,9 @@
         ]
       }
     },
+    "files": [
+      "docker-compose/docker-compose-fixed-instrumented.yml"
+    ],
     "environment": {
         "uilayout": "terminal",
         "uieditorpath": "/root/app-files/",
