@@ -44,6 +44,11 @@
             "file": "grademe",
             "target": "/usr/local/bin/",
             "chmod": "+x"
+          },
+          {
+            "file": "prep-environment",
+            "target": "/usr/local/bin/",
+            "chmod": "+x"
           }
         ]
       }
