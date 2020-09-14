@@ -1,1 +1,1 @@
-`docker-compose/docker-compose-fixed-instrumented`{{open}}
+`root/app-files/docker-compose/docker-compose-fixed-instrumented`{{open}}
