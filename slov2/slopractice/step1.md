@@ -1,1 +1,1 @@
-`docker-compose/docker-compose-fixed-instrumented.yml`{{open}}
+`docker-compose-files/docker-compose-fixed-instrumented.yml`{{open}}
