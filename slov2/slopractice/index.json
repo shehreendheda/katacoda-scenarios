@@ -27,7 +27,8 @@
         },
         {
           "title": "Modeling Failure in the App",
-          "text": "step6.md"
+          "text": "step6.md",
+          "code": "brokenapp.sh"
         }
       ],
       "intro": {
