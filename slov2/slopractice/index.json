@@ -1,6 +1,6 @@
 {
-    "title": "Creating SLOs",
-    "description": "Creating Service Level Objectives with Datadog",
+    "title": "SLOs in Practice",
+    "description": "Creating and Working with SLOs in Datadog",
     "difficulty": "Intermediate",
     "time": "20 minutes",
     "details": {
