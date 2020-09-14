@@ -1,7 +1,9 @@
 #!/bin/bash
 
-docker container kill $(docker ps -q)
+docker-compose -f docker-compose-fixed-instrumented.yml stop
 clear
 docker-compose -f docker-compose-broken-instrumented.yml up -d
 clear
-printf '\n\nThe app has restarted! You can continue.\n\n'
+alias app_ready="printf '\n\nThe app has restarted! You can continue.\n\n'"
+clear
+app_ready
