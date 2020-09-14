@@ -10,11 +10,11 @@
           "text": "step1.md"
         },
         {
-          "title": "Exploring Metrics for SLIs",
+          "title": "Selecting SLIs",
           "text": "step2.md"
         },
         {
-          "title": "Creating an APM Monitor",
+          "title": "Creating a Metric Based SLO",
           "text": "step3.md"
         },
         {
@@ -22,11 +22,11 @@
           "text": "step4.md"
         },
         {
-          "title": "Creating An Event Based SLO",
+          "title": "Adding SLOs to a Dashbaord",
           "text": "step5.md"
         },
         {
-          "title": "Interrupting the App Service",
+          "title": "Modeling Failure in the App",
           "text": "step6.md"
         }
       ],
