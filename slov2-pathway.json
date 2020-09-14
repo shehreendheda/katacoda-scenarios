@@ -1,0 +1,14 @@
+{
+  "title": "Introduction to Service Level Objectives",
+  "description": "",
+  "icon": "fa-katacoda",
+  "courses": [
+    {
+      "pathway_id": "slov2",
+      "course_id": "slopractice",
+      "id": "slopractice",
+      "title": "SLOs in Practice",
+      "description": "Working with SLOs in Datadog"
+    }
+  ]
+}
