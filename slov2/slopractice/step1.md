@@ -1,4 +1,4 @@
-In the terminal on the right, the Storedog app is being instrumented for APM with Datadog. Live traffic to the app is also being simulated. This may take up to two minutes. Once the app is instrumented, you will see the following message in the terminal: `The environment is prepared!`
+In the terminal on the right, the Storedog app is being instrumented for monitoring with Datadog. Live traffic to the app is also being simulated. This may take up to two minutes. Once the app is instrumented, you will see the following message in the terminal: `The environment is prepared!`
 
 Let's make sure that the app environment comes online successfully and you are collecting app data in the Datadog.
 
