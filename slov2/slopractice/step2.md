@@ -1,8 +1,8 @@
-Exploring and understanding the app is an important step in the SLO creation process. Consider what users would do in the app and what critical user journeys should be reliable. 
+Understanding the user experience in the app is an important step in the SLO creation process. Consider what users would do in the app and what critical user journeys should be reliable. 
 
-For an e-commerce app like Storedog, users would reasonably expect to be able to log in, search for items, view item details, manage items in their cart, and check out items for purchase.
+For an e-commerce app like Storedog, users would reasonably expect to visit the home page, log in, search for items, view item details, manage items in their cart, and check out items for purchase.
 
-Let's focus on two actions users will do: visiting the storedog home page and managing items in a cart.
+Let's focus on two actions users will do: visi the storedog home page and manage items in their cart.
 
 1. Click the **storedog** tab to the right. A new browser tab will open for Storedog app. 
 
