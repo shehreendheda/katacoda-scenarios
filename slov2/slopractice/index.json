@@ -29,6 +29,10 @@
           "title": "Modeling Failure in the App",
           "text": "step6.md",
           "code": "brokenapp.sh"
+        },
+        {
+          "title": "Investigating the Cause of Failure (Optional)",
+          "text": "step7.md"
         }
       ],
       "intro": {
@@ -73,6 +77,6 @@
         ]
     },
     "backend": {
-        "imageid": "datadog-base-v1"
+        "imageid": "datadog-ecommerce-observability"
     }
 }
