@@ -14,7 +14,7 @@ Let's create SLOs for two user experiences: viewing the storedog home page and m
 
    Remember, an SLO includes an SLI target and a time window. 
    
-   So, let's create the SLO `*"Over the past 7-days, 99% of the time the p99 latency of a home page request should be lower than 5s."*`.
+   So, let's create the SLO `*"Over the past 7-days, 99% of the time the p99 latency of a home page request should be lower than 5s."*`
 
 3. Click 2 or 3 different products and add items to the cart.
 
