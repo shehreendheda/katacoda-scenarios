@@ -6,15 +6,15 @@
     "details": {
       "steps": [
         {
-          "title": "Instrumenting the App with Datadog",
+          "title": "Collecting App Data in Datadog",
           "text": "step1.md"
         },
         {
-          "title": "Selecting SLIs",
+          "title": "Understanding the User Experience",
           "text": "step2.md"
         },
         {
-          "title": "Creating a Metric Based SLO",
+          "title": "Exploring Available Metrics for SLIs",
           "text": "step3.md"
         },
         {
@@ -22,17 +22,25 @@
           "text": "step4.md"
         },
         {
-          "title": "Adding SLOs to a Dashbaord",
+          "title": "Creating a Metric Based SLO with an Error Budget Monitor",
           "text": "step5.md"
         },
         {
+          "title": "Adding SLOs to a Dashbaord",
+          "text": "step6.md"
+        },
+        {
           "title": "Modeling Failure in the App",
-          "text": "step6.md",
+          "text": "step7.md",
           "code": "brokenapp.sh"
         },
         {
-          "title": "Investigating the Cause of Failure (Optional)",
-          "text": "step7.md"
+          "title": "(Optional) Investigating the Cause of Failure",
+          "text": "step8.md"
+        },
+        {
+          "title": "(Optional) Creating other relevant SLOs",
+          "text": "step9.md"
         }
       ],
       "intro": {
@@ -59,7 +67,7 @@
       }
     },
     "environment": {
-      "uilayout": "editor-terminal", 
+      "uilayout": "terminal", 
       "uieditorpath": "/root/app-files",
       "hideHiddenFiles": true,
       "exclusionPatterns": ["**/store-frontend/tmp/*", "**/store-frontend/log/*"],
