@@ -1,37 +1,41 @@
-You can explore the respective APM Resource pages to investigate the depleting error budgets for the SLOs. 
+In the terminal, the Storedog app is being restarted. This may take up to 2 minutes. Once the app is ready, you will see the following message in the terminal: `The environment is prepared!`. 
 
-1. Navigate to <a href="https://app.datadoghq.com/apm/services" target="_datadog">**APM > Services**</a>.
+The restarted app is broken, so you will now see errors in the app.
 
-2. Select the `store-frontend` service from the list. 
+1. Close the browser tab you opened earlier for the Storedog app.
 
-   Notice that the two monitors you created `...` and `...` are linked to the service and in the ALERT state.
+2. Click the **storedog** tab to the right. A new browser tab will open for the broken Storedog app. 
 
-3. Scroll down to the **Endpoints** list and select **Spree::HomeController#index** to explore the data for the resource.
+2. Notice how long it takes the home page to load. 
 
-   Notice that the monitor you created for the Monitor Based SLO is linked to the resource and is in the ALERT state.
+   *The home page is taking longer to load for the broken app.*
 
-4. View the **Latency** graph. Notice the increase in latency when the app restarted. Select the `p99` legend option. This is metric you used to create the monitor for the Monitor Based SLO.
+3. Click a product and add an item to the cart.
 
-5. Scroll down to the **Traces** list. Browse the **Duration** column. 
+   *A NoMethodError page appears. Users are unable to add items to the cart.* 
 
-   Select a trace with duration less than 3 seconds. Note the lengths of the spans for `GET_\ads` and `GET_\discounts`.
+   Let's check the SLOs that you created for these user actions.
 
-   Select a trace  with duration greater than 3 seconds. Notice the lengths of the spans for `GET_\ads` and `GET_\discounts` is longer than those in the traces with duration less than 3 seconds.
+4. Navigate to <a href="https://app.datadoghq.com/slo" target="_datadog">**Monitors > SLOs**</a>.
 
-   *Looks like ads and discounts services are the sources of the higher latencies!* 
-   
-   *Investigating/troubleshooting these services can be a first step in restoring the error budget for the Monitor Based SLO.*
-  
-6. Navigate to `store-frontend` Service page, scroll down to the **Endpoints** list, and select **Spree::OrdersController#edit** to explore the data for the resource.
+   The SLO statuses and remaining error budgets should be less than 100% or even in the `ALERT` state because of the new app errors. 
 
-   Notice that the Error Budget monitor you created for the Metric Based SLO is linked to the resource and is in the ALERT state.
+5. Click the Monitor Based SLO and view its details. Close the SLO. 
 
-7. Scroll down to the **Traces** list. 
+6. Click the Metric Based SLO and view its details. ...
 
-   Filter the list for traces with an **ERROR**. 
-   
-   Click a trace to see its details, specifically the **Errors** tab for details about the errors.
+7. Click the **Alerts** tab for the Metric Based SLO. Notice that the Alert is in the ALERT state.
 
-   *Looks like there error is an in a build file for the store-frontend service!* 
-   
-   *Investigating/troubleshooting this error can be a first step in restoring the error budget for the Monitor Based SLO.*
+8. Navigate to <a href="https://app.datadoghq.com/dashboards" target="_datadog">**Dashboards**</a>. Select the dashboard you created for the SLOs. 
+
+9. Click each SLO to view its details. Each SLO will open in a new browser tab.
+
+The significant change in the SLO statuses is due to the relatively low traffic and the trace metrics only having less than an hour's worth of history. The number of total events (SLI denominator value) is relatively small, making the SLO sensitive to even just one error. In a real world scenario, the number of total events will be in the thousands or millions, so one error wouldn't normally have such a large impact.
+
+When you see your error budget is depleted, or better when it is close to depleting, you should take action to restore the error budget. The next page is an optional walkthrough of investigating the app errors using Datadog.
+
+...
+
+#### Assessment
+
+Click `grademe`{{execute}} to recieve a grade for the activity. Then, click **Continue** to go to the next page. If you want to skip the walkthough, scroll to the bottom and click **Finish**.
