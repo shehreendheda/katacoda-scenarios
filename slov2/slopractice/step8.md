@@ -4,7 +4,7 @@ You can explore the respective APM Resource pages to investigate the depleting e
 
 2. Select the `store-frontend` service from the list. 
 
-   Notice that the two monitors you created `...` and `...` are linked to the service and in the ALERT state.
+   Notice that the APM monitor and Error Budget monitor you created are linked to the service and are in the ALERT state.
 
 3. Scroll down to the **Endpoints** list and select **Spree::HomeController#index** to explore the data for the resource.
 
@@ -32,6 +32,8 @@ You can explore the respective APM Resource pages to investigate the depleting e
    
    Click a trace to see its details, specifically the **Errors** tab for details about the errors.
 
-   *Looks like there error is an in a build file for the store-frontend service!* 
+   *Looks like there is error in a file for the store-frontend service!* 
    
    *Investigating/troubleshooting this error can be a first step in restoring the error budget for the Monitor Based SLO.*
+
+With Datadog, your teams can start exploring related infrastructure and app data to find the sources of depleting error budgets to work toward restoring them and meeting your SLO targets.  
