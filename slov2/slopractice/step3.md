@@ -8,13 +8,13 @@ Let's explore the available metrics in Datadog that can be used in SLIs for the 
 
 3. Scroll to the list of **Endpoints**. 
 
-   **Spree::HomeController#index** is the resource for viewing the home page (SLO 1). 
+   **Spree::HomeController#index** is the resource for viewing the home page. When a user tries to view the home page, a request is made to this resource. 
 
-   **Spree::OrderController#edit** is the resource for managing the cart (SLO 2).
+   **Spree::OrderController#edit** is the resource for managing items the cart. When a user tries to manage items in the cart, a request is made to this resource. 
 
    Let's explore both.
 
-## SLO for Latency of Viewing the Home Page
+## SLI for Latency of Viewing the Home Page
 
 4. Click **Spree::HomeController#index** to view its details. Observe that there are Latency and Latency Distribution graphs.
 
@@ -26,7 +26,7 @@ Let's explore the available metrics in Datadog that can be used in SLIs for the 
 
 6. Above the graphs for the resource, click **store-frontend** to navigate back to the service page.
 
-## SLO for Successfully Managing Items in the Cart
+## SLI for Successfully Managing Items in the Cart
 
 7. Scroll to the **Endpoints** list and select **Spree::OrderController#edit** to view its details.
 
@@ -34,10 +34,10 @@ Let's explore the available metrics in Datadog that can be used in SLIs for the 
 
 8. Expand the **Total Request** graph.
 
-   Below the graph, the `trace.rack.request.hits` metric is related to requests to the cart. This metrics includes requests that are successful and requests that are errors.
+   Below the graph, the `trace.rack.request.hits` metric is listed and is related to requests to the cart. This metrics includes requests that are successful and requests that are errors.
    
-   If there are requests errors, you would also see the `trace.rack.request.errors` metric. If you don't see the metric, that's alright. You'll see how to manually enter the metric when you create the SLO.
+   If there are request errors, you would also see the `trace.rack.request.errors` metric. If you don't see the metric, that's alright. You'll see how to manually enter the metric when you create the SLO.
 
-   You can use these two metrics in the SLI for the SLO to track successfully managing items in the cart.
+   You will use these two metrics in the SLI for the SLO to track successfully managing items in the cart.
 
 With the available metrics for SLIs determined, let's create the SLOs. 
