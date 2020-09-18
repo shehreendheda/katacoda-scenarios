@@ -57,6 +57,6 @@ Let's set an alert to monitor the error budget of the SLO. <a href="https://docs
 
 5. Click **Save Alerting Setup**.
 
-6. Navigate to <a href="https://app.datadoghq.com/event/stream" target="_datadog">**Events**</a>. Browse the stream or search for `SLO` to see the audit events for SLOs and Monitors/Alerts you've created.
+6. Navigate to <a href="https://app.datadoghq.com/event/stream" target="_datadog">**Events**</a>. Browse the stream or search for `SLO` to see the <a href="https://docs.datadoghq.com/monitors/service_level_objectives/#slo-audit-events" target="_blank">audit events</a> for SLOs and Monitors/Alerts you've created.
 
 Now that you've created the SLOs, let's add the SLOs to a Dashboard.
