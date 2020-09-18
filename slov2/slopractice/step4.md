@@ -3,7 +3,7 @@ Monitor Based SLOs take a time-based approach to tracking SLIs. The target is th
 Because latency is time-based, you'll create a Monitor Based SLO to track latency for viewing the home page.
 
 SLO:
-*`"Over the past 7-days, 99% of the time the p99 latency of a home page request should be less than 5s."`*
+*`"Over the past 7-days, 99% of the time the p99 latency of a home page request should be less than 5 seconds."`*
 
 Note: The SLO targets and time windows in this activity are just arbitrary. In real-world situations, various teams (Product, Engineering, Executive, etc.) would collaborate to determine SLO details.
 
@@ -31,11 +31,11 @@ The SLI for this SLO will be a monitor that tracks the trace metric for p99 late
 
 4. Expand **Say what’s happening**.
 
-   Name the monitor `p99 latency of a home page request should be less than 5s`{{copy}}.
+   Name the monitor `p99 latency of a home page request`{{copy}}.
    
-   Add the description `Monitor for the SLO "99% of the time the p99 latency of a home page request should be less than 5s."`{{copy}}
+   Add the description `Monitor for the SLO "99% of the time the p99 latency of a home page request should be less than 5 seconds."`{{copy}}
 
-5. Make sure the **Notify your team** field is blank and `Do not notify` is selected. No notification alerts are needed in this activity.
+5. Make sure the **Notify your team** field is blank and `Do not notify` is selected. No notifications are needed in this activity.
 
 5. Click **Save**. You'll be redirected to the monitor details.
 
@@ -47,7 +47,7 @@ Now that you've created the monitor. Let's create the Monitor Based SLO.
 
 1. Navigate to <a href="https://app.datadoghq.com/slo/new" target="_datadog">**Monitor** > **New SLO**</a>.
 
-2. Under **Define the source**, select **Monitor Based**, then select  the monitor you created above, `p99 latency of a home page request should be less than 5s`.
+2. Under **Define the source**, select **Monitor Based**, then select the monitor you created above, `p99 latency of a home page`.
 
 3. Under **Set your targets**, click **New Target +**. Set **Target:** to `99%` and **Time Window:** to `7 Days`.
 
@@ -55,9 +55,9 @@ Now that you've created the monitor. Let's create the Monitor Based SLO.
 
    Enter `Home Page P99 Latency`{{copy}} for **Name**
    
-   Add the descriptions `99% of time, the p99 latency of viewing the home page should be lower than 6 seconds`{{copy}} for the description.
+   Add the descriptions `99% of time, the p99 latency of viewing the home page should be lower than 5 seconds`{{copy}}.
    
-   Enter the **Tags** `env:ruby-shop`, `service:storefrontend`, and `resource_name:spree::homecontroller_index`.
+   Enter the **Tags** `env:ruby-shop`, `service:store-frontend`, and `resource_name:spree::homecontroller_index`.
 
 5. Click **Save & Exit**.
 
