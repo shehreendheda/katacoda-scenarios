@@ -16,4 +16,4 @@ Let's make sure that the app environment comes online successfully and you are c
    
    ![trace-services](slopractice/assets/trace-services.png)
 
-With Datadog collecting data from the Storedog app, let's start exploring the data to select SLIs for SLOs.
+With Datadog collecting live data from the Storedog app, let's start exploring the data to select SLIs for SLOs.

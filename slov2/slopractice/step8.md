@@ -4,7 +4,7 @@ You can explore the respective APM Resource pages to investigate the depleting e
 
 2. Select the `store-frontend` service from the list. 
 
-   Notice that the APM monitor and Error Budget monitor you created are linked to the service and are in the ALERT state.
+   Notice that the APM monitor and the Error Budget monitor you created are linked to the service and are in the ALERT state.
 
 3. Scroll down to the **Endpoints** list and select **Spree::HomeController#index** to explore the data for the resource.
 
@@ -14,9 +14,9 @@ You can explore the respective APM Resource pages to investigate the depleting e
 
 5. Scroll down to the **Traces** list. Browse the **Duration** column. 
 
-   Select a trace with duration less than 3 seconds. Note the lengths of the spans for `GET_\ads` and `GET_\discounts`.
+   Select a trace with duration less than 3 seconds. Note the lengths of the spans for `flask.request GET_\ads` and `flask.request GET_\discounts`.
 
-   Select a trace  with duration greater than 3 seconds. Notice the lengths of the spans for `GET_\ads` and `GET_\discounts` is longer than those in the traces with duration less than 3 seconds.
+   Select a trace  with duration greater than 3 seconds. Notice the lengths of the spans for `flask.request GET_\ads` and `flask.request GET_\discounts` is longer than those in the traces with duration less than 3 seconds.
 
    *Looks like ads and discounts services are the sources of the higher latencies!* 
    
