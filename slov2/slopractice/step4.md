@@ -1,4 +1,4 @@
-Monitor Based SLOs take a time-based approach to tracking SLIs. The target is the proportion of the time window all the monitors should be in the OK state. 
+<a href="https://docs.datadoghq.com/monitors/service_level_objectives/monitor/" target="_blank">Monitor Based SLOs</a> take a time-based approach to tracking SLIs. The target is the proportion of the time window all the monitors should be in the OK state. 
 
 Because latency is time-based, you'll create a Monitor Based SLO to track latency for viewing the home page.
 

@@ -32,10 +32,10 @@ The restarted app is broken, so you will now see errors in the app.
 
 The significant change in the SLO statuses is due to the relatively low traffic and the trace metrics only having less than an hour's worth of history. The number of total events (SLI denominator value) is relatively small, making the SLO sensitive to even just one error. In a real world scenario, the number of total events will be in the thousands or millions, so one error wouldn't normally have such a large impact.
 
-When you see your error budget is depleted, or better when it is close to depleting, you should take action to restore the error budget. The next page is an optional walkthrough of investigating the app errors using Datadog.
-
-...
+When you see your error budget is depleted, or better when it is close to depleting, you should take action to restore the error budget. The next page is an optional walkthrough of investigating the app errors using Datadog, followed by an optional exercise to create more SLOs.
 
 #### Assessment
 
-Click `grademe`{{execute}} to recieve a grade for the activity. Then, click **Continue** to go to the next page. If you want to skip the walkthough, scroll to the bottom and click **Finish**.
+This concludes the required portion of the activity. Click `grademe`{{execute}} to recieve a grade for the activity. 
+
+Click **Continue** to go to the next page. If you want to skip the two optional exercises, click the gray arrow `>` above the instructions for both pages.
