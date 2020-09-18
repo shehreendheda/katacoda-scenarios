@@ -17,3 +17,5 @@ Let's make sure that the app environment comes online successfully and you are c
    ![trace-services](slopractice/assets/trace-services.png)
 
 With Datadog collecting live data from the Storedog app, let's start exploring the data to select SLIs for SLOs.
+
+(For more details on how the app has been instrumented for monitoring with Datadog, you can go through <a href="https://learn.datadoghq.com/mod/lti/view.php?id=363" target="_blank">Instrumenting an App for Datadog APM</a> in the <a href="https://learn.datadoghq.com/course/view.php?id=33" target="_blank">Introduction to Application Performance Monitoring</a> course.)

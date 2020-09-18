@@ -1,4 +1,4 @@
-Metric Based SLOs take a count-based approach to tracking SLIs. The SLI is the ratio of “good” events divided by total events. The SLO target sets the expectation for the percentage of total events that should be “good”.
+<a href="https://docs.datadoghq.com/monitors/service_level_objectives/metric/" target="_blank">Metric Based SLOs</a> take a count-based approach to tracking SLIs. The SLI is the ratio of “good” events divided by total events. The SLO target sets the expectation for the percentage of total events that should be “good”.
 
 Because successfully managing items in the cart depends on successful requests to an app service resource,  you'll create a Metric Based SLO to track succussfully managing items in the cart.
 
@@ -33,9 +33,9 @@ SLO:
 
 6. In the list of SLOs, click the SLO you just created to view the details, status, and history.
 
-Let's set an alert to monitor the error budget of the SLO.
+Let's set an alert to monitor the error budget of the SLO. <a href="https://docs.datadoghq.com/monitors/service_level_objectives/error_budget/" target="_blank">Error budget monitors</a>  warn or alert you when you error budget has been consumed by a certain percentage (which you choose).
 
-## Setting up an Error Budget Alert
+## Setting up an Error Budget Monitor
 
 1. In the details panel for the SLO, click **Set up Alerts**.
 
