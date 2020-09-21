@@ -17,7 +17,7 @@ SLO:
 
    Update the expression to `a - b`.
 
-   ![Events List](slopractice/assets/ebslo-homepage.png) 
+   ![metric-slo-addquery](slopractice/assets/metric-slo-addquery.gif) 
 
 3. Under **Set your targets**, click **New Target +**. Set **Target:** to `99%` and **Time Window:** to `7 Days`.
 
@@ -31,7 +31,11 @@ SLO:
 
 5. Click **Save & Exit**.
 
+   ![metric-slo-create](slopractice/assets/metric-slo-create.png) 
+
 6. In the list of SLOs, click the SLO you just created to view the details, status, and history.
+
+   ![metric-slo-new](slopractice/assets/metric-slo-new.png) 
 
 Let's set an alert to monitor the error budget of the SLO. <a href="https://docs.datadoghq.com/monitors/service_level_objectives/error_budget/" target="_blank">Error budget monitors</a>  warn or alert you when you error budget has been consumed by a certain percentage (which you choose).
 
@@ -43,7 +47,7 @@ Let's set an alert to monitor the error budget of the SLO. <a href="https://docs
 
 2. Update the **Set alerting conditions** as follows:
 
-   Update the Error budget alert to **Trigger if** `95` **% of budget for** `7-day target` **is consumed.** 
+   Update the Error budget alert to **Trigger if** `95` **% of budget for** `30-day target` **is consumed.** 
    
    Click **New Condition** to add an Error budget warning for the alert. Leave the condition as is.
 
@@ -56,6 +60,10 @@ Let's set an alert to monitor the error budget of the SLO. <a href="https://docs
 4. Make sure the **Notify your team** field is blank and `Do not notify` is selected. No notifications are needed in this activity.
 
 5. Click **Save Alerting Setup**.
+
+   ![errorbudget-monitor-create](slopractice/assets/errorbudget-monitor-create.png)   
+
+   At first, the monitor status with will be `NO DATA before it shows the actual monitor status. 
 
 6. Navigate to <a href="https://app.datadoghq.com/event/stream" target="_datadog">**Events**</a>. Browse the stream or search for `SLO` to see the <a href="https://docs.datadoghq.com/monitors/service_level_objectives/#slo-audit-events" target="_blank">audit events</a> for SLOs and Monitors/Alerts you've created.
 
