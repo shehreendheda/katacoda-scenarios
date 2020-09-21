@@ -12,10 +12,10 @@ Let's create SLOs for two user experiences: viewing the storedog home page and m
    
    You can create an SLO related to the *latency of viewing the home page*.
 
-3. Click 2 or 3 different products in tha app and add items to the cart.
+3. Click 2 or 3 different products in the app and add items to the cart.
 
-   If users are unable to add items to a cart---one of the most important user actions in an e-commerce app---users will probably swtich to another app. 
+   If users are unable to add items to a cart—one of the most important user actions in an e-commerce app—users will probably swtich to another app. 
    
    You can create an SLO related to a *successfully managing items in the cart*.
 
-Now that you've determined SLOs you'd like to create, let's explore the available metrics in Datadog that you can use for SLIs.
+With some SLOs in mind, let's explore the available metrics in Datadog that you can use for SLIs.

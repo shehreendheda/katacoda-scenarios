@@ -1,6 +1,6 @@
 In the terminal on the right, the Storedog app is being instrumented for monitoring with Datadog. Live traffic to the app is also being simulated. This may take up to 2 minutes. Once the app is instrumented, you will see the following message in the terminal: `The environment is prepared!`
 
-Let's make sure that the app environment comes online successfully and you are collecting app data in the Datadog.
+Let's make sure that the app is instrumented successfully and you are collecting app data from Storedog in the Datadog.
 
 1. In a new browser window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com.
 
@@ -10,12 +10,12 @@ Let's make sure that the app environment comes online successfully and you are c
 
 3. Under **Facets**, expand **Env** and **Services**. 
 
-   Make sure that `ruby-shop` is the only env selected so that you are only viewing traces for the Storedog app.
+   Make sure that `ruby-shop` is the only **Env** selected so that you are only viewing traces for the Storedog app.
    
-   Make sure the services shown below are listed. Click each and make sure that you are collecting live traces from them.
+   Make sure the **Services** shown below are listed. Click each to confirm that you are collecting live traces from them.
    
    ![trace-services](slopractice/assets/trace-services.png)
 
-With Datadog collecting live data from the Storedog app, let's start exploring the data to select SLIs for SLOs.
+With Datadog collecting live app data from Storedog, let's start exploring the data to select SLIs for SLOs.
 
 (For more details on how the app has been instrumented for monitoring with Datadog, you can go through <a href="https://learn.datadoghq.com/mod/lti/view.php?id=363" target="_blank">Instrumenting an App for Datadog APM</a> in the <a href="https://learn.datadoghq.com/course/view.php?id=33" target="_blank">Introduction to Application Performance Monitoring</a> course.)
