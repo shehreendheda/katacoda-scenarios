@@ -37,7 +37,7 @@ SLO:
 
    ![metric-slo-new](slopractice/assets/metric-slo-new.png) 
 
-Let's set an alert to monitor the error budget of the SLO. <a href="https://docs.datadoghq.com/monitors/service_level_objectives/error_budget/" target="_blank">Error budget monitors</a>  warn or alert you when you error budget has been consumed by a certain percentage (which you choose).
+Let's set an alert to monitor the error budget of the SLO. <a href="https://docs.datadoghq.com/monitors/service_level_objectives/error_budget/" target="_blank">Error budget monitors</a> warn or alert you when the error budget has been consumed by a certain percentage (which you choose).
 
 ## Setting up an Error Budget Monitor
 
@@ -63,8 +63,8 @@ Let's set an alert to monitor the error budget of the SLO. <a href="https://docs
 
    ![errorbudget-monitor-create](slopractice/assets/errorbudget-monitor-create.png)   
 
-   The monitor status with will first read `NO DATA before it shows the actual monitor status. 
+   The monitor status with will first read `NO DATA` before it shows the actual monitor status. 
 
 6. Navigate to <a href="https://app.datadoghq.com/event/stream" target="_datadog">**Events**</a>. Browse the stream or search for `SLO` to see the <a href="https://docs.datadoghq.com/monitors/service_level_objectives/#slo-audit-events" target="_blank">audit events</a> for the SLOs and Monitors/Alerts you've created.
 
-Now that you've created the SLOs, let's add the SLOs to a Dashboard.
+Now that you've created the SLOs, let's add the SLOs to a dashboard.

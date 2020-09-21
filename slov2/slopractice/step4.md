@@ -17,11 +17,11 @@ The SLI for this SLO will be a monitor that tracks the trace metric for p99 late
 
 2. Expand **Select monitor scope**.
    
-   Select `APM Metrics`. 
+   Select `APM Metrics`.
    
-   Select `store-frontend` for **Service:**.
+   For **Service**, select `store-frontend`.
    
-   Select `spree::homecontroller_index` for **Resource:**.
+   For **Resource**, select `spree::homecontroller_index`.
 
    ![monitor-new-scope](slopractice/assets/monitor-new-scope.png)
 

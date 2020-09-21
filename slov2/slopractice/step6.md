@@ -26,7 +26,7 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
 11. Under **Select summary type**, select **Monitor**.
 
-12. Under **Search for monitors to summarize**, enter `latency`.
+12. Under **Search for monitors to summarize**, enter `tag:env:ruby-shop` to list all monitors created for the Storedog app.
 
 13. Leave the **Set display preferences** as is.
 
@@ -34,11 +34,7 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
 15. Click **Done**.
 
-    ![monitor-summary-widget](slopractice/assets/monitor-summary-widget.gif)
-
-16. Repeat steps 10 to 15 for the Error Budger Monitor you created. 
-
-    To search for the monitor, enter `type:slo`.
+    ![monitor-summary-widget](slopractice/assets/monitor-summary-widget2.gif)
 
 17. Rearrange the widgets on the boards as desired. 
 
