@@ -48,6 +48,6 @@ Let's explore the available metrics in Datadog that can be used in SLIs for the 
 
    Close the graph.
 
-   ![ordercontroller-requests](slopractice/assets/homecontroller-requests.gif)
+   ![ordercontroller-requests](slopractice/assets/ordercontroller-requests.gif)
 
 Let's create the SLOs now that you know which metrics you can use for the SLIs. 

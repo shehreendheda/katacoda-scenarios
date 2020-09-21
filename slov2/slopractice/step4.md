@@ -39,7 +39,7 @@ The SLI for this SLO will be a monitor that tracks the trace metric for p99 late
    
    Add `Monitor for the SLO "99% of the time the p99 latency of a home page request should be less than 5 seconds."`{{copy}} to the description.
 
-   ![monitor-new-whatshappening](slopractice/assets/monitor-new-whatshappening.png)
+   ![monitor-new-descriptionslo](slopractice/assets/monitor-new-descriptionslo.png)
 
 5. Make sure the **Notify your team** field is blank and `Do not notify` is selected. No notifications are needed in this activity.
 
