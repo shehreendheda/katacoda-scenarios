@@ -1,8 +1,10 @@
 The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank">SLO Summary widget</a> allows you to track your SLOs alongside other data in <a href="https://docs.datadoghq.com/dashboards/" target="_blank">Dashboards. 
 
-1.  Navigate to <a href="https://app.datadoghq.com/dashboard/lists" target="_datadog">**Dashboards**</a> and click **New Dashboard**.
+1. Navigate to <a href="https://app.datadoghq.com/dashboard/lists" target="_datadog">**Dashboards**</a> and click **New Dashboard**.
 
 2. Enter the Dashboard name `Storedog App SLOs` and select **New Screenboard**.
+
+   <a href="https://docs.datadoghq.com/dashboards/screenboards/" target="_blank">Screenboards</a> are used as status boards or storytelling views that update in real-time or represent fixed points in the past. 
 
 3. Click and drag the **SLO Summary** widget to the board. The SLO Summary Edtior window will pop up.
 
@@ -14,6 +16,8 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
 7. Click **Done**.
 
+   ![slo-summary-widget](slopractice/assets/slo-summary-widget.gif)
+
 8. Repeat steps 3 to 7 for the other SLO you created.
 
 9. In the Widget Bar, click the right arrow to see more options.
@@ -22,13 +26,15 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
 11. Under **Select summary type**, select **Monitor**.
 
-12. Under **Search for monitors to summarize**, enter the title for monitor `p99 latency of a home page request`{{copy}} or search using its tags...
+12. Under **Search for monitors to summarize**, enter `latency`.
 
 13. Leave the **Set display preferences** as is.
 
 14. Under **Widget title**, select **Show a title**. You can leave the title setting as is or modify them as desired.
 
 15. Click **Done**.
+
+    ![monitor-summary-widget](slopractice/assets/monitor-summary-widget.gif)
 
 16. Repeat steps 10 to 15 for the Error Budger Monitor you created. 
 
