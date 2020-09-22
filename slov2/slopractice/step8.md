@@ -4,11 +4,11 @@ You can explore the respective APM Resource pages to investigate the depleting e
 
 2. Select the `store-frontend` service from the list. 
 
-   Notice that the APM monitor and the Error Budget monitor you created are linked to the service and are in the ALERT state.
+   Notice that the APM monitor and the Error Budget monitor you created are linked to the service and are in the `ALERT` state.
 
-3. Scroll down to the **Endpoints** list and select **Spree::HomeController#index** to explore the data for the resource.
+3. Scroll to the **Endpoints** list and select **Spree::HomeController#index** to explore the data for the resource.
 
-   Notice that the monitor you created for the Monitor Based SLO is linked to the resource and is in the ALERT state.
+   Notice that the monitor you created for the Monitor Based SLO is linked to the resource and is in the `ALERT` state.
 
 4. View the **Latency** graph. Notice the increase in latency when the app restarted. Select the `p99` legend option. This is metric you used to create the monitor for the Monitor Based SLO.
 
@@ -16,17 +16,19 @@ You can explore the respective APM Resource pages to investigate the depleting e
 
    Select a trace with duration less than 3 seconds. Note the lengths of the spans for `flask.request GET_\ads` and `flask.request GET_\discounts`.
 
-   Select a trace  with duration greater than 3 seconds. Notice the lengths of the spans for `flask.request GET_\ads` and `flask.request GET_\discounts` is longer than those in the traces with duration less than 3 seconds.
+   Select a trace with duration greater than 3 seconds. Notice the lengths of the spans for `flask.request GET_\ads` and `flask.request GET_\discounts` is longer than those in the traces with duration less than 3 seconds.
 
    *Looks like ads and discounts services are the sources of the higher latencies!* 
    
    *Investigating/troubleshooting these services can be a first step in restoring the error budget for the Monitor Based SLO.*
   
-6. Navigate to `store-frontend` Service page, scroll down to the **Endpoints** list, and select **Spree::OrdersController#edit** to explore the data for the resource.
+6. Navigate to `store-frontend` Service page.
 
-   Notice that the Error Budget monitor you created for the Metric Based SLO is linked to the resource and is in the ALERT state.
+7. Select **Spree::OrdersController#edit** from the **Endpoints** list to explore the data for the resource.
 
-7. Scroll down to the **Traces** list. 
+   Notice that the Error Budget monitor you created for the Metric Based SLO is linked to the resource and is in the `ALERT` state.
+
+7. Scroll to the **Traces** list. 
 
    Filter the list for traces with an **ERROR**. 
    

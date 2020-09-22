@@ -2,19 +2,25 @@ You created an SLO related to the latency of viewing the home page and an SLO re
 
 You can also create an SLO related to successfully viewing the home page and an SLO related to the latency of managing items in the cart.
 
-1. Create a Metric Based SLO for successfully viewing the home page.
+1. Create a Metric Based SLO for successfully viewing the home page and an Error Budget Monitor for the SLO.
+
+   Hint: Use the `trace.rack.requests.hits` and `trace.rack.requests.errors` metrics scoped to the `env:ruby-shop`, `service:store-frontend`, and `resource_name:spree::homecontroller_index` for the SLI.
 
 2. Create a Monitor Based SLO for the p99 latency of managing items in the cart.
 
-3. Add these SLOs to the dashboard you created.
+   Hint: Create a monitor similar to the one you created for the p99 latency of viewing the home page, but scoped to the resource `resource_name:spree::homecontroller_index` for the SLI.
 
-   Are the new SLOs affected by the errors in the broken app? That is, do either have error budgets less than 100%?
+3. Add the new SLOs and associated monitors to the dashboard you created.
+
+   Are the new SLOs affected by the errors in the broken app? That is, do either have error budgets less than 0%?
 
 4. Explore the respective APM Resource pages. 
 
-   Are you able to find more information about the source of the errors.
+   Are you able to find more information about the source of the consumed error budgets.
 
 5. Explore the Storedog app and the APM Service and Resource pages for the app in Datadog. 
 
    What other SLOs can you create for the app?
+
+Click **Finish** to complete the activity.
 
