@@ -8,17 +8,19 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
 3. Click and drag the **SLO Summary** widget to the board. The SLO Summary Edtior window will pop up.
 
-4. Under **Search and Select**, select one of the SLOs you created and pick the all time windows that are available.
+4. Under **Search and Select**, select the Monitor Based SLO you created and pick the all time windows that are available.
 
 5. Under **Set display preferences**, make sure **Show error budget** is selected.
 
-6. Next to **Widget title**, select **Show a title**. You can leave the title setting as is or modify them as desired.
+6. Next to **Widget title**, select **Show a title**. You can leave the title settings as is or modify as desired.
 
 7. Click **Done**.
 
-   ![slo-summary-widget](slopractice/assets/slo-summary-widget.gif)
+   ![slo-widget-monitorbased](slopractice/assets/slo-widget-monitorbased.png)
 
-8. Repeat steps 3 to 7 for the other SLO you created.
+8. Repeat steps 3 to 7 for the Metric Based SLO you created.
+
+   ![slo-widget-metricbased](slopractice/assets/slo-widget-metricbased.png)
 
 9. In the Widget Bar, click the right arrow to see more options.
 
@@ -26,16 +28,26 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
 11. Under **Select summary type**, select **Monitor**.
 
-12. Under **Search for monitors to summarize**, enter `tag:env:ruby-shop` to list all monitors created for the Storedog app.
+12. Under **Search for monitors to summarize**, enter `tag:env:ruby-shop type:metric` to list all monitors created for the Storedog app.
 
 13. Leave the **Set display preferences** as is.
 
-14. Under **Widget title**, select **Show a title**. You can leave the title setting as is or modify them as desired.
+14. Under **Widget title**, select **Show a title** and enter the title `Monitors for Monitor Based SLOs`. Leave the title setting as is or modify as desired.
 
 15. Click **Done**.
 
-    ![monitor-summary-widget](slopractice/assets/monitor-summary-widget2.gif)
+    ![monitor-widget-monitorsforslos](slopractice/assets/monitor-widget-monitorsforslos.png)
 
-17. Rearrange the widgets on the boards as desired. 
+16. Repeat steps 10 to 15 for the Error Budger Monitor you created. 
+
+    To search for the monitor, enter `tag:env:ruby-shoptype:slo`.
+
+    Enter the title `Error Budget Monitors for SLOs`.
+
+    ![monitor-widget-errorbudgets](slopractice/assets/monitor-widget-errorbudgets.png)
+
+17. Rearrange the widgets on the boards as desired.
+
+18. Click `Save Changes` next to the dashboard title.
 
 With the Dashbaord created with the SLOs and related monitors, let's see what happens to the SLOs and their error budgets when the app has errors. 

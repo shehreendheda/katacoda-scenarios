@@ -35,7 +35,7 @@ The SLI for this SLO will be a monitor that tracks the trace metric for p99 late
 
 4. Expand **Say what’s happening**.
 
-   Leave the name the monitor as is.
+   Leave the name of the monitor as is.
    
    Add `Monitor for the SLO "99% of the time the p99 latency of a home page request should be less than 5 seconds."`{{copy}} to the description.
 
