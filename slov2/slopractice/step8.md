@@ -8,9 +8,9 @@ You can explore the respective APM Resource pages to investigate the depleting e
 
 3. Scroll to the **Endpoints** list and select **Spree::HomeController#index** to explore the data for the resource.
 
-   Notice that the monitor you created for the Monitor Based SLO is linked to the resource and is in the `ALERT` state.
+   Notice that the monitor you created for the Monitor-based SLO is linked to the resource and is in the `ALERT` state.
 
-4. View the **Latency** graph. Notice the increase in latency when the app restarted. Select the `p99` legend option. This is metric you used to create the monitor for the Monitor Based SLO.
+4. View the **Latency** graph. Notice the increase in latency when the app restarted. Select the `p99` legend option. This is metric you used to create the monitor for the Monitor-based SLO.
 
 5. Scroll down to the **Traces** list. Browse the **Duration** column. 
 
@@ -20,13 +20,13 @@ You can explore the respective APM Resource pages to investigate the depleting e
 
    *Looks like ads and discounts services are the sources of the higher latencies!* 
    
-   *Investigating/troubleshooting these services can be a first step in restoring the error budget for the Monitor Based SLO.*
+   *Investigating/troubleshooting these services can be a first step in restoring the error budget for the Monitor-based SLO.*
   
 6. Navigate to `store-frontend` Service page.
 
 7. Select **Spree::OrdersController#edit** from the **Endpoints** list to explore the data for the resource.
 
-   Notice that the Error Budget monitor you created for the Metric Based SLO is linked to the resource and is in the `ALERT` state.
+   Notice that the Error Budget monitor you created for the Metric-based SLO is linked to the resource and is in the `ALERT` state.
 
 7. Scroll to the **Traces** list. 
 
@@ -36,6 +36,6 @@ You can explore the respective APM Resource pages to investigate the depleting e
 
    *Looks like there is error in a file for the store-frontend service!* 
    
-   *Investigating/troubleshooting this error can be a first step in restoring the error budget for the Monitor Based SLO.*
+   *Investigating/troubleshooting this error can be a first step in restoring the error budget for the Monitor-based SLO.*
 
 With Datadog, your teams can start exploring related infrastructure and app data to find the sources of depleting error budgets to work toward restoring them and meeting your SLO targets.  

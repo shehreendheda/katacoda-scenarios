@@ -1,15 +1,15 @@
-<a href="https://docs.datadoghq.com/monitors/service_level_objectives/metric/" target="_blank">Metric Based SLOs</a> take a count-based approach to tracking SLIs. The SLI is the ratio of “good” events divided by total events. The SLO target sets the expectation for the percentage of total events that should be “good”.
+<a href="https://docs.datadoghq.com/monitors/service_level_objectives/metric/" target="_blank">Metric-based SLOs</a> take a count-based approach to tracking SLIs. The SLI is the ratio of “good” events divided by total events. The SLO target sets the expectation for the percentage of total events that should be “good”.
 
-Because successfully managing items in the cart depends on successful requests to an app service resource,  you'll create a Metric Based SLO to track succussfully managing items in the cart.
+Because successfully managing items in the cart depends on successful requests to an app service resource,  you'll create a Metric-based SLO to track succussfully managing items in the cart.
 
 SLO:
 *`"Over a 7-day period, 99% of requests to the cart will be successful."`*
 
-## Creating the Metric Based SLO
+## Creating the Metric-based SLO
 
 1. Navigate to <a href="https://app.datadoghq.com/slo/new" target="_datadog">**Monitor** > **New SLO**</a>.
 
-2. Under **Define the source**, select **Metric Based**.
+2. Under **Define the source**, select **Metric-based**.
 
 3. Update the fields under **Good events** and **Total Events** as shown below.
 
