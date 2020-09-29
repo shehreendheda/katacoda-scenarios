@@ -1,6 +1,6 @@
-<a href="https://docs.datadoghq.com/monitors/service_level_objectives/monitor/" target="_blank">Monitor Based SLOs</a> take a time-based approach to tracking SLIs. The SLO target is the proportion of the time window all the monitors should be in the OK state. 
+<a href="https://docs.datadoghq.com/monitors/service_level_objectives/monitor/" target="_blank">Monitor-based SLOs</a> take a time-based approach to tracking SLIs. The SLO target is the proportion of the time window all the monitors should be in the OK state. 
 
-Because latency is time-based, you'll create a Monitor Based SLO to track latency for viewing the home page.
+Because latency is time-based, you'll create a Monito-based SLO to track latency for viewing the home page.
 
 SLO:
 *`"Over the past 7-days, 99% of the time the p99 latency of a home page request should be less than 5 seconds."`*
@@ -51,13 +51,13 @@ The SLI for this SLO will be a monitor that tracks the trace metric for p99 late
    
    Notice that **Tags** have been automaically added for the corresponding `env`, `service`, and `resource_name`. You can use these tags to search the monitors in the Manage Monitors list. These tags also link the monitor to corresponding APM Service and Resource pages.
 
-Now that you've created the monitor. Let's create the Monitor Based SLO.
+Now that you've created the monitor. Let's create the Monitor-based SLO.
 
-## Creating the Monitor Based SLO
+## Creating the Monitor-based SLO
 
 1. Navigate to <a href="https://app.datadoghq.com/slo/new" target="_datadog">**Monitor** > **New SLO**</a>.
 
-2. Under **Define the source**, select **Monitor Based**, then select the monitor you created above, `Service store-frontend on resource_name:spree::homecontroller_index has a high p99 latency on env:ruby-shop`.
+2. Under **Define the source**, select **Monitor-based**, then select the monitor you created above, `Service store-frontend on resource_name:spree::homecontroller_index has a high p99 latency on env:ruby-shop`.
 
 3. Under **Set your targets**, click **New Target +**. Set **Target:** to `99%` and **Time Window:** to `30 Days`.
 
@@ -79,7 +79,7 @@ Now that you've created the monitor. Let's create the Monitor Based SLO.
 
 Because the app was just instrumented with Datadog, more metrics need to be collected before the SLO status and history provide insightful information about the SLO. If the app ran for more than 7 days, the history bar would be solid.
 
-Example of older Monitor Based SLO
+Example of older Monitor-based SLO
 ![old SLO](slopractice/assets/monitor-slo-7-days.png)
 
-You've created the Monitor Based SLO to track latency for vieing the home page. Let's now create the second SLO to track successfully managing items in a cart.
+You've created the Monitor-based SLO to track latency for vieing the home page. Let's now create the second SLO to track successfully managing items in a cart.

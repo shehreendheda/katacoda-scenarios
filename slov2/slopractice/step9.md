@@ -2,11 +2,11 @@ You created an SLO related to the latency of viewing the home page and an SLO re
 
 You can also create an SLO related to successfully viewing the home page and an SLO related to the latency of managing items in the cart.
 
-1. Create a Metric Based SLO for successfully viewing the home page and an Error Budget Monitor for the SLO.
+1. Create a Metric-based SLO for successfully viewing the home page and an Error Budget Monitor for the SLO.
 
    Hint: Use the `trace.rack.requests.hits` and `trace.rack.requests.errors` metrics scoped to the `env:ruby-shop`, `service:store-frontend`, and `resource_name:spree::homecontroller_index` for the SLI.
 
-2. Create a Monitor Based SLO for the p99 latency of managing items in the cart.
+2. Create a Monitor-based SLO for the p99 latency of managing items in the cart.
 
    Hint: Create a monitor similar to the one you created for the p99 latency of viewing the home page, but scoped to the resource `resource_name:spree::homecontroller_index` for the SLI.
 

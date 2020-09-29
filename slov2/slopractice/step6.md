@@ -8,7 +8,7 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
 3. Click and drag the **SLO Summary** widget to the board. The SLO Summary Edtior window will pop up.
 
-4. Under **Search and Select**, select the Monitor Based SLO you created and pick the all time windows that are available.
+4. Under **Search and Select**, select the Monitor-based SLO you created and pick the all time windows that are available.
 
 5. Under **Set display preferences**, make sure **Show error budget** is selected.
 
@@ -18,7 +18,7 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
    ![slo-widget-monitorbased](slopractice/assets/slo-widget-monitorbased.png)
 
-8. Repeat steps 3 to 7 for the Metric Based SLO you created.
+8. Repeat steps 3 to 7 for the Metric-based SLO you created.
 
    ![slo-widget-metricbased](slopractice/assets/slo-widget-metricbased.png)
 
@@ -32,7 +32,7 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
 13. Leave the **Set display preferences** as is.
 
-14. Under **Widget title**, select **Show a title** and enter the title `Monitors for Monitor Based SLOs`. Leave the title setting as is or modify as desired.
+14. Under **Widget title**, select **Show a title** and enter the title `Monitors for Monitor-based SLOs`. Leave the title setting as is or modify as desired.
 
 15. Click **Done**.
 

@@ -18,11 +18,11 @@
           "text": "step3.md"
         },
         {
-          "title": "Creating a Monitor Based SLO",
+          "title": "Creating a Monitor-based SLO",
           "text": "step4.md"
         },
         {
-          "title": "Creating a Metric Based SLO with an Error Budget Monitor",
+          "title": "Creating a Metric-based SLO with an Error Budget Monitor",
           "text": "step5.md"
         },
         {
@@ -39,7 +39,7 @@
           "text": "step8.md"
         },
         {
-          "title": "(Optional) Creating other relevant SLOs",
+          "title": "(Optional) Creating Other Relevant SLOs",
           "text": "step9.md"
         }
       ],
