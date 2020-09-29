@@ -11,7 +11,7 @@ The SLI for this SLO will be a monitor that tracks the trace metric for p99 late
 
 ## Creating the Monitor for the SLI
 
-1. Navigate to <a href="https://app.datadoghq.com/monitors#/create" target="_datadog">**Monitor** > **New Monitor**</a> and select **APM**.
+1. Navigate to <a href="https://app.datadoghq.com/monitors#/create" target="_datadog">**Monitors** > **New Monitor**</a> and select **APM**.
 
    The <a href="https://docs.datadoghq.com/monitors/monitor_types/apm/?tab=apmmetrics" target="_blank">APM Monitor</a> is designed specifically for trace metrics. After you create the monitor, you'll see that the underlying monitor for the APM Monitor is a <a href="https://docs.datadoghq.com/monitors/monitor_types/metric" target="_blank">Metric Monitor</a> for the trace metric.
 
@@ -29,7 +29,7 @@ The SLI for this SLO will be a monitor that tracks the trace metric for p99 late
 
    Select `Threshold Alert`. 
    
-   Set the alert criteria to **Alert when the** `p99 latency` **is** `above` `5` **over the last** `1 minutes`.
+   Set the alert criteria to **Alert when the** `p99 latency` **is** `above` `5` **over the last** `1 minute`.
 
    ![monitor-new-conditions](slopractice/assets/monitor-new-conditions.png)
 
@@ -55,11 +55,11 @@ Now that you've created the monitor. Let's create the Monitor-based SLO.
 
 ## Creating the Monitor-based SLO
 
-1. Navigate to <a href="https://app.datadoghq.com/slo/new" target="_datadog">**Monitor** > **New SLO**</a>.
+1. Navigate to <a href="https://app.datadoghq.com/slo/new" target="_datadog">**Monitors** > **New SLO**</a>.
 
 2. Under **Define the source**, select **Monitor-based**, then select the monitor you created above, `Service store-frontend on resource_name:spree::homecontroller_index has a high p99 latency on env:ruby-shop`.
 
-3. Under **Set your targets**, click **New Target +**. Set **Target:** to `99%` and **Time Window:** to `30 Days`.
+3. Under **Set your targets**, click **New Target +**. Set **Target:** to `99%` and **Time Window:** to `7 Days`.
 
 4. Under **Add names and tags**, enter the following:
 
@@ -69,15 +69,13 @@ Now that you've created the monitor. Let's create the Monitor-based SLO.
    
    Enter or select the **Tags** `env:ruby-shop`, `service:store-frontend`, and `resource_name:spree::homecontroller_index`.
 
-5. Click **Save & Exit**.
-   
    ![monitor-slo-create](slopractice/assets/monitor-slo-create.png)
 
-6. In the list of SLOs, click the SLO you just created to view the details, status, and history.
+5. Click **Save & Exit**. You will be redirected to the details, status, and history of the SLO.
 
    ![new SLO](slopractice/assets/monitor-slo-new.png)
 
-Because the app was just instrumented with Datadog, more metrics need to be collected before the SLO status and history provide insightful information about the SLO. If the app ran for more than 7 days, the history bar would be solid.
+Because the app was just instrumented with Datadog, more metrics need to be collected before the SLO status and history provide insightful information about the SLO. If the app ran for more than 30 days, the history bar would be solid.
 
 Example of older Monitor-based SLO
 ![old SLO](slopractice/assets/monitor-slo-7-days.png)

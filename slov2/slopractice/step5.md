@@ -1,25 +1,27 @@
-<a href="https://docs.datadoghq.com/monitors/service_level_objectives/metric/" target="_blank">Metric-based SLOs</a> take a count-based approach to tracking SLIs. The SLI is the ratio of “good” events divided by total events. The SLO target sets the expectation for the percentage of total events that should be “good”.
+For <a href="https://docs.datadoghq.com/monitors/service_level_objectives/metric/" target="_blank">Metric-based SLOs</a>, the SLI is a metric query for “good” events divided by the total number of valid events. The SLO target sets the expectation for the percentage of total events that should be “good”.
 
 Because successfully managing items in the cart depends on successful requests to an app service resource,  you'll create a Metric-based SLO to track succussfully managing items in the cart.
 
 SLO:
-*`"Over a 7-day period, 99% of requests to the cart will be successful."`*
+*`"Over a 30-day period, 99% of requests to the cart will be successful."`*
 
 ## Creating the Metric-based SLO
 
-1. Navigate to <a href="https://app.datadoghq.com/slo/new" target="_datadog">**Monitor** > **New SLO**</a>.
+1. Navigate to <a href="https://app.datadoghq.com/slo/new" target="_datadog">**Monitors** > **New SLO**</a>.
 
 2. Under **Define the source**, select **Metric-based**.
 
 3. Update the fields under **Good events** and **Total Events** as shown below.
 
+   Remember, there is no direct metric for "successful" requests, but there is a metric for total requests `trace.rack.request.hits` and for request errors `trace.rack.request.errors`. So, "successful" request are `trace.rack.request.hits - trace.rack.request.errors`. 
+   
    To add the errors metric in **Good events**, click **Advanced** and then **Add Query**. Search the metrics list for `trace.rack.requests.errors`. Select the metric if it is listed, then fill out the **from** field as indicated in the image. If the metric is not listed, click the `</>` icon, then manually enter (copy/paste) `sum:trace.rack.request.errors{service:store-frontend,resource_name:spree::orderscontroller_edit,env:ruby-shop}.as_count()`{{copy}}.
 
    Update the expression to `a - b`.
 
    ![metric-slo-addquery](slopractice/assets/metric-slo-addquery.gif) 
 
-3. Under **Set your targets**, click **New Target +**. Set **Target:** to `99%` and **Time Window:** to `7 Days`.
+3. Under **Set your targets**, click **New Target +**. Set **Target:** to `99%` and **Time Window:** to `30 Days`.
 
 4. Under **Add names and tags**, enter the following:
 
@@ -53,7 +55,7 @@ Let's set an alert to monitor the error budget of the SLO. <a href="https://docs
 
 3. Under **Say what's happening**, enter the following:
 
-   Add the description `Warn on 90% of error budget consumed. Alert on 95% of error budget consumder.`{{copy}}
+   Add the description `Warn on 90% of error budget consumed. Alert on 95% of error budget consumed.`{{copy}}
 
    Add the **Tags** `env:ruby-shop`, `service:store-frontend`, and `resource_name:spree::ordercontroller_edit`.
 

@@ -6,9 +6,9 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
    <a href="https://docs.datadoghq.com/dashboards/screenboards/" target="_blank">Screenboards</a> are used as status boards or storytelling views that update in real-time or represent fixed points in the past. 
 
-3. Click and drag the **SLO Summary** widget to the board. The SLO Summary Edtior window will pop up.
+3. Click and drag the **SLO Summary** widget to the board. The SLO Summary Editor window will pop up.
 
-4. Under **Search and Select**, select the Monitor-based SLO you created and pick the all time windows that are available.
+4. Under **Search and Select**, select the Monitor-based SLO you created `Home Page P99 Latency` and pick the all time windows that are available.
 
 5. Under **Set display preferences**, make sure **Show error budget** is selected.
 
@@ -38,9 +38,9 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
     ![monitor-widget-monitorsforslos](slopractice/assets/monitor-widget-monitorsforslos.png)
 
-16. Repeat steps 10 to 15 for the Error Budger Monitor you created. 
+16. Repeat steps 10 to 15 for the Error Budget Monitor you created. 
 
-    To search for the monitor, enter `tag:env:ruby-shoptype:slo`.
+    To search for the monitor, enter `tag:env:ruby-shop type:slo`.
 
     Enter the title `Error Budget Monitors for SLOs`.
 
@@ -50,4 +50,4 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
 18. Click `Save Changes` next to the dashboard title.
 
-With the Dashbaord created with the SLOs and related monitors, let's see what happens to the SLOs and their error budgets when the app has errors. 
+Now that you've created the dashboard for the SLOs and their related monitors, let's see what happens to the SLOs and their error budgets when the app has errors. 
