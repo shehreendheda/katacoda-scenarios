@@ -1,6 +1,6 @@
 <a href="https://docs.datadoghq.com/monitors/service_level_objectives/monitor/" target="_blank">Monitor-based SLOs</a> take a time-based approach to tracking SLIs. The SLO target is the proportion of the time window all the monitors should be in the OK state. 
 
-Because latency is time-based, you'll create a Monito-based SLO to track latency for viewing the home page.
+Because latency is time-based, you'll create a Monitor-based SLO to track latency for viewing the home page.
 
 SLO:
 *`"Over the past 7-days, 99% of the time the p99 latency of a home page request should be less than 5 seconds."`*

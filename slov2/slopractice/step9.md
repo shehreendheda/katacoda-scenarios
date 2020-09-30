@@ -8,7 +8,7 @@ You can also create an SLO related to successfully viewing the home page and an 
 
 2. Create a Monitor-based SLO for the p99 latency of managing items in the cart. You can set the target and time window as desired.
 
-   Hint: Create a monitor similar to the one you created for the p99 latency of viewing the home page, but scoped to the resource `resource_name:spree::homecontroller_index` for the SLI.
+   Hint: Create a monitor similar to the one you created for the p99 latency of viewing the home page, but scoped to the resource `resource_name:spree::ordercontroller_edit` for the SLI.
 
 3. Add the new SLOs and associated monitors to the dashboard you created.
 
