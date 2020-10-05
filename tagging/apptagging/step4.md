@@ -6,7 +6,7 @@ Tags are also filter facets for various lists throughout Datadog. Let's create t
 
 3. For **Choose Request Type**, select **HTTP**.
 
-4. Under **Make a request**, fill in each field as shown below. <p> **Note**: For **URL**, enter the URL for your Storedog home page. Click the **storedog** tab above the terminal on the right. Copy the URL for the Storedog home page and paste the URL in the sythentic test URL field.<p>![syn-makerequest](apptagging/assets/syn-makerequest.png)
+4. Under **Make a request**, fill in each field as shown below. <p> **Note**: For **URL**, enter the URL for your Storedog home page: `https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/`{{copy}} <p>![syn-makerequest](apptagging/assets/syn-makerequest.png)
 
 5. Click **Alert conditions** to expand the section. Fill in each field as shown below. <p>![syn-alertconditions](apptagging/assets/syn-alertconditions.png)
 
