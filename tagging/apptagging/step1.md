@@ -1,4 +1,4 @@
-In the terminal on the right, the Storedog app is being instrumented for monitoring with Datadog. Live traffic to the app is also being simulated. This may take up to 7 minutes.
+In the terminal on the right, the Storedog app is being instrumented for monitoring with Datadog. Live traffic to the app is also being simulated. This may take up to 2 minutes.
 
 Once the app is instrumented, you will see the following message in the terminal: `The environment is prepared! You can now start the activity.`
 
