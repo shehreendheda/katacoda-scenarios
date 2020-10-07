@@ -16,15 +16,17 @@ The restarted app is broken, so you will now see errors in the app.
 
    Let's check the SLOs that you created for these user actions.
 
-4. Navigate to <a href="https://app.datadoghq.com/dashboards" target="_datadog">**Dashboards**</a>. Select the dashboard you created for the SLOs.
+4. Navigate to <a href="https://app.datadoghq.com/dashboards" target="_datadog">**Dashboards**</a>. Select the dashboard you created for the SLOs `Storedog App SLOs`.
 
-   Notice the changes to each SLO and monitor now that errors are being introduced.
+   Notice the changes to each SLO and monitor now that errors are being introduced. You may need to wait 2 - 3 minutes and refresh the page to see new data.
 
 5. In each widget, click the SLO or monitor to view its details. Each SLO/monitor will open in a new browser tab.
 
 The significant change in the SLO statuses is due to the relatively low traffic and the trace metrics only having less than an hour's worth of history. The number of total events (SLI denominator value) is relatively small, making the SLO sensitive to even just one error. In a real world scenario, the number of total events will be in the thousands or millions, so one error wouldn't normally have such a large impact.
 
-When you see your error budget is consumed, or better when it is close to being consumed, you should take action to restore the error budget. The next page is an optional walkthrough of investigating the app errors using Datadog, followed by an optional exercise to create more SLOs.
+When you see your error budget is consumed, or better when it is close to being consumed, you should take action to restore the error budget. 
+
+The next page is an optional walkthrough of investigating the app errors using Datadog, followed by an optional exercise to create more SLOs.
 
 #### Assessment
 

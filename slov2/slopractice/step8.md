@@ -14,9 +14,9 @@ You can explore the respective APM Resource pages to investigate the depleting e
 
 5. Scroll down to the **Traces** list. Browse the **Duration** column. 
 
-   Select a trace with duration less than 3 seconds. Note the lengths of the spans for `flask.request GET_\ads` and `flask.request GET_\discounts`.
+   Select a trace with duration less than 3 seconds. Note the lengths of the spans for `flask.request GET_/ads` and `flask.request GET_/discounts`.
 
-   Select a trace with duration greater than 3 seconds. Notice the lengths of the spans for `flask.request GET_\ads` and `flask.request GET_\discounts` is longer than those in the traces with duration less than 3 seconds.
+   Select a trace with duration greater than 3 seconds. Notice the lengths of the spans for `flask.request GET_/ads` and `flask.request GET_/discounts` is longer than those in the traces with duration less than 3 seconds.
 
    *Looks like ads and discounts services are the sources of the higher latencies!* 
    
@@ -26,7 +26,7 @@ You can explore the respective APM Resource pages to investigate the depleting e
 
 7. Select **Spree::OrdersController#edit** from the **Endpoints** list to explore the data for the resource.
 
-   Notice that the Error Budget monitor you created for the Metric-based SLO is linked to the resource and is in the `ALERT` state.
+   Notice that the Error Budget Monitor you created for the Metric-based SLO is linked to the resource and is in the `ALERT` state.
 
 7. Scroll to the **Traces** list. 
 

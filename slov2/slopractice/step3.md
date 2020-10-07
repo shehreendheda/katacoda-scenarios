@@ -22,9 +22,9 @@ Let's explore the available metrics in Datadog that can be used in SLIs for the 
 
 4. Click **Spree::HomeController#index** to view its details. 
 
-5. Expand the **Latency** graph. Below the graph, notice that there are mutiple latency metrics based on distribution percentile. 
+5. Expand the **Latency** graph as shown below. Notice that there are mutiple latency metrics based on distribution percentile below the Latency graph. 
 
-   Let's be specific and use the metric for the p99 latency of a home page request `trace.rack.request.duration.by.resource_service.99p` in the SLI for the SLO to track latency of viewing the home page.
+   Let's be specific and use the metric for the p99 latency of a home page request `trace.rack.request.duration.by.resource_service.99p` in the SLI for the SLO to track latency of viewing the home page. (The p99 latency means that 99% of requests have latencies lower than this value.)
 
    Close the graph.
 
@@ -34,13 +34,13 @@ Let's explore the available metrics in Datadog that can be used in SLIs for the 
 
 ## SLI for Successfully Managing Items in the Cart
 
-7. Scroll to the **Endpoints** list and select **Spree::OrderController#edit** to view its details.
+7. Scroll to the **Endpoints** list and select **Spree::OrdersController#edit** to view its details.
 
-   The **Total Request** graph is related to the adding items to the cart.
+   The **Total Request** graph is related to adding items to the cart.
 
-8. Expand the **Total Request** graph.
+8. Expand the **Total Request** graph as shown below.
 
-   Below the graph, the `trace.rack.request.hits` metric is listed and is related to requests to the cart. This metrics includes requests that are successful and requests that are errors.
+   The `trace.rack.request.hits` metric is listed below the Total Requests graph. This metric is the count of total requests to the endpoint and is the sum of the requests that are successful and the requests that are errors
    
    If there are request errors, you would also see the `trace.rack.request.errors` metric. If you don't see the metric, that's alright. You'll see how to manually enter the metric when you create the SLO.
 

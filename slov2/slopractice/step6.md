@@ -6,9 +6,11 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
    <a href="https://docs.datadoghq.com/dashboards/screenboards/" target="_blank">Screenboards</a> are used as status boards or storytelling views that update in real-time or represent fixed points in the past. 
 
+3. Click **Edit Widget** next to the screenboard title if the widget options are not displayed.
+
 3. Click and drag the **SLO Summary** widget to the board. The SLO Summary Editor window will pop up.
 
-4. Under **Search and Select**, select the Monitor-based SLO you created `Home Page P99 Latency` and pick the all time windows that are available.
+4. Under **Search and select SLO**, select the Monitor-based SLO you created `Home Page P99 Latency` and pick the all time windows that are available.
 
 5. Under **Set display preferences**, make sure **Show error budget** is selected.
 
@@ -21,6 +23,8 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 8. Repeat steps 3 to 7 for the Metric-based SLO you created.
 
    ![slo-widget-metricbased](slopractice/assets/slo-widget-metricbased.png)
+
+   Let's also add widgets for the different monitor types you created.
 
 9. In the Widget Bar, click the right arrow to see more options.
 
@@ -46,7 +50,7 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
     ![monitor-widget-errorbudgets](slopractice/assets/monitor-widget-errorbudgets.png)
 
-17. Rearrange the widgets on the boards as desired.
+17. Rearrange and resize the widgets on the boards as desired.
 
 18. Click `Save Changes` next to the dashboard title.
 
