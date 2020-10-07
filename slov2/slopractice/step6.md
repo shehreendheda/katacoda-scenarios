@@ -10,7 +10,11 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
 3. Click and drag the **SLO Summary** widget to the board. The SLO Summary Editor window will pop up.
 
-4. Under **Search and select SLO**, select the Monitor-based SLO you created `Home Page P99 Latency` and pick the all time windows that are available.
+4. Under **Search and select SLO**, select the Monitor-based SLO you created `Home Page P99 Latency`.
+
+5. Under **Set Time Windows**, notice that `7 Days` is automatically selected for the **Rolling Time Windows** because the SLO time window is for the past 7 days. 
+
+   Select `Week to date` and `Previous week` below **Calendar Time Windows**.
 
 5. Under **Set display preferences**, make sure **Show error budget** is selected.
 
@@ -18,13 +22,17 @@ The <a href="https://docs.datadoghq.com/dashboards/widgets/slo/" target="_blank"
 
 7. Click **Done**.
 
-   ![slo-widget-monitorbased](slopractice/assets/slo-widget-monitorbased.png)
+   ![slo-widget-monitorbased](slopractice/assets/slo-widget-monitorbased-2.png)
 
 8. Repeat steps 3 to 7 for the Metric-based SLO you created.
 
-   ![slo-widget-metricbased](slopractice/assets/slo-widget-metricbased.png)
+   Under **Set Time Windows**, notice that `30 Days` is automatically selected for the **Rolling Time Windows** because the SLO time window is for the past 30 days. 
 
-   Let's also add widgets for the different monitor types you created.
+   Select `Month to date` and `Previous month` below **Calendar Time Windows**.
+
+   ![slo-widget-metricbased](slopractice/assets/slo-widget-metricbased-2.png)
+
+   Let's also add two separate Monitor Summary widgets: one for monitors used in Monitor-based SLOs and one for Error Budget Monitors.
 
 9. In the Widget Bar, click the right arrow to see more options.
 

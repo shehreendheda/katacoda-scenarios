@@ -69,7 +69,7 @@ Now that you've created the monitor. Let's create the Monitor-based SLO.
    
    Add the description `99% of time, the p99 latency of viewing the home page should be lower than 5 seconds`{{copy}}.
    
-   Enter or select the **Tags** `env:ruby-shop`, `service:store-frontend`, and `resource_name:spree::homecontroller_index`.
+   Individually enter or select the **Tags** `env:ruby-shop`{{copy}}, `service:store-frontend`{{copy}}, and `resource_name:spree::homecontroller_index`{{copy}}.
 
    ![monitor-slo-create](slopractice/assets/monitor-slo-create.png)
 
