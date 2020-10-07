@@ -31,7 +31,7 @@ SLO:
    
    Add the descriptions `99% of requests to the cart will be successful`{{copy}}.
    
-   Enter the **Tags** `env:ruby-shop`, `service:store-frontend`, and `resource_name:spree::orderscontroller_edit`.
+   Individually enter or select the **Tags** `env:ruby-shop`{{copy}}, `service:store-frontend`{{copy}}, and `resource_name:spree::orderscontroller_edit`{{copy}}.
 
 5. Click **Save & Exit**.
 
@@ -59,7 +59,7 @@ Let's set an alert to monitor the error budget of the SLO. <a href="https://docs
 
    Add the description `Warn on 90% of error budget consumed. Alert on 95% of error budget consumed.`{{copy}}
 
-   Add the **Tags** `env:ruby-shop`, `service:store-frontend`, and `resource_name:spree::orderscontroller_edit`.
+   Individually enter or select the **Tags** `env:ruby-shop`{{copy}}, `service:store-frontend`{{copy}}, and `resource_name:spree::orderscontroller_edit`{{copy}}.
 
 4. Make sure the **Notify your team** field is blank and `Do not notify` is selected. No notifications are needed in this activity.
 
