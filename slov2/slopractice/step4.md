@@ -3,7 +3,9 @@
 Because latency is time-based, you'll create a Monitor-based SLO to track latency for viewing the home page.
 
 SLO:
-*`"Over the past 7-days, 99% of the time the p99 latency of a home page request should be less than 5 seconds."`*
+*`"Over the past 7 days, 99% of the time the p99 latency of a home page request should be less than 5 seconds."`*
+
+That is, over 99% of the past 7 days, 99% of home page requests have a latency lower than 5 seconds.
 
 Note: The SLO targets and time windows in this activity are just arbitrary. In real-world situations, various teams (Product, Engineering, Executive, etc.) would collaborate to determine SLO details.
 
@@ -37,7 +39,7 @@ The SLI for this SLO will be a monitor that tracks the trace metric for p99 late
 
    Leave the name of the monitor as is.
    
-   Add `Monitor for the SLO "99% of the time the p99 latency of a home page request should be less than 5 seconds."`{{copy}} to the description.
+   Replace the description with `Monitor for the SLO "99% of the time the p99 latency of a home page request should be less than 5 seconds."`{{copy}}.
 
    ![monitor-new-descriptionslo](slopractice/assets/monitor-new-descriptionslo.png)
 

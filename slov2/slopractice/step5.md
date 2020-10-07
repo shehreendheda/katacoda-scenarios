@@ -3,7 +3,7 @@ For <a href="https://docs.datadoghq.com/monitors/service_level_objectives/metric
 Because successfully managing items in the cart depends on successful requests to an app service resource,  you'll create a Metric-based SLO to track succussfully managing items in the cart.
 
 SLO:
-*`"Over a 30-day period, 99% of requests to the cart will be successful."`*
+*`"Over the past 30 days, 99% of requests to the cart will be successful."`*
 
 ## Creating the Metric-based SLO
 
@@ -13,9 +13,11 @@ SLO:
 
 3. Update the fields under **Good events** and **Total Events** as shown below.
 
+   ![metric-slo-sli](slopractice/assets/metric-slo-sli.png)
+
    Remember, there is no direct metric for "successful" requests, but there is a metric for total requests `trace.rack.request.hits` and for request errors `trace.rack.request.errors`. So, "successful" request are `trace.rack.request.hits - trace.rack.request.errors`. 
    
-   To add the errors metric in **Good events**, click **Advanced** and then **Add Query**. Search the metrics list for `trace.rack.requests.errors`. Select the metric if it is listed, then fill out the **from** field as indicated in the image. If the metric is not listed, click the `</>` icon, then manually enter (copy/paste) `sum:trace.rack.request.errors{service:store-frontend,resource_name:spree::orderscontroller_edit,env:ruby-shop}.as_count()`{{copy}}.
+   To add the errors metric in **Good events** (see gif below), click **Advanced** and then **Add Query**. Search the metrics list for `trace.rack.requests.errors`. Select the metric if it is listed, then fill out the **from** field as indicated in the image. If the metric is not listed, click the `</>` icon, then manually enter (copy/paste) `sum:trace.rack.request.errors{service:store-frontend,resource_name:spree::orderscontroller_edit,env:ruby-shop}.as_count()`{{copy}}.
 
    Update the expression to `a - b`.
 
@@ -29,7 +31,7 @@ SLO:
    
    Add the descriptions `99% of requests to the cart will be successful`{{copy}}.
    
-   Enter the **Tags** `env:ruby-shop`, `service:store-frontend`, and `resource_name:spree::ordercontroller_edit`.
+   Enter the **Tags** `env:ruby-shop`, `service:store-frontend`, and `resource_name:spree::orderscontroller_edit`.
 
 5. Click **Save & Exit**.
 
@@ -57,7 +59,7 @@ Let's set an alert to monitor the error budget of the SLO. <a href="https://docs
 
    Add the description `Warn on 90% of error budget consumed. Alert on 95% of error budget consumed.`{{copy}}
 
-   Add the **Tags** `env:ruby-shop`, `service:store-frontend`, and `resource_name:spree::ordercontroller_edit`.
+   Add the **Tags** `env:ruby-shop`, `service:store-frontend`, and `resource_name:spree::orderscontroller_edit`.
 
 4. Make sure the **Notify your team** field is blank and `Do not notify` is selected. No notifications are needed in this activity.
 
@@ -65,8 +67,8 @@ Let's set an alert to monitor the error budget of the SLO. <a href="https://docs
 
    ![errorbudget-monitor-create](slopractice/assets/errorbudget-monitor-create.png)   
 
-   The monitor status with will first read `NO DATA` before it shows the actual monitor status. 
+   The monitor status will first read `NO DATA` before it shows the actual monitor status. 
 
-6. Navigate to <a href="https://app.datadoghq.com/event/stream" target="_datadog">**Events**</a>. Browse the stream or search for `SLO` to see the <a href="https://docs.datadoghq.com/monitors/service_level_objectives/#slo-audit-events" target="_blank">audit events</a> for the SLOs and Monitors/Alerts you've created.
+6. Navigate to <a href="https://app.datadoghq.com/event/stream" target="_datadog">**Events**</a> in the main menu. Browse the stream or search for `SLO` to see the <a href="https://docs.datadoghq.com/monitors/service_level_objectives/#slo-audit-events" target="_blank">audit events</a> for the SLOs and Monitors/Alerts you've created.
 
 Now that you've created the SLOs, let's add the SLOs to a dashboard.

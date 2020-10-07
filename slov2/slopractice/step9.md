@@ -22,5 +22,4 @@ You can also create an SLO related to successfully viewing the home page and an 
 
    What other SLOs can you create for the app?
 
-Click **Finish** to complete the activity.
 
