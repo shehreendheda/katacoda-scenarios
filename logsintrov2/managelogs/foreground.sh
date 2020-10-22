@@ -19,3 +19,5 @@ rm Vagrantfile
 rm docker-compose.yml
 python main.py &
 echo "ready"
+
+clear
