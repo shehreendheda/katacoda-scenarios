@@ -1,0 +1,21 @@
+{
+  "title": "Logs Processing",
+  "description": "",
+  "icon": "fa-katacoda",
+  "courses": [
+    {
+      "pathway_id": "datadog/logsprocess",
+      "course_id": "logsparsing",
+      "id": "logsparsing",
+      "title": "Grok Parsing",
+      "description": "Intro to grok parsing"
+    },
+    {
+      "pathway_id": "datadog/logsprocess",
+      "course_id": "logspipeline",
+      "id": "logspipeline",
+      "title": "Creating a Custom Pipeline",
+      "description": "Walkthrough of creating a custom pipeline"
+    }    
+  ]
+}
