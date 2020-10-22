@@ -1,0 +1,21 @@
+{
+  "title": "Introduction to Logs with Datadog",
+  "description": "",
+  "icon": "fa-katacoda",
+  "courses": [
+    {
+      "pathway_id": "datadog/logsintrov2",
+      "course_id": "collectlogs",
+      "id": "collectlogs",
+      "title": "Setting up Log Collection and Integration Pipelines",
+      "description": "Intro to log collection and integration pipelines"
+    },
+    {
+      "pathway_id": "datadog/logsintrov2",
+      "course_id": "managelogs",
+      "id": "managelogs",
+      "title": "Getting Started with Log Management",
+      "description": "Intro to log management in Datadog"
+    }    
+  ]
+}

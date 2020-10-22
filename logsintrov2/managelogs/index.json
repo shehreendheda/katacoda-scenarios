@@ -1,0 +1,33 @@
+{
+  "title": "Getting Started with Log Management",
+  "description": "Intro to log management in Datadog",
+  "time": "20 minutes",
+  "difficulty": "Beginner",
+  "details": {
+    "intro": {
+      "courseData": "background.sh",
+      "code": "foreground.sh",
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "text": "step1.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal", 
+    "uieditorpath": "/etc/datadog-agent",
+    "terminals": [
+      {
+        "name": "Terminal 2"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
