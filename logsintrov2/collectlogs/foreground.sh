@@ -6,7 +6,8 @@ cat > apikey.env <<EOL
 DD_API_KEY=${DD_API_KEY}
 EOL
 
-git clone https://github.com/DataDog/TrainingEnvironment.git
+git clone https://github.com/DataDog/TrainingEnvironment.git /root/lab-files
+cd /root/lab-files
 cp -r TrainingEnvironment/logsintro/* .
 rm -rf TrainingEnvironment
 
