@@ -6,10 +6,10 @@ cat > apikey.env <<EOL
 DD_API_KEY=${DD_API_KEY}
 EOL
 
-git clone https://github.com/DataDog/TrainingEnvironment.git /root/lab-files
-cd /root/lab-files
-cp -r TrainingEnvironment/logsintro/* .
+git clone https://github.com/DataDog/TrainingEnvironment.git
+cp -r TrainingEnvironment/logsintro/* lab-files
 rm -rf TrainingEnvironment
+cd /root/lab-files
 
 sed -i '12 i \ \ \ \ \ \ - DD_API_KEY' docker-compose.yml 
 sed -i '12 i \ \ \ \ \ \ - DD_LOGS_ENABLED=true' docker-compose.yml 
