@@ -13,7 +13,6 @@ DD_API_KEY=${DD_API_KEY}
 EOL
 
 sed -i '12 i \ \ \ \ \ \ - DD_API_KEY' docker-compose.yml 
-sed -i '12 i \ \ \ \ \ \ - DD_LOGS_ENABLED=true' docker-compose.yml 
 
 sed -i 's|datadog/agent:latest|datadog/agent:6.11.1|' docker-compose.yml
 sed -i 's|redis:latest|redis:5.0.5|' docker-compose.yml
