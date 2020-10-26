@@ -1,33 +1,61 @@
-<a href="https://docs.datadoghq.com/agent/docker/log/?tab=containerinstallation" target="_datadog">Log collection</a> has to be enabled for the Datadog Agent so that logs from the Agent container as well as the application services containers can be collected by Datadog.
+The environment is running and the Datadog Agent in configured to collect logs. Let's view the <a href="https://docs.datadoghq.com/logs/explorer/" target="_blank">Log Explorer</a> to see the logs that are being collected.
 
-1. Click `docker-compose.yml`{{open}}.
+1. In a new window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com. 
 
-2. Click **Copy to Editor** in the block below to add the following environment variables for the agent.
+2. If you have previously used the **Log Explorer** in the Datadog organization you are working in, move on to the next step. 
+    
+    If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Getting Started** again.
 
-    <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert environment variables here">
-         - DD_LOGS_ENABLED=true
-         - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true</pre>
+3. Navigate to the <a href="https://app.datadoghq.com/logs" target="_datadog">**Log Explorer**</a> in Datadog. 
 
-    (Note: Make sure the environmment variables are indented at the same level as the others in the `environment` list.)
+    Notice that logs from the Datadog Agent are being collected. Remember that the environment variable `DD_LOGS_ENABLED=true` enabled log collection from the Datadog Agent.
 
-    `DD_LOGS_ENABLED=true` enables log collection. 
+    Also, notice that logs from the Redis and Nginx are being collected. Remember that the environment variable `DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true` enabled log collection for all containers.
 
-    `DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true` enables log collection for all containers.
+4. Click a log for the `agent` to open the <a href="https://docs.datadoghq.com/logs/explorer/#the-log-side-panel" target="_blank">Log Side Panel</a> with the logs details. Repeat for a log for `redis` and for `nginx`.
 
-3. Click **Copy to Editor** in the block below add the following volume.
+    The logs for each service have a processed list of **Event Attributes**. The logs are processed because the Integration Pipelines for these sources have been automatically installed for the following reasons.
 
-    <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert volume here">
-         - /opt/datadog-agent/run:/opt/datadog-agent/run:rw</pre>
+    `agent` - The configuration steps that you completed on the previous page enabled log collection and Integration Pipeline installation for the Datadog Agent. 
 
-    (Note: Make sure the volume name is indented at the same level as the others in the `volumes` list.)
+    `redis` - Redis is one of the default <a href="https://docs.datadoghq.com/agent/docker/integrations/?tab=file#datadog-redis-integration" target="_blank">Autodiscovery configuration file templates</a>packaged with the Agent v6.2+. Autodiscovery applies this template to any container on the same host that runs a redis image. This results in the Datadog Agent identifiying the redis container and automatically installing the Redis Integration and Integration Pipeline in Datadog.
+    
+    `nginx` - The following lines in the `nginx` section of the `docker-compose.yml`{{open}} are used by <a href="https://docs.datadoghq.com/agent/docker/integrations/?tab=docker" target="_blank">Datadog's Autodiscovery feature</a> to <a href="https://docs.datadoghq.com/agent/docker/log/?tab=nginxdockerfile#examples" target="_blank"> automatically enable log collection and integration pipeline installation</a>.
+    ```
+        labels:
+          com.datadoghq.ad.check_names: '["nginx"]'
+          com.datadoghq.ad.init_configs: '[{}]'
+          com.datadoghq.ad.instances: '[{"nginx_status_url": "http://%%host%%:%%port%%/nginx_status"}]'
+    ```
+    
+    But what about the api and thinker services of the application? There are no logs in the list for these services.
 
-    `/opt/datadog-agent/run:/opt/datadog-agent/run:rw` mounts a persistent host volume to store the Agent's logging registry. The registry stores a reference to the last log line collected for each container. Persisting the registry on the host prevents loss of container logs during restarts or network issues.
+5. Click the **Terminal 2** tab. Then, click each of these commands to run them in the terminal.
 
-4. Click the terminal on the right and enter **CTRL-C** to stop the process.
+    `curl -X GET 'http://localhost:8080/think/?subject=technology'`{{execute T2}}
 
-5. Click the command `docker-compose stop && docker-compose rm -f && docker-compose up --build`{{execute}} to restart the Docker environment.
+    `curl -X GET 'http://localhost:8080/think/?subject=religion'`{{execute T2}}
 
-6. Wait for the terminal to display the output from the restarted containers before you continue.
+    `curl -X GET 'http://localhost:8080/think/?subject=war'`{{execute T2}}
+    
+    `curl -X GET 'http://localhost:8080/think/?subject=work'`{{execute T2}}
 
-    ![env-restarted](collectlogs/assets/env-restarted.png)
+    `curl -X GET 'http://localhost:8080/think/?subject=music'`{{execute T2}}
+
+6. Navigate to the <a href="https://app.datadoghq.com/logs" target="_datadog">**Log Explorer**</a> and select `root-api` in the **Service** list under the Facets tab. You may need to click the refresh button in the upper right near the time range selector.
+
+    ![root-api-facet](collectlogs/assets/root-api-facet2.png)
+
+    Notice that, although you clicked 5 commands, there are a total of 10 logs---that is, 2 logs for each command.
+
+    It looks like the logs for the `api` and `thinker` services are likely being grouped as `root-api`.
+    
+7. Click the `root-api` log to see its details. 
+
+   ![root-api-log](collectlogs/assets/root-api-log.png)
+
+    Notice that, unlike the log details for `agent`, `redis`, and `nginx`, the log for this service is not processed so there are no **Event Attributes**. The `api` and `thinker` services are custom services, so OOTB Integrations and Integration Pipelines are not available for these.
+
+Let's update the labels for the `api` and `thinker` services so they are clearly labeled.
+
 
