@@ -1,30 +1,47 @@
-7. In a new window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com. 
+For many log sources, log configuration for Datadog involves setting <a href="https://docs.datadoghq.com/agent/logs/?tab=tailfiles#custom-log-collection" target="_blank">log collection configurations</a> that you usually find in an integration configuration file. 
 
-8. If you have previously used the **Log Explorer** in the Datadog organization you are working in, move on to the next step. 
-    
-    If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Start Trial** in the pop-up window. Select **Container**, then select the **docker** tile. Scroll to the bottom and click **Explore your Logs**.
+For a Docker environment, the log collection configuration are assigned using the following label:
 
-9. Navigate to the <a href="https://app.datadoghq.com/logs" target="_datadog">**Log Explorer**</a> in Datadog. 
+```
+labels:
+    com.datadoghq.ad.logs: '["<LOGS_CONFIG>"]'
+```
+where <LOGS_CONFIG> are the log collection configuration parameters listed <a href="https://docs.datadoghq.com/agent/logs/?tab=tailfiles#custom-log-collection" target="_blank">here</a>. 
 
-    Notice that only logs from the Datadog Agent are being collected .
+The log collection parameters that you'll configure for the app services are `source` and `service`.
 
-10. Click an Agent log to open the Log Side panel with the logs details.
+`source` - The attribute that defines which integration is sending the logs. If the logs do not come from an existing integration, then this field may include a custom source name. However, it is recommended that you match this value to the namespace of any related custom metrics you are collecting, for example: `myapp` from `myapp.request.count`.
 
-    The details of the logs are not processed into attributes.
+`service` - The name of the service owning the log. If you instrumented your service with <a href="https://docs.datadoghq.com/tracing/" target="_blank">Datadog APM</a>, this must be the same service name. Check the <a href="https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging" target="_blank">unified service tagging</a> instructions when configuring `service` across multiple data types.
 
-11. Click the **Terminal 2** tab. Then, click each of these commands to run them in the terminal.
+On the previous page, the some of the logs for the curls commands you sent were grouped under the `root-api` service. These logs belonged to the `api` and `thinker` services. 
 
-    `curl -X GET 'http://localhost:8080/think/?subject=technology'`{{execute T2}}
+Let's add labels to the logs for these services so that they are no longer grouped. Adding the service tag will also separate their spans in the APM traces for the commands.
 
-    `curl -X GET 'http://localhost:8080/think/?subject=religion'`{{execute T2}}
+From Datadog Agent 6.8+, the `source` and `service` default to the `short_image` tag value for the integrations sources, which is why `redis` and `nginx` had pre-assigned `source` and `service` tags when their integrations were automatically enabled.
 
-    `curl -X GET 'http://localhost:8080/think/?subject=war'`{{execute T2}}
-    
-    `curl -X GET 'http://localhost:8080/think/?subject=work'`{{execute T2}}
+In general, for the log sources with integrations, Datadog automatically installs the corresponding integration based on the log source listed in the configurations and overrides any defaults values for parameters based on the configurations.
 
-    `curl -X GET 'http://localhost:8080/think/?subject=music'`{{execute T2}}
+Let's also update the add labels for the nginx and redis that override either the default `source` or `service` value to see how this affects the log
 
-12. Navigate to the <a href="https://app.datadoghq.com/logs" target="_datadog">**Log Explorer**</a> and find the logs for these commands in the list.
+1. Click `docker-compose.yml`{{open}}.
 
-    
+2. Click **Copy to Editor** to configure the log `source` and `service` tags for the `api` and `thinker` containers.
+
+    <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert api labels here">
+       labels:
+         com.datadoghq.ad.logs: '[{"source": "webapp", "service": "thinker-api"}]'</pre>
+
+    <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert thinker labels here">
+       labels:
+         com.datadoghq.ad.logs: '[{"source": "webapp", "service": "thinker-microservice"}]'</pre>
+
+3. Click **Copy to Editor** to configure the log `source` and `service` tags for the `redis` and `nginx` containers.
+
+    <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert redis labels here">
+       labels:
+         com.datadoghq.ad.logs: '[{"source": "redis", "service": "redis"}]'</pre>
+
+    <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert nginx labels here">
+         com.datadoghq.ad.logs: '[{"source": "nginx", "service": "nginx"}]'</pre>
 
