@@ -1,34 +1,19 @@
+In the terminal on the right, the environment is being prepared. This may take up to 3 minutes. 
 
-1. To start gathering the application logs, we need to add a couple environment variables and a new volume to the `datadog` container. Open `docker-compose.yml`{{open}} in the editor on the right. Add these two environment variables to the `environment` list in the `datadog` section:
+The Flask application supported by NGINX, Redis, an API, and a thinker microservice is being brought online using a docker-compose.yml. The application is also being configured for data collection with the Datadog Agent.
 
-    <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert environment variables here">
-         - DD_LOGS_ENABLED=true
-         - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true</pre>
+Click `docker-compose.yml`{{open}} to view its details.
 
-    _Make sure these environmment variables are intended at the same level as the others in the `environment` list._
+All <a href="https://docs.datadoghq.com/agent/docker/?tab=standard" target="_datadog">configuration in a Docker environment</a> is done through environment variables, volumes, and Docker labels.
 
-    And then add this line to the `volumes` list in the `datadog` section:
+Each application service runs in its own Docker container: `api`, `thinker`, `nginx`, and `regis`.
 
-    <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert volume here">
-         - /opt/datadog-agent/run:/opt/datadog-agent/run:rw</pre>
+Because the application is run in a Docker (containerized) environment, the Datadog Agent also runs in a container alongside the other containers: `datadog`. 
 
-2. Press CTRL-C in the **Terminal** to stop docker-compose. Then add the following label to the redis block in your docker-compose.yml file:
+Metric and trace collection has been configured, but log collection is not yet configured.
 
-    <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert redis labels here">
-       labels:
-         com.datadoghq.ad.logs: '[{"source": "redis", "service": "redis"}]'</pre>
+You will configure log collection in the following steps.
 
-3. Add the following label to the nginx block in the same file:
+When the output in the terminal looks like the following image, the environment is ready to go and you can continue.
 
-    <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert nginx labels here">
-         com.datadoghq.ad.logs: '[{"source": "nginx", "service": "nginx"}]'</pre>
-
-1. Add the following labels to the docker-compose.yml file for the api and thinker containers:
-
-    <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert api labels here">
-       labels:
-         com.datadoghq.ad.logs: '[{"source": "webapp", "service": "thinker-api"}]'</pre>
-
-    <pre class="file" data-filename="docker-compose.yml" data-target="insert" data-marker="# insert thinker labels here">
-       labels:
-         com.datadoghq.ad.logs: '[{"source": "webapp", "service": "thinker-microservice"}]'</pre>
+![env-online](collectlogs/assets/env-online.png)

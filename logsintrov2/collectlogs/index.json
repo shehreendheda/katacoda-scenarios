@@ -11,7 +11,24 @@
     },
     "steps": [
       {
+        "title": "Preparing the Environment",
         "text": "step1.md"
+      },
+      {
+        "title": "Configuring the Datadog Agent for Log Collection",
+        "text": "step2.md"
+      },
+      {
+        "title": "Using the Source Tag to Enable Integration Pipelines",
+        "text": "step3.md"
+      },
+      {
+        "title": "Using the Service Tag to Correlate Metrics, Traces, and Logs",
+        "text": "step4.md"
+      },
+      {
+        "title": "Viewing Correlated Metrics, Traces, and Logs",
+        "text": "step5.md"
       }
     ],
     "finish": {
