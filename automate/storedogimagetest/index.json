@@ -44,11 +44,11 @@
           "target": "/root/test/",
           "chmod": "+x"
         },
-        
-        "file": "./app/.",
-        "target": "/root/lab-files",
-        "chmod": "+x"
-      }
+        {
+          "file": "./app/.",
+          "target": "/root/lab-files",
+          "chmod": "+x"
+        }
       ]
     }
   },
