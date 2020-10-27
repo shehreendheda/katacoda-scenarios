@@ -1,9 +1,9 @@
 #!/bin/bash
 
 mkdir /root/app-files
-git clone https://github.com/shehreendheda/ecommerce-observability /root/app-files
-cd /root/app-files
-git checkout no-apm-instrumentation
-docker-compose pull
+#git clone https://github.com/shehreendheda/ecommerce-observability /root/app-files
+#cd /root/app-files
+#git checkout no-apm-instrumentation
+#docker-compose pull
 
-./gor --input-file-loop --input-file requests_0.gor --output-http "http://localhost:3000" >> /dev/null 2>&1
+#./gor --input-file-loop --input-file requests_0.gor --output-http "http://localhost:3000" >> /dev/null 2>&1
