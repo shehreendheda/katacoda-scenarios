@@ -11,28 +11,33 @@
     },
     "steps": [
       {
-        "title": "Preparing the Environment",
+        "title": "Configuring the Datadog Agent for Log Collection",
         "text": "step1.md"
       },
       {
-        "title": "Configuring the Datadog Agent for Log Collection",
+        "title": "Viewing Logs in the Log Explorer",
         "text": "step2.md"
       },
       {
-        "title": "Using the Source Tag to Enable Integration Pipelines",
+        "title": "Defining Configuration Parameters for Log Collection",
         "text": "step3.md"
       },
       {
-        "title": "Using the Service Tag to Correlate Metrics, Traces, and Logs",
-        "text": "step4.md"
-      },
-      {
         "title": "Viewing Correlated Metrics, Traces, and Logs",
-        "text": "step5.md"
+        "text": "step4.md"
       }
     ],
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "grademe",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        }
+      ]
     }
   },
   "environment": {
