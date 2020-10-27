@@ -1,4 +1,4 @@
-The Flask application in the environment is supported by NGINX, Redis, an API, and a thinker microservice. A docker-compose.yml has been created to help you bring the application online and configure it for data collection with the Datadog Agent.
+The Flask application in the Docker environment is supported by NGINX, Redis, and a thinker API and microservice. A docker-compose.yml file has been created to bring the application online alongside the Datadog Agent for data collection and monitoring with Datadog.
 
 1. Click `docker-compose.yml`{{open}} to view its details.
 
