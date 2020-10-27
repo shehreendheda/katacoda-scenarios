@@ -26,4 +26,6 @@ sed -i '\|com\.datadoghq\.ad\.instances.*|a # insert nginx labels here' docker-c
 sed -i '/- thinker.*/a # insert api labels here' docker-compose.yml
 sed -i '/- "5001:8000".*/a # insert thinker labels here' docker-compose.yml
 
-docker-compose up
+#docker-compose up
+
+clear
