@@ -10,13 +10,13 @@ The store-frontend service has been instrumented for you, but you will update th
 
 4. Click `store-frontend-broken-instrumented/store-frontend/config/application.rb`{{open}}. **Line 7** installs and automatically instruments the `active-record` service to support Rails `store-frontend` service. You can view the <a href="https://docs.datadoghq.com/tracing/setup/ruby/#active-record" target="_blank"> Tracing Ruby Application</a> documentation for more details.
 
-5. Click `docker-compose-files/docker-compose-broken-no-apm-instrumentation.yml`{{open}}.
+5. Click `docker-compose-files/docker-compose-broken-no-instrumentation.yml`{{open}}.
 
 6. Under **services**, view the details for **frontend**. <p> Let's add the code for enabling trace and log collection.
 
 7. Click **Copy to Editor** below to add the following to the list of environment variables for the service. These environment variables are required for each service in the app that will be monitored. 
 
-    <pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add frontend env variables">
+    <pre class="file" data-filename="docker-compose-broken-no-instrumentation.yml" data-target="insert" data-marker="# add frontend env variables">
          - DD_AGENT_HOST=agent
          - DD_LOGS_INJECTION=true
          - DD_ANALYTICS_ENABLED=true</pre> 
@@ -29,7 +29,7 @@ The store-frontend service has been instrumented for you, but you will update th
 
 8. Click **Copy to Editor** below to add labels to enable logs.
 
-    <pre class="file" data-filename="docker-compose-broken-no-apm-instrumentation.yml" data-target="insert" data-marker="# add frontend log labels">
+    <pre class="file" data-filename="docker-compose-broken-no-instrumentation.yml" data-target="insert" data-marker="# add frontend log labels">
        labels:
          com.datadoghq.ad.logs: '[{"source": "ruby", "service": "store-frontend"}]'</pre> 
 
