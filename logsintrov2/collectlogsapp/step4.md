@@ -1,6 +1,6 @@
 First, you'll restart the docker deployment to apply the changes for monitoring the `store-frontend` service. Then, you'll view the trace and log data being collected by Datadog from the app.
 
-1. Click `rm /root/app-files/store-frontend-broken-instrumented/store-frontend/tmp/pids/*; docker-compose -f docker-compose-broken-no-instrumentation.yml up -d`{{execute}} to clear the server cache and restart the docker deployment. <p> ![restarted-agent-frontend](instrumentapp2/assets/restarted-agent-frontend.png)
+1. Click `rm /root/app-files/store-frontend-broken-instrumented/store-frontend/tmp/pids/*; docker-compose -f docker-compose-broken-no-instrumentation.yml up -d`{{execute}} to clear the server cache and restart the docker deployment. <p> ![restarted-agent-frontend](collectlogsapp/assets/restarted-agent-frontend.png)
 
 2. In a new window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization.
 
@@ -10,7 +10,7 @@ First, you'll restart the docker deployment to apply the changes for monitoring 
 
 5. In the search field, type `env:ruby-shop` if it is not listed so that the traces list displays traces for the storedog app only.
 
-6. In the **Facets** list, expand **Service** to view the services from the app that are injecting traces into Datadog. <p>![trace-frontendservices](instrumentapp2/assets/trace-frontendservices.png)
+6. In the **Facets** list, expand **Service** to view the services from the app that are injecting traces into Datadog. <p>![trace-frontendservices](collectlogsapp/assets/trace-frontendservices.png)
 
 7. Click a trace for the `store-frontend` service to view the Flame Graph and Span List. <p> The color of each span is based on the associated service, listed on the right of the Flame Graph. <p> To zoom in and out of the Flame Graph, hover the cursor over the Flame Graph and scroll up and down. 
 
