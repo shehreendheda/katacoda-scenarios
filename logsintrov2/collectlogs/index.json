@@ -41,10 +41,8 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "editor-terminal",
     "uieditorpath": "/root/lab-files",
-    "idePort": 23000,
-    "showide": true,
     "terminals": [
       {
         "name": "Terminal 2"
