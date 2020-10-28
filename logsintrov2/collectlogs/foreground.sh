@@ -6,10 +6,10 @@ git clone https://github.com/DataDog/TrainingEnvironment.git
 cp -r TrainingEnvironment/logsintro/* lab-files
 rm -rf TrainingEnvironment
 cd /root/lab-files
-rm install.sh
-rm provision.sh
-rm Vagrantfile
-rm main.py
+#rm install.sh
+#rm provision.sh
+#rm Vagrantfile
+#rm main.py
 
 
 cat > apikey.env <<EOL
