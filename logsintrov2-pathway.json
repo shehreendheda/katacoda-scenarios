@@ -30,6 +30,13 @@
       "id": "collectapplogs",
       "title": "Setting up Log Collection and Integration Pipelines for an App",
       "description": "Intro to log collection and integration pipelines"
-    }  
+    },
+    {
+      "pathway_id": "datadog/logsintrov2",
+      "course_id": "collectlogsapp",
+      "id": "collectlogsapp",
+      "title": "Setting up Log Collection for an App",
+      "description": "Intro to log collection and integration pipelines"
+    }   
   ]
 }
