@@ -11,23 +11,50 @@
     },
     "steps": [
       {
+        "title": "Preparing the Environment",
         "text": "step1.md"
-      }
+      },
+      {
+        "title": "Configuring the Datadog Agent for Log Collection",
+        "text": "step2.md"
+      },
+      {
+        "title": "Defining Configuration Parameters for Log Collection",
+        "text": "step2.md"
+      },
     ],
     "finish": {
       "text": "finish.md"
     }
+    "assets": {
+      "host01": [
+        {
+          "file": "grademe",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "prep-environment",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "check-file",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        }
+      ]
+    }
   },
   "environment": {
     "uilayout": "editor-terminal", 
-    "uieditorpath": "/etc/datadog-agent",
-    "terminals": [
-      {
-        "name": "Terminal 2"
-      }
-    ]
+    "uieditorpath": "/root/app-files",
+    "hideHiddenFiles": true,
+    "exclusionPatterns": ["**/store-frontend/tmp/*", "**/store-frontend/log/*"],
+    "showdashboard": true,
+    "dashboards": [{"name": "storedog", "port": 3000}]
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "datadog-ecommerce-observability"
   }
 }

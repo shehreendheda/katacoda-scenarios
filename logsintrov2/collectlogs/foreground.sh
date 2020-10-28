@@ -9,6 +9,7 @@ cd /root/lab-files
 rm install.sh
 rm provision.sh
 rm Vagrantfile
+rm main.py
 
 
 cat > apikey.env <<EOL
