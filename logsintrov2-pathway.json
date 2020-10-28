@@ -16,6 +16,13 @@
       "id": "managelogs",
       "title": "Getting Started with Log Management",
       "description": "Intro to log management in Datadog"
-    }    
+    },
+    {
+      "pathway_id": "datadog/logsintrov2",
+      "course_id": "collectlogs2",
+      "id": "collectlogs2",
+      "title": "Setting up Log Collection and Integration Pipelines 2",
+      "description": "Intro to log collection and integration pipelines"
+    }   
   ]
 }
