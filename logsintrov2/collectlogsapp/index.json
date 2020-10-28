@@ -15,17 +15,22 @@
         "text": "step1.md"
       },
       {
-        "title": "Configuring the Datadog Agent for Log Collection",
+        "title": "Enabling Log Collection by the Datadog Agent",
         "text": "step2.md"
       },
       {
-        "title": "Defining Configuration Parameters for Log Collection",
+        "title": "Instrumenting a Rails App Service",
         "text": "step3.md"
       },
       {
-        "title": "Correlating Logs with Metrics and Traces",
+        "title": "Viewing Collected Logs in Datadog",
         "text": "step4.md"
+      },
+      {
+        "title": "Instrumenting Python Flask App Services",
+        "text": "step5.md"
       }
+ 
     ],
     "finish": {
       "text": "finish.md"
