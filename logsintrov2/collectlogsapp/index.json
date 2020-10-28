@@ -51,6 +51,14 @@
           "file": "check-file",
           "target": "/usr/local/bin/",
           "chmod": "+x"
+        },
+        {
+          "file": "docker-compose.yml",
+          "target": "/root/app-files/"
+        },
+        {
+          "file": "docker-compose-no-instrumentation.yml",
+          "target": "/root/app-files/"
         }
       ]
     }
