@@ -45,7 +45,7 @@
           "chmod": "+x"
         },
         {
-          "file": "./app/.",
+          "file": "app/*",
           "target": "/root/lab-files",
           "chmod": "+x"
         }
