@@ -6,7 +6,7 @@ The environment is running and the Datadog Agent is configured to collect logs. 
     
     If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Getting Started** again. You'll be redirected to the **Log Explorer**.
 
-3. Navigate to the <a href="https://app.datadoghq.com/logs" target="_datadog">**Log Explorer**</a> in Datadog to view the a href="https://docs.datadoghq.com/logs/explorer/list/" target="_blank">Log List</a>.
+3. Navigate to the <a href="https://app.datadoghq.com/logs" target="_datadog">**Log Explorer**</a> in Datadog to view the <a href="https://docs.datadoghq.com/logs/explorer/list/" target="_blank">Log List</a>.
 
     ![agent-nginx-redis-logs](collectlogs/assets/agent-nginx-redis-logs.png)
 
@@ -35,7 +35,7 @@ The environment is running and the Datadog Agent is configured to collect logs. 
           com.datadoghq.ad.instances: '[{"nginx_status_url": "http://%%host%%:%%port%%/nginx_status"}]'
     ```
     
-    But what about the `api` and `thinker` services of the application? There are no logs in the Log List for these services.
+    But what about the `thinker-api` and `thinker-microservice` sources in the application? There are no logs for these in the Log List.
 
 5. Click the **Terminal 2** tab. Then, click each of these commands to run them in the terminal.
 
@@ -55,10 +55,8 @@ The environment is running and the Datadog Agent is configured to collect logs. 
     
     Notice that, although you clicked 5 commands, there are a total of 10 logs---that is, 2 logs for each command.
 
-    It looks like the logs for the `api` and `thinker` services are being grouped as the `root-api` service.
+    It looks like the log sources `thinker-api` and `thinker-microservice` are being grouped as `root-api`.
 
-    Notice that, unlike the log details for `agent`, `redis`, and `nginx`, the log for this service is not processed so there are no **Event Attributes**. The `api` and `thinker` services are custom services, so OOTB Integrations and Integration Pipelines are not available for these. Also, notice that the `service` and `source` tiles in the log details list `root-api` for each.
+    Also, notice that, unlike the log details for `agent`, `redis`, and `nginx`, the logs for this source are not processed so there are no **Event Attributes**. The `thinker-api` and `thinker-microservice` are custom sources, so OOTB Integrations and Integration Pipelines are not available for these. Also, notice that the `service` and `source` tiles in the log details list `root-api` for each.
 
-Let's update the labels for the `api` and `thinker` services so correctly represent the services.
-
-
+Let's update the labels for the `thinker-api` and `thinker-microservice` to correctly match their `source` and `service` names.

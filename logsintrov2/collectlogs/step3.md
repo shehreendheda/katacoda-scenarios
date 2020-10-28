@@ -1,6 +1,6 @@
 For many log sources, log configuration for Datadog involves setting <a href="https://docs.datadoghq.com/agent/logs/?tab=tailfiles#custom-log-collection" target="_blank">log collection configurations</a> that you usually find in an integration configuration file. 
 
-For a Docker environment, the log collection configuration are assigned using the following label, where <LOGS_CONFIG> are the log collection configuration parameters listed <a href="https://docs.datadoghq.com/agent/logs/?tab=tailfiles#custom-log-collection" target="_blank">here</a>. :
+For a Docker environment, the log collection configuration are assigned using the following label, where <LOGS_CONFIG> are the log collection configuration parameters listed <a href="https://docs.datadoghq.com/agent/logs/?tab=tailfiles#custom-log-collection" target="_blank">here</a>:
 
 ```
 labels:
@@ -9,11 +9,11 @@ labels:
 
 The log collection parameters that you'll configure for the app services are `source` and `service`.
 
-    `source` - The attribute that defines which integration is sending the logs. If the logs do not come from an existing integration, then this field may include a custom source name. However, it is recommended that you match this value to the namespace of any related custom metrics you are collecting, for example: `myapp` from `myapp.request.count`.
+`source` - The attribute that defines which integration is sending the logs. If the logs do not come from an existing integration, then this field may include a custom source name. However, it is recommended that you match this value to the namespace of any related custom metrics you are collecting, for example: `myapp` from `myapp.request.count`.
 
-    `service` - The name of the service owning the log. If you instrumented your service with <a href="https://docs.datadoghq.com/tracing/" target="_blank">Datadog APM</a>, this must be the same service name. Check the <a href="https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging" target="_blank">unified service tagging</a> instructions when configuring `service` across multiple data types.
+`service` - The name of the service owning the log. If you instrumented your service with <a href="https://docs.datadoghq.com/tracing/" target="_blank">Datadog APM</a>, this must be the same service name. Check the <a href="https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging" target="_blank">unified service tagging</a> instructions when configuring `service` across multiple data types.
 
-On the previous page, the some of the logs for the curls commands you sent were grouped under the `root-api` service. These logs belonged to the `api` and `thinker` services. Let's add labels to the logs for these services so that they are no longer grouped. 
+On the previous page, the some of the logs for the curls commands you sent were grouped under the `root-api` service. These logs belonged to the `thinker-api` and `thinker-microservice` sources. Let's add labels to their logs so that they are clearly named. 
 
 1. Click `docker-compose.yml`{{open}}.
 
