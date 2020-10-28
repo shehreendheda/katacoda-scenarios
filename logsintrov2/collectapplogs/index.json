@@ -20,11 +20,11 @@
       },
       {
         "title": "Defining Configuration Parameters for Log Collection",
-        "text": "step2.md"
+        "text": "step3.md"
       },
       {
         "title": "Correlating Logs with Metrics and Traces",
-        "text": "step2.md"
+        "text": "step4.md"
       }
     ],
     "finish": {
