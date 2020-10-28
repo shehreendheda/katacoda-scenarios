@@ -34,9 +34,7 @@ services:
     depends_on:
       - agent
       - db
-    labels:
 # add discounts log labels 
-      my.custom.label.team: "discount"
   frontend:
     environment:
       - DD_AGENT_HOST=agent
@@ -57,9 +55,7 @@ services:
       - db
       - discounts
       - advertisements
-    labels:
 # add frontend log labels
-      my.custom.label.team: "frontend"
   advertisements:
     environment:
       - FLASK_APP=ads.py
@@ -78,14 +74,11 @@ services:
     depends_on:
       - agent
       - db
-    labels:
 # add ads log labels
-      my.custom.label.team: "advertisements"
   db:
     image: postgres:11-alpine
     restart: always
     environment:
       - POSTGRES_PASSWORD
       - POSTGRES_USER
-    labels:
 # add postgres log labels
