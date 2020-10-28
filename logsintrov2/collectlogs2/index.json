@@ -19,7 +19,7 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal",
+    "uilayout": "terminal",
     "idePort": 23000,
     "showide": true,
     "terminals": [
