@@ -54,11 +54,11 @@
         },
         {
           "file": "docker-compose.yml",
-          "target": "/root/app-files/"
+          "target": "/root"
         },
         {
           "file": "docker-compose-no-instrumentation.yml",
-          "target": "/root/app-files/"
+          "target": "/root"
         }
       ]
     }
