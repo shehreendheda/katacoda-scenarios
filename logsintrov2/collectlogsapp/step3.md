@@ -4,9 +4,9 @@ The store-frontend service has been instrumented for you, but you will update th
 
 1. Click `store-frontend-instrumented-fixed/store-frontend/Gemfile`{{open}} to view the Gemfile for the store-frontend. The Gemfile installs the required tracing and log collection libraries.
 
-**Line 48** installs the `logging-rails` Gem, which is a railtie for integrating the Ruby logging framework into the Rails application. To learn more, view the <a href="https://github.com/TwP/logging-rails" target="_blank">logging-rails</a> documentation. 
+    **Line 48** installs the `logging-rails` Gem, which is a railtie for integrating the Ruby logging framework into the Rails application. To learn more, view the <a href="https://github.com/TwP/logging-rails" target="_blank">logging-rails</a> documentation. 
 
-**Line 49** installs the `lograge` Gem to send logs to Datadog. To learn more, view the <a href="https://docs.datadoghq.com/logs/log_collection/ruby/#setup" target="_blank"> Rails log collection</a> documentation.
+    **Line 49** installs the `lograge` Gem to send logs to Datadog. To learn more, view the <a href="https://docs.datadoghq.com/logs/log_collection/ruby/#setup" target="_blank"> Rails log collection</a> documentation.
 
 2. Click `store-frontend-instrumented-fixed/store-frontend/config/initializers/lograge.rb`{{open}} to view the configuration file that converts the logs to the JSON format . To learn more, view the <a href="https://docs.datadoghq.com/tracing/connect_logs_and_traces/ruby/?tab=lograge#automatic-trace-id-injection" target="_blank">Connecting Ruby Logs and Traces</a> documentation. <p> With the service instrumented and trace collection automatically enabled via the `datadog.rb` initializer file, you can finish enabling trace  and log collection and App Analytics for the service.
 
@@ -17,15 +17,9 @@ The store-frontend service has been instrumented for you, but you will update th
 5. Click **Copy to Editor** below to add the following to the list of environment variables for the service. These environment variables are required for each service in the app that will be monitored. 
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add frontend env variables">
-         - DD_AGENT_HOST=agent
-         - DD_LOGS_INJECTION=true
-         - DD_ANALYTICS_ENABLED=true</pre> 
-
-    `DD_AGENT_HOST=agent` defines the address of the Agent that the tracer submits traces to. 
+         - DD_LOGS_INJECTION=true</pre> 
     
     `DD_LOGS_INJECTION=true` enables automatic injection of trace IDs into the logs from the supported logging libraries to correlate traces and logs. 
-    
-    `DD_ANALYTICS_ENABLED=true` enables App Analytics for the traces.
 
 8. Click **Copy to Editor** below to add labels to enable logs.
 
