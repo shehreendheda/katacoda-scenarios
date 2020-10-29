@@ -16,15 +16,13 @@ To collect logs from the app, <a href="https://docs.datadoghq.com/agent/docker/l
     
     To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#one-step-install-to-collect-all-the-container-logs" target="_blank">Docker Log Collection</a> documentation.
 
-4. Click **Copy to Editor** below to add labels to the logs. 
+4. Click **Copy to Editor** below to add the following logs configuration label under `agent`. 
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add agent log labels">
        labels:
-         com.datadoghq.ad.logs: '[{"source": "datadog-agent", "service": "agent"}]'</pre>
+         com.datadoghq.ad.logs: '[{"source": "agent", "service": "agent"}]'</pre>
     
-    The `com.datadoghq.ad.logs` label sets the <a href="https://docs.datadoghq.com/agent/logs/?tab=tailfiles#custom-log-collection" target="_blank">configuration parameters for log collection</a>. 
-    
-    The log collection parameters that you're configure are `"source": "datadog-agent"` and `"service": "agent"`.
+    The `com.datadoghq.ad.logs` label sets the <a href="https://docs.datadoghq.com/agent/logs/?tab=tailfiles#custom-log-collection" target="_blank">configuration parameters for log collection</a>. In this case, you're setting the `source` and `service` tags for the agent logs.
 
     `source` - The attribute that defines which integration is sending the logs. Datadog identifies the log source for the container and to automatically install corresponding integrations, if available. This **Autodiscovery** feature speeds up the setup process for log collection. To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#activate-log-integrations" target="_blank">Docker Log Collection</a> documentation. If the logs do not come from an existing integration, then this field may include a custom source name. However, it is recommended that you match this value to the namespace of any related custom metrics you are collecting, for example: `myapp` from `myapp.request.count`.
 
@@ -34,6 +32,4 @@ The **agent** section of the docker-compose file should now look like the screen
 
 Note: If you want to exclude logs collected from the Datadog Agent, you can add the environment variable `DD_CONTAINER_EXCLUDE="name:datadog-agent"` for the `agent`.
 
-With log collection enabled for the Datadog Agent, let's go through instrumentation of one of the app services.
-
-
+With log collection enabled for the Datadog Agent and for all containers, let's see what logs are being collected from the application environment.

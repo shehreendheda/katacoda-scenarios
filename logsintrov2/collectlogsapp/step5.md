@@ -1,25 +1,34 @@
-The `discounts` and `advertisements` services have a Python Flask framework, so the services are instrumented using the Python tracing library `ddtrace`. First, the `ddtrace` library is added to the list of required libraries, and then, the docker-compose.yml is updated for trace injection, log injection, and App Analytics.
+When you viewed the logs collected for the `discounts-service` and the `advertisements-service`, you noticed three features about the log details (example in the image below).
+
+- The `source` and `service` tags were not assigned as needed.
+- The **Event Attributes** were not listed. That is, the collected logs were not processed.
+- There were no traces correlated with the logs.
+
+![discounts-service-log2](collectlogsapp/assets/discounts-service-log2.png)
+
+You can add the `com.datadoghq.ad.logs` label to the docker-compose file to update the `source` and `service` tags, like you did for the `store-frontend`. You will see that adding the label will not only update these tags, but `source` tag will trigger the associated **python** Integration and Integration Pipeline to be installed. The Integration Pipeline will process the collected logs.
+
+First, though, you'll enable log and trace correlation using the the environment variable `DD_LOGS_INJECTION=true`. The `discounts` and `advertisements` services have a Python Flask framework, so the services are instrumented using the Python tracing library `ddtrace`. The standard `logging` library in `ddtrace` supports automatic trace ID and span ID injection. However, the environment variable `DD_LOGS_INJECTION=true` has to be added to each service in the docker-compose file for this to happen. (For more details, you can view the <a href="https://docs.datadoghq.com/tracing/connect_logs_and_traces/python/#automatically-inject-trace-and-span-ids" target="_blank">Connecting Python Logs and Traces</a> documentation.)
+
 
 #### Discounts Service
 
-1. Click `discounts-service/requirements.txt`{{open}} to view the list of required libraries that are installed for the service. The `ddtrace` library (**Line 4**) has already been included.
+1. Click `docker-compose-files/docker-compose-no-logs.yml`{{open}}. 
 
-2. Click `docker-compose-files/docker-compose-no-logs.yml`{{open}}. 
-
-3. Under **services**, view the details for **discounts**. <p> Let's add the code for enabling trace and log collection.
-
-4. Click **Copy to Editor** below to add the following to the list of environment variables for the service.
+2. Click **Copy to Editor** below to add the following to the list of environment variables under `discounts`.
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add discounts env variables">
          - DD_LOGS_INJECTION=true</pre>
 
-5. Click **Copy to Editor** below to add labels to enable logs. 
+    `DD_LOGS_INJECTION=true` enables automatic injection of trace IDs into the logs from the supported logging libraries to correlate traces and logs. 
+
+3. Click **Copy to Editor** below to add the following logs configuration label under `discounts`. 
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add discounts log labels">
        labels:
          com.datadoghq.ad.logs: '[{"source": "python", "service": "discounts-service"}]'</pre>
 
-6. Click `rm /root/app-files/store-frontend-instrumented-fixed/store-frontend/tmp/pids/*; docker-compose -f docker-compose-no-logs.yml up -d`{{execute}} to restart the docker deployment to apply these changes. <p> The **discounts** section of the docker-compose file should now look like the screenshot below. <p> ![instrumented-discounts](collectlogsapp/assets/instrumented-discounts.png)
+6. Click `docker-compose -f docker-compose-no-logs.yml up -d`{{execute}} to restart the docker deployment to apply these changes. <p> The **discounts** section of the docker-compose file should now look like the screenshot below. <p> ![instrumented-discounts](collectlogsapp/assets/instrumented-discounts.png)
 
 7. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM > Traces** </a> in Datadog to view the list of traces that are coming in. <p> You should now see traces for the `discounts` service in the list. This may take a couple of minutes.
 
@@ -27,22 +36,20 @@ The `discounts` and `advertisements` services have a Python Flask framework, so 
 
 #### Advertisements Service
 
-Because the advertisements service also has a Python-Flask framework, the advertisements service has the same instrumentation as the discounts service. The ddtrace library has already been installed for you for this service (**Line 4** in `ads-service/requirements.txt`{{open}}).
-
 1. Click `docker-compose-files/docker-compose-no-logs.yml`{{open}}. 
 
-2. Click **Copy to Editor** below to add the following to the list of environment variables for the service. 
+2. Click **Copy to Editor** below to add the following to the `DD_LOGS_INJECTION=true` environment variable under `advertisements`.
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add ads env variables">
-         - DD_LOGS_INJECTION=true</pre>
+         - DD_LOGS_INJECTION=true</pre> 
 
-3. Click **Copy to Editor** below to add labels to enable logs. 
+3. Click **Copy to Editor** below to add the following logs configuration label under `advertisements`. 
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add ads log labels">
        labels:
          com.datadoghq.ad.logs: '[{"source": "python", "service": "advertisements-service"}]'</pre>
 
-5. Click `rm /root/app-files/store-frontend-instrumented-fixed/store-frontend/tmp/pids/*; docker-compose -f docker-compose-no-logs.yml up -d`{{execute}} to restart the docker deployment to apply these changes. <p> The **advertisements** section of the docker-compose file should now look like the screenshot below. <p> ![instrumented-adverstisements](collectlogsapp/assets/instrumented-advertisements.png)
+5. Click `docker-compose -f docker-compose-no-logs.yml up -d`{{execute}} to restart the docker deployment to apply these changes. <p> The **advertisements** section of the docker-compose file should now look like the screenshot below. <p> ![instrumented-adverstisements](collectlogsapp/assets/instrumented-advertisements.png)
 
 6. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM > Traces** </a> in Datadog to view the list of traces that are coming in. <p> You should now see traces for the `advertisements` service in the list. This may take a couple of minutes.
 
