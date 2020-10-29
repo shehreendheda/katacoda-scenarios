@@ -38,7 +38,7 @@ Because the advertisements service also has a Python-Flask framework, the advert
 
 3. Click **Copy to Editor** below to add labels to enable logs. 
 
-    <pre class="file" data-filename="docker-compose-no-instrumentation.yml" data-target="insert" data-marker="# add ads log labels">
+    <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add ads log labels">
        labels:
          com.datadoghq.ad.logs: '[{"source": "python", "service": "advertisements-service"}]'</pre>
 
