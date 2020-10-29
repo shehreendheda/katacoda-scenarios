@@ -1,6 +1,6 @@
 First, you'll restart the docker deployment to apply the changes for monitoring the `store-frontend` service. Then, you'll view the trace and log data being collected by Datadog from the app.
 
-1. Click `rm /root/app-files/store-frontend-broken-instrumented/store-frontend/tmp/pids/*; docker-compose -f docker-compose-broken-no-instrumentation.yml up -d`{{execute}} to clear the server cache and restart the docker deployment. <p> ![restarted-agent-frontend](collectlogsapp/assets/restarted-agent-frontend.png)
+1. Click `rm /root/app-files/store-frontend-instrumented-fixed/store-frontend/tmp/pids/*; docker-compose -f docker-compose-no-logs.yml up -d`{{execute}} to clear the server cache and restart the docker deployment. <p> ![restarted-agent-frontend](collectlogsapp/assets/restarted-agent-frontend.png)
 
 2. In a new window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization.
 

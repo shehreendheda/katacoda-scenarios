@@ -53,11 +53,11 @@
           "chmod": "+x"
         },
         {
-          "file": "docker-compose.yml",
+          "file": "docker-compose-logs.yml",
           "target": "/root"
         },
         {
-          "file": "docker-compose-no-instrumentation.yml",
+          "file": "docker-compose-no-logs.yml",
           "target": "/root"
         }
       ]
