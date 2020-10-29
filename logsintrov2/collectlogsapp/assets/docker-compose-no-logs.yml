@@ -38,7 +38,6 @@ services:
   frontend:
     environment:
       - DD_AGENT_HOST=agent
-# add frontend env variables
       - DD_TRACE_ANALYTICS_ENABLED=true
       - DD_SERVICE=store-frontend
       - DB_USERNAME
