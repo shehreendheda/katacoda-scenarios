@@ -10,6 +10,6 @@ mv /root/docker-compose-no-logs.yml /root/app-files/docker-compose-files/docker-
 #rm docker-compose-broken-no-apm-instrumentation.yml
 #sed -i 's/ads-service/advertisements-service/' docker-compose-fixed-instrumented.yml
 clear
-docker-compose -f docker-compose-no-logs.yml up -d
+docker-compose -f /docker-compose-files/docker-compose-no-logs.yml up -d
 clear
 prep-environment
