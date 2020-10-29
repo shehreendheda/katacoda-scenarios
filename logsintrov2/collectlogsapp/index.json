@@ -19,7 +19,7 @@
         "text": "step2.md"
       },
       {
-        "title": "Instrumenting a Rails App Service",
+        "title": "Enabling Log Collection for a Ruby App Service",
         "text": "step3.md"
       },
       {
@@ -27,10 +27,9 @@
         "text": "step4.md"
       },
       {
-        "title": "Instrumenting Python Flask App Services",
+        "title": "Enabling Log Collection for Python App Services",
         "text": "step5.md"
       }
- 
     ],
     "finish": {
       "text": "finish.md"
