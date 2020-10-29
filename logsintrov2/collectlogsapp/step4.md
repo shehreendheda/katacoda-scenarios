@@ -1,23 +1,34 @@
-First, you'll restart the docker deployment to apply the changes for monitoring the `store-frontend` service. Then, you'll view the trace and log data being collected by Datadog from the app.
+The `store-frontend` service has a Rails framework. The first step for instrumentation is to install the required Ruby tracing and log libraries. Next, an initializer file is added to ship logs to Datadog in JSON format to allow Datadog to inject trace and span IDs into logs for correlation with trace data. Finally, the docker-compose file is updated for log collection. 
 
-1. Click `rm /root/app-files/store-frontend-instrumented-fixed/store-frontend/tmp/pids/*; docker-compose -f docker-compose-no-logs.yml up -d`{{execute}} to clear the server cache and restart the docker deployment. <p> ![restarted-agent-frontend](collectlogsapp/assets/restarted-agent-frontend.png)
+in Datadog, you need to enable trace collection by the Datadog agent. To use the added feature of correlating trace and log data, you will also need to enable log collection. 
 
-2. In a new window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization.
+The store-frontend service has been instrumented for you, but you will update the docker-compose.yml. Let's first go through the instrumentation.
 
-3. If you have previously used the **Log Explorer** in the Datadog organization you are working in, move on to the next step. <p>If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Start Trial** in the pop-up window. Select **Container**, then select the **docker** tile. Scroll to the bottom and click **Explore your Logs**.
+1. Click `store-frontend-instrumented-fixed/store-frontend/Gemfile`{{open}} to view the Gemfile for the store-frontend. The Gemfile installs the required tracing and log collection libraries.
 
-4. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM > Traces** </a> in Datadog to view the list of traces that are being ingested. 
+    **Line 48** installs the `logging-rails` Gem, which is a railtie for integrating the Ruby logging framework into the Rails application. To learn more, view the <a href="https://github.com/TwP/logging-rails" target="_blank">logging-rails</a> documentation. 
 
-5. In the search field, type `env:ruby-shop` if it is not listed so that the traces list displays traces for the storedog app only.
+    **Line 49** installs the `lograge` Gem to send logs to Datadog. To learn more, view the <a href="https://docs.datadoghq.com/logs/log_collection/ruby/#setup" target="_blank"> Rails log collection</a> documentation.
 
-6. In the **Facets** list, expand **Service** to view the services from the app that are injecting traces into Datadog. <p>![trace-frontendservices](collectlogsapp/assets/trace-frontendservices.png)
+2. Click `store-frontend-instrumented-fixed/store-frontend/config/initializers/lograge.rb`{{open}} to view the configuration file that converts the logs to the JSON format . To learn more, view the <a href="https://docs.datadoghq.com/tracing/connect_logs_and_traces/ruby/?tab=lograge#automatic-trace-id-injection" target="_blank">Connecting Ruby Logs and Traces</a> documentation. <p> With the service instrumented and trace collection automatically enabled via the `datadog.rb` initializer file, you can finish enabling trace  and log collection and App Analytics for the service.
 
-7. Click a trace for the `store-frontend` service to view the Flame Graph and Span List. <p> The color of each span is based on the associated service, listed on the right of the Flame Graph. <p> To zoom in and out of the Flame Graph, hover the cursor over the Flame Graph and scroll up and down. 
+3. Click `docker-compose-files/docker-compose-no-logs.yml`{{open}}.
 
-8. Below the Flame Graph, click each tab to see the Tags, related Hosts, and related Logs. <p> Under **Logs(#)**, you can see the `trace_id:###` tag assigned by Datadog to the trace and the list of logs that are correlated to the trace via the `trace_id:###` tag. Correlating traces with related logs allows you to see all details related to each trace so that you can quickly troubleshoot any issues. To learn more, view the <a href="https://docs.datadoghq.com/tracing/connect_logs_and_traces/" target="_blank">Connect Logs and Traces</a> documentation. 
- 
-9. Click any of the logs. A new browser tab will open for the **Log Explorer** and the details for the log. <p> Notice the tag selected in the search field above the lists of logs is the `trace_id:###` for the specific trace.
+4. Under **services**, view the details for **frontend**. <p> Let's add the code for enabling trace and log collection.
 
-As you can see, the agent and store-frontend service were successfully instrumented for APM and log collection in Datadog. 
+5. Click **Copy to Editor** below to add the following to the list of environment variables for the service. These environment variables are required for each service in the app that will be monitored. 
 
-Now, let's instrument the Python-Flask services of the app.
+    <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add frontend env variables">
+         - DD_LOGS_INJECTION=true</pre> 
+    
+    `DD_LOGS_INJECTION=true` enables automatic injection of trace IDs into the logs from the supported logging libraries to correlate traces and logs. 
+
+8. Click **Copy to Editor** below to add labels to enable logs.
+
+    <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add frontend log labels">
+       labels:
+         com.datadoghq.ad.logs: '[{"source": "ruby", "service": "store-frontend"}]'</pre> 
+
+With these steps, the Rails `store-frontend` service is instrumented for APM and Log management with Datadog. The **frontend** section of the docker-compose file should now look like the screenshot below. <p> ![instrumented-frontend](collectlogsapp/assets/instrumented-frontend.png) 
+
+Before instrumenting the discounts and advertisements services, let's log in to Datadog to view the traces and logs being collected for the store-frontend service. 
