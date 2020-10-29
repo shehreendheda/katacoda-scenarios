@@ -81,4 +81,4 @@ services:
     environment:
       - POSTGRES_PASSWORD
       - POSTGRES_USER
-# add postgres log labels
+# add db log labels

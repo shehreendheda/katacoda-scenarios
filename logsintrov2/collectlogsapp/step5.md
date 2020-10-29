@@ -48,11 +48,22 @@ Because the advertisements service also has a Python-Flask framework, the advert
 
 7. Click a trace for the `advertisements` service to view the Flame Graph, Span List, Tags, related Hosts, and related Logs.
 
-With these steps, the Python-based services are ready for Log Management with Datadog. The final list for **Service** under **Facets** is shown below.
+    With these steps, the Python-based services are ready for Log Management with Datadog. 
+    
+    These services are dependent on a postgres database. As a final step, let's enable log collection for the db.
+
+8. Click **Copy to Editor** below to add labels to enable logs. 
+
+    <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add db log labels">
+       labels:
+         com.datadoghq.ad.logs: '[{"source": "postgresql", "service": "postgres"}]'</pre>
+
+    The `postgres` is installed and automatically instrumented to support the discounts and advertisements services using **Line 12** in `discounts-service/requirements.txt`{{open}} and `ads-service/requirements.txt`{{open}}, respectively. You can view <a href="http://pypi.datadoghq.com/trace/docs/db_integrations.html#module-ddtrace.contrib.psycopg" target="_blank"> Datadog's Python tracing client</a> for more details. 
+
+The final list for **Service** under **Facets** is shown below.
 
 ![trace-services](collectlogsapp/assets/trace-allservices.png)
 
-The `postgres` service appears in the list because it is installed and automatically instrumented to support the discounts and advertisements services using **Line 12** in `discounts-service/requirements.txt`{{open}} and `ads-service/requirements.txt`{{open}}, respectively. You can view <a href="http://pypi.datadoghq.com/trace/docs/db_integrations.html#module-ddtrace.contrib.psycopg" target="_blank"> Datadog's Python tracing client</a> for more details. 
 
 
 ### Assessment
