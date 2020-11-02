@@ -35,3 +35,15 @@
     Then, click the command to below to run a new docker container with the `source` and `service` tag. 
     
     `docker run --name flog -d --label com.datadoghq.ad.logs='[{"source": "apache", "service": "apache"}]' -it --rm mingrammer/flog -f apache_combined -l -n 100000 -d 0.2`{{execute}}
+
+
+----
+
+`clear`{{execute}}
+
+Generate Metrics
+- apache.error.count (source:apache ERROR count * )
+- apache.error.count_per_statuscode (source:apache ERROR count * group by http.status_code)
+
+
+step 13,15&16,18&19,21&22
