@@ -36,47 +36,47 @@
         },
         {
           "file": "labfiles/conf.d/nginx/nginx.conf",
-          "target": "/root/lab-files/conf.d/nginx/nginx.conf",
+          "target": "/root/lab-files/conf.d/nginx/",
           "chmod": "+x"
         },
         {
           "file": "labfiles/conf.d/redis/redis.conf",
-          "target": "/root/lab-files/conf.d/redis/redis.conf",
+          "target": "/root/lab-files/conf.d/redis/",
           "chmod": "+x"
         },
         {
           "file": "labfiles/app/api.py",
-          "target": "/root/lab-files/app/api.py",
+          "target": "/root/lab-files/app/",
           "chmod": "+x"
         },
         {
           "file": "labfiles/app/requirements.txt",
-          "target": "/root/lab-files/app/requirements.txt",
-          "chmod": "+x"
+          "target": "/root/lab-files/app/",
+          "chmodls ": "+x"
         },
         {
           "file": "labfiles/app/thinker.py",
-          "target": "/root/lab-files/app/thinker.py",
+          "target": "/root/lab-files/app/",
           "chmod": "+x"
         },
         {
           "file": "labfiles/app/thoughts.py",
-          "target": "/root/lab-files/app/thoughts.py",
+          "target": "/root/lab-files/app/",
           "chmod": "+x"
         },
         {
           "file": "labfiles/app/Dockerfile",
-          "target": "/root/lab-files/app/Dockerfile",
+          "target": "/root/lab-files/app/",
           "chmod": "+x"
         },
         {
           "file": "labfiles/datadog_agent/Dockerfile",
-          "target": "/root/lab-files/datadog_agent/Dockerfile",
+          "target": "/root/lab-files/datadog_agent/",
           "chmod": "+x"
         },
         {
           "file": "labfiles/datadog_agent/training.yaml",
-          "target": "/root/lab-files/datadog_agent/training.yaml",
+          "target": "/root/lab-files/datadog_agent/",
           "chmod": "+x"
         }
       ]

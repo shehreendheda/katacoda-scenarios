@@ -13,7 +13,7 @@
 #sed -i 's|redis:latest|redis:5.0.5|' docker-compose.yml
 #sed -i 's|nginx:latest|nginx:1.16.0|' docker-compose.yml
 
-while [ ! -f /root/app-files/docker-compose.yml ]; do sleep 1; done
+while [ ! -f /root/lab-files/docker-compose.yml ]; do sleep 1; done
 
 cd /root/lab-files
 
