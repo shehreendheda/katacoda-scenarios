@@ -16,6 +16,60 @@
     ],
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "grademe",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "prep-environment",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "docker-compose.yml",
+          "target": "/root/lab-files",
+          "chmod": "+x"
+        },
+        {
+          "file": "conf.d/nginx/nginx.conf",
+          "target": "/root/lab-files/conf.d/nginx/nginx.conf",
+          "chmod": "+x"
+        },
+        {
+          "file": "conf.d/redis/redis.conf",
+          "target": "/root/lab-files/conf.d/redis/redis.conf",
+          "chmod": "+x"
+        },
+        {
+          "file": "app/api.py",
+          "target": "/root/lab-files/app/api.py",
+          "chmod": "+x"
+        },
+        {
+          "file": "app/requirements.txt",
+          "target": "/root/lab-files/app/requirements.txt",
+          "chmod": "+x"
+        },
+        {
+          "file": "app/thinker.py",
+          "target": "/root/lab-files/app/thinker.py",
+          "chmod": "+x"
+        },
+        {
+          "file": "app/thoughts.py",
+          "target": "/root/lab-files/app/thoughts.py",
+          "chmod": "+x"
+        },
+        {
+          "file": "app/Dockerfile",
+          "target": "/root/lab-files/app/Dockerfile",
+          "chmod": "+x"
+        }
+      ]
     }
   },
   "environment": {
