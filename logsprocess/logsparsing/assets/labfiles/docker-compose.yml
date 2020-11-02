@@ -19,6 +19,8 @@ services:
     depends_on:
       - webserver
       - api
+    labels:
+      com.datadoghq.ad.logs: '[{"source": "agent", "service": "agent"}]'
   
   api:
     container_name: thinker-api
@@ -30,7 +32,9 @@ services:
       - ./app:/usr/src/app/
     depends_on:
       - thinker
-
+    labels:
+      com.datadoghq.ad.logs: '[{"source": "webapp", "service": "thinker-api"}]'
+  
   thinker:
     container_name: thinker-microservice
     build: ./app/.
@@ -43,6 +47,8 @@ services:
       - docdb
     ports:
       - "5001:8000"
+    labels:
+      com.datadoghq.ad.logs: '[{"source": "webapp", "service": "thinker-microservice"}]'
 
   docdb:
     image: redis:5.0.5
@@ -66,4 +72,3 @@ services:
       com.datadoghq.ad.check_names: '["nginx"]'
       com.datadoghq.ad.init_configs: '[{}]'
       com.datadoghq.ad.instances: '[{"nginx_status_url": "http://%%host%%:%%port%%/nginx_status"}]'
-      com.datadoghq.ad.logs: '[{"source": "nginx", "service": "webapp"}]'
