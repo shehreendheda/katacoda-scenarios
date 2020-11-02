@@ -26,6 +26,6 @@ In the terminal on the right, the Storedog app is being deployed using Docker. L
 
      In the **Facets** list, expand **Service**. The list of services from the app that are injecting traces into Datadog should look like the list in the image.
 
-     ![trace-services](collectlogsapp/assets/trace-allservices.png)
+     ![trace-services](collectlogsapp2/assets/trace-allservices.png)
 
 With Datadog collecting metric and trace data from the app, let's enable log collection.

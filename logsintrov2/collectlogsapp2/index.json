@@ -1,5 +1,5 @@
 {
-  "title": "Setting up Log Collection for an App",
+  "title": "Configuring Log Collection for an App",
   "description": "Intro to log management in Datadog",
   "time": "20 minutes",
   "difficulty": "Beginner",
@@ -19,15 +19,15 @@
         "text": "step2.md"
       },
       {
-        "title": "Enabling Log Collection for a Ruby App Service",
+        "title": "Configuring Log Collection for a Ruby App Service",
         "text": "step3.md"
       },
       {
-        "title": "Enabling Log Collection for Python App Services",
+        "title": "Configuring Log Collection for Python App Services",
         "text": "step4.md"
       },
       {
-        "title": "Viewing Collected Logs in Datadog",
+        "title": "Exploring Collected Logs in Datadog",
         "text": "step5.md"
       }
     ],
