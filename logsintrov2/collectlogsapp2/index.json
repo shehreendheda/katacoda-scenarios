@@ -1,0 +1,71 @@
+{
+  "title": "Setting up Log Collection for an App",
+  "description": "Intro to log management in Datadog",
+  "time": "20 minutes",
+  "difficulty": "Beginner",
+  "details": {
+    "intro": {
+      "courseData": "background.sh",
+      "code": "foreground.sh",
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Preparing the Environment",
+        "text": "step1.md"
+      },
+      {
+        "title": "Enabling Log Collection by the Datadog Agent",
+        "text": "step2.md"
+      },
+      {
+        "title": "Enabling Log Collection for a Ruby App Service",
+        "text": "step3.md"
+      },
+      {
+        "title": "Enabling Log Collection for Python App Services",
+        "text": "step4.md"
+      },
+      {
+        "title": "Viewing Collected Logs in Datadog",
+        "text": "step5.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "grademe",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "prep-environment",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "docker-compose-logs.yml",
+          "target": "/root"
+        },
+        {
+          "file": "docker-compose-no-logs.yml",
+          "target": "/root"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal", 
+    "uieditorpath": "/root/app-files",
+    "hideHiddenFiles": true,
+    "exclusionPatterns": ["**/store-frontend/tmp/*", "**/store-frontend/log/*"],
+    "showdashboard": true,
+    "dashboards": [{"name": "storedog", "port": 3000}]
+  },
+  "backend": {
+    "imageid": "datadog-ecommerce-observability"
+  }
+}

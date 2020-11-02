@@ -8,28 +8,28 @@
       "course_id": "collectlogs",
       "id": "collectlogs",
       "title": "Setting up Log Collection and Integration Pipelines",
-      "description": "Intro to log collection and integration pipelines"
+      "description": "Using Nginx, Redis, Thinker API and microservice"
     },
     {
       "pathway_id": "datadog/logsintrov2",
       "course_id": "managelogs",
       "id": "managelogs",
       "title": "Getting Started with Log Management",
-      "description": "Intro to log management in Datadog"
-    },
-    {
-      "pathway_id": "datadog/logsintrov2",
-      "course_id": "managelogs2",
-      "id": "managelogs2",
-      "title": "Getting Started with Log Management 2",
-      "description": "Intro to log management in Datadog"
+      "description": "Based on Storedog APP"
     },
     {
       "pathway_id": "datadog/logsintrov2",
       "course_id": "collectlogsapp",
       "id": "collectlogsapp",
       "title": "Setting up Log Collection for an App",
-      "description": "Intro to log collection and integration pipelines"
-    }   
+      "description": "Configure Agent, View in App, Finalize service configurations"
+    },
+    {
+      "pathway_id": "datadog/logsintrov2",
+      "course_id": "collectlogsapp2",
+      "id": "collectlogsapp2",
+      "title": "Getting Started with Log Management 2",
+      "description": "Configure Agent, Finalize service configurations, View in App"
+    }  
   ]
 }
