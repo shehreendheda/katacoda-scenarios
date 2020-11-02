@@ -28,7 +28,7 @@
       "pathway_id": "datadog/logsintrov2",
       "course_id": "collectlogsapp2",
       "id": "collectlogsapp2",
-      "title": "Getting Started with Log Management 2",
+      "title": "Configuring Log Collection for an App",
       "description": "Configure Agent, Finalize service configurations, View in App"
     }  
   ]
