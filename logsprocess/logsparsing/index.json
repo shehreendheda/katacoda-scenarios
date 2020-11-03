@@ -11,7 +11,36 @@
     },
     "steps": [
       {
+        "title": "The Grok Parser",
         "text": "step1.md"
+      },
+      {
+        "title": "Parsing Logs using the Matcher Syntax",
+        "text": "step2.md"
+      },
+      {
+        "title": "More Matcher Examples",
+        "text": "step3.md"
+      },
+      {
+        "title": "Listing Mulitple Rules",
+        "text": "step4.md"
+      },
+      {
+        "title": "Parsing Key-Value Pairs using a Filter",
+        "text": "step5.md"
+      },
+      {
+        "title": "More Key-Value Pair Examples",
+        "text": "step6.md"
+      },
+      {
+        "title": "Parsing Dates",
+        "text": "step7.md"
+      },
+      {
+        "title": "Automatic Parsing in Datadog",
+        "text": "step8.md"
       }
     ],
     "finish": {
