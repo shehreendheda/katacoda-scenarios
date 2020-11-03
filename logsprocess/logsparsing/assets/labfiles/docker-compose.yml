@@ -51,7 +51,7 @@ services:
       com.datadoghq.ad.logs: '[{"source": "webapp", "service": "thinker-microservice"}]'
 
   docdb:
-    image: redis:5.0.5
+    image: redis:latest
     container_name: docker-docdb
     ports:
         - "6379:6379"
@@ -60,7 +60,7 @@ services:
       - ./conf.d/redis/redis.conf:/usr/local/etc/redis/redis.conf
 
   webserver:
-    image: "nginx:1.16.0"
+    image: "nginx:latest"
     container_name: docker-webserver
     ports:
       - "8080:80"
