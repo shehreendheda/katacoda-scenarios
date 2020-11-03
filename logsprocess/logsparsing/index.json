@@ -5,12 +5,12 @@
   "difficulty": "Intermediate",
   "details": {
     "intro": {
+      "courseData": "background.sh",
+      "code": "foreground.sh",
       "text": "intro.md"
     },
     "steps": [
       {
-        "courseData": "background.sh",
-        "code": "foreground.sh",
         "text": "step1.md"
       }
     ],
@@ -83,7 +83,8 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/root/lab-files",
     "terminals": [
       {
         "name": "Terminal 2"
@@ -91,6 +92,6 @@
     ]
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "datadog-base-v1"
   }
 }
