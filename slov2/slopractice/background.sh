@@ -1,12 +1,12 @@
 #!/bin/bash
 
-mkdir /root/app-files
-git clone https://github.com/DataDog/ecommerce-workshop /root/app-files
-cd /root/app-files
+#mkdir /root/app-files
+#git clone https://github.com/DataDog/ecommerce-workshop /root/app-files
+#cd /root/app-files
 # locked to specific commit on 2020-10-02
-git checkout 9ce34516d9a65d6f09a6fffd5c4911a409d31e3f
-git reset --hard
+#git checkout 9ce34516d9a65d6f09a6fffd5c4911a409d31e3f
+#git reset --hard
 
-docker-compose pull
+#docker-compose pull
 
-./gor --input-file-loop --input-file requests_0.gor --output-http "http://localhost:3000" >> /dev/null 2>&1
+/ecommworkshop/gor --input-file-loop --input-file requests_0.gor --output-http "http://localhost:3000" >> /dev/null 2>&1
