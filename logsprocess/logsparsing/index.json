@@ -5,12 +5,12 @@
   "difficulty": "Intermediate",
   "details": {
     "intro": {
-      "courseData": "background.sh",
-      "code": "foreground.sh",
       "text": "intro.md"
     },
     "steps": [
       {
+        "courseData": "background.sh",
+        "code": "foreground.sh",
         "text": "step1.md"
       }
     ],
