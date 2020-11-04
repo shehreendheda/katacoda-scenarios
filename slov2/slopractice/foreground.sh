@@ -8,8 +8,8 @@ cd /ecommworkshop
 #sed -i 's/.ruby-shop./ENV["DD_ENV"]/' ./store-frontend-instrumented-fixed/api/config/initializers/datadog.rb
 #sed -i 's/.ruby-shop./ENV["DD_ENV"]/' ./store-frontend-instrumented-fixed/config/initializers/datadog.rb
 #sed -i 's/.ruby-shop./ENV["DD_ENV"]/' ./store-frontend-instrumented-fixed/frontend/config/initializers/datadog.rb
-sed -i 's/ddtrace==0.40.0/ddtrace==0.41.0/g' ./ads-service/requirements.txt
-sed -i 's/ddtrace==0.40.0/ddtrace==0.41.0/g' ./discounts-service-fixed/requirements.txt
+#sed -i 's/ddtrace==0.40.0/ddtrace==0.41.0/g' ./ads-service/requirements.txt
+#sed -i 's/ddtrace==0.40.0/ddtrace==0.41.0/g' ./discounts-service-fixed/requirements.txt
 #mv /root/frontend-docker-entrypoint.sh ./store-frontend-instrumented-fixed/docker-entrypoint.sh
 clear
 cd docker-compose-files
