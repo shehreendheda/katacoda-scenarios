@@ -6,53 +6,64 @@ Grok syntax provides an easier way to parse logs than pure regular expressions. 
 
 - <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=filter#matcher-and-filter" target="_blank">Filter</a> (optional) -  a post-processor of the match to transform it.
 
-Let's start with a simple example.
+Let's start with a simple example for using matchers: `%{matcher:attribute}`.
 
 Log 1 - `John 12312 connected in Datadog`
 
-1. Navigate to  
+1. Navigate to the **New Processor** window from the previous page.
 
-The structure of this log looks like  `username userid ‘connected in’ application_name`. 
+2. Click the log to copy it and paste it into the **Log samples** field: `John 12312 connected in Datadog`{{copy}} 
 
-The important attributes that need to be extracted from any log like this one are `username`, `userid`, and `application_name`, so a rule is needed to extract each attribute from the log. 
+    The structure of this log looks like  `username userid ‘connected in’ application_name`. 
 
-Let’s start with `username` and create a simple rule to extract just this attribute from the log. 
+    The important attributes that need to be extracted from any log like this one are `username`, `userid`, and `application_name`, so a rule is needed to extract each attribute from the log. 
 
-Refer to the <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=matcher#matcher-and-filter" target="_blank">Matchers and Filters</a> table to find a  matcher for the attribute.
+3. Let’s start with `username` and create a simple rule to extract just this attribute from the log. 
 
-It looks like `word` is a fitting matcher for `username`. 
+    Refer to the <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=matcher#matcher-and-filter" target="_blank">Matchers and Filters</a> table to find a  matcher for the attribute.
 
-Also, let's use `user.name` instead of `username` so that you can group `user.name` and `user.id` (instead of `userid`) under the `user` attribute.
+    It looks like `word` is a fitting matcher for `username`. 
 
-The matcher syntax to extract just the `user.name` is then `%{word:user.name}`. 
+    Also, let's use `user.name` instead of `username` so that you can group `user.name` and `user.id` (instead of `userid`) under the `user` attribute.
 
-But, to make sure that all all logs starting with `user.name` are parsed using the rule, add `.*` at the end.
+    The matcher syntax to extract just the `user.name` is then `%{word:user.name}`. 
 
-The rule to extract the `user.name` is `%{word:user.name}.*`.
+    But, to make sure that all all logs starting with `user.name` are parsed using the rule, add `.*` at the end.
 
-IMAGE
+    The rule to extract the `user.name` is `%{word:user.name}.*`.
 
-Now, let’s include a matcher for `userid` in the rule. 
+    In the **Define parsing rules** field of the Grok Parser, copy and paste this rule: `rule_1 %{word:user.name}.*`{{copy}}.
 
-Because the `userid` is a simple number, the fitting matcher is `number`. 
+    ![log1-username](logsparsing/assets/log1-username.png)
 
-Also, let's use `user.id` so that the `userid` is listed as part of the `user` attribute group. 
+    Notice the message below the field. The rule matches the log sample.
 
-The matcher syntax is `%{number:user.id}`, so the rule is now `%{word:user.name} %{number:user.id}.*`.
+    Try deleting `.*` from the rule. You'll see that the rule does not match because the text after the `username` is not accounted for.
 
-IMAGE
+4. Now, let’s include a matcher for `userid` in the rule. 
 
-To extract the last attribute in the log, `application_name`, you can use the matcher `word` and the attribute value `application_name`. 
+    Because the `userid` is a simple number, the matcher is `number`. 
 
-Before adding the matcher syntax to the rule, you need to hard code `'connected in'` into the rule because of the structure of the logs: `username userid ‘connected in’ application_name`. 
+    Also, let's use `user.id` so that the `userid` is listed as part of the `user` attribute group. 
 
-The rule becomes `%{word:user.name} %{number:user.id} connected on %{word:application_name}.*`. 
+    The matcher syntax is `%{number:user.id}`, so the rule is now `%{word:user.name} %{number:user.id}.*`.
+
+    Clear the **Define parsing rules** field. Then, copy and paste the rule: `rule_1 %{word:user.name} %{number:user.id}.*`{{copy}}.
+    
+    ![log1-username-userid](logsparsing/assets/log1-username-userid.png)
+
+    Notice the message below the field. The rule matches the log sample.
+
+5. To extract the last attribute in the log, `application_name`, you can use the matcher `word` and the attribute value `application_name`. 
+
+    Before adding the matcher syntax to the rule, you need to hard code `connected in` into the rule because of the structure of the logs: `username userid ‘connected in’ application_name`. 
+
+    The rule becomes `%{word:user.name} %{number:user.id} connected in %{word:application_name}.*`. 
+
+    Clear the **Define parsing rules** field. Then, copy and paste the rule: `rule_1 %{word:user.name} %{number:user.id} connected in %{word:application_name}.*`{{copy}}.
+    
+    ![log1-username-userid-appname](logsparsing/assets/log1-username-userid-appname.png)
 
 
 
-| Attribute | Value | Matcher | 
-|-----------|-------|---------|
-| username | John | word |
-| userid | 12312 | number |
-| application_name | Datadog | word |
 

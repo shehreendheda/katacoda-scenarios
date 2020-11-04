@@ -10,8 +10,10 @@ Datadog automatically parses JSON-formatted logs to extract attributes. For logs
 
 5. Click **Save**. A new `nginx - custom` pipeline will appear in the pipelines list.
 
-6. Expand the new pipeline and click **Add Processor**.
+6. Expand the new pipeline and click **Add Processor**. A pop-up window to create a **New Processor** will open.
 
 7. Under **Select the processor type**, select `Grok Parser`.
 
-In the following examples, you're going to copy-paste the given log example in the **Log samples** field and the parsing rule into the **Define parsing rules** field. Once you enter a log sample and a parsing rule, you'll see that the parser checks if the rule matches the sample.
+8. Leave the **New Processor** window open.
+
+In the following examples, you're going to copy-paste the given log example into the **Log samples** field and the matching parsing rule into the **Define parsing rules** field. Once you enter a log sample and a parsing rule, you'll see that the parser checks if the rule matches the sample.

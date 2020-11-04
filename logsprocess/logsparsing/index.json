@@ -23,7 +23,7 @@
         "text": "step3.md"
       },
       {
-        "title": "Listing Mulitple Rules",
+        "title": "Listing Multiple Rules in a Grok Parser",
         "text": "step4.md"
       },
       {
@@ -39,8 +39,12 @@
         "text": "step7.md"
       },
       {
-        "title": "Automatic Parsing in Datadog",
+        "title": "Using Helper Rules",
         "text": "step8.md"
+      },
+      {
+        "title": "Automatic Parsing in Datadog",
+        "text": "step9.md"
       }
     ],
     "finish": {
