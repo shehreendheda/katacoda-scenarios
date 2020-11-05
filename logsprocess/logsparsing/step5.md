@@ -11,7 +11,7 @@ The filter accounts for the following:
 | separatorStr | Defines the separator between key and values. Defaults to `=` |
 | characterWhiteList | Defines extra non-escaped value chars in addition to the default `\\w.\\-_@`. Used only for non-quoted values (e.g. `key=@valueStr`) |
 | quotingStr | Defines quotes, replacing the default quotes detection: `<>`, `""`, `''` |
-| delimiter | Defines the separator between the different key values pairs (e.g. `\|` is the delimiter in `key1=value1\|key2=value2`). Default to `(normal space)` , `,` and `;` |
+| delimiter | Defines the separator between the different key values pairs (e.g. <code>&#124;</code> is the delimiter in `key1=value1`<code>&#124;</code>`key2=value2`). Defaults to `(normal space)` , `,` and `;` |
 
 Let's use the key-value filter to create rules for the following logs.
 
