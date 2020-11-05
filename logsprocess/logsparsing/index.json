@@ -31,20 +31,16 @@
         "text": "step5.md"
       },
       {
-        "title": "More Key-Value Pair Examples",
+        "title": "More Parsing Examples - Dates and Special Characters",
         "text": "step6.md"
       },
       {
-        "title": "Parsing Dates",
+        "title": "Using Helper Rules",
         "text": "step7.md"
       },
       {
-        "title": "Using Helper Rules",
-        "text": "step8.md"
-      },
-      {
         "title": "Automatic Parsing in Datadog",
-        "text": "step9.md"
+        "text": "step8.md"
       }
     ],
     "finish": {

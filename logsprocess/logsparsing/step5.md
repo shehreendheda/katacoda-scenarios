@@ -6,12 +6,12 @@ To account for the variations in key-value pairs, you need to include the `key-v
 
 The filter accounts for the following:
 
-| character type | description |
+| Character type | Description |
 |--------------|----------|
 | separatorStr | Defines the separator between key and values. Defaults to `=` |
 | characterWhiteList | Defines extra non-escaped value chars in addition to the default `\\w.\\-_@`. Used only for non-quoted values (e.g. `key=@valueStr`) |
 | quotingStr | Defines quotes, replacing the default quotes detection: `<>`, `""`, `''` |
-| delimiter | Defines the separator between the different key values pairs (e.g. `|` is the delimiter in `key1=value1|key2=value2`). Default to ` ` (normal space), `,` and `;` |
+| delimiter | Defines the separator between the different key values pairs (e.g. `\|` is the delimiter in `key1=value1\|key2=value2`). Default to `(normal space)` , `,` and `;` |
 
 Let's use the key-value filter to create rules for the following logs.
 
@@ -27,7 +27,7 @@ Log 5 -  `url=https://app.datadoghq.com/event/stream user=john`
 
     ![log3_1](logsparsing/assets/log3_1.png)
 
-    Because the `key-value` filter defaults to a separatorStr `=` and delimiter ` ` , you can use the syntax `%{data::keyvalue}` for the rule.
+    Because the `key-value` filter defaults to a separatorStr `=` and delimiter `(normal space)` , you can use the syntax `%{data::keyvalue}` for the rule.
 
     But, say, you want to extract these key value pairs under the attribute `user_info`, you can include the <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=matcher#parsing-a-specific-text-attribute" target="_blank">**Extract**</a> option in the syntax: `%{data:user_info:keyvalue}`
 
