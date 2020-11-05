@@ -14,7 +14,7 @@ Log 2_2 - `John connected to the instance i-023vseq123`
 3. You can create a rule with the following matchers for these attributes.
 
     | Attribute | Data | Matcher | Parsing element |
-    |-----------|-------|---------|--------|
+    |-----------|------|---------|-----------------|
     | user.name | John | word | %{word:user.name} |
     | user.familyname | Doe | word | %{number:user.familyname} |
     | instance.name | i-02312aavseq123 | notSpace | %{notSpace:instance.name} |
