@@ -101,3 +101,5 @@ Log 8 - `jenny doe connected on server ABC in development`
 As you can see, the Grok Parser in Datadog is designed to help you create multiple parsing rules and helper rules by actively checking and confirming if your rules match your log samples that are filtered into log pipelines.
 
 To help you further with grok parsing logs, Datadog also offers automatic parsing features.
+
+Before you continue to the next step, click **Cancel** in the **New Processor** window. Click the blue toggle button on the right of the `nginx - custom` pipeline to disable the pipeline.
