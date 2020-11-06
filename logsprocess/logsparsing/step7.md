@@ -40,7 +40,7 @@ Log 8 - `jenny doe connected on server ABC in development`
 
 5. Below the first log sample under **Log samples**, click **Add**. 
 
-    Copy and paste Log 8 in to the new log sample field: ``jenny doe connected on server ABC in development`{{copy}}
+    Copy and paste Log 8 in to the new log sample field: `jenny doe connected on server ABC in development`{{copy}}
 
     Compare the two log samples. What's different?
 
@@ -49,10 +49,12 @@ Log 8 - `jenny doe connected on server ABC in development`
     Log 8 looks like `user.name user.familyname 'connected on server' server.name 'in' server.env`.
 
     Notice the following differences:
-        - Log 7 include `user.name` and `user.id`, while Log 8 includes `user.name` and `user.familyname`.
-        - Log 7 includes a `connect_date`, while Log 8 does not.
     
-    How can you modify the helper rules above to account for these differences and to use the same set of helper rules for logs like Log 7 and for logs like Log 8,
+    - Log 7 include `user.name` and `user.id`, while Log 8 includes `user.name` and `user.familyname`.
+    
+    - Log 7 includes a `connect_date`, while Log 8 does not.
+    
+    How can you modify the helper rules above to account for these differences and to use the same set of helper rules for types of logs.
 
 6. Let's start with the `user` helper rule. 
 
@@ -80,7 +82,7 @@ Log 8 - `jenny doe connected on server ABC in development`
     
     But, instead of hard-coding the word `connected` into the parsing rule, you can hard-code an optional `connected ` into the `server` helper rule.
 
-    Delete the `user` helper rule in the **Helper Rules** field, and copy and paste the new `user` helper rule in its place: `server (connected )?on server %{notSpace:server.name} in %{notSpace:server.env}`{{copy}}
+    Delete the `server` helper rule in the **Helper Rules** field, and copy and paste the new `user` helper rule in its place: `server (connected )?on server %{notSpace:server.name} in %{notSpace:server.env}`{{copy}}
 
     Delete `connected` from `rule_8` in the **Define parsing rules** field so that the rule is `rule_8 %{user} %{server}`{{copy}}
 
@@ -90,11 +92,11 @@ Log 8 - `jenny doe connected on server ABC in development`
 
     The difference between `rule_7`  and `rule_8` is `%{connection} `, which you can make optional.
 
-    Delete `rule 8` in the **Define parsing rules** field and update the  `%{connection} ` to  `(%{connection} )?` so that the rule becomes `rule_7 %{user} (%{connection} )?%{server}`{{copy}}.
+    Delete `rule_8` in the **Define parsing rules** field and update `%{connection} ` in `rule_7` to  `(%{connection} )?` so that the rule becomes `rule_7 %{user} (%{connection} )?%{server}`{{copy}}.
 
     ![log8c](logsparsing/assets/log8c.png)
 
-    Now you have 3 helper rules and 1 parsing rules for these two different log structures.
+    Now you have 3 helper rules and 1 parsing rule for these two different log structures.
 
 As you can see, the Grok Parser in Datadog is designed to help you create multiple parsing rules and helper rules by actively checking and confirming if your rules match your log samples that are filtered into log pipelines.
 

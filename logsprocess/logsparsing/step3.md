@@ -1,8 +1,8 @@
 Now that you're familiar with using matchers, let's look at a few other log examples using matchers.
 
-Log 2_1 - `John Doe connected to the instance i-02312aavseq123`
+Log 2a - `John Doe connected to the instance i-02312aavseq123`
 
-Log 2_2 - `John connected to the instance i-023vseq123`
+Log 2b - `John connected to the instance i-023vseq123`
 
 1. Navigate to the **New Processor** window from the previous page.
 
@@ -28,13 +28,13 @@ Log 2_2 - `John connected to the instance i-023vseq123`
 
     Clear the **Define parsing rules** field. Then, copy and paste the rule: `rule_2 %{word:user.name} %{word:user.familyname} connected to the instance %{notSpace:instance.name}.*`{{copy}}.
     
-    ![log2_1](logsparsing/assets/log2_1.png)
+    ![log2a](logsparsing/assets/log2a.png)
 
-4. Log 2_2 is variation of Log 2_1 that does not include the `user.familyname` attribute. Let's create a rule that takes into account logs with the structures of Log 2_1 and Log 2_2.
+4. Log 2b is variation of Log 2a that does not include the `user.familyname` attribute. Let's create a rule that takes into account logs with the structures of Log 2a and Log 2b.
 
     Clear the **Log samples** field. Then, copy and paste the log: `John connected to the instance i-02312aavseq123`{{copy}}
     
-    To account for the optional `user.familyname` attribute in Log 2_2, the rule for Log 2_1 can be modified with `( )?` around the attribute.
+    To account for the optional `user.familyname` attribute in Log 2b, the rule for Log 2a can be modified with `()?` around the attribute.
 
     The rule becomes `%{word:user.name} (%{word:user.familyname} )?connected to the instance %{notSpace:instance.name}.*`.
 
@@ -42,5 +42,5 @@ Log 2_2 - `John connected to the instance i-023vseq123`
 
     Clear the **Define parsing rules** field. Then, copy and paste the rule: `rule_2 %{word:user.name} (%{word:user.familyname} )?connected to the instance %{notSpace:instance.name}.*`{{copy}}.
 
-    ![log2_2](logsparsing/assets/log2_2.png)
+    ![log2b](logsparsing/assets/log2b.png)
 

@@ -1,6 +1,6 @@
 Most logs contain dates. However, parsing dates can be complicated given the variety of date formats. You can view the list of date formats in the <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=matcher#parsing-dates" target="_blank">Parsing dates</a> documentation.
 
-Many logs will also contain special characters that require escaping `\character`. These characters are `?`, `[`, `]`, `{`, `}`, `(`, `)`, `>`, `<`, `:`, `=`, `"`, `~`, `/`, and `\`.
+Many logs also contain special characters that require escaping `\character`. These characters are `?`, `[`, `]`, `{`, `}`, `(`, `)`, `>`, `<`, `:`, `=`, `"`, `~`, `/`, and `\`.
 
 Let's parse a log with a date and special characters.
 

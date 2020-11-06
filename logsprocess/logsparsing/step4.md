@@ -10,7 +10,7 @@ Logs -
 
 The first log matches the rule_1 created for Log 1: `%{word:user.name} %{number:user.id} connected in %{word:application_name}.*`
 
-But the second, third, and forth logs all match the rule_2 created for Log 2_1 and Log 2_2: `%{word:user.name} (%{word:user.familyname} )?connected to the instance %{notSpace:instance.name}.*`
+But the second, third, and forth logs all match the rule_2 created for Log 2a and Log 2b: `%{word:user.name} (%{word:user.familyname} )?connected to the instance %{notSpace:instance.name}.*`
 
 To parse the logs above, you can use these two parsing rules:
 

@@ -38,7 +38,7 @@ Log 1 - `John 12312 connected in Datadog`
 
     Notice the message below the field. The rule matches the log sample.
 
-    Try deleting `.*` from the rule. You'll see that the rule does not match because the text after the `username` is not accounted for.
+    Try deleting `.*` from the rule. You'll see that the rule does not match because the text after the `user.name` is not accounted for.
 
 4. Now, let’s include a matcher for `userid` in the rule. 
 
