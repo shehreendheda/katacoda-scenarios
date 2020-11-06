@@ -6,7 +6,6 @@
   "details": {
     "intro": {
       "courseData": "background.sh",
-      "code": "foreground.sh",
       "text": "intro.md"
     },
     "steps": [
@@ -40,7 +39,8 @@
       },
       {
         "title": "Automatic Parsing in Datadog",
-        "text": "step8.md"
+        "text": "step8.md",
+        "code": "foreground.sh"
       }
     ],
     "finish": {
