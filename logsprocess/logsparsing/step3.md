@@ -14,7 +14,9 @@ Log 2_2 - `John connected to the instance i-023vseq123`
 3. You can create a rule with the following matchers for each attributes.
 
     `user.name` &rarr; `%{word:user.name}`
+
     `user.familyname` &rarr; `%{number:user.familyname}`
+    
     `instance.name` &rarr; `%{notSpace:instance.name}`
     
     The matcher `notSpace` matches any string until the next space. The instance name is a random collection of characters including alphabets, numbers, and a dash. The `notSpace` matcher will allow for any instance name to be extracted.
