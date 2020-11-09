@@ -103,3 +103,6 @@ As you can see, the Grok Parser in Datadog is designed to help you create multip
 To help you further with grok parsing logs, Datadog also offers automatic parsing features.
 
 Before you continue to the next step, click **Cancel** in the **New Processor** window. Click the blue toggle button on the right of the `nginx - custom` pipeline to disable the pipeline.
+
+nginx-custom-disabled
+![nginx-custom-disabled](logsparsing/assets/nginx-custom-disabled.png)

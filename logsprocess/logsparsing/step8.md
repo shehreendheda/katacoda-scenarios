@@ -10,7 +10,9 @@ Grok Parsers in OOTB Integration Pipelines, Parse My Logs, and Patterns are grea
 
 3. Filter the Log List by entering `source:nginx` in the search field above the list or by selecting `nginx` under **Sources** in the **Facets** list on the left of the Log List.
 
-4. Click an of the nginx logs.
+4. Click one of the nginx logs.
+
+    ![nginx-ip-processed](logsparsing/assets/nginx-ip-processed.png)
 
     Notice the list of **Event Attributes**. The log message below the **ALL TAGS** list is processed in these attributes because of the OOTB nginx Integration and Integration Pipeline that are automically installed and used to collected and process logs from the nginx source.
 
@@ -18,7 +20,9 @@ Grok Parsers in OOTB Integration Pipelines, Parse My Logs, and Patterns are grea
 
     Notice the **Nginx** pipeline in the **Pipelines** list. When an nginx log is collected it is processed by the **Nginx** pipeline.
 
-6. Expand the **Nginx** pipline.
+6. Expand the **Nginx** pipeline.
+
+    ![nginx-ip](logsparsing/assets/nginx-ip)
 
     Notice that the first processor in the list is a **Grok Parser**. When an nginx log is filtered into the Nginx pipeline, it is first processed by the parser and its individual attributes are extracted. 
 
@@ -34,29 +38,25 @@ Grok Parsers in OOTB Integration Pipelines, Parse My Logs, and Patterns are grea
 
 8. Hover over the **Nginx** pipline title. On the right of the Nginx pipeline, click the toggle switch to disable the pipeline.
 
-9. Open the <a href="https://app.datadoghq.com/logs" target="_blank">**Log Explorer**</a> in a new tab and filter the list for `source:nginx`.
+    Hover over the **nginx - custom** pipline title. On the right of the Nginx pipeline, click the toggle switch to enable the pipeline.
 
-    Notice that new nginx logs that are not processed because you turned off the pipeline.
+    ![nginx-toggled](logsparsing/assets/nginx-toggled.png)
 
-10. In the tab with **Logs > Configuration > Pipelines**</a>, click the blue toggle button on the right of the **Nginx** pipline to disable it.
+9. Expand the **nginx - custom** pipeline and click **Add Processor**.
 
-11. Click the blue toggle button on the right of the **nginx - custom** pipline to enable it.
+    Under **Select the processor type**, select `Grok Parser`.
 
-    ![nginx_toggled](logsparsing/assets/nginx_toggled.png)
+    Click **Parse My Logs**.
 
-11. Expand the **nginx - custom** pipeline and click **Add Processor**.
+    Notice the **Log samples** and **Define parsing rules** fields fill up. Look closely at the log samples and parsing rules, they don't necessarily match the ones in the OOTB Integration Pipeline. That's alright. In fact, that's the purpose of being able to create unique parsing rules because even common tools like nginx can be configured to produce logs with custom formats and structures that require custom parsing rules.
 
-12. Under **Select the processor type**, select `Grok Parser`.
-
-13. Click **Parse My Logs**.
-
-    Notice the **Log samples** and **Define parsing rules** fields fill up. Looking closely at the log samples and parsing rules, they don't necessarily match the ones in the OOTB Integration Pipeline. That's alright. In fact, that's the purpose of having the ability to create unique parsing rules because even common tools like nginx can be configured to produce logs with custom formats and structures that require custom parsing rules.
+    When you click each log sample, notice the **Need Help?** link under the **Match** label. You can click this link any time to get direct help from a Datadog Support Engineer to parse the log.
     
     **Parse My Logs** is a "magic" parsing tool that looks at logs that are filtered through the pipeline and determines the most common logs patterns and creates matching parsing rules.
 
-14. Click the questiom mark next to **Parse My Logs**. 
+    Click the questiom mark next to **Parse My Logs**. 
 
-15. In the message that appears, click the **logs patterns** hyperlink to open a new tab for the **Logs Explorer > Patterns** view.
+10. In the message that appears, click the **logs patterns** link to open a new tab for the **Logs Explorer > Patterns** view.
 
     The <a href="https://docs.datadoghq.com/logs/explorer/patterns/" target="_blank">Patterns</a> view lists the most frequent log patterns based on the search contenxt (time range and search query). 
 
@@ -64,9 +64,26 @@ Grok Parsers in OOTB Integration Pipelines, Parse My Logs, and Patterns are grea
 
     Also, notice that the patterns listed match the log samples that appeared in the Grok Parser after you clicked **Parse My Logs**. 
 
-16. Click one of the patterns. You'll see details about the patterns and a list of corresponding logs for the pattern.
+11. Click one of the patterns. You'll see details about the patterns and a list of corresponding logs for the pattern.
 
-17. Click **Show parsing rule** near the top of the pattern. This is one of the parsing rules that was listed in the Grok Parser after you clicked **Parse My Logs**.
+    Click **Show parsing rule** near the top of the pattern. This is one of the parsing rules that was listed in the Grok Parser after you clicked **Parse My Logs**.
+
+    Close the pattern detail panel.
+
+12. Click the icon for **Search** on the left of the Log Explorer search field, and click one of the nginx logs.
+
+    ![nginx-unprocessed](logsparsing/assets/nginx-unprocessed.png)
+
+    Notice there is no list of **Event Attributes**. Instead, there is message to help you get started with processing your logs from this source. Remember, the **Nginx** Integration Pipeline is disabled and there is no processor saved in the **nginx - custom** pipeline.  
+
+    In the tab that you are creating the Grok Parser, enter `Parsing nginx logs for webapp`{{copy}} in the **Name the Processor** field and click **Save**.
+
+    In the tab with the Log Explorer, wait a few seconds then click a new log. 
+
+    ![nginx-custom-processed](logsparsing/assets/nginx-custom-processed.png)
+
+    Notice that the **Event Attributes** are now listed. Compared to the logs processed by the Nginx Integration Pipeline, this list of Event Attributes is simple. The pipeline that processed this logs had only one processer---the Grok Parser, while the Integration Pipeline includes other processors in addition to a Grok Parser.
+
 
 Datadog provides these automatic parsing features to help you get started with Grok parsing. If needed, you can then expand on the log samples/patterns and parsing rules that are created from these features to account for all possible log patterns of your infrastructure and applications.
 
