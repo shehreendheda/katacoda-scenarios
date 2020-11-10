@@ -11,6 +11,7 @@
     },
     "steps": [
       {
+        "title": "Preparing the Environment",
         "text": "step1.md"
       }
     ],
@@ -27,6 +28,6 @@
     ]
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "datadog-base-v2"
   }
 }
