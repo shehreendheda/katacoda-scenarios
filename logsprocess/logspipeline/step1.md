@@ -6,7 +6,7 @@ Before you create the custom pipeline, you need to first install the Datadog Age
             -e DD_API_KEY=${DD_API_KEY} \
             -e DD_LOGS_ENABLED=true \
             -e DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true \
-            -e DD_CONTAINER_EXCLUDE_LOGS="name:datadog-agent" \
+            -e DD_CONTAINER_EXCLUDE_LOGS="name:agent" \
             -v /var/run/docker.sock:/var/run/docker.sock:ro \
             -v /proc/:/host/proc/:ro \
             -v /opt/datadog-agent/run:/opt/datadog-agent/run:rw \
