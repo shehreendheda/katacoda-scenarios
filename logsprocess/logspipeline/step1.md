@@ -1,6 +1,6 @@
-In the terminal on the right, the Datadog Agent and a custom apache log service have been brought online in a Docker environment. 
+In the terminal on the right, the Datadog Agent and a custom apache service have been brought online in a Docker environment. 
 
-Let's login to Datadog to see the logs that are being collected by the Datadog Agent for the apache log source.
+Let's log in to Datadog to see the logs that are being collected by the Datadog Agent for the apache service and create a <a href="https://docs.datadoghq.com/logs/processing/pipelines/" target="_blank">pipeline</a> to process the logs.
 
 1. If you've previously used **Logs** in the Datadog organization you are working in, move on to the next step. 
 
@@ -24,9 +24,8 @@ Let's login to Datadog to see the logs that are being collected by the Datadog A
     
     Close the log's details panel.
 
-    Let's create a custom <a href="https://docs.datadoghq.com/logs/processing/pipelines/" target="_blank">pipeline</a> to process the logs.
 
-4. Navigate to <a href="https://app.datadoghq.com/logs/pipelines" target="_blank">**Logs > Configuration > Pipelines**</a> in a new browser tab. 
+4. Open <a href="https://app.datadoghq.com/logs/pipelines" target="_blank">**Logs > Configuration > Pipelines**</a> in a new browser tab.
 
     You'll want to keep the Log Explorer tab open so that you can see how the logs details are processed by each processor you add to the pipeline.
 
@@ -36,4 +35,10 @@ Let's login to Datadog to see the logs that are being collected by the Datadog A
 
     Enter `apache - flog`{{copy}} as the **Name**.
 
+    Click **Save**.
+
     ![create-flog-pipeline](logspipeline/assets/create-flog-pipeline.png)
+
+    ![example-pipelines-list](logspipeline/assets/example-pipelines-list.png)
+
+Let's start adding processors to the pipeline so that the log for `service:flog` start getting processed.
