@@ -11,8 +11,44 @@
     },
     "steps": [
       {
-        "title": "Preparing the Environment",
+        "title": "Creating the Custom Pipeline",
         "text": "step1.md"
+      },
+      {
+        "title": "Adding a Grok Parser",
+        "text": "step2.md"
+      },
+      {
+        "title": "Adding a Category Processor",
+        "text": "step3.md"
+      },
+      {
+        "title": "Adding a Status Remapper",
+        "text": "step4.md"
+      },
+      {
+        "title": "Adding a URL Parser",
+        "text": "step5.md"
+      },
+      {
+        "title": "Adding a User-Agent Parser",
+        "text": "step6.md"
+      },
+      {
+        "title": "Adding a String Builder Processor",
+        "text": "step7.md"
+      },
+      {
+        "title": "Adding a Message Remapper",
+        "text": "step8.md"
+      },
+      {
+        "title": "Reviewing the Processed Logs",
+        "text": "step9.md"
+      },
+      {
+        "title": "Comparing the OOTB Integration Pipeline",
+        "text": "step10.md"
       }
     ],
     "finish": {

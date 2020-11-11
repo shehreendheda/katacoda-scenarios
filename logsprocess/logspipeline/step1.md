@@ -1,40 +1,39 @@
-Before you create the custom pipeline, you need to first install the Datadog Agent to collect data for Datadog and the custom apache log source to generate logs. You'll be running these in a Docker environment, so you'll need to follow the instructions for log collection from Docker containers.
+In the terminal on the right, the Datadog Agent and a custom apache log service have been brought online in a Docker environment. 
 
-1. Click the code block below to install the containerized Datadog Agent and enable log collection. 
-    ```
-    docker run -d --name datadog-agent \
-            -e DD_API_KEY=${DD_API_KEY} \
-            -e DD_LOGS_ENABLED=true \
-            -e DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true \
-            -e DD_CONTAINER_EXCLUDE_LOGS="image:datadog/agent" \
-            -v /var/run/docker.sock:/var/run/docker.sock:ro \
-            -v /proc/:/host/proc/:ro \
-            -v /opt/datadog-agent/run:/opt/datadog-agent/run:rw \
-            -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
-            datadog/agent:latest
-    ```{{execute}}
+Let's login to Datadog to see the logs that are being collected by the Datadog Agent for the apache log source.
 
-    Note: Detailed instructions for agent installation can be found in <a href="https://app.datadoghq.com/logs/onboarding/container" target="_datadog">**Log > Getting Started**</a>. Select **Container**, and then **Docker** to view the detailed instructions for installation.)
+1. If you've previously used **Logs** in the Datadog organization you are working in, move on to the next step. 
 
-    The following parameters are related to log collection in the command above:
+    If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Getting Started** again.
 
-    `-e DD_LOGS_ENABLED=true`: this parameter enables log collection when set to true. The Agent now looks for log instructions in configuration files.
+2. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Log Explorer**</a>.
 
-    `-e DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true`: this parameter adds a log configuration that enables log collection for all containers (see Option 1 below)
+    In the search field above the log list, enter `env:logspipeline`{{copy}} to make sure you are only seeing logs from this environments. 
 
-    `-v /opt/datadog-agent/run:/opt/datadog-agent/run:rw`: to make sure we do not lose any logs from containers during restarts or network issues, we store on the host the last line that was collected for each container in this directory.
+    ![logs-raw](logspipeline/assets/logs-raw.png)
 
-    `-e DD_CONTAINER_EXCLUDE_LOGS="name:datadog-agent"`: to prevent the Datadog Agent from collecting and sending its own logs. Remove this parameter if you want to collect the Datadog Agent logs. In this case, you want to only focus on logs from the apache source.
+3. Click one of the `flog` logs to view the log's details.
 
-2. Click the command below to install the custom apache log source in a container alongside the Datadog Agent container. 
+    ![raw-details](logspipeline/assets/raw-details.png)
+
+    Notice that the `service` and `source` tags are `flog`.
+
+    Notice also that the Event Attributes listed. Instead, there is message to help you get started with processing your logs.
+
+    Use the up/down arrow keys on your keyboard to view details for more logs in the list. Notice that no log is processed.
     
-    `docker run --name flog -d -it --rm mingrammer/flog -f apache_combined -l -n 100000 -d 0.2`{{execute}}
+    Close the log's details panel.
 
-3. Add the `source` tag to enable the OOTB Integration Pipeline.        
-    `--label com.datadoghq.ad.logs='[{"source": "apache", "service": "apache"}]'`
+    Let's create a custom <a href="https://docs.datadoghq.com/logs/processing/pipelines/" target="_blank">pipeline</a> to process the logs.
 
-    First, click the command  `docker kill flog`{{execute}} to kill the container running flog.  
+4. Navigate to <a href="https://app.datadoghq.com/logs/pipelines" target="_blank">**Logs > Configuration > Pipelines**</a> in a new browser tab. 
 
-    Then, click the command to below to run a new docker container with the `source` and `service` tag. 
-    
-    `docker run --name flog -d --label com.datadoghq.ad.logs='[{"source": "apache", "service": "apache"}]' -it --rm mingrammer/flog -f apache_combined -l -n 100000 -d 0.2`{{execute}}
+    You'll want to keep the Log Explorer tab open so that you can see how the logs details are processed by each processor you add to the pipeline.
+
+5. Click **New Pipeline** to create the new pipeline.
+
+    Enter `service:flog`{{copy}} as the **Filter**.
+
+    Enter `apache - flog`{{copy}} as the **Name**.
+
+    ![create-flog-pipeline](logspipeline/assets/create-flog-pipeline.png)
