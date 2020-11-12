@@ -22,7 +22,7 @@ Datadog provides a <a href="https://docs.datadoghq.com/logs/processing/processor
 
     Click a `flog` log and notice that the official status now matches the `http.status_code_category` value. Use the up and down arrow keys to look at statuses of more logs.
 
-    ![logs-status-full-m](logspipeline/assets/logs-status-full-m.png)
+    ![log-status-full-m](logspipeline/assets/log-status-full-m.png)
 
     The status of the logs is clearly defined now based on the severity derived from http.status_codes in the logs. 
 
