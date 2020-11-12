@@ -16,8 +16,7 @@
       },
       {
         "title": "Adding a Grok Parser",
-        "text": "step2.md",
-        "answer": "answer2.md"
+        "text": "step2.md"
       },
       {
         "title": "Adding a Category Processor",

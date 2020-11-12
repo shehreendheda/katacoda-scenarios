@@ -16,14 +16,13 @@ Let's log in to Datadog to see the logs that are being collected by the Datadog 
 
     ![raw-details](logspipeline/assets/raw-details.png)
 
-    Notice that the `service` and `source` tags are `flog`.
+    Notice that the `service` and `source` tags are `flog`. 
 
     Notice also that the Event Attributes listed. Instead, there is message to help you get started with processing your logs.
 
-    Use the up/down arrow keys on your keyboard to view details for more logs in the list. Notice that no log is processed.
+    Use the up/down arrow keys on your keyboard to view details for more logs in the list. Notice that no log is processed. Also, notice that the log message (text in gray box) in each log has a similar structure. (You'll look more closely at this on the next page.)
     
     Close the log's details panel.
-
 
 4. Open <a href="https://app.datadoghq.com/logs/pipelines" target="_blank">**Logs > Configuration > Pipelines**</a> in a new browser tab.
 

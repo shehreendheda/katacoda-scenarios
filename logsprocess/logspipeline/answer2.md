@@ -10,7 +10,8 @@ Let's use the log sample below to build out the rule.
 | ---------- | ----------------------- | -------------------------------------------- |
 | `ip`       | `network.client.ip`     | The client ip address.                       |
 | `notSpace` | `http.ident`            | The HTTP identification protocol             |
-| `NotSpace` | `http.auth`             | The HTTP authentification                    |
+| `notSpace` | `http.auth`             | The HTTP authentification                    |
+| `date`     | `"dd/MM/yyyy:HH:mm:ss Z"`|
 | `word`     | `http.method`           | The HTTP method associated with the request. |
 | `notSpace` | `http.url`              | The URL associated with the request.         |
 | `number`   | `http.version`          | The HTTP version used.                       |
@@ -20,6 +21,19 @@ Let's use the log sample below to build out the rule.
 | `data`     | `http.useragent`        | The User-Agent associated with the request.  |
 
 
+| Text                                                                  | Attribute               |
+| --------------------------------------------------------------------- | ----------------------- |
+| 53.166.47.138                                                         | `network.client.ip`     | 
+| -                                                                     | `http.ident`            |
+| nienow5151                                                            | `http.auth`             |
+| [11/Nov/2020:22:53:40 +0000]                                          | `date`                  |
+| PUT                                                                   | `http.method`           |
+| /implement                                                            | `http.url`              |
+| 1.1                                                                   | `http.version`          |
+| 100                                                                   | `http.status_code`      |
+| 30792                                                                 | `network.bytes_written` |
+| http://www.productnetworks.org/transition/integrate/cross-platform    | `http.referer`          |
+| Mozilla/5.0 (iPhone; CPU iPhone OS 8_3_2 like Mac OS X; en-US)        | `http.useragent`        |
 
 
 | Text                                                                  | Pattern                                   |
@@ -35,3 +49,18 @@ Let's use the log sample below to build out the rule.
 | 30792                                                                 | %{integer:network.bytes_written}          |
 | http://www.productnetworks.org/transition/integrate/cross-platform    | %{notSpace:http.referer}                  |
 | Mozilla/5.0 (iPhone; CPU iPhone OS 8_3_2 like Mac OS X; en-US)        | %{data:http.useragent}                    |
+
+
+| Matcher    | Attribute               | Pattern                                   |
+| ---------- | ----------------------- | ------------------------------------------|
+| `ip`       | `network.client.ip`     | %{ip:network.client_ip}                   |
+| `notSpace` | `http.ident`            | %{notSpace:http.ident:nullIf("-")}        |
+| `notSpace` | `http.auth`             | %{notSpace:http.auth:nullIf("-")}         |
+| `date`     | `date`                  | \[%{date("dd/MM/yyyy:HH:mm:ss Z"):date}\] |
+| `word`     | `http.method`           | %{word:http.method}                       |
+| `notSpace` | `http.url`              | %{notSpace:http.url}                      |
+| `number`   | `http.version`          | %{number:http.version}                    |
+| `integer`  | `http.status_code`      | %{number:http.status_code}                |
+| `integer`  | `network.bytes_written` | %{integer:network.bytes_written}          |
+| `notSpace` | `http.referer`          | %{notSpace:http.referer}                  |
+| `data`     | `http.useragent`        | %{data:http.useragent}                    |
