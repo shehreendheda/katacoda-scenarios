@@ -60,10 +60,12 @@ With the rule written, let's create the Grok Parser.
 
 5. Enter `Using custom rule`{{copy}} for **Name the processor** and click **Save**.
 
-    ![grok-parser](logspipeline/assets/grok-parser.png)
+    ![grok-parser](logspipeline/assets/grok-config.png)
 
 6. In the tab with Log Explorer, close the log details if it is open. Scroll to the top of the list for the most recent logs, and click a recent `flog` log.
 
+    ![logs-parsed-full](logspipeline/assets/logs-parsed-full.png)
+    
     Notice that the **Event Attributes** list is now populated because the Grok Parser is successfully extracting attributes for the logs.
 
     Use the up and down arrow keys to look at more logs. You'll notice, with a exception of a rare few, the logs are now parsed. (The logs that are exceptions would be interesting to explore to understand why they are not parsed.)
