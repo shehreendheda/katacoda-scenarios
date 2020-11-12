@@ -18,7 +18,7 @@ Breaking down the structure of the log gives the following:
 | http://www.productnetworks.org/transition/integrate/cross-platform    | `http.referer`          |
 | Mozilla/5.0 (iPhone; CPU iPhone OS 8_3_2 like Mac OS X; en-US)        | `http.useragent`        |
 
-Refering to the <a href="https://docs.datadoghq.com/logs/processing/parsing/overview" target="_blank">%{MATCHER:EXTRACT:FILTER} syntax</a>: in the <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#grok-parser" target="_blank">Grok Parser</a> documentation, you can use the following matchers and parsing elements.
+Refering to the <a href="https://docs.datadoghq.com/logs/processing/parsing/overview" target="_blank">%{MATCHER:EXTRACT:FILTER} syntax</a> in the <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#grok-parser" target="_blank">Grok Parser</a> documentation, you can use the following matchers and parsing elements.
 
 | Matcher    | Attribute               | Pattern                                   |
 | ---------- | ----------------------- | ------------------------------------------|
@@ -66,7 +66,7 @@ With the rule written, let's create the Grok Parser.
 
     ![logs-parsed-full](logspipeline/assets/logs-parsed-full.png)
     
-    Notice that the **Event Attributes** list is now populated because the Grok Parser is successfully extracting attributes for the logs.
+    Notice that the **Event Attributes** list is now populated because the Grok Parser is successfully extracting attributes from the logs.
 
     Use the up and down arrow keys to look at more logs. You'll notice, with a exception of a rare few, the logs are now parsed. (The logs that are exceptions would be interesting to explore to understand why they are not parsed.)
 

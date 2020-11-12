@@ -1,4 +1,4 @@
-These logs are http access logs and usually don't have an assigned severity. You can assign the severity using the `http.status_code` attribute (indicated in box in image) to enrich the logs displayed using information from the logs.
+These logs are http access logs and usually don't have an assigned severity. You can assign the severity using the `http.status_code` attribute (indicated in box in image) to enrich the logs using information from the logs.
 
 ![logs-parsed-attributes](logspipeline/assets/logs-parsed-attributes.png)
 
