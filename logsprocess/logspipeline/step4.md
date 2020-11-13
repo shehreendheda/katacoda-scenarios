@@ -14,13 +14,13 @@ Datadog provides a <a href="https://docs.datadoghq.com/logs/processing/processor
 
     ![status-remapper](logspipeline/assets/status-remapper.png)
 
-5. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs.
+7. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs. You'll notice that there is a pause in the log stream while the new processor is starting to process incoming logs. 
 
     Notice that the new logs in the list and in the chart above the list have different color bars and that the **Status** Facet has more options.
     
     ![logs-new-status](logspipeline/assets/logs-new-status.png)
 
-    Click a `flog` log and notice that the official status now matches the `http.status_code_category` value. Use the up and down arrow keys to look at statuses of more logs.
+    Click a new `flog` log and notice that the official status now matches the `http.status_code_category` value. Use the up and down arrow keys to look at statuses of more logs.
 
     ![log-status-full-m](logspipeline/assets/log-status-full-m.png)
 

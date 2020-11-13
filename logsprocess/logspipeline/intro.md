@@ -6,9 +6,6 @@ In this activity, you will create a custom pipeline with mutliple processors to 
 4. Adding a Status Remapper
 5. Adding a URL Parser
 6. Adding a User-Agent Parser
-7. Adding a String Builder Processor
-8. Adding a Message Remapper
-9. Reviewing the Processed Logs
-10. Comparing the OOTB Integration Pipeline
+8. Comparing the Custom Pipeline to the OOTB Integration Pipeline
 
 

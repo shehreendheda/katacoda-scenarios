@@ -31,7 +31,7 @@ The first step is to use the <a href="https://docs.datadoghq.com/logs/processing
 
     ![category-processor](logspipeline/assets/category-processor.png)
     
-7. In the **Logs** browser tab, close the log details if it's open. Scroll to the top of the list for the most recent logs, and click a recent `flog` log.
+7. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs. You'll notice that there is a pause in the log stream while the new processor is starting to process incoming logs. When new logs start coming in, click a new `flog` log.
 
     ![log-catproc-full](logspipeline/assets/log-catproc-full.png)
 

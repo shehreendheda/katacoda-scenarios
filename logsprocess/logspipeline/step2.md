@@ -61,7 +61,7 @@ With the rule written, let's create the Grok Parser.
 
     ![grok-parser](logspipeline/assets/grok-config.png)
 
-6. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs, and click a recent `flog` log.
+6. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs. You'll notice that there is a pause in the log stream while the new processor is starting to process incoming logs. When new logs start coming in, click a new `flog` log.
 
     ![log-parsed-full](logspipeline/assets/log-parsed-full.png)
     

@@ -14,9 +14,7 @@ The <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#url-p
 
     ![url-parser](logspipeline/assets/url-parser.png)
 
-6. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs.
-
-7. Click a `flog` log.
+6. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs. You'll notice that there is a pause in the log stream while the new processor is starting to process incoming logs. When new logs start coming in, click a new `flog` log.
 
     Notice that **Event Attributes** now lists the attribute group `url_details` and includes a banner with the `http.method`, `url_details` and `status_code`. Use the up and down arrow keys to look at more logs. 
 
@@ -26,7 +24,7 @@ The <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#url-p
 
     ![urlparse-example](logspipeline/assets/urlparse-example.png)
 
-8. In the **Facets** on the left, expand the facet group **WEB ACCESS**, then expand the facet **URL Path** in this group. 
+7. In the **Facets** on the left, expand the facet group **WEB ACCESS**, then expand the facet **URL Path** in this group. 
 
     Notice that the facet is now populated with the `url_details.path` attribute values. 
 
@@ -34,4 +32,4 @@ The <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#url-p
 
     You can compare with the older logs by highlighting a region of the bar chart above the Logs List that corresponds to logs before you added the URL Parser. You'll see that the **URL Path** facet is empty. Reset the time range to **Past 15 minutes** using the time range selector. The **URL Path** facet will fill up again.
 
-With the URL parsed, let's parse the User-Agent attribute in the logs. For example, the user agent `Opera/10.45 (Windows NT 6.0; en-US) Presto/2.8.270 Version/13.00` has a lot of information you can extract.
+With the URL parsed, let's parse the User-Agent attribute in the logs.
