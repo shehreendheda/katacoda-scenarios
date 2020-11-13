@@ -6,7 +6,7 @@ Let's log in to Datadog to see the logs that are being collected by the Datadog 
 
     If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Getting Started** again.
 
-2. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Log Explorer**</a>.
+2. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>.
 
     In the search field above the log list, enter `env:logspipeline`{{copy}} to make sure you are only seeing logs from this environments. 
 
@@ -24,11 +24,15 @@ Let's log in to Datadog to see the logs that are being collected by the Datadog 
     
     Close the log's details panel.
 
-4. Open <a href="https://app.datadoghq.com/logs/pipelines" target="_blank">**Logs > Configuration > Pipelines**</a> in a new browser tab.
+4. In the **Facets** on the left, browse and see what facets are available. 
 
-    You'll want to keep the Log Explorer tab open so that you can see how the logs details are processed by each processor you add to the pipeline.
+    As you add processors to the pipeline later in the activity, you'll see what facets become available. And, if some facets are not available, you'll learn how to add them. 
 
-5. Click **New Pipeline** to create the new pipeline.
+5. Open <a href="https://app.datadoghq.com/logs/pipelines" target="_blank">**Logs > Configuration > Pipelines**</a> in a new browser tab.
+
+    You'll want to keep the **Logs** browser tab open so that you can see how the logs details are processed by each processor you add to the pipeline.
+
+6. Click **New Pipeline** to create the new pipeline.
 
     Enter `service:flog`{{copy}} as the **Filter**.
 

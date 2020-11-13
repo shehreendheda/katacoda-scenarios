@@ -45,12 +45,11 @@ With the rule written, let's create the Grok Parser.
      
 2. Under **Select the processor type**, select **Grok Parser**.
 
-3. In the tab with Log Explorer, click a log detail.
+3. In the **Logs** browser tab, click a log detail.
 
     Copy the log message (text in gray box) into the log sample. Note: There is a copy icon in the upper right corner of the log message. Click the icon to copy the log message.
 
 3. In the Grok Parser, paste the log sample into the **Log samples** field.
-
 
 4. Click the rule below to copy it and then paste it into the **Define parsing rules** field.
 
@@ -62,12 +61,18 @@ With the rule written, let's create the Grok Parser.
 
     ![grok-parser](logspipeline/assets/grok-config.png)
 
-6. In the tab with Log Explorer, close the log details if it is open. Scroll to the top of the list for the most recent logs, and click a recent `flog` log.
+6. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs, and click a recent `flog` log.
 
-    ![logs-parsed-full](logspipeline/assets/logs-parsed-full.png)
+    ![log-parsed-full](logspipeline/assets/log-parsed-full.png)
     
     Notice that the **Event Attributes** list is now populated because the Grok Parser is successfully extracting attributes from the logs.
 
     Use the up and down arrow keys to look at more logs. You'll notice, with a exception of a rare few, the logs are now parsed. (The logs that are exceptions would be interesting to explore to understand why they are not parsed.)
+
+4. In the **Facets** on the left, browse and see what facets is available. 
+
+    Grok parsing the logs has allowed Datadog to recognize common attributes and fill in the Facets.
+
+    In the log details, click an attribute listed in the **Event Attributes**. In the menu that appears, you will see **Edit facet for xxx*** if the Facet exists or **Create facet for xxx** if the Facet does not exist. You can read the <a href="https://docs.datadoghq.com/logs/explorer/facets/" target="_blank">Log Facets documentation</a> to learn more. 
 
 Now that attributes are being parsed from the logs, let's start using other processors like remappers and parsers to further enrich the logs.

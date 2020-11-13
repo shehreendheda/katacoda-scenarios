@@ -1,6 +1,6 @@
 These logs are http access logs and usually don't have an assigned severity. You can assign the severity using the `http.status_code` attribute (indicated in box in image) to enrich the logs using information from the logs.
 
-![logs-parsed-attributes](logspipeline/assets/logs-parsed-attributes.png)
+![log-parsed-attributes](logspipeline/assets/log-parsed-attributes.png)
 
 The first step is to use the <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#category-processor" target="_blank">Category Processor</a> to define the status code categories.
 
@@ -31,11 +31,11 @@ The first step is to use the <a href="https://docs.datadoghq.com/logs/processing
 
     ![category-processor](logspipeline/assets/category-processor.png)
     
-7. In the tab with the Log Explorer, close the log details if it's open. Scroll to the top of the list for the most recent logs, and click a recent `flog` log.
+7. In the **Logs** browser tab, close the log details if it's open. Scroll to the top of the list for the most recent logs, and click a recent `flog` log.
 
-    ![logs-catproc-full](logspipeline/assets/logs-catproc-full.png)
+    ![log-catproc-full](logspipeline/assets/log-catproc-full.png)
 
-    ![logs-catproc-attributes](logspipeline/assets/logs-catproc-attributes.png)
+    ![log-catproc-attributes](logspipeline/assets/log-catproc-attributes.png)
 
     Notice that there is now a `http.status_code_category` attribute (boxed in image above) listed under the **Event Attribute**.
 
