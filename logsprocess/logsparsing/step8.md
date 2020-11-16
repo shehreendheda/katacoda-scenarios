@@ -22,7 +22,7 @@ Grok Parsers in OOTB Integration Pipelines, Parse My Logs, and Patterns are grea
 
 6. Expand the **Nginx** pipeline.
 
-    ![nginx-ip](logsparsing/assets/nginx-ip)
+    ![nginx-ip](logsparsing/assets/nginx-ip.png)
 
     Notice that the first processor in the list is a **Grok Parser**. When an nginx log is filtered into the Nginx pipeline, it is first processed by the parser and its individual attributes are extracted. 
 
