@@ -35,20 +35,8 @@
         "text": "step6.md"
       },
       {
-        "title": "Adding a String Builder Processor",
+        "title": "Comparing the Custom Pipeline to the Apache Integration Pipeline",
         "text": "step7.md"
-      },
-      {
-        "title": "Adding a Message Remapper",
-        "text": "step8.md"
-      },
-      {
-        "title": "Reviewing the Processed Logs",
-        "text": "step9.md"
-      },
-      {
-        "title": "Comparing the OOTB Integration Pipeline",
-        "text": "step10.md"
       }
     ],
     "finish": {
