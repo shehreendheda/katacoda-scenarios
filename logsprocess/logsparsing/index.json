@@ -40,7 +40,8 @@
       {
         "title": "Automatic Parsing in Datadog",
         "text": "step8.md",
-        "code": "foreground.sh"
+        "code": "foreground.sh",
+        "courseData": "background.sh"
       }
     ],
     "finish": {
