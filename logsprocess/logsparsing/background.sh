@@ -1,6 +1,6 @@
 #!/bin/bash
 
-until $(curl -o /dev/null -s -I -f http://localhost:3000)
+until $(curl -o /dev/null -s -I -f http://localhost:8080)
 do
     sleep 5
 done
