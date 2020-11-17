@@ -1,4 +1,4 @@
-Now that you're familiar with using matchers, let's look at a few other log examples using matchers.
+Now that you're familiar with using matchers, let's look at some other log examples using matchers.
 
 Log 2a - `John Doe connected to the instance i-02312aavseq123`
 
@@ -20,9 +20,9 @@ Log 2b - `John connected to the instance i-023vseq123`
 
     `instance.name` &rarr; `%{notSpace:instance.name}`
     
-    The matcher `notSpace` matches any string until the next space. The instance name is a random collection of characters including alphabets, numbers, and a dash. The `notSpace` matcher will allow for any instance name to be extracted.
+    The matcher `notSpace` matches any string until the next space. The instance name is a collection of characters including alphabets, numbers, and a dash. The `notSpace` matcher will allow for any instance name to be extracted.
 
-    Putting together the matchers listed above and the text that needs to be hard-coded for logs `connected to the instance` with this structure, the rule is `%{word:user.name} %{word:user.familyname} connected to the instance %{notSpace:instance.name}.*`. 
+    Putting together the matchers listed above and the text that needs to be hard-coded for these logs, the rule is `%{word:user.name} %{word:user.familyname} connected to the instance %{notSpace:instance.name}.*`. 
 
     Again, you can end this rule with `.*` to make sure that matching logs will still be parsed even if something follows `instance.name` in the log.
 
@@ -43,4 +43,3 @@ Log 2b - `John connected to the instance i-023vseq123`
     Clear the **Define parsing rules** field. Then, copy and paste the rule: `rule_2 %{word:user.name} (%{word:user.familyname} )?connected to the instance %{notSpace:instance.name}.*`{{copy}}.
 
     ![log2b](logsparsing/assets/log2b.png)
-

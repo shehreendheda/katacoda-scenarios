@@ -1,4 +1,4 @@
-Because Log 1, Log 2, and Log 3 are from the same source, you can create one Grok Parser for them. The parser should list all rules to match each of these log structures. 
+You can create one Grok Parser with muliple rules for logs from the same source. Let's use the samples and rules you just created. 
 
 Logs - 
 ``` 
@@ -8,15 +8,11 @@ Logs -
 	James Dean connected to the instance i-02312aavseq123
 ```
 
-The first log matches the rule_1 created for Log 1: `%{word:user.name} %{number:user.id} connected in %{word:application_name}.*`
-
-But the second, third, and forth logs all match the rule_2 created for Log 2a and Log 2b: `%{word:user.name} (%{word:user.familyname} )?connected to the instance %{notSpace:instance.name}.*`
-
 To parse the logs above, you can use these two parsing rules:
 
-`rule_1 %{word:user.name} %{number:user.id} connected in %{word:application_name}.*`
+The first log matches rule_1 created for Log 1: `%{word:user.name} %{number:user.id} connected in %{word:application_name}.*`
 
-`rule_2 %{word:user.name} (%{word:user.familyname} )?connected to the instance %{notSpace:instance.name}.*`
+The second, third, and fourth logs match the rule_2 created for Log 2a and Log 2b: `%{word:user.name} (%{word:user.familyname} )?connected to the instance %{notSpace:instance.name}.*`
 
 1. Navigate to the **New Processor** window from the previous page.
 
@@ -24,20 +20,22 @@ To parse the logs above, you can use these two parsing rules:
 
 3. Click **Add** below the first sample. 
 
-4. Copy and paste the second log into the new **Log samples** field: `John Doe connected to the instance i-02312vseq123`{{copy}}
+    Copy and paste the second log into the new **Log samples** field: `John Doe connected to the instance i-02312vseq123`{{copy}}
 
-5. Clear the **Define parsing rules** field. Then, copy and paste the rules:
+4. Clear the **Define parsing rules** field. Then, copy and paste the rules:
     
-    ```
-    rule_1 %{word:user.name} %{number:user.id} connected in %{word:application_name}.*
-    rule_2 %{word:user.name} (%{word:user.familyname} )?connected to the instance %{notSpace:instance.name}.*
-    ```{{copy}}
+   ```
+   rule_1 %{word:user.name} %{number:user.id} connected in %{word:application_name}.*
+   rule_2 %{word:user.name} (%{word:user.familyname} )?connected to the instance %{notSpace:instance.name}.*
+   ```{{copy}}
 
-6. Select the first sample under **Log samples**. rule_1 is matched.
+5. Select the first sample under **Log samples**. rule_1 is matched.
 
     ![logs-rule1](logsparsing/assets/logs-rule1.png)
 
-7. Select the second sample under **Log samples**. rule_2 is matched.
+6. Select the second sample under **Log samples**. rule_2 is matched.
 
     ![logs-rule2](logsparsing/assets/logs-rule2.png)
+
+7. Repeat step 3 and 6 for the log samples: `John connected to the instance i-023vseq123`{{copy}} and `James Dean connected to the instance i-02312aavseq123`{{copy}}
 

@@ -1,7 +1,7 @@
 {
   "title": "Grok Parsing",
   "description": "Intro to grok parsing",
-  "time": "15 minutes",
+  "time": "30 minutes",
   "difficulty": "Intermediate",
   "details": {
     "intro": {
@@ -14,7 +14,7 @@
         "text": "step1.md"
       },
       {
-        "title": "Parsing Logs using the Matcher Syntax",
+        "title": "Parsing Logs using the Grok Syntax",
         "text": "step2.md"
       },
       {
