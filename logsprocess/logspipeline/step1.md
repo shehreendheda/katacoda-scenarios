@@ -2,17 +2,19 @@ In the terminal on the right, the Datadog Agent and a custom apache service have
 
 Let's log in to Datadog to see the logs that are being collected by the Datadog Agent for the apache service and create a <a href="https://docs.datadoghq.com/logs/processing/pipelines/" target="_blank">pipeline</a> to process the logs.
 
-1. If you've previously used **Logs** in the Datadog organization you are working in, move on to the next step. 
+1. In a new browser window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com.
+
+2. If you've previously used **Logs** in the Datadog organization you are working in, move on to the next step. 
 
     If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Getting Started** again.
 
-2. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>.
+3. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>.
 
     In the search field above the log list, enter `env:logspipeline`{{copy}} to make sure you are only seeing logs from this environments. 
 
     ![logs-raw](logspipeline/assets/logs-raw.png)
 
-3. Click one of the `flog` logs to view the log's details.
+4. Click one of the `flog` logs to view the log's details.
 
     ![raw-details](logspipeline/assets/raw-details.png)
 
@@ -24,15 +26,15 @@ Let's log in to Datadog to see the logs that are being collected by the Datadog 
     
     Close the log's details panel.
 
-4. In the **Facets** on the left, browse and see what facets are available. 
+5. In the **Facets** on the left, browse and see what facets are available. 
 
     As you add processors to the pipeline later in the activity, you'll see what facets become available. And, if some facets are not available, you'll learn how to add them. 
 
-5. Open <a href="https://app.datadoghq.com/logs/pipelines" target="_blank">**Logs > Configuration > Pipelines**</a> in a new browser tab.
+6. Open <a href="https://app.datadoghq.com/logs/pipelines" target="_blank">**Logs > Configuration > Pipelines**</a> in a new browser tab.
 
     You'll want to keep the **Logs** browser tab open so that you can see how the logs details are processed by each processor you add to the pipeline.
 
-6. Click **New Pipeline** to create the new pipeline.
+7. Click **New Pipeline** to create the new pipeline.
 
     Enter `service:flog`{{copy}} as the **Filter**.
 
