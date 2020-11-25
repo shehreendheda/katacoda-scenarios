@@ -1,0 +1,64 @@
+{
+  "title": "Tagging an App Service",
+  "description": "Tagging for a Docker-based App Service",
+  "difficulty": "Intermediate",
+  "time": "20 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Assigning Tags to the App",
+        "text": "step1.md"
+      },
+      {
+        "title": "Exploring Correlated Data using Tags",
+        "text": "step2.md"
+      },
+      {
+        "title": "Using Tags to Create Targeted Alerts",
+        "text": "step3.md"
+      },
+      {
+        "title": "Searching and Correlating Synthetic Tests",
+        "text": "step4.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "courseData": "background.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "grademe",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "prep-environment",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        },
+        {
+          "file": "check-file",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal", 
+    "uieditorpath": "/ecommworkshop",
+    "hideHiddenFiles": true,
+    "exclusionPatterns": ["**/store-frontend/tmp/*", "**/store-frontend/log/*"],
+    "showdashboard": true,
+    "dashboards": [{"name": "storedog", "port": 3000}]
+  },
+  "backend": {
+      "imageid": "datadog-base-v1"
+  }
+}
