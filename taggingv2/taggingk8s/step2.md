@@ -7,41 +7,67 @@ With inherited tags like `kube_container_name` and custom tags like `environment
 Note: As you go through the steps below, you can note down your answers to the questions. At the bottom of the page, you can click **Solution** to view the answers.
 
 ## Using inherited tags
-1. For the container map in the previous step, type **kube** in the **Group hosts by Tags** field. Three tag keys appear in the list (pictured below).
+1. In the Container Host Map for the deployment, type **kube** in the **Group hosts by Tags** field to see the list of `kube_*` tag keys for the deployment.
 
-2. View the tags in `lotsofpods.yaml`{{open}} file again. As you can see, the `kube_*` tags were not assigned via the pod labels, but were inherited through the Kubernetes Integration. 
+2. View the tags in `lotsofpods.yaml`{{open}} file again. `kube_*` tags were not assigned via the pod labels. This means that the `kube_*` tags were inherited through the Kubernetes Integration. 
 
-3. Select `kube_container_name` in the **Group hosts by Tags** list and hover over the `my-container` group. <p> How many containers are in this group?
+3. Select `kube_container_name` in the **Group hosts by Tags** list. How many containers are in the `my-container` group?
 
 4. Unselect `kube_container_name` and take turns selecting the other `kube_*` tag keys to see how the container map changes.
 
-5. In the **Filter by** field, type `kube` to see the list of tags for the `kube_*` keys. 
+5. In the **Filter by** field, type `kube_`{{copy}} to see the list of tags for the `kube_*` keys. 
+
+    Clear the **Filter by** and **Group hosts by Tags** fields.
 
 ## Using custom tags
 Now, let’s start using the custom tags assigned via the pod labels. 
-1. Assume this is a deployment for your organization and it is required that any container with the `my-container-*` name be assigned an `environment`. Let’s see if any of the containers are not meeting the requirement. <p> Select `kube_container_name:my-container` for **Filter by** and `environment` for **Group hosts by Tags**.<p> How many containers have `no environment`? Which team(s) do they belong to? Hint: Click the containers with `no environment` and view their tags. 
+1. Assume this is a deployment for your organization and it is required that every container with the `my-container-*` label has to have an `environment`. Let’s see if any of the containers are not meeting the requirement. 
 
-2. Now, assume you want to know how many containers are running in the `production` environment for each office. <p> Select `environment:production` for **Filter by** and `office` for **Group hosts by Tags**. <p> Which office is running the most containers? How many containers are they running?
+    Select `kube_container_name:my-container` for **Filter by** and `environment` for **Group hosts by Tags**.
+    
+    How many containers have `no environment`? Which team(s) do they belong to? Hint: Click the containers with `no environment` and view their tags.
 
-3. Assume you want to know which containers in the `qa` environment have a certain role at each office. <p> Select `environment:qa` for **Filter by**. Select `role` then add `office` for **Group hosts by Tags**.  <p> How many roles are associated with the qa environment? Which role is at the most offices?
+    Clear the **Filter by** and **Group hosts by Tags** fields. 
+
+2. Now, assume you want to know how many containers are running in the `production` environment for each office. 
+
+    Select `environment:production` for **Filter by** and `office` for **Group hosts by Tags**. 
+    
+    Which office is running the most containers? How many containers are they running?
+
+    Clear the **Filter by** and **Group hosts by Tags** fields.
+
+3. Assume you want to know which containers in the `qa` environment have a certain role at each office. 
+
+    Select `environment:qa` for **Filter by**. Select `role` then add `office` for **Group hosts by Tags**.  
+    
+    How many roles are associated with the qa environment? Which role is at the most offices?
+
+    Clear the **Filter by** and **Group hosts by Tags** fields.
 
 
 ## Adding new tags to a deployment 
  
 Let’s introduce another dimension to the tags by adding pods with the tag key `owner` to the deployment.
 
-1. Clear the **Filter by** and **Group hosts by Tags** fields above the container map.
+1. Click the **Group hosts by Tags** field and search the list. 
 
-2. Click the **Group hosts by Tags** field and search the list. <p> Do you see the `owner` tag in the **Group hosts by Tags** list? *Note: The list is in alphabetical order. Actually, you will find that any list of tags in the Datadog UI is in alphabetical order.*
+    Do you see the `owner` tag in the **Group hosts by Tags** list? *Note: The list is in alphabetical order. Actually, you will find that any list of tags in the Datadog UI is in alphabetical order.*
 
-3. Click `kubectl apply -f taggingk8s/couplemore.yaml`{{execute}} to add more pods/containers to the deployment.
+2. Click `kubectl apply -f taggingk8s/couplemore.yaml`{{execute}} to add more pods/containers to the deployment.
 
-4. Wait until the container map in the UI updates with the new containers. Once the new containers are running, you should see 55 containers when there are no filters in the container map. <p>![newcontainers](taggingk8s/assets/new-containers-running.png)
+3. Wait until the Container Map in the UI updates with the **two** new containers. 
+    
+    ![newcontainers](taggingk8s/assets/new-containers-running.png)
 
-5. Click the **Group hosts by Tags** field and search the list. <p> Do you see the owner tag in the group by list?
+4. Click the **Group hosts by Tags** field and search the list. 
 
-6. Select `owner` for **Group hosts by Tags**. <p>How many uniques values for the owner tag are there? (Hint: `no owner` is not a tag value.)
+    Do you see the `owner` tag in the group by list?
 
-These are just a few examples of how you can use tags to filter and group containers to learn valuable information about the infrastructure.
+5. Select `owner` for **Group hosts by Tags**. 
 
- When you assign tags, remember to consider the scopes, functions, and ownerships of the different parts of your deployments. With strategic tagging, you can use the tags to filter and group your containers (and hosts) based on your use cases and end users.
+    How many uniques values for the owner tag are there? (Hint: `no owner` is not a tag value.)
+
+These are just a few examples of how you can use tags to filter and group containers to learn valuable information about your kubernetes deployment.
+
+When you assign tags, remember to consider the scopes, functions, and ownerships of the different parts of your deployments. With strategic tagging, you can use  tags to filter and group your containers (and hosts) based on your use cases and end users.

@@ -1,10 +1,10 @@
-The Kubernetes deployment for this activity is being brought online and the Datadog Agent is being instrumented. This may take up to 5 minutes. Using Autodiscovery, Datadog is able to detect that the deployment uses Kubernetes and Docker, so Datadog will install the Kubernetes and Docker Integrations for you as data starts coming in. 
+The Kubernetes deployment for this activity is being brought online. This may take about 2 minutes. The Datadog Agent is run as a DaemonSet in the Kuber Using Autodiscovery, Datadog is able to detect that the deployment uses Kubernetes and Docker, so Datadog will install the Kubernetes and Docker Integrations for you as data starts coming in. 
 
 In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for the deployment. The datadog.yaml file is the datadog agent configuration file, and the lotsofpods.yaml file defines the number and details of the pods that are being brought online.
 
 1. Click `datadog.yaml`{{open}} to view the file in the editor on the right.
 
-2. Scroll to line 33 and 34. `DD_KUBERNETES_POD_LABELS_AS_TAGS` is set to `true` under `env` for the datadog agent, which means the deployed containers will have custom tags assigned via the <a href="https://docs.datadoghq.com/tagging/assigning_tags/?tab=agentv6#environment-variables" target="_blank">environment variable</a>.
+2. Scroll to line 33 and 34. `DD_KUBERNETES_POD_LABELS_AS_TAGS` is set to `true` under `env` for the datadog agent, which means the deployed containers will have custom tags assigned via the <a href="https://docs.datadoghq.com/getting_started/tagging/assigning_tags/?tab=containerizedenvironments#environment-variables" target="_blank">environment variable</a>.
 
 3. Click `lotsofpods.yaml`{{open}} to view the file in the editor.
 
@@ -18,7 +18,7 @@ In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for 
 
 8. In the menu at the top, change **Hosts** to **Containers** and delete `availability-zone` from the **Group hosts by Tags** field.
 
-9. Hover over the containers. In the bottom right, you should see that there are 53 containers running in the deployment. <p>![containers](taggingk8s/assets/containers-running.png)
+9. Hover over the containers. In the bottom right, you should see that at least 50 containers running in the deployment. <p>![containers](taggingk8s/assets/containers-running.png)
 
 10. Click one of the containers labeled `my-container-*` and view its tags. <p>Some of the tags are the custom tags assigned in the lotsofpods.yaml, while others are assigned by Datadog such as `host` or through integration inheritance such as `kube-container-name`.
 

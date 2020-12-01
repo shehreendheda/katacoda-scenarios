@@ -59,7 +59,6 @@
     "uieditorpath": "taggingk8s"
   },
   "backend": {
-    "imageid": "datadog-kubernetes-cluster-running",
-    "livetime": "1h"
+    "imageid": "datadog-kubernetes-cluster-running"
   }
 }
