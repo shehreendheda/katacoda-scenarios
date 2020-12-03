@@ -2,7 +2,14 @@
 
 export POSTGRES_USER=postgres
 export POSTGRES_PASSWORD=postgres
-cd /ecommworkshop/docker-compose-files
-docker-compose -f docker-compose-fixed-instrumented.yml up -d
+cd /ecommworkshop
+
+while [ ! -f /ecommworkshop/docker-compose-broken.yml ]; do
+    printf '.'
+    sleep 2; 
+done
+printf '\n'
+
+docker-compose -f docker-compose-broken.yml up -d
 clear
 prep-environment
