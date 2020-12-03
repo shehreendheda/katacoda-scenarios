@@ -40,6 +40,9 @@ services:
       - db
     labels:
       com.datadoghq.ad.logs: '[{"source": "python", "service": "discounts-service"}]'
+      com.datadoghq.tags.env: "ruby-shop"
+      com.datadoghq.tags.service: "discounts-service"
+      com.datadoghq.tags.version: "1.0"
       my.custom.label.team: "discounts"
   frontend:
     environment:
@@ -64,6 +67,9 @@ services:
       - advertisements
     labels:
       com.datadoghq.ad.logs: '[{"source": "ruby", "service": "store-frontend"}]'
+      com.datadoghq.tags.env: "ruby-shop"
+      com.datadoghq.tags.service: "store-frontend"
+      com.datadoghq.tags.version: "1.0"
       my.custom.label.team: "frontend"
   advertisements:
     environment:
@@ -86,7 +92,10 @@ services:
       - agent
       - db
     labels:
-      com.datadoghq.ad.logs: '[{"source": "python", "service": "ads-service"}]'
+      com.datadoghq.ad.logs: '[{"source": "python", "service": "advertisements-service"}]'
+      com.datadoghq.tags.env: "ruby-shop"
+      com.datadoghq.tags.service: "advertisements-service"
+      com.datadoghq.tags.version: "1.0"
       my.custom.label.team: "advertisements"
   db:
     image: postgres:11-alpine
