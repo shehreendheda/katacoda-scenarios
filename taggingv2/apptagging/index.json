@@ -49,6 +49,10 @@
         {
           "file": "docker-compose-broken.yml",
           "target": "/root"
+        },
+        {
+          "file": "frontend-docker-entrypoint.sh",
+          "target": "/root"
         }
       ]
     }
