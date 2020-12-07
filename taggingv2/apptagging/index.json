@@ -20,6 +20,11 @@
       {
         "title": "Searching and Correlating Synthetic Tests",
         "text": "step4.md"
+      },
+      {
+        "title": "Unified Service Tagging",
+        "text": "step5.md",
+        "code": "brokenapp.sh"
       }
     ],
     "intro": {
