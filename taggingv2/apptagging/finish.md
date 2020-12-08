@@ -1,3 +1,3 @@
-Congratulations! With a variety of tags, you explored correlated data for an application. You also created a targeted multi alert for services that support the app and you created synthethic tests with tags that linked the tests to the associated service.
+Congratulations! Using tags, you explored correlated metric, trace, and log data for an application. You created targeted alerts and synthethic tests that were linked to the associated app services. You also saw how unified service tagging allows you to monitor app services based on deployment version.
 
-To continue, click **Next Module**.
+To continue, click **Next**.

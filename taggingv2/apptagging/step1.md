@@ -4,7 +4,7 @@ Once the app is instrumented, you will see the following message in the terminal
 
 While you wait for the environment to be prepared, you can explore the assigned tags for the application.
 
-1. Click `docker-compose-fixed.yml`{{open}} to view the file in the editor on the right. 
+1. Click `docker-compose-broken.yml`{{open}} to view the file in the editor on the right. 
 
     The docker-compose.yml instruments the Datadog agent and application for monitoring with Datadog.
 

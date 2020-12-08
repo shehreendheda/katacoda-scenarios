@@ -4,17 +4,21 @@ In the terminal on the right, new version of the app is coming online. You will 
 
 In the meantime, let's compare the new version of the app with the first version to see what is different.
 
-1. Click `docker-compose-fixed.yml`{{open}} to open the docker-compose file for the original version of the app. 
+1. Click `docker-compose-broken.yml`{{open}} to open the docker-compose file for the original version of the app. 
 
-2. Click `docker-compose-broken.yml`{{open}} to open the docker-compose file for the new version of the app.
+2. Click `docker-compose-fixed.yml`{{open}} to open the docker-compose file for the new version of the app.
 
-3. Compare the two files. You'll notice that the images for the discounts and the frontend service in the new version are labeled "fixed".
+3. Compare the two files. You'll notice that the images/volumes for the discounts, frontend, and advertisements services in the new version are labeled "fixed".
 
-    Also notice the differences between these lines in each file: **Lines 27-29, 45-47, 54-56, 74-76, 84-86, and 102-104**. The version numbers for the discounts and frontend service are different.
+    Also notice the differences between these lines in each file: **Lines 27-29, 45-47, 54-56, 74-76, 84-86, and 102-104**. The version numbers for the services are different. The original version of each service is `1.0` and the new version of each service is `1.1`.
 
 4. After you see the "environment is prepared" message in the terminal, navigate to <a href="https://app.datadoghq.com/apm/services" target="_datadog">**APM** > **Services**</a>. Select **discounts-service**.
 
-5. Click the **Total Requests** menu and select **Total Requests by Version**. Click the **Total Errors** menu and select **Total Errors by Version**. Notice that there is data for the two versions of the service: `1.0` and `1.1`.
+5. Click the **Total Requests** menu and select **Total Requests by Version**. 
+
+    Click the **Total Errors** menu and select **Total Errors by Version**. 
+    
+    Notice that there is data for the two versions of the service: `1.0` and `1.1`.
 
 6. Scroll down to the **Deployments** list. You'll see the `1.0` and `1.1` deployments listed.
 
@@ -22,11 +26,11 @@ In the meantime, let's compare the new version of the app with the first version
 
 8. Scroll down to the list of **Traces**. Expand the **Version** facet. 
 
-    Select version `1.0`. Notice the listed durations.
+    Select version `1.0`. Notice the Durations listed. Hover over the Latency Breakdown bars to view the latencies of the discounts-service spans.
 
-    Select version `1.1`. Notice the listed durations.
+    Select version `1.1`. Notice the Durations listed. Hover over the Latency Breakdown bars to view the latencies of the discounts-service spans.
 
-    _Looks like the new version of the discounts-service has increased latency that can impact user experience. The deployment can be rolled back, fixed, and then redeployed or a new fix/version can be pushed._
+    _Looks like the new version of the discounts-service has much lower latency and resolved a high-latency issue in the service._
 
 9.  Navigate to <a href="https://app.datadoghq.com/apm/services" target="_datadog">**APM** > **Services**</a>. Select **store-frontend**.
 
@@ -34,12 +38,16 @@ In the meantime, let's compare the new version of the app with the first version
 
     Notice that there is data for the two versions of the service: `1.0` and `1.1`.
 
-    Compare the total requests data and the total errors data along the timeline. Notice that the errors for version `1.1` are more spread out. 
+    Compare the total requests data and the total errors data along the timeline. 
+    
+    Notice that version `1.0` had errors over time, while version `1.0` only had some initial errors. 
 
-    _Looks like the new version of the store-frontend has errors built in that can impact user experience. The deployment can be rolled back, fixed, and then redeployed or a new fix/version can be pushed._ 
+    _Looks like the new version of the store-frontend resolved the issues that were causing errors over time in the original version of the app._ 
 
 
+This is basic introduction to unified service tagging. As you saw, including the version tag allows you to the track and troubleshoot how your app services perform in each deployment.
+
+In general, you saw throughout this activity that tags allow you to link related data through Datadog and to quickly search for the data you need.
  
-
 #### Assessment
 When you are finished, click `grademe`{{execute}} to receive a grade for this activity. 
