@@ -30,7 +30,7 @@ With the help of tags, you can create <a href="https://docs.datadoghq.com/monito
     
     For **Tags**, enter `env:ruby-shop`{{copy}}, `service:discounts-service`{{copy}}, `service:advertisements-service`{{copy}}, `team:discounts`{{copy}}, `team:advertisements`{{copy}}. 
     
-    ![alert-message](apptagging/assets/alert-message3.png)
+    ![alert-message](apptagging/assets/alert-message.png)
 
 8. Expand **Notify your team**. The field is already populated with the `@` selections in **Say what's happening**. 
 
@@ -44,13 +44,13 @@ With the help of tags, you can create <a href="https://docs.datadoghq.com/monito
 
     A message appears in the window: `Test notifications sent with group $service:<service.name>`. 
     
-    ![alert-tested](apptagging/assets/alert-tested2.png)
+    ![alert-tested](apptagging/assets/alert-tested.png)
 
 11. Check your email at the address included in **Notify your team**. You should see an email with the subject `[Monitor Alert] Triggered: [TEST] The <service.name> is running slowly!!`.
 
 12. Open the email to view its details. You will see that the `{{service.name}}` has been replaced with the actual service name throughout the email. 
 
-    ![alert-testemail](apptagging/assets/alert-testemail3.png)
+    ![alert-testemail](apptagging/assets/alert-testemail.png)
 
 13. In Datadog, close the test notifcation window and click **Save** to save the monitor. 
 

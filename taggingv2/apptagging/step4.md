@@ -34,7 +34,11 @@ Tags can also act as Facets for various lists throughout Datadog. Let's create t
 
 11. Click **New Test** in the upper right and follow steps 2 - 7 above with the following changes. In **Make a request**, name the new test `Test on Storedog Home Page 2` and do **not** assign the `service:store-frontend` tag.
 
-12. Navigate to the Synthetics list and view the **ENV** and **TAGS** facet. Notice the number of tests associated with `env:ruby-shop` and `service:store-frontend`.
+12. Navigate to the Synthetics list and view the **ENV** and **TAGS** facet. 
+
+    Notice the number of tests associated with `env:ruby-shop` and `service:store-frontend`.
+
+    ![syn-testfacets](apptagging/assets/syn-testfacets.png)
 
 13. In the search field above the list of facets, enter `tag:service:store-frontend`{{copy}}. Only the `Test on Storedog Home Page` test appears in the list.
 
