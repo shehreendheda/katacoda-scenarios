@@ -8,17 +8,25 @@ In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for 
 
 3. Click `lotsofpods.yaml`{{open}} to view the file in the editor.
 
-4. Scroll through the file and look for lines similar to lines 6 and 18. These lines define the tags for each pod. <p> As you can see, the tags add some scope, function, and ownership to the containers. The tag keys are `environment`, `office`, `team`, `role` and `color`.
+4. Scroll through the file and look for lines similar to lines 6 and 18. These lines define the tags for each pod. 
 
-5. To confirm the pods are running, click `count-pods`{{execute}}. Make sure that 50 pods are running. If not, wait and repeat this step. <p> Once all the pods are running, let's view the infrastructure in Datadog. 
+    As you can see, the tags add some scope, function, and ownership to the containers. The tag keys are `environment`, `office`, `team`, `role` and `color`.
 
-6. In a new browser window/tab, log in to the Datadog account/organization that was created for you by learn.datadoghq.com. <p> To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization.
+5. To confirm the pods are running, click `count-pods`{{execute}}. Make sure that 50 pods are running. If not, wait and repeat this step. 
 
-7. Navigate to <a href="https://app.datadoghq.com/infrastructure/map?fillby=avg%3Acpuutilization&sizeby=avg%3Anometric&groupby=none&nameby=name&nometrichosts=false&tvMode=false&nogrouphosts=true&palette=green_to_orange&paletteflip=false&node_type=host" target="_datadog">**Infrastructure** > **Host Maps**</a>.
+    Once all the pods are running, let's view the infrastructure in Datadog. 
+
+6. In a new browser window/tab, log in to the Datadog account/organization that was created for you by learn.datadoghq.com. 
+
+    To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization.
+
+7. Navigate to <a href="https://app.datadoghq.com/infrastructure/map" target="_datadog">**Infrastructure** > **Host Maps**</a>.
 
 8. In the menu at the top, change **Hosts** to **Containers** and delete `availability-zone` from the **Group hosts by Tags** field.
 
-9. Hover over the containers. In the bottom right, you should see that at least 50 containers running in the deployment. <p>![containers](taggingk8s/assets/containers-running.png)
+9. Hover over the containers. In the bottom right, you should see that at least 50 containers running in the deployment. 
+
+    ![containers](taggingk8s/assets/containers-running.png)
 
 10. Click one of the containers labeled `my-container-*` and view its tags. <p>Some of the tags are the custom tags assigned in the lotsofpods.yaml, while others are assigned by Datadog such as `host` or through integration inheritance such as `kube-container-name`.
 

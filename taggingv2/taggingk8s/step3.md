@@ -32,7 +32,9 @@
 
 6. Click and drag the **Table** tile to the dashboard area. 
 
-7. Fill the template as shown in the image below. Notice that `$team` is now available as an option in your tags filter by and group by lists. Click **Save**.<p> ![community-environment-timeseries](taggingk8s/assets/teams-color-table2.png) 
+7. Fill the template as shown in the image below. Notice that `$team` is now available as an option in your tags filter by and group by lists. Click **Save**.
+
+    ![teams-color-table](taggingk8s/assets/teams-color-table.png) 
 
 8. At the top of the dashboard, select the different `$team` variable options and see the results for each team in the table you just created.
 
