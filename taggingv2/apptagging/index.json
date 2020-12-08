@@ -2,7 +2,7 @@
   "title": "Tagging an App Service",
   "description": "Tagging for a Docker-based App Service",
   "difficulty": "Intermediate",
-  "time": "20 minutes",
+  "time": "30 minutes",
   "details": {
     "steps": [
       {
@@ -24,7 +24,7 @@
       {
         "title": "Unified Service Tagging",
         "text": "step5.md",
-        "code": "brokenapp.sh"
+        "code": "newapp.sh"
       }
     ],
     "intro": {

@@ -1,4 +1,4 @@
-Tags are also filter facets for various lists throughout Datadog. Let's create two synthetic tests for the Storedog home page to understand tags as facets.  
+Tags can also act as Facets for various lists throughout Datadog. Let's create two synthetic tests for the Storedog home page to understand tags as facets.  
 
 1. In Datadog, navigate to <a href="https://app.datadoghq.com/synthetics/list" target="_datadog">**UX Monitoring** > **Synthetic Tests**</a>.
 
@@ -28,11 +28,11 @@ Tags are also filter facets for various lists throughout Datadog. Let's create t
 
 10. In the search field above the list of facets, enter `tag:service:store-frontend`{{copy}}. You will see that you can still see the test you created in the list.
 
-11. Click **New Test** in the upper right and follow steps 2 - 7, but name the test `Test on Storedog Home Page 2` and do not assign the `service:store-frontend` tag under **Make a request**.
+11. Click **New Test** in the upper right and follow steps 2 - 7 above with the following changes. In **Make a request**, name the new test `Test on Storedog Home Page 2` and do **not** assign the `service:store-frontend` tag.
 
-12. Navigate to the Synthetics list and view the **TAGS** facet. Notice the number of tests associated with `env:ruby-shop` and `service:store-frontend`.
+12. Navigate to the Synthetics list and view the **ENV** and **TAGS** facet. Notice the number of tests associated with `env:ruby-shop` and `service:store-frontend`.
 
-13.  In the search field above the list of facets, enter `tag:service:store-frontend`{{copy}}. Only the `Test on Storedog Home Page` test appears in the list.
+13. In the search field above the list of facets, enter `tag:service:store-frontend`{{copy}}. Only the `Test on Storedog Home Page` test appears in the list.
 
     Assigning relevant tags ensures that you can find all tests associated with each tag and connects your tests to related data throughout Datadog.
 
@@ -40,5 +40,5 @@ Tags are also filter facets for various lists throughout Datadog. Let's create t
 
 15. Click the Monitor banner above the graphs. Only the first synthetic test you created is listed under **Synthetics Tests** because it was assigned the `service:store-frontend` tag.
 
-16. Navigate to the <a href="https://app.datadoghq.com/synthetics/list" target="_datadog">**UX Monitoring** > **Synthetic Tests**</a>. Select the tests you created and delete the tests. (This is to avoid unnecessary pings to the lab environment.)
+16. Navigate to the <a href="https://app.datadoghq.com/synthetics/list" target="_datadog">**UX Monitoring** > **Synthetic Tests**</a>. Select the tests you created and delete the tests. (This is to avoid unnecessary pings to the lab environment after you complete the lab.)
 
