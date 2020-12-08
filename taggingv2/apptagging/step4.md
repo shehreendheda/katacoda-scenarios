@@ -36,9 +36,7 @@ Tags can also act as Facets for various lists throughout Datadog. Let's create t
 
 12. Navigate to the Synthetics list and view the **ENV** and **TAGS** facet. 
 
-    Notice the number of tests associated with `env:ruby-shop` and `service:store-frontend`.
-
-    ![syn-testfacets](apptagging/assets/syn-testfacets.png)
+    Notice that there are 2 tests for `env:ruby-shop` and 1 test for `service:store-frontend`.
 
 13. In the search field above the list of facets, enter `tag:service:store-frontend`{{copy}}. Only the `Test on Storedog Home Page` test appears in the list.
 
