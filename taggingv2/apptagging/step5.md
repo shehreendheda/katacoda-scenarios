@@ -26,15 +26,19 @@ In the meantime, let's compare the new version of the app with the first version
 
 8. Scroll down to the list of **Traces**. Expand the **Version** facet. 
 
-    Select version `1.0`. Notice the Durations listed. Hover over the Latency Breakdown bars to view the latencies of the discounts-service spans.
+    Select version `1.0`. Notice the durations of the listed spans. Hover over the Latency Breakdown bars to view the latencies of the discounts-service spans.
 
-    Select version `1.1`. Notice the Durations listed. Hover over the Latency Breakdown bars to view the latencies of the discounts-service spans.
+    Select version `1.1`. Notice the durations of the listed spans. Hover over the Latency Breakdown bars to view the latencies of the discounts-service spans.
 
-    _Looks like the new version of the discounts-service has much lower latency and resolved a high-latency issue in the service._
+    _Looks like the discounts-service had a high-latency issue that is resolved in the new version of the service._
+
+    ![ust-discounts](apptagging/assets/ust-discounts.gif)
 
 9.  Navigate to <a href="https://app.datadoghq.com/apm/services" target="_datadog">**APM** > **Services**</a>. Select **store-frontend**.
 
-10. Click the **Total Requests** menu and select **Total Requests by Version**. Click the **Total Errors** menu and select **Total Errors by Version**. 
+10. Display the **Total Requests by Version**. 
+
+    Display the **Total Errors by Version**. 
 
     Notice that there is data for the two versions of the service: `1.0` and `1.1`.
 
@@ -42,12 +46,14 @@ In the meantime, let's compare the new version of the app with the first version
     
     Notice that version `1.0` had errors over time, while version `1.0` only had some initial errors. 
 
-    _Looks like the new version of the store-frontend resolved the issues that were causing errors over time in the original version of the app._ 
+    _Looks like the store-frontend had issues causing errors over time that were resolved in the new version of the service._ 
+
+    ![ust-frontend](apptagging/assets/ust-frontend.png)
 
 
-This is basic introduction to unified service tagging. As you saw, including the version tag allows you to the track and troubleshoot how your app services perform in each deployment.
+This is a basic introduction to unified service tagging. As you saw, including the version tag allows you to monitor how your app services perform in each deployment.
 
-In general, you saw throughout this activity that tags allow you to link related data through Datadog and to quickly search for the data you need.
+Throughout this activity, you also saw that tags allow you to link related data throughout Datadog and to quickly search for the data you need.
  
 #### Assessment
 When you are finished, click `grademe`{{execute}} to receive a grade for this activity. 

@@ -6,7 +6,11 @@ Tags can also act as Facets for various lists throughout Datadog. Let's create t
 
 3. For **Choose Request Type**, select **HTTP**.
 
-4. Under **Make a request**, fill in each field as shown below. <p> **Note**: For **URL**, enter the custom URL for your Storedog home page: `https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/`{{copy}} <p>![syn-makerequest](apptagging/assets/syn-makerequest.png)
+4. Under **Make a request**, fill in each field as shown below. 
+
+    **Note**: For **URL**, enter the custom URL for your Storedog home page: `https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/`{{copy}} 
+
+    ![syn-makerequest](apptagging/assets/syn-makerequest.png)
 
 5. Expand **Define asserations** and fill in as follows: **When `response time` `is less than` `10`ms**.
 
