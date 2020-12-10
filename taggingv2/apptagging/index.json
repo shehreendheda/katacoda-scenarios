@@ -43,7 +43,7 @@
           "chmod": "+x"
         },
         {
-          "file": "env-ready",
+          "file": "envready",
           "target": "/usr/local/bin/",
           "chmod": "+x"
         },
