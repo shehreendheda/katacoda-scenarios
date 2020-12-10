@@ -1,6 +1,6 @@
 In the terminal on the right, the Storedog app is being instrumented for monitoring with Datadog. Live traffic to the app is also being simulated. This may take up to 2 minutes.
 
-Once the app is instrumented, you will see the following message in the terminal: `The environment is prepared! You can now start the activity.`
+Once the app is running, you will see the message `Provisioning Complete` in the terminal along with your Datadog login credentials.
 
 While you wait for the environment to be prepared, you can explore the assigned tags for the application.
 
@@ -28,7 +28,7 @@ While you wait for the environment to be prepared, you can explore the assigned 
 
     The `service` tags for the `store-frontend`, `store-frontend-cache`, and `store-frontend-sqlite` are assigned here. (To learn more, view the <a href="https://docs.datadoghq.com/tracing/setup/ruby/#rails" target="_blank">Tracing Ruby Applications</a> documentation.)
 
-3. After you see the "environment is prepared" message in the terminal, click the **storedog** tab on the right to view the Storedog app. 
+3. After you see the `Provisioning Complete` message in the terminal, click the **storedog** tab on the right to view the Storedog app. 
 
     As you can see, the app includes a home page, product pages, advertisements, discounts, and a cart.
 
