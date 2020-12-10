@@ -16,9 +16,7 @@ In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for 
 
     Once all the pods are running, let's view the infrastructure in Datadog. 
 
-6. In a new browser window/tab, log in to the Datadog account/organization that was created for you by learn.datadoghq.com. 
-
-    To open the correct Datadog organization, you can click **Login Now** in the “Congrats” email you received after you joined the account/organization.
+6. In a new browser window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com. 
 
 7. Navigate to <a href="https://app.datadoghq.com/infrastructure/map" target="_datadog">**Infrastructure** > **Host Maps**</a>.
 
