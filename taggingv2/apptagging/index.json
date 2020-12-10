@@ -43,7 +43,7 @@
           "chmod": "+x"
         },
         {
-          "file": "prep-environment",
+          "file": "env-ready",
           "target": "/usr/local/bin/",
           "chmod": "+x"
         },
