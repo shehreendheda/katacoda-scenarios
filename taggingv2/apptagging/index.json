@@ -6,7 +6,7 @@
   "details": {
     "steps": [
       {
-        "title": "Assigning Tags to the App",
+        "title": "Assigning Tags to App Data",
         "text": "step1.md"
       },
       {
@@ -18,11 +18,11 @@
         "text": "step3.md"
       },
       {
-        "title": "Searching and Correlating Synthetic Tests",
+        "title": "Searching and Correlating Synthetic Tests using Tags",
         "text": "step4.md"
       },
       {
-        "title": "Unified Service Tagging",
+        "title": "Working with Unified Service Tagging",
         "text": "step5.md",
         "code": "newapp.sh"
       }
