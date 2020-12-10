@@ -14,3 +14,7 @@ cp /root/frontend-docker-entrypoint.sh ./store-frontend-broken-instrumented/dock
 docker-compose -f docker-compose-broken.yml up -d
 clear
 prep-environment
+
+statusupdate complete
+
+prepenvironment

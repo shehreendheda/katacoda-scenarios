@@ -18,4 +18,6 @@ done
 kubectl apply -f taggingk8s/lotsofpods.yaml
 kubectl apply -f taggingk8s/datadog.yaml
 
+statusupdate complete
+
 prepenvironment
