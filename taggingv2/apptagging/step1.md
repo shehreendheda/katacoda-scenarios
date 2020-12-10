@@ -1,4 +1,4 @@
-In the terminal on the right, the Storedog app is being instrumented for monitoring with Datadog. Live traffic to the app is also being simulated. This may take up to 2 minutes.
+In the terminal on the right, the Storedog app is being brought online and is being instrumented for monitoring with Datadog. Live traffic to the app is also being simulated. This may take up to 2 minutes.
 
 Once the app is running, you will see the message `Provisioning Complete` in the terminal along with your Datadog login credentials.
 
