@@ -2,7 +2,7 @@
     "title": "SLOs in Practice",
     "description": "Creating and Working with SLOs in Datadog",
     "difficulty": "Intermediate",
-    "time": "30 minutes",
+    "time": "60 minutes",
     "details": {
       "steps": [
         {
@@ -59,7 +59,7 @@
             "chmod": "+x"
           },
           {
-            "file": "prep-environment",
+            "file": "envready",
             "target": "/usr/local/bin/",
             "chmod": "+x"
           }
