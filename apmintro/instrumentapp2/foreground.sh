@@ -6,8 +6,4 @@ export POSTGRES_PASSWORD=postgres
 cd /ecommworkshop/docker-compose-files
 docker-compose -f docker-compose-broken-no-apm-instrumentation.yml up -d
 
-
-#envready
-#statusupdate complete
-
 prepenvironment
