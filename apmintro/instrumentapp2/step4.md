@@ -4,7 +4,7 @@ First, you'll restart the docker deployment to apply the changes for monitoring 
 
 2. In a new window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com.
 
-3. If you have previously used the **Log Explorer** in the Datadog organization you are working in, move on to the next step. <p>If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Start Trial** in the pop-up window. Select **Container**, then select the **docker** tile. Scroll to the bottom and click **Explore your Logs**.
+3. If you have previously used the **Log Explorer** in the Datadog organization you are working in, move on to the next step. <p>If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Get Started**, then click **Get Started** again. You should now be able to see the Log List.
 
 4. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM > Traces** </a> in Datadog to view the list of traces that are being ingested. 
 
