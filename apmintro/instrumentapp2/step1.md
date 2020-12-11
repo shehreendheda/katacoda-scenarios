@@ -1,4 +1,4 @@
-In the terminal on the right, the Storedog app is being deployed using Docker. Live traffic to the app is also being simulated. This may take up to 3 minutes. Once the app is instrumented, you will see the following message in the terminal: `The environment is prepared!`
+In the terminal on the right, the Storedog app is being deployed using Docker. Live traffic to the app is also being simulated. This may take up to 2 minutes. Once the app is running, you will see the message `Provisioning Complete` in the terminal along with your Datadog login credentials.
 
 1. Click `docker-compose-files/docker-compose-broken-no-apm-instrumentation.yml`{{open}} to view the file in the editor on the right. <p> This docker-compose file instruments the Datadog agent and app services for monitoring with Datadog. <p> Browse the file to view the details of the deployment. As you can see, there are no specifications for apm or log collection. 
 

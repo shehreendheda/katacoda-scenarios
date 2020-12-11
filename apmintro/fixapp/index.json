@@ -2,7 +2,7 @@
   "title": "Monitoring App Performance",
   "description": "Using APM to investigate app performance ",
   "difficulty": "Beginner",
-  "time": "20 minutes",
+  "time": "40 minutes",
   "details": {
     "steps": [
       {
@@ -46,7 +46,7 @@
           "chmod": "+x"
         },
         {
-          "file": "prep-environment",
+          "file": "envready",
           "target": "/usr/local/bin/",
           "chmod": "+x"
         },
