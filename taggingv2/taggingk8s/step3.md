@@ -14,17 +14,17 @@
 
     ![community-environment-timeseries](taggingk8s/assets/community-environment-timeseries.png)
 
-4. In the new timeseries graph, click any of the lines and view the options. 
+4. In the new timeseries graph, click any of the data areas and view the options. 
 
     Say, you want to see which containers the data is related to. 
 
-5. Select **View related hosts**, and in the host map that opens, change **Hosts** to **Containers**. 
+    Select **View related hosts**, and in the host map that opens, change **Hosts** to **Containers**. 
 
     You can see that the `environment` and `team` tags are already selected in **Filter by** because you used these tags to filter the data to create the timeseries graph. 
     
     Because of the tags, you can jump between the graph in the dashboard and the associated containers in the container map. 
     
-6. Now, let's create a table that lists the kubernetes memory usage of any or all teams by color (an internal company designation). 
+5. Now, let's create a table that lists the kubernetes memory usage of any or all teams by color (an internal company designation). 
     
     First, you need to set up the <a href="https://docs.datadoghq.com/tagging/assigning_tags/?tab=agentv6#environment-variables" target="_datadog">template variable</a> that will allow you to select which team’s memory usage you want to view.
 
@@ -36,9 +36,9 @@
 
     ![teams-color-table](taggingk8s/assets/teams-color-table.png) 
 
-8. At the top of the dashboard, select the different `$team` variable options and see the results for each team in the table you just created.
+6. At the top of the dashboard, select the different `$team` variable options and see the results for each team in the table you just created.
 
-9. (Optional) Consider other metrics that you may want to visualize and track for this kubernetes deployment and continue adding other template variables and widgets to the dashboard using the different tags. 
+7. (Optional) Consider other metrics that you may want to visualize and track for this kubernetes deployment and continue adding other template variables and widgets to the dashboard using the different tags. 
 
 #### Assessment
 When you are finished, click `grademe`{{execute}} to receive a grade for this activity. 
