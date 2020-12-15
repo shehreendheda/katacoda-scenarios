@@ -6,7 +6,7 @@ Tags can also act as Facets for various lists throughout Datadog. Let's create t
 
 3. For **Choose Request Type**, select **HTTP**.
 
-4. Under **Make a request**, fill in each field as shown below. 
+4. Under **Define request**, fill in each field as shown below. 
 
     **Note**: For **URL**, enter the custom URL for your Storedog home page: `https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/`{{copy}} 
 
@@ -32,7 +32,7 @@ Tags can also act as Facets for various lists throughout Datadog. Let's create t
 
 10. In the search field above the list of facets, enter `tag:service:store-frontend`{{copy}}. You will see that you can still see the test you created in the list.
 
-11. Click **New Test** in the upper right and follow steps 2 - 7 above with the following changes. In **Make a request**, name the new test `Test on Storedog Home Page 2` and do **not** assign the `service:store-frontend` tag.
+11. Click **New Test** in the upper right and follow steps 2 - 7 above with the following changes. In **Define request**, name the new test `Test on Storedog Home Page 2` and do **not** assign the `service:store-frontend` tag.
 
 12. Navigate to the Synthetics list and view the **ENV** and **TAGS** facet. 
 

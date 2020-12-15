@@ -22,7 +22,7 @@ While you wait for the environment to be prepared, you can explore the assigned 
     
     **Lines 20, 44, 73, 101, and 113** assign labels as tags to the logs for the datadog agent, discount service, frontend service, advertisements services, and postgres, respectively. (To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#activate-log-integrations" target="_blank">Docker Log Collection</a> documentation.)
     
-    **Lines 27-29, 45-47, 54-56, 74-76, 84-86, and 102-104** assigns the `env`, `service`, and `version` tags to the services for <a href="https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging?tab=docker" target="_blank">unified service tagging</a>. Unified service tagging ties together Datadog telemetry using these three reserved tags.
+    **Lines 27-29, 45-47, 54-56, 74-76, 84-86, and 102-104** assigns the `env`, `service`, and `version` tags to the services for <a href="https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging?tab=docker" target="_blank">unified service tagging</a>. Unified service tagging ties together Datadog telemetry using these three reserved tags. It is recommeded that you set the `DD_ENV`, `DD_SERVICE`, and `DD_VERSION` environment variables and the corresponding Docker labels for each container of interest to ensure that all metric, trace, and log data collected from the container has these three tags.
 
 3. Click `store-frontend-instrumented-fixed/store-frontend/config/initializers/datadog.rb `{{open}} to view the file that instruments rails for tracing ruby applications. 
 

@@ -10,7 +10,7 @@ Let's explore the data for the Storedog app.
 
 3. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> in Datadog to view the list of traces that are coming in. 
     
-    If you are working in a new Datadog organization, the link will be redirected to the **APM** > **Introduction** page. You may need to wait about two minutes as Datadog's Autodiscovery recognizes that trace data is coming in. In the main menu, when the option appears, click the **APM > Traces** to see the list of traces.
+    If you are working in a new Datadog organization, the link will be redirected to the **APM** > **Introduction** page. You may need to wait about two minutes as Datadog's Autodiscovery recognizes that trace data is coming in. In the main menu, when the option appears, click **APM > Traces** to see the list of traces.
 
 3. In the search field above the list of traces, enter the following. 
 

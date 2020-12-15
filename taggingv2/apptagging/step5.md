@@ -1,6 +1,6 @@
 When you reviewed the docker-compose file for the app, you looked at the environment variables and docker labels that eassigned the `env`, `service`, and `version` tags for <a href="https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging?tab=docker" target="_blank">unified service tagging</a>. Unified service tagging allows you to investigate and monitor application data throughout Datadog based on deployment version.Let's see these tags in action. 
 
-In the terminal on the right, new version of the app is coming online. You will see the following message in the terminal when it is ready: `The environment is prepared! You can now start the activity.`
+In the terminal on the right, a new version of the app is coming online. You will see the following message in the terminal when it is ready: `The environment is prepared! You can now start the activity.`
 
 In the meantime, let's compare the new version of the app with the first version to see what is different.
 
