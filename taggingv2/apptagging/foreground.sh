@@ -2,7 +2,9 @@
 
 export POSTGRES_USER=postgres
 export POSTGRES_PASSWORD=postgres
-while [ ! -f /ecommworkshop/docker-compose-fixed.yml ]; do sleep 2; done
+
+statuscheck files
+
 cd /ecommworkshop
 
 sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./ads-service/requirements.txt
