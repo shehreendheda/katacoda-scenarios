@@ -1,4 +1,4 @@
-You can create one Grok Parser with muliple rules for logs from the same source. Let's use the samples and rules you just created. 
+You just listed multiple log samples to the same Grok Parser. You can also list multiple rules in the same Grok Parser. Let's create a Grok Parser for the following log samples. 
 
 Logs - 
 ``` 
@@ -8,7 +8,7 @@ Logs -
 	James Dean connected to the instance i-02312aavseq123
 ```
 
-To parse the logs above, you can use these two parsing rules:
+To parse these logs, you can use the two parsing rules you created earlier:
 
 The first log matches rule_1 created for Log 1: `%{word:user.name} %{number:user.id} connected in %{word:application_name}.*`
 
@@ -37,5 +37,9 @@ The second, third, and fourth logs match the rule_2 created for Log 2a and Log 2
 
     ![logs-rule2](logsparsing/assets/logs-rule2.png)
 
-7. Repeat step 3 and 6 for the log samples: `John connected to the instance i-023vseq123`{{copy}} and `James Dean connected to the instance i-02312aavseq123`{{copy}}
+7. Repeat step 3 and step 6 for the log samples: `John connected to the instance i-023vseq123`{{copy}} and `James Dean connected to the instance i-02312aavseq123`{{copy}}
+
+    Notice that rule_2 matches for both of these samples. 
+    
+As you've seen here, you can list log samples and parsing rules for the same log source in one Grok Parser to simplify your log pipelines.
 

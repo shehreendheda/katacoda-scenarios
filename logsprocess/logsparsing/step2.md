@@ -1,10 +1,10 @@
 Grok syntax provides an easier way to parse logs than pure regular expressions. You can write parsing rules with the <a href="https://docs.datadoghq.com/logs/processing/parsing/overview" target="_blank">%{MATCHER:EXTRACT:FILTER} syntax</a>:
 
-- <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=matcher#matcher-and-filter" target="_blank">Matcher</a> - rule (possibly a reference to another token rule) that describes what type of element (number, word, notSpace, etc.) to expect  for an attribute
+- <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=matcher#matcher-and-filter" target="_blank">Matcher</a> - rule (possibly a reference to another token rule) that describes what type of element (number, word, notSpace, etc.) to expect for an attribute
 
-- Extract (optional) - an identifier representing the capture destination for the piece of text matched by the Matcher.
+- <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=matcher#parsing-a-specific-text-attribute" target="_blank">Extract</a> (optional) - an identifier representing the capture destination for the element matched by the matcher.
 
-- <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=filter#matcher-and-filter" target="_blank">Filter</a> (optional) -  a post-processor of the match to transform it.
+- <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=filter#matcher-and-filter" target="_blank">Filter</a> (optional) -  a post-processor that transforms the element
 
 Let's start with a simple example of using matchers `%{matcher:attribute}` to parse the following log.
 
@@ -12,7 +12,7 @@ Log 1 - `John 12312 connected in Datadog`
 
 1. Navigate to the **New Processor** window from the previous page.
 
-2. Click the log below to copy it and paste it into the **Log samples** field: `John 12312 connected in Datadog`{{copy}} 
+2. Click the log `John 12312 connected in Datadog`{{copy}} to copy it. Paste it into the **Log samples** field. 
 
     The structure of this log looks like  `username userid ‘connected in’ application_name`. 
 
@@ -32,7 +32,7 @@ Log 1 - `John 12312 connected in Datadog`
 
     ![log1-username](logsparsing/assets/log1-username.png)
 
-    Try deleting `.*` from the rule. You'll see that the rule does not match because the text after the `user.name` is not accounted for.
+    Try deleting `.*` from the rule. You'll see that the rule no longer matches because the text after the `user.name` is not accounted for.
 
 4. Now, let’s include a matcher for `userid` in the rule. 
 
@@ -50,7 +50,7 @@ Log 1 - `John 12312 connected in Datadog`
 
 5. To extract the last attribute in the log, `application_name`, you can use the matcher `%{word:application_name}`. 
 
-    Before adding the matcher syntax to the rule, you need to hard code `connected in` into the rule because of the structure of the log: `username userid ‘connected in’ application_name`. 
+    Before adding the matcher syntax to the rule, you need to hard code `connected in` into the rule because the structure of the log is `username userid ‘connected in’ application_name`. 
 
     The rule becomes `%{word:user.name} %{number:user.id} connected in %{word:application_name}.*`. 
 

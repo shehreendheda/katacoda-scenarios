@@ -16,7 +16,9 @@ The filter accounts for the following:
 Let's use the key-value filter to create rules for the following logs.
 
 Log 3 - `user=john action=connection app=datadog page=logs`
+
 Log 4 - `user: john connect_date: 11/08/2017 id: 123 action: click`
+
 Log 5 -  `url=https://app.datadoghq.com/event/stream user=john`
 
 1. Navigate to the **New Processor** window from the previous page.
@@ -35,7 +37,7 @@ Log 5 -  `url=https://app.datadoghq.com/event/stream user=john`
 
     ![log3_2](logsparsing/assets/log3_2.png)
 
-3. If there are also logs that do not use `=` as a separator, you should modify the filter.
+3. If you have logs that do not use `=` as a separator, you should modify the filter.
 
     Clear the **Log samples** field. Then, copy and paste the log: `user: john connect_date: 11/08/2017 id: 123 action: click`{{copy}}.
 
@@ -55,4 +57,4 @@ Log 5 -  `url=https://app.datadoghq.com/event/stream user=john`
 
     ![log5](logsparsing/assets/log5.png)
 
-You can view more `key-value` examples listed in the <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=filter#key-value-or-logfmt" target="_blank">documentation</a>. 
+You can view more `key-value` examples listed in the <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=filter#key-value-or-logfmt" target="_blank">Parsing documentation</a>. 
