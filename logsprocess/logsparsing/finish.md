@@ -1,3 +1,3 @@
-Congratulations! You've completed the grok parsing activty. You should now be familiar with the Grok Parser in Pipelines as well as the Parse My Logs and Patterns features to create parsing rules for your infrastructure and application logs.
+Congratulations! You've completed the Grok Parsing activty. You've had an introduction to grok parsing and using the Grok Parser to create custom and automatic parsing rules in Datadog.
 
 To continue the course, click **Next**.

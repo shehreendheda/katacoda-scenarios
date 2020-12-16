@@ -6,7 +6,7 @@ Let's parse a log with a date and special characters.
 
 Log 6 - `2000-09-07 14:07:41,508 [main] INFO  MyApp - Entering application.`
 
-Based on the logs you’ve parsed so far, you can refer to the <a href="https://docs.datadoghq.com/logs/processing/parsing/overview" target="_blank">%{MATCHER:EXTRACT:FILTER} syntax</a> and <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=matcher#parsing-dates" target="_blank">Parsing dates</a>  documentation to break down the log and create the rule. Assume that you don’t know how many spaces will be present between each piece of data. Use the `\s+` character between each piece instead of a single space.
+Based on the logs you’ve parsed so far, you can refer to the <a href="https://docs.datadoghq.com/logs/processing/parsing/overview" target="_blank">%{MATCHER:EXTRACT:FILTER} syntax</a> and <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=matcher#parsing-dates" target="_blank">Parsing dates</a>  documentation to break down the log and create the rule. Assume that you don’t know how many spaces will be present between each data element. Use the `\s+` character between each element, instead of a single space, to account for an unknown number of spaces.
 
 | Data | Parsing element |
 |------|-----------------|
@@ -27,6 +27,6 @@ The final rule is `%{date("yyyy-MM-dd HH:mm:ss,SSS"):timestamp}\s+\[%{notSpace:l
 
     ![log6](logsparsing/assets/log6.png)
 
-4. Test out changing the number of spaces in the log sample. You'll see that the changing the spaces in the log where `\s+` is in the rule does not affect the rule match.
+4. Test out changing the number of spaces in the log sample. You'll see that changing the spaces in the log where `\s+` is in the rule does not affect the rule match.
 
 

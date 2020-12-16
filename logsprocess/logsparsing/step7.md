@@ -30,15 +30,15 @@ Log 8 - `jenny doe connected on server ABC in development`
 
     With these helper rules, the parsing rule is `%{user} %{connection} %{server}`.
 
-4.  Clear the **Define parsing rules** field. Then, copy and paste the rule: `rule_7 %{user} %{connection} %{server}`{{copy}}
+    Clear the **Define parsing rules** field. Then, copy and paste the rule: `rule_7 %{user} %{connection} %{server}`{{copy}}
 
     ![log7](logsparsing/assets/log7.png)
 
-    The helper rules above help you write a simple parsing rule for logs similar to Log 7. 
+4. The helper rules above help you write a simple parsing rule for logs similar to Log 7. 
 
     But what about logs like Log 8? Let's modify the helper rules above so that you can use them for logs like Log 8.
 
-5. Below the first log sample under **Log samples**, click **Add**. 
+    Below the first log sample under **Log samples**, click **Add**. 
 
     Copy and paste Log 8 in to the new log sample field: `jenny doe connected on server ABC in development`{{copy}}
 
@@ -56,13 +56,15 @@ Log 8 - `jenny doe connected on server ABC in development`
     
     How can you modify the helper rules above to account for these differences.
 
-6. Let's start with the `user` helper rule. 
+5. Let's start with the `user` helper rule. 
 
     The current helper rule is `user %{word:user.name} id:%{integer:user.id}`.
 
-    Both Log 7 and Log 8 have `%{word:user.name}`, so this element can remain unchanged, but Log 7 has `id:%{integer:user.id}` and Log 8 has `%{word:user.familyname}`.
+    Both Log 7 and Log 8 have `%{word:user.name}` so this matcher can remain unchanged.
+    
+    Log 7 has `id:%{integer:user.id}`, while Log 8 has `%{word:user.familyname}`. This difference needs to be accounted for.
 
-    Remember, you can use `()?` to make part of a rule optional. For the helper rule to apply to both Log 7 and Log 8, `id:%{integer:user.id}` and `%{word:user.familyname}` should be optional: `(id:%{integer:user.id})?(%{word:user.familyname})?`
+    Remember, you can use `()?` to make part of a rule optional. For the helper rule to apply to both Log 7 and Log 8, both `id:%{integer:user.id}` and `%{word:user.familyname}` should be optional: `(id:%{integer:user.id})?(%{word:user.familyname})?`
 
     The `user` helper rule for both logs becomes `user %{word:user.name} (id:%{integer:user.id})?(%{word:user.familyname})?`.
 
@@ -74,9 +76,9 @@ Log 8 - `jenny doe connected on server ABC in development`
 
     You can create a parsing rule for Log 8 that looks like `%{user} connected %{server}`.
 
-    In the **Define parsing rule** field, copy and paste this rule under the first rule: `rule_8 %{user} connected %{server}`{{copy}}.
+    In the **Define parsing rule** field, copy and paste this rule below the first rule: `rule_8 %{user} connected %{server}`{{copy}}.
 
-    Click the second log sample to make sure that rule matches.
+    Click the second log sample to make sure the new rule matches.
 
     ![log8a](logsparsing/assets/log8a.png)
     
@@ -98,10 +100,10 @@ Log 8 - `jenny doe connected on server ABC in development`
 
     Now you have 3 helper rules and 1 parsing rule for these two different log structures.
 
-As you can see, the Grok Parser in Datadog is designed to help you create multiple parsing rules and helper rules by actively checking and confirming if your rules match the log samples that are filtered into a log pipeline.
+As you can see, the Grok Parser in Datadog is designed to help you create multiple parsing rules and helper rules by actively checking and confirming if your rules match the log samples you provide.
 
 To help you further with grok parsing logs, Datadog also offers automatic parsing features.
 
-Before you continue to the next step, click **Cancel** in the **New Processor** window. Click the blue toggle button on the right of the `nginx - custom` pipeline to disable the pipeline.
+Before you continue to the next page, click **Cancel** in the **New Processor** window. Click the blue toggle button on the right of the `nginx - custom` pipeline to disable the pipeline.
 
 ![nginx-custom-disabled](logsparsing/assets/nginx-custom-disabled.png)

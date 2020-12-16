@@ -57,4 +57,4 @@ Log 5 -  `url=https://app.datadoghq.com/event/stream user=john`
 
     ![log5](logsparsing/assets/log5.png)
 
-You can view more `key-value` examples listed in the <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=filter#key-value-or-logfmt" target="_blank">Parsing documentation</a>. 
+You can view more `key-value` examples listed in the <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=filter#key-value-or-logfmt" target="_blank">Parsing</a> documentation. 
