@@ -26,7 +26,7 @@ With the help of tags, you can create <a href="https://docs.datadoghq.com/monito
     
     Assume at Storedog, the email addresses and slack channels for the advertisements and discounts engineering teams are named for their respective services. If either of the services triggers an alert, `{{service.name}}` will be populated with the appropriate service name and that team will be notified. 
     
-    Delete `@<YOUR EMAIL ADDRESS>` in the message and type `@`, then select your name from the list that appears. Do **not** select `Datadog Learning Parent` or `All`. You can also add line breaks so that the message looks similar to that in the image below.
+    Replace `<YOUR EMAIL ADDRESS>` in the message with an email address you would like to receive the test alert at in a later step. Make sure to leave `@` in front of your email address.
     
     For **Tags**, enter `env:ruby-shop`{{copy}}, `service:discounts-service`{{copy}}, `service:advertisements-service`{{copy}}, `team:discounts`{{copy}}, `team:advertisements`{{copy}}. 
     

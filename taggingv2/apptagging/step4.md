@@ -12,7 +12,7 @@ Tags can also act as Facets for various lists throughout Datadog. Let's create t
 
     ![syn-makerequest](apptagging/assets/syn-makerequest.png)
 
-5. Expand **Define asserations** and fill in as follows: **When `response time` `is less than` `10`ms**.
+5. Expand **Define assertions**. Click **New Assertion** and fill in the fields as follows: **When `response time` `is less than` `10`ms**.
 
 6. Expand **Specify test frequency** and select **1w**.
 
