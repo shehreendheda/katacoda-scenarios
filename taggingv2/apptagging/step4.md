@@ -10,7 +10,7 @@ Tags can also act as Facets for various lists throughout Datadog. Let's create t
 
     **Note**: For **URL**, enter the custom URL for your Storedog home page: `https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/`{{copy}} 
 
-    ![syn-makerequest](apptagging/assets/syn-makerequest.png)
+    ![syn-makerequest](apptagging/assets/syn-makerequest2.png)
 
 5. Expand **Define assertions**. Click **New Assertion** and fill in the fields as follows: **When `response time` `is less than` `10`ms**.
 
@@ -28,7 +28,7 @@ Tags can also act as Facets for various lists throughout Datadog. Let's create t
 
 8. Above the test name, click **Synthetics** to navigate to the test list.
 
-9. On the left, expand the **TAGS** facet. You will see a menu for **Service**, which was created because you assigned the tag to the synthetic test.
+9. On the left, expand the **TAGS** facet. You will see menus for **service** and **team**, which were created because you assigned the tag to the synthetic test.
 
 10. In the search field above the list of facets, enter `tag:service:store-frontend`{{copy}}. You will see that you can still see the test you created in the list.
 
@@ -36,7 +36,7 @@ Tags can also act as Facets for various lists throughout Datadog. Let's create t
 
 12. Navigate to the Synthetics list and view the **ENV** and **TAGS** facet. 
 
-    Notice that there are 2 tests for `env:ruby-shop` and 1 test for `service:store-frontend`.
+    Notice that there are 2 tests for `env:ruby-shop` and `team:frontend`, but only 1 test for `service:store-frontend`.
 
 13. In the search field above the list of facets, enter `tag:service:store-frontend`{{copy}}. Only the `Test on Storedog Home Page` test appears in the list.
 
