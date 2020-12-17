@@ -1,4 +1,4 @@
-The <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#user-agent-parser" target="_blank">User-Agent</a> parser takes a User-Agent attribute and extracts the OS, browser, device, and other user data. 
+The <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#user-agent-parser" target="_blank">User-Agent</a> parser takes a User-Agent attribute and extracts the OS, browser, device, and other user data. Because the flog logs contain user-agent information, let's also add a User-Agent Parser to the pipeline.
 
 ![log-urlparse-attributes-m2](logspipeline/assets/log-urlparse-attributes-m2.png)
 
@@ -14,13 +14,13 @@ The <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#user-
 
     ![url-parser](logspipeline/assets/url-parser.png)
 
-6. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs. You'll notice that there is a pause in the log stream while the new processor is starting to process incoming logs. When new logs start coming in, click a new `flog` log.
+6. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs. You'll notice that there is a pause in the log stream while the new processor is starting to process incoming logs. When new logs start coming in, click a new **flog** log.
 
     Notice that **Event Attributes** now lists the attribute group `useragent_details` that include attributes for `browser`, `device`, and `os`.
 
     ![log-useragent-attributes-m](logspipeline/assets/log-useragent-attributes-m.png)
 
-7. In the **Facets** on the left, expand the facet group **WEB ACCESS**, then expand the facets **OS**, **Browser**, and **Device** in this group. 
+7. In the list of facets on the left, expand the facet group **WEB ACCESS**, then expand the facets **OS**, **Browser**, and **Device** in this group. 
 
     Notice that the facets are now populated with attribute values. 
 

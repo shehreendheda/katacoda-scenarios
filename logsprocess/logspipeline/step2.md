@@ -1,4 +1,4 @@
-The first step in processing the `service:flog` logs is to add a <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#grok-parser" target="_blank">Grok Parser</a> to pipeline to extract log attributes. Remember when you viewed the log details, you noted that the logs have a similar structure. Let's breakdown the structure of the logs and write a parsing rule for it.
+The first step in processing the `service:flog` logs is to add a <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#grok-parser" target="_blank">Grok Parser</a> to the pipeline to extract log attributes. Remember when you viewed the log details, you noted that the logs have a similar structure. Let's breakdown the structure of the logs and write a parsing rule for it.
 
 An example log is `53.166.47.138 - nienow5151 [11/Nov/2020:22:53:40 +0000] "PUT /implement HTTP/1.1" 100 30792 "http://www.productnetworks.org/transition/integrate/cross-platform" "Mozilla/5.0 (iPhone; CPU iPhone OS 8_3_2 like Mac OS X; en-US)"`. 
 
@@ -18,7 +18,7 @@ Breaking down the structure of the log gives the following:
 | http://www.productnetworks.org/transition/integrate/cross-platform    | `http.referer`          |
 | Mozilla/5.0 (iPhone; CPU iPhone OS 8_3_2 like Mac OS X; en-US)        | `http.useragent`        |
 
-Refering to the <a href="https://docs.datadoghq.com/logs/processing/parsing/overview" target="_blank">%{MATCHER:EXTRACT:FILTER} syntax</a> in the <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#grok-parser" target="_blank">Grok Parser</a> documentation, you can use the following matchers and parsing elements.
+Refering to the <a href="https://docs.datadoghq.com/logs/processing/parsing/overview" target="_blank">%{MATCHER:EXTRACT:FILTER} syntax</a> in the <a href="https://docs.datadoghq.com/logs/processing/parsing/" target="_blank">Parsing</a> documentation, you can use the following matchers for the parsing elements.
 
 | Matcher    | Attribute               | Pattern                                   |
 | ---------- | ----------------------- | ------------------------------------------|
@@ -49,7 +49,7 @@ With the rule written, let's create the Grok Parser.
 
     Copy the log message (text in gray box) into the log sample. Note: There is a copy icon in the upper right corner of the log message. Click the icon to copy the log message.
 
-3. In the Grok Parser, paste the log sample into the **Log samples** field.
+3. In the **Grok Parser** , paste the log sample into the **Log samples** field.
 
 4. Click the rule below to copy it and then paste it into the **Define parsing rules** field.
 
@@ -61,18 +61,18 @@ With the rule written, let's create the Grok Parser.
 
     ![grok-parser](logspipeline/assets/grok-config.png)
 
-6. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs. You'll notice that there is a pause in the log stream while the new processor is starting to process incoming logs. When new logs start coming in, click a new `flog` log.
+6. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs. You'll notice that there is a pause in the log stream while the new processor is starting to process incoming logs. When new logs start coming in, click a new **flog** log.
 
     ![log-parsed-full](logspipeline/assets/log-parsed-full.png)
     
     Notice that the **Event Attributes** list is now populated because the Grok Parser is successfully extracting attributes from the logs.
 
-    Use the up and down arrow keys to look at more logs. You'll notice, with a exception of a rare few, the logs are now parsed. (The logs that are exceptions would be interesting to explore to understand why they are not parsed.)
+    Use your up and down arrow keys to look at more logs. You'll notice, with a exception of a rare few, the logs are now parsed. (The logs that are exceptions would be interesting to explore to understand why they are not parsed.)
 
-4. In the **Facets** on the left, browse and see what facets is available. 
+4. In the **Facets** on the left, browse and see what facets are available. 
 
-    Grok parsing the logs has allowed Datadog to recognize common attributes and fill in the Facets.
+    Grok parsing the logs has allowed Datadog to recognize common attributes in the processed logs and fill in the facets.
 
-    In the log details, click an attribute listed in the **Event Attributes**. In the menu that appears, you will see **Edit facet for xxx*** if the Facet exists or **Create facet for xxx** if the Facet does not exist. You can read the <a href="https://docs.datadoghq.com/logs/explorer/facets/" target="_blank">Log Facets documentation</a> to learn more. 
+    In the log details, click an attribute listed in the **Event Attributes**. In the menu that appears, you will see **Edit facet for xxx** if the facet exists or **Create facet for xxx** if the facet does not exist. You can read the <a href="https://docs.datadoghq.com/logs/explorer/facets/" target="_blank">Log Facets documentation</a> to learn more. 
 
 Now that attributes are being parsed from the logs, let's start using other processors like remappers and parsers to further enrich the logs.

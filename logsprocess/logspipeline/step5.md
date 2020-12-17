@@ -1,4 +1,4 @@
-The <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#url-parser" target="_blank">URL Parser</a> extracts query parameters and other important parameters from a URL.
+The <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#url-parser" target="_blank">URL Parser</a> extracts query parameters and other important parameters from a URL. Because the flog logs contain URLs, let's add a URL parser to the pipeline.
 
 ![log-status-attributes-m](logspipeline/assets/log-status-attributes-m.png)
 
@@ -10,13 +10,13 @@ The <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#url-p
 
 4. Under **Set target attribute path**, enter `http.url_details`{{copy}}.
 
-5. Enter `Parsing URL`{{copy}} for **Name the processor**, and click **Save**.
+5. Enter `Parsing URL`{{copy}} for **Name the processor** and click **Save**.
 
     ![url-parser](logspipeline/assets/url-parser.png)
 
-6. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs. You'll notice that there is a pause in the log stream while the new processor is starting to process incoming logs. When new logs start coming in, click a new `flog` log.
+6. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs. You'll notice that there is a pause in the log stream while the new processor is starting to process incoming logs. When new logs start coming in, click a new **flog** log.
 
-    Notice that **Event Attributes** now lists the attribute group `url_details` and includes a banner with the `http.method`, `url_details` and `status_code`. Use the up and down arrow keys to look at more logs. 
+    Notice that **Event Attributes** now lists the attribute group `url_details` and includes a banner with the `http.method`, `url_details` and `status_code`. Use your up and down arrow keys to look at more logs. 
 
     ![log-urlparse-attributes-m](logspipeline/assets/log-urlparse-attributes-m.png)
     
@@ -24,7 +24,7 @@ The <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#url-p
 
     ![urlparse-example](logspipeline/assets/urlparse-example.png)
 
-7. In the **Facets** on the left, expand the facet group **WEB ACCESS**, then expand the facet **URL Path** in this group. 
+7. In the list of facets on the left, expand the facet group **WEB ACCESS**, then expand the facet **URL Path** in this group. 
 
     Notice that the facet is now populated with the `url_details.path` attribute values. 
 

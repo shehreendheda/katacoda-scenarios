@@ -6,35 +6,35 @@ Let's log in to Datadog to see the logs that are being collected by the Datadog 
 
 2. If you've previously used **Logs** in the Datadog organization you are working in, move on to the next step. 
 
-    If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Getting Started** again.
+    If you are working in a new Datadog organization, you have to first enable **Logs** before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Getting Started** again.
 
 3. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>.
 
-    In the search field above the log list, enter `env:logspipeline`{{copy}} to make sure you are only seeing logs from this environments. 
+    In the search field above the Log List, enter `env:logspipeline`{{copy}} to make sure you are only seeing logs from this environments. 
 
     ![logs-raw](logspipeline/assets/logs-raw.png)
 
-4. Click one of the `flog` logs to view the log's details.
+4. Click one of the **flog** logs to view the log's details.
 
     ![raw-details](logspipeline/assets/raw-details.png)
 
-    Notice that the `service` and `source` tags are `flog`. 
+    Notice that the `service` and `source` tag values are `flog`. 
 
-    Notice also that the Event Attributes listed. Instead, there is message to help you get started with processing your logs.
+    Notice also that there are no Event Attributes listed. Instead, there is message to help you get started with processing your logs.
 
     Use the up/down arrow keys on your keyboard to view details for more logs in the list. Notice that no log is processed. Also, notice that the log message (text in gray box) in each log has a similar structure. (You'll look more closely at this on the next page.)
     
-    Close the log's details panel.
+    Close the log details panel.
 
-5. In the **Facets** on the left, browse and see what facets are available. 
+5. In the list of facets on the left, browse and see what facets are available. 
 
     As you add processors to the pipeline later in the activity, you'll see what facets become available. And, if some facets are not available, you'll learn how to add them. 
 
 6. Open <a href="https://app.datadoghq.com/logs/pipelines" target="_blank">**Logs > Configuration > Pipelines**</a> in a new browser tab.
 
-    You'll want to keep the **Logs** browser tab open so that you can see how the logs details are processed by each processor you add to the pipeline.
+    You'll want to keep the **Logs** browser tab open so that you can see how the log details are processed by each processor you add to the pipeline.
 
-7. Click **New Pipeline** to create the new pipeline.
+7. Click **New Pipeline** in the upper right to create the new pipeline.
 
     Enter `service:flog`{{copy}} as the **Filter**.
 
@@ -46,4 +46,4 @@ Let's log in to Datadog to see the logs that are being collected by the Datadog 
 
     ![example-pipelines-list](logspipeline/assets/example-pipelines-list.png)
 
-Let's start adding processors to the pipeline so that the log for `service:flog` start getting processed.
+Let's start adding processors to the pipeline so that the logs for `service:flog` start getting processed.
