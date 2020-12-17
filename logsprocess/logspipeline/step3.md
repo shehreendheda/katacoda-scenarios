@@ -15,7 +15,7 @@ You can use the <a href="https://docs.datadoghq.com/logs/processing/processors/?
 
 2. Under **Select the processor type**, select **Category Processor**.
 
-3. Under **Set target category attributes**, select **Category Processor**.
+3. Under **Set target category attributes**, enter `http.status_code_category`{{copy}}.
 
 4. Under **Populate category**, enter `@http.status_code:[200 TO 299]`{{copy}} for **All events that match** and `ok`{{copy}} for **Appear under the value name**. Click **Add**.
 
@@ -27,7 +27,7 @@ You can use the <a href="https://docs.datadoghq.com/logs/processing/processors/?
     * `@http.status_code:[400 TO 499]`{{copy}} and `warning`{{copy}}
     * `@http.status_code:[500 TO 599]`{{copy}} and `error`{{copy}}
 
-6. Enter `Assigning severity based on status code`{{copy}) for **Name the processor** and click **Save**.
+6. Enter `Assigning severity based on status code`{{copy}} for **Name the processor** and click **Save**.
 
     ![category-processor](logspipeline/assets/category-processor.png)
     

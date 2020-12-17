@@ -10,7 +10,7 @@ Let's install the Apache Integration Pipeline and take a look at its processed l
 
 1.  Click the command `flog-with-source-tag`{{execute}} to restart the Docker container for custom apache service with a source tag.
 
-    Adding `--label com.datadoghq.ad.logs='[{"source": "apache", "service": "apache"}]'` when running the Docker container assigns the tags `source:apache` and `service:apache` to the logs. 
+    Adding `--label com.datadoghq.ad.logs='[{"source": "apache", "service": "apache"}]'` when running the flog docker container assigns the tags `source:apache` and `service:apache` to the logs. 
 
     `source` - The name of the source owning the log. Datadog identifies the log source and automatically uses corresponding the Integration Pipeline, if available. This **Autodiscovery** feature speeds up configuration for log processing. To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#activate-log-integrations" target="_blank">Docker Log Collection</a> documentation. If the logs do not come from an existing integration, then this field may include a custom source name. However, it is recommended that you match this value to the namespace of any related custom metrics you are collecting, for example: `myapp` from `myapp.request.count`.
 
@@ -20,9 +20,9 @@ Let's install the Apache Integration Pipeline and take a look at its processed l
 
 2. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs. Clear the search field and enter `env:logspipeline`{{copy}} to make sure you are only seeing logs from this environments.
 
-    ![logs-apache-source](logspipeline/assets/logs-apache-source.png)
+    ![logs-apache-source](logspipeline/assets/logs-apache-source2.png)
 
-    Notice that you are now seeing logs for the `apache` service. Click one of these logs.
+    Notice that you are now seeing logs for the `apache` service in the Log List. Click one of these logs.
 
     ![log-final-apache-source](logspipeline/assets/log-final-apache-source.png)
 

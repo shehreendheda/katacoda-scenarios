@@ -18,7 +18,7 @@ The <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#log-s
 
     Notice that the new logs in the list and in the chart above the list have different color bars and that the **Status** Facet has more options.
     
-    ![logs-new-status](logspipeline/assets/logs-new-status.png)
+    ![logs-new-status](logspipeline/assets/logs-new-status2.png)
 
     Click a new **flog** log. Notice that the official status now matches the `http.status_code_category` value. Use your up and down arrow keys to look at the statuses of more logs.
 

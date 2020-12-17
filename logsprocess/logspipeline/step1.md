@@ -12,7 +12,7 @@ Let's log in to Datadog to see the logs that are being collected by the Datadog 
 
     In the search field above the Log List, enter `env:logspipeline`{{copy}} to make sure you are only seeing logs from this environments. 
 
-    ![logs-raw](logspipeline/assets/logs-raw.png)
+    ![logs-raw](logspipeline/assets/logs-raw2.png)
 
 4. Click one of the **flog** logs to view the log's details.
 
