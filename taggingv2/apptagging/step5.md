@@ -53,7 +53,4 @@ In the meantime, let's compare the new version of the app with the first version
 
 This is a basic introduction to unified service tagging. As you saw, including the version tag allows you to monitor how your app services perform in each deployment.
 
-Throughout this activity, you also saw that tags allow you to link related data throughout Datadog and to quickly search for the data you need.
- 
-#### Assessment
-When you are finished, click `grademe`{{execute}} to receive a grade for this activity. 
+Throughout this activity, you also saw that tags allow you to link related data throughout Datadog and to quickly search for the data you need. 

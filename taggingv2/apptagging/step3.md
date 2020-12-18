@@ -26,7 +26,7 @@ With the help of tags, you can create <a href="https://docs.datadoghq.com/monito
     
     Assume at Storedog, the email addresses and slack channels for the advertisements and discounts engineering teams are named for their respective services. If either of the services triggers an alert, `{{service.name}}` will be populated with the appropriate service name and that team will be notified. 
     
-    In a later step, you will send a Test Notification with the `{{service.name}}` populated. If you would like to receive the notification, replace `<YOUR EMAIL ADDRESS>` in the monitor message with your email address. Make sure to leave `@` in front of your email address.
+    In a later step, you will send a Test Notification with the `{{service.name}}` populated. If you would like to receive the notification, replace `<YOUR EMAIL ADDRESS>` in the monitor message with your email address. Make sure to leave `@` in front of your email address. (If you do not want to enter your email address, it's alright. A screenshot of an example test notification is included below.)
     
     For **Tags**, enter `env:ruby-shop`{{copy}}, `service:discounts-service`{{copy}}, `service:advertisements-service`{{copy}}, `team:discounts`{{copy}}, `team:advertisements`{{copy}}. 
     
@@ -52,11 +52,15 @@ With the help of tags, you can create <a href="https://docs.datadoghq.com/monito
     
     You will see that the `{{service.name}}` has been replaced with the actual service name throughout the email. 
 
-12. In Datadog, close the test notification window. Delete your email address from the **Notify your team** field and click **Save** to save the monitor. 
+12. In Datadog, close the test notification window. 
+
+    Delete your email address from the **Notify your team** field. 
+    
+    Click **Save** to save the monitor. 
 
 13. Select **Manage Monitors** above the monitor to navigate to the monitors list.
 
-14. On the left of the Monitors list, expand the different Facets. Notice that **Service**, **Tag**, **Env**, and **Team** have optons related to the tags you assigned to the monitor.
+14. On the left of the monitors list, expand the different facets. Notice that **Service**, **Tag**, **Env**, and **Team** have optons related to the tags you assigned to the monitor.
 
 15. In a new browser tab, navigate to <a href="https://app.datadoghq.com/apm/services" target="_blank">**APM** > **Services**</a>. Select **discounts-service**.
 
@@ -64,4 +68,6 @@ With the help of tags, you can create <a href="https://docs.datadoghq.com/monito
 
     Because of the tags you assigned to the monitor in step 7, the monitor is linked to the respective APM service pages.
 
-17. In the browser tab with the **Manage Monitors** list, hover over the monitor you created. Click the trash icon that appear on the right of the monitor to delete the monitor.
+17. Click the command `grademe`{{execute}} to receive credit for creating the monitor.
+
+18. In the browser tab with the **Manage Monitors** list, hover over the monitor you created. Click the trash icon that appear on the right of the monitor to delete the monitor.
