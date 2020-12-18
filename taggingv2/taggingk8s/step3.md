@@ -40,5 +40,8 @@
 
 7. (Optional) Consider other metrics that you may want to visualize and track for this kubernetes deployment and continue adding other template variables and widgets to the dashboard using the different tags. 
 
-#### Assessment
-When you are finished, click `grademe`{{execute}} to receive a grade for this activity. 
+8. Click the command `grademe`{{execute}} to receive credit for creating the dashboard. 
+
+    Note: If you created the dashboard but received a grade of zero, make sure that the dashboard name is `Kubernetes Deployment`{{copy}}. To edit the name, click the down arrow next to the name then click Edit. Enter the correct name and click Save. Click the `grademe` command above again.
+
+9. In the upper right of the dashboard, click the wheel icon. Select **Delete dashboard** to remove the dashboard.
