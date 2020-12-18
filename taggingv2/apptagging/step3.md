@@ -6,19 +6,27 @@ With the help of tags, you can create <a href="https://docs.datadoghq.com/monito
 
 3. In **Choose the detection method**, select **Threshold Alert**.
 
-4. Expand **Define the metric**. For **Metric**, select  `trace.flask.request.duration`. For **from**, select `env:ruby-shop` to filter by the app environment.
+4. Expand **Define the metric**. 
 
-5. Below the metric, change `Single Alert` to `Multi Alert` and select `service` for **(select group)**. 
+    For **Metric**, select  `trace.flask.request.duration`. 
+    
+    For **from**, select `env:ruby-shop` to filter by the app environment.
+
+    Below the metric, change `Single Alert` to `Multi Alert` and select `service` for **(select group)**. 
 
     You will see that `service` automatically populates the **avg by** (group by) field for the metric. 
 
     ![alert-metric](apptagging/assets/alert-metric.png) 
 
-6. Expand **Set the alert condition**. For **Alert Threshold**, enter 5. Leave all other fields as is. 
+5. Expand **Set the alert condition**. 
+
+    For **Alert Threshold**, enter 5. 
+    
+    Leave all other fields as is. 
 
     ![alert-condition](apptagging/assets/alert-condition.png)
 
-7. Expand **Say what's happening**.
+6. Expand **Say what's happening**.
 
     In the **Example Monitor Name** field, enter `The {{service.name}} is running slowly!!`{{copy}}.
     
@@ -28,19 +36,24 @@ With the help of tags, you can create <a href="https://docs.datadoghq.com/monito
     
     In a later step, you will send a Test Notification with the `{{service.name}}` populated. If you would like to receive the notification, replace `<YOUR EMAIL ADDRESS>` in the monitor message with your email address. Make sure to leave `@` in front of your email address. (If you do not want to enter your email address, it's alright. A screenshot of an example test notification is included below.)
     
-    For **Tags**, enter `env:ruby-shop`{{copy}}, `service:discounts-service`{{copy}}, `service:advertisements-service`{{copy}}, `team:discounts`{{copy}}, `team:advertisements`{{copy}}. 
+    For **Tags**, enter the following tags. Note: After entering each tap, press enter/return.
+    `env:ruby-shop`{{copy}}
+    `service:discounts-service`{{copy}}
+    `service:advertisements-service`{{copy}}
+    `team:discounts`{{copy}}
+    `team:advertisements`{{copy}}. 
     
     ![alert-message](apptagging/assets/alert-message.png)
 
-8. Expand **Notify your team**. The field is already populated with the `@` options in **Say what's happening**. 
+7. Expand **Notify your team**. The field is already populated with the `@` options in **Say what's happening**. 
 
     ![alert-notifications](apptagging/assets/alert-notifications.png) 
     
     Before you save the monitor, let's see an example alert.
 
-9. In the bottom right, click **Test Notifications**. 
+8. In the bottom right, click **Test Notifications**. 
 
-10. In the pop-up window that appears, select the **Alert** tile and click **Run Test**. 
+9. In the pop-up window that appears, select the **Alert** tile and click **Run Test**. 
 
     A message appears in the window: `Test notifications sent with group $service:<service.name>`. 
     
