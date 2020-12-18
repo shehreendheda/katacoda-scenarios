@@ -34,53 +34,56 @@ With the help of tags, you can create <a href="https://docs.datadoghq.com/monito
     
     Assume at Storedog, the email addresses and slack channels for the advertisements and discounts engineering teams are named for their respective services. If either of the services triggers an alert, `{{service.name}}` will be populated with the appropriate service name and that team will be notified. 
     
-    In a later step, you will send a Test Notification with the `{{service.name}}` populated. If you would like to receive the notification, replace `<YOUR EMAIL ADDRESS>` in the monitor message with your email address. Make sure to leave `@` in front of your email address. (If you do not want to enter your email address, it's alright. A screenshot of an example test notification is included below.)
+    In a later step, you will send a Test Notification with the `{{service.name}}` populated. If you would like to receive the notification, replace `<YOUR EMAIL ADDRESS>` in the monitor message with your email address. Make sure to leave `@` in front of your email address. (If you do not want to enter your email address, that's alright. A screenshot of an example test notification is included below.)
     
     For **Tags**, enter the following tags. Note: After entering each tap, press enter/return.
+    
     `env:ruby-shop`{{copy}}
+    
     `service:discounts-service`{{copy}}
+    
     `service:advertisements-service`{{copy}}
+    
     `team:discounts`{{copy}}
+    
     `team:advertisements`{{copy}}. 
     
     ![alert-message](apptagging/assets/alert-message.png)
 
-7. Expand **Notify your team**. The field is already populated with the `@` options in **Say what's happening**. 
+7. Expand **Notify your team**. The field is already populated with the `@` options in **Say what's happening**. (`@<YOUR EMAIL ADDRESS>` will be included if you chose to enter an actual email address.)
 
     ![alert-notifications](apptagging/assets/alert-notifications.png) 
     
-    Before you save the monitor, let's see an example alert.
+8. Before you save the monitor, let's see an example alert.
 
-8. In the bottom right, click **Test Notifications**. 
+    In the bottom right, click **Test Notifications**. 
 
-9. In the pop-up window that appears, select the **Alert** tile and click **Run Test**. 
+    In the pop-up window that appears, select the **Alert** tile and click **Run Test**. 
 
     A message appears in the window: `Test notifications sent with group $service:<service.name>`. 
     
     ![alert-tested](apptagging/assets/alert-tested.png)
 
-11. If you entered your email address in step 7, check your email account for an email with the subject `[Monitor Alert] Triggered: [TEST] The <service.name> is running slowly!!`. Open the email to view its details. 
+    If you entered your email address in step 7, check your email account for an email with the subject `[Monitor Alert] Triggered: [TEST] The <service.name> is running slowly!!`. Open the email to view its details. You will see that the `{{service.name}}` has been replaced with the actual service name throughout the email.
 
     ![alert-testemail](apptagging/assets/alert-testemail.png)
     
-    You will see that the `{{service.name}}` has been replaced with the actual service name throughout the email. 
-
-12. In Datadog, close the test notification window. 
+9. In Datadog, close the Test Notification window. 
 
     Delete your email address from the **Notify your team** field. 
     
     Click **Save** to save the monitor. 
 
-13. Select **Manage Monitors** above the monitor to navigate to the monitors list.
+10. Select **Manage Monitors** above the monitor to navigate to the monitors list.
 
-14. On the left of the monitors list, expand the different facets. Notice that **Service**, **Tag**, **Env**, and **Team** have optons related to the tags you assigned to the monitor.
+11. On the left of the monitors list, expand the different facets. Notice that **Service**, **Tag**, **Env**, and **Team** have options related to the tags you assigned to the monitor.
 
-15. In a new browser tab, navigate to <a href="https://app.datadoghq.com/apm/services" target="_blank">**APM** > **Services**</a>. Select **discounts-service**.
+12. In a new browser tab, navigate to <a href="https://app.datadoghq.com/apm/services" target="_blank">**APM** > **Services**</a>. Select **discounts-service**.
 
-16. Above the graphs, you will see a **Monitor** banner. Click the banner to view the list of monitors associated with and suggested for the service. Notice that the monitor you created is listed.
+13. Above the graphs, you will see a **Monitor** banner. Click the banner to view the list of monitors associated with and suggested for the service. 
 
-    Because of the tags you assigned to the monitor in step 7, the monitor is linked to the respective APM service pages.
+    Notice that the monitor you created is listed. Because of the tags you assigned to the monitor in step 7, the monitor is linked to the respective APM service pages.
 
-17. Click the command `grademe`{{execute}} to receive credit for creating the monitor.
+14. Click the command `grademe`{{execute}} to receive credit for creating the monitor.
 
-18. In the browser tab with the **Manage Monitors** list, hover over the monitor you created. Click the trash icon that appear on the right of the monitor to delete the monitor.
+15. In the browser tab with the **Manage Monitors** list, hover over the monitor you created. Click the trash icon that appear on the right of the monitor to delete the monitor.
