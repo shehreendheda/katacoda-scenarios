@@ -2,9 +2,7 @@ Based on how the tags have been assigned, you can search the data using the tags
 
 Let's explore the data for the Storedog app.
 
-1. In a new browser window/tab, use the login credentials provided in the terminal to log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you for this activity.
-
-    Note: If the credentials are not displayed in the terminal, run the command `creds`{{execute}} in the terminal.
+1. In a new browser window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com.
 
 2. If you have previously used **Logs** in the Datadog organization you are working in, you can move on to the next step. 
 
