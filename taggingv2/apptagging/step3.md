@@ -74,16 +74,6 @@ With the help of tags, you can create <a href="https://docs.datadoghq.com/monito
     
     Click **Save** to save the monitor. 
 
-10. Select **Manage Monitors** above the monitor to navigate to the monitors list.
+10. Click the command `grademe`{{execute}} to receive credit for creating the monitor.
 
-11. On the left of the monitors list, expand the different facets. Notice that **Service**, **Tag**, **Env**, and **Team** have options related to the tags you assigned to the monitor.
-
-12. In a new browser tab, navigate to <a href="https://app.datadoghq.com/apm/services" target="_blank">**APM** > **Services**</a>. Select **discounts-service**.
-
-13. Above the graphs, you will see a **Monitor** banner. Click the banner to view the list of monitors associated with and suggested for the service. 
-
-    Notice that the monitor you created is listed. Because of the tags you assigned to the monitor in step 7, the monitor is linked to the respective APM service pages.
-
-14. Click the command `grademe`{{execute}} to receive credit for creating the monitor.
-
-15. In the browser tab with the **Manage Monitors** list, hover over the monitor you created. Click the trash icon that appear on the right of the monitor to delete the monitor.
+11. In the upper right of the monitor details, click the wheel icon. Select **Delete** to remove the monitor. 

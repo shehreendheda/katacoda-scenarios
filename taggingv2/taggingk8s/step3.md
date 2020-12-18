@@ -42,6 +42,6 @@
 
 8. Click the command `grademe`{{execute}} to receive credit for creating the dashboard. 
 
-    Note: If you created the dashboard but received a grade of zero, make sure that the dashboard name is `Kubernetes Deployment`{{copy}}. To edit the name, click the down arrow next to the name then click Edit. Enter the correct name and click Save. Click the `grademe` command above again.
+    Note: If you created the dashboard but received a grade of zero, make sure that the dashboard name is `Kubernetes Deployment`{{copy}}. To edit the name, click the down arrow next to the name, then click Edit. Enter the correct name and click Save. Click the `grademe` command above again.
 
 9. In the upper right of the dashboard, click the wheel icon. Select **Delete dashboard** to remove the dashboard.
