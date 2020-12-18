@@ -2,9 +2,7 @@ In the terminal on the right, the Datadog Agent and a custom apache service have
 
 Let's log in to Datadog to see the logs that are being collected by the Datadog Agent for the apache service and create a <a href="https://docs.datadoghq.com/logs/processing/pipelines/" target="_blank">pipeline</a> to process the logs.
 
-1. In a new browser window/tab, use the log in credentials provided in the terminal to log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com.
-
-    Note: If the credentials are not displayed in the terminal, run the command `creds`{{execute}} in the terminal.
+1. In a new browser window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com.
 
 2. If you've previously used **Logs** in the Datadog organization you are working in, move on to the next step. 
 
