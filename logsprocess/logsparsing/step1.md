@@ -12,7 +12,7 @@ Datadog automatically parses JSON-formatted logs to extract attributes. For logs
 
 4. Click **New Pipeline** in the upper right. 
 
-    Enter `source:nginx`{{copy}} for **Filter**.
+    Enter `source:nginx`{{copy}} for **Filter**. Note: The list of logs in the New Pipeline window will disappear if logs with the `source:nginx` tag were not recently collected in the Datadog organization. That's expected.  
 
     Enter `nginx - custom`{{copy}} for **Name**.
 

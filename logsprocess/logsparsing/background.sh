@@ -8,8 +8,6 @@ statuscheck apikey
 
 DD_API_KEY=`cat /root/.dd_api_key`
 
-wall -n ${DD_API_KEY}
-
 docker run -d --name datadog-agent \
     -e DD_API_KEY=${DD_API_KEY} \
     -e DD_LOGS_ENABLED=true \
