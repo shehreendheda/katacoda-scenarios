@@ -14,3 +14,4 @@ docker run -d --name datadog-agent \
 
 docker run --name flog -d -it --rm mingrammer/flog -f apache_combined -l -n 100000 -d 0.2
 
+prepenvironment

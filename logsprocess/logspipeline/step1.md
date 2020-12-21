@@ -1,6 +1,6 @@
-In the terminal on the right, the Datadog Agent and a custom apache service have been brought online in a Docker environment. 
+In the terminal on the right, the Datadog Agent and a custom Apache service have been brought online in a Docker environment. 
 
-Let's log in to Datadog to see the logs that are being collected by the Datadog Agent for the apache service and create a <a href="https://docs.datadoghq.com/logs/processing/pipelines/" target="_blank">pipeline</a> to process the logs.
+Let's log in to Datadog to see the logs that are being collected by the Datadog Agent for the Apache service and create a <a href="https://docs.datadoghq.com/logs/processing/pipelines/" target="_blank">pipeline</a> to process the logs.
 
 1. In a new browser window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com.
 
@@ -10,7 +10,7 @@ Let's log in to Datadog to see the logs that are being collected by the Datadog 
 
 3. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>.
 
-    In the search field above the Log List, enter `env:logspipeline`{{copy}} to make sure you are only seeing logs from this environments. 
+    In the search field above the Log List, enter `env:logspipeline`{{copy}} to make sure you are only seeing logs from this environment. 
 
     ![logs-raw](logspipeline/assets/logs-raw2.png)
 

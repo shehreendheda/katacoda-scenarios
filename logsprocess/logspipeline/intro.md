@@ -1,4 +1,4 @@
-In this activity, you will create a custom pipeline with mutliple processors to process logs from an apache service using the following steps:
+In this activity, you will create a custom pipeline with mutliiple processors to process logs from an apache service using the following steps:
 
 1. Creating the Custom Pipeline
 2. Adding a Grok Parser

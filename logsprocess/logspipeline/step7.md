@@ -8,7 +8,7 @@ And the **Event Attributes** listed in the processed logs should look like the f
 
 Let's install the Apache Integration Pipeline and take a look at its processed logs.
 
-1.  Click the command `flog-with-source-tag`{{execute}} to restart the Docker container for custom apache service with a source tag.
+1.  Click the command `flog-with-source-tag`{{execute}} to restart the Docker container for custom Apache service with a source tag.
 
     Adding `--label com.datadoghq.ad.logs='[{"source": "apache", "service": "apache"}]'` when running the flog docker container assigns the tags `source:apache` and `service:apache` to the logs. 
 
@@ -18,7 +18,7 @@ Let's install the Apache Integration Pipeline and take a look at its processed l
 
     Note: In Datadog Agent 6.8+, the `source` and `service` default to the `short_image` tag value, which is why the flog logs so far have the tags `source:flog` and `service:flog`. If the `short_image` tag value matches an Integration name, such as for the `agent`, it is not necessary to set these values because Datadog's Autodiscovery will recognize the `source` tag value and use the corresponding Integration. Because `flog` is not an Integration name, you have to update the `source` tag using `labels` to make sure that the Apache Intergration Pipeline is installed and is used to process the logs.
 
-2. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs. Clear the search field and enter `env:logspipeline`{{copy}} to make sure you are only seeing logs from this environments.
+2. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs. Clear the search field and enter `env:logspipeline`{{copy}} to make sure you are only seeing logs from this environment.
 
     ![logs-apache-source](logspipeline/assets/logs-apache-source2.png)
 
@@ -44,7 +44,7 @@ Let's install the Apache Integration Pipeline and take a look at its processed l
 
 5. Repeat step 4 for the other processors in the list.
 
-Overall, you were able to build a custom apache pipeline that is very similar to the Apache Integration Pipeline. Although, you can use the Integration Pipeline to successfully process logs from the live source, this may not always be the case. You can have custom log sources that do not have a matching Integration Pipeline. Or, you can have custom logs coming from a source that has an Intgeration Pipeline, but the log details don't quite match the Integration Pipelines. In the latter case, you can clone the Integration Pipeline and modify it as needed.
+Overall, you were able to build a custom Apache pipeline that is very similar to the Apache Integration Pipeline. Although, you can use the Integration Pipeline to successfully process logs from the live source, this may not always be the case. You can have custom log sources that do not have a matching Integration Pipeline. Or, you can have custom logs coming from a source that has an Integration Pipeline, but the log details don't quite match the Integration Pipelines. In the latter case, you can clone the Integration Pipeline and modify it as needed.
 
 As optional exercises, you can try the following:
 * Add a Date Remapper to your custom pipeline. But, remember that you named the date attribute `date` (while it is named `date_access` in the Apache pipeline), so you'll have to remap the attribute `date` to be the official log date.

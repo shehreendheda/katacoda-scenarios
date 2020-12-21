@@ -55,7 +55,7 @@ With the rule written, let's create the Grok Parser.
 
     `rule %{ip:network.client.ip} %{notSpace:http.ident:nullIf("-")} %{notSpace:http.auth:nullIf("-")} \[%{date("dd/MMM/yyyy:HH:mm:ss Z"):date}\] "%{word:http.method} %{notSpace:http.url} HTTP\/%{number:http.version}" %{number:http.status_code} %{integer:network.bytes_written} "%{notSpace:http.referer}" "%{data:http.useragent}"`{{copy}}
 
-    Notice that the rule matches the sample and extract the attributes.
+    Notice that the rule matches the sample and extracts the attributes.
 
 5. Enter `Using custom rule`{{copy}} for **Name the processor** and click **Save**.
 
