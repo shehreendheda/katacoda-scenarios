@@ -2,7 +2,7 @@
 
 wall -n "testing"
 
-wall -n "${DD_API_KEY"
+wall -n "${DD_API_KEY}"
 
 curl -s https://datadoghq.dev/katacodalabtools/r?raw=true|bash
 
