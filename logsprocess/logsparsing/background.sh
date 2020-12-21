@@ -18,6 +18,6 @@ docker run -d --name datadog-agent \
     -v /proc/:/host/proc/:ro \
     -v /opt/datadog-agent/run:/opt/datadog-agent/run:rw \
     -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
-    datadog/agent:latest
+    datadog/agent:7.21.0
 
 statusupdate complete
