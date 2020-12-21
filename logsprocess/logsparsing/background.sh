@@ -1,10 +1,14 @@
 #!/bin/bash
 
+wall -n "testing"
+
+wall -n "${DD_API_KEY"
+
 curl -s https://datadoghq.dev/katacodalabtools/r?raw=true|bash
 
 statusupdate tools
 
-wall -n "${DD_API_KEY}"
+
 
 docker run -d --name datadog-agent \
     -e DD_API_KEY=${DD_API_KEY} \
