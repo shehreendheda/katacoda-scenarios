@@ -28,7 +28,7 @@ While you wait for the environment to be prepared, you can explore the assigned 
 
     The `service` tags for the `store-frontend`, `store-frontend-cache`, and `store-frontend-sqlite` are assigned here. (To learn more, view the <a href="https://docs.datadoghq.com/tracing/setup/ruby/#rails" target="_blank">Tracing Ruby Applications</a> documentation.)
 
-3. After you see the `Provisioning Complete` message in the terminal, click the **storedog** tab on the right to view the Storedog app. 
+4. After you see the `Provisioning Complete` message in the terminal, click the **storedog** tab on the right to view the Storedog app. 
 
     As you can see, the app includes a home page, product pages, advertisements, discounts, and a cart.
 

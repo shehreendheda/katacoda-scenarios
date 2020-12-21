@@ -1,79 +1,53 @@
-With the help of tags, you can create <a href="https://docs.datadoghq.com/monitors/notifications/?tab=is_alertis_warning" target="_blank">targeted alerts</a> so specific teams or team members can be notified if a part of their workflow needs attention.
+Tags can also act as Facets for various lists throughout Datadog. Let's create two synthetic tests for the Storedog home page to understand tags as facets.  
 
-1. In Datadog, navigate to <a href="https://app.datadoghq.com/monitors#/create" target="_datadog">**Monitors** > **New Monitor**</a> to start creating a new monitor.
+1. In Datadog, navigate to <a href="https://app.datadoghq.com/synthetics/list" target="_datadog">**UX Monitoring** > **Synthetic Tests**</a>.
 
-2. Select **Metric** from the list of monitors.
+2. Click **Get Started** in the top right, and select **New API Test**. 
 
-3. In **Choose the detection method**, select **Threshold Alert**.
+3. For **Choose Request Type**, select **HTTP**.
 
-4. Expand **Define the metric**. 
+4. Under **Define request**, fill in each field as shown below. 
 
-    For **Metric**, select  `trace.flask.request.duration`. 
-    
-    For **from**, select `env:ruby-shop` to filter by the app environment.
+    **Note**: For **URL**, enter the custom URL for your Storedog home page: `https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/`{{copy}} 
 
-    Below the metric, change `Single Alert` to `Multi Alert` and select `service` for **(select group)**. 
+    ![syn-makerequest](apptagging/assets/syn-makerequest2.png)
 
-    You will see that `service` automatically populates the **avg by** (group by) field for the metric. 
+5. Expand **Define assertions**. Click **New Assertion** and fill in the fields as follows: **When `response time` `is less than` `10`ms**.
 
-    ![alert-metric](apptagging/assets/alert-metric.png) 
+6. Expand **Specify test frequency** and select **1w**.
 
-5. Expand **Set the alert condition**. 
+5. Expand **Define alert conditions** and fill in each field as follows: **An alert is triggered if your test fails for `1` minutes from any `1` of 5 locations. Retry  `1` time before location is marked as failed**.
 
-    For **Alert Threshold**, enter 5. 
-    
-    Leave all other fields as is. 
+6. Expand **Notify your team** the section. You can leave this section blank, or you can enter a message and select to receive notifications.
 
-    ![alert-condition](apptagging/assets/alert-condition.png)
+7. Click **Create Test**. You will be redirected to the new Synthethic test. 
 
-6. Expand **Say what's happening**.
+    You will see a message near the top that you may need to refresh the page after a moment once data starts coming in. This is expected. 
 
-    In the **Example Monitor Name** field, enter `The {{service.name}} is running slowly!!`{{copy}}.
-    
-    In **Example Monitor Message**, enter `The {{service.name}} is running slowly!! Contact: Email - @{{service.name}}@mycompany.com, @<YOUR EMAIL ADDRESS> Slack - @slack-{{service.name}}`{{copy}} 
-    
-    Assume at Storedog, the email addresses and slack channels for the advertisements and discounts engineering teams are named for their respective services. If either of the services triggers an alert, `{{service.name}}` will be populated with the appropriate service name and that team will be notified. 
-    
-    In a later step, you will send a Test Notification with the `{{service.name}}` populated. If you would like to receive the notification, replace `<YOUR EMAIL ADDRESS>` in the monitor message with your email address. Make sure to leave `@` in front of your email address. (If you do not want to enter your email address, that's alright. A screenshot of an example test notification is included below.)
-    
-    For **Tags**, enter the following tags. Note: After entering each tap, press enter/return.
-    
-    `env:ruby-shop`{{copy}}
-    
-    `service:discounts-service`{{copy}}
-    
-    `service:advertisements-service`{{copy}}
-    
-    `team:discounts`{{copy}}
-    
-    `team:advertisements`{{copy}}. 
-    
-    ![alert-message](apptagging/assets/alert-message.png)
+    Under **Properties**, notice the two tags you assigned to the test.
 
-7. Expand **Notify your team**. The field is already populated with the `@` options in **Say what's happening**. (`@<YOUR EMAIL ADDRESS>` will be included if you chose to enter an actual email address.)
+8. Above the test name, click **Synthetics** to navigate to the test list.
 
-    ![alert-notifications](apptagging/assets/alert-notifications.png) 
-    
-8. Before you save the monitor, let's see an example alert.
+9. On the left, expand the **TAGS** facet. You will see menus for **service** and **team**, which were created because you assigned the tag to the synthetic test.
 
-    In the bottom right, click **Test Notifications**. 
+10. In the search field above the list of facets, enter `tag:service:store-frontend`{{copy}}. You will see that you can still see the test you created in the list.
 
-    In the pop-up window that appears, select the **Alert** tile and click **Run Test**. 
+11. Click **New Test** in the upper right and follow steps 2 - 7 above with the following changes. In **Define request**, name the new test `Test on Storedog Home Page 2` and do **not** assign the `service:store-frontend` tag.
 
-    A message appears in the window: `Test notifications sent with group $service:<service.name>`. 
-    
-    ![alert-tested](apptagging/assets/alert-tested.png)
+12. Navigate to the Synthetics list and view the **ENV** and **TAGS** facet. 
 
-    If you entered your email address in step 7, check your email account for an email with the subject `[Monitor Alert] Triggered: [TEST] The <service.name> is running slowly!!`. Open the email to view its details. You will see that the `{{service.name}}` has been replaced with the actual service name throughout the email.
+    Notice that there are 2 tests for `env:ruby-shop` and `team:frontend`, but only 1 test for `service:store-frontend`.
 
-    ![alert-testemail](apptagging/assets/alert-testemail.png)
-    
-9. In Datadog, close the Test Notification window. 
+13. In the search field above the list of facets, enter `tag:service:store-frontend`{{copy}}. Only the `Test on Storedog Home Page` test appears in the list.
 
-    Delete your email address from the **Notify your team** field. 
-    
-    Click **Save** to save the monitor. 
+    Assigning relevant tags ensures that you can find all tests associated with each tag and connects your tests to related data throughout Datadog.
 
-10. Click the command `grademe`{{execute}} to receive credit for creating the monitor.
+14. Navigate to <a href="https://app.datadoghq.com/apm/services" target="_datadog">**APM** > **Services**</a>. Select **store-frontend**.
 
-11. In the upper right of the monitor details, click the wheel icon. Select **Delete** to remove the monitor. 
+15. Click the Monitor banner above the graphs. All monitors (including budget alerts on SLOs) and synthetic tests that have the `env:ruby-shop` and `service:store-frontend` tags are listed in the panel that opens.
+
+    In general, all monitor or synthetic tests that have tags for a specific `env` and `service` will be linked to the corresponding APM Service page. Similarly, all monitors and synthetic tests that have tags for a specific `env`, `service`, and `resource_name` will be linked to the corresponding APM Service and Resource pages.
+
+    Notice only the first synthetic test you created is listed under **Synthetics Tests** because it was assigned the `service:store-frontend` tag.
+
+16. Navigate to the <a href="https://app.datadoghq.com/synthetics/list" target="_datadog">**UX Monitoring** > **Synthetic Tests**</a>. Select the tests you created and delete the tests. (This is to avoid unnecessary pings to the lab environment after you complete the lab.)
