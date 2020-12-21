@@ -6,6 +6,8 @@ Grok syntax provides an easier way to parse logs than pure regular expressions. 
 
 - <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=filter#matcher-and-filter" target="_blank">Filter</a> (optional) -  a post-processor that transforms the element
 
+The parsing rule for a log should account for all characters, spaces, and strings in the log.
+
 Let's start with a simple example of using matchers `%{matcher:attribute}` to parse the following log.
 
 Log 1 - `John 12312 connected in Datadog`
@@ -24,7 +26,7 @@ Log 1 - `John 12312 connected in Datadog`
     
     The matcher `word` from the <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=matcher#matcher-and-filter" target="_blank">Matchers</a> table is a good fit for `user.name`. The matcher syntax is `%{word:user.name}`. 
 
-    To complete the rule and make sure that all logs starting with `user.name` are parsed using the rule, you should add `.*` at the end: `%{word:user.name}.*`.
+    To complete the rule and make sure that all logs starting with `user.name` are parsed using the rule, you should add `.*` at the end: `%{word:user.name}.*`. Without `.*`, the rule would only match a log with the structure `user.name`. With `.*`, the rule match any log with the structure `user.namexxxx` where xxxx is any string of characters and spaces.
 
     In the **Define parsing rules** field of the Grok Parser, copy and paste the rule: `rule_1 %{word:user.name}.*`{{copy}}.
 

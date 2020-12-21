@@ -1,15 +1,19 @@
 #!/bin/bash
 
-while true
-do
-	curl -X GET 'http://localhost:8080/think/?subject=technology'
-    sleep 5
-    curl -X GET 'http://localhost:8080/think/?subject=religion'
-    sleep 5
-    curl -X GET 'http://localhost:8080/think/?subject=war'
-    sleep 5
-    curl -X GET 'http://localhost:8080/think/?subject=work'
-    sleep 5
-    curl -X GET 'http://localhost:8080/think/?subject=music'
-    sleep 5
-done
+curl -s https://datadoghq.dev/katacodalabtools/r?raw=true|bash
+
+statusupdate tools
+
+docker run -d --name datadog-agent \
+    -e DD_API_KEY=${DD_API_KEY} \
+    -e DD_LOGS_ENABLED=true \
+    -e DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true \
+    -e DD_CONTAINER_EXCLUDE_LOGS="image:datadog/agent" \
+    -e DD_ENV="logspipeline" \
+    -v /var/run/docker.sock:/var/run/docker.sock:ro \
+    -v /proc/:/host/proc/:ro \
+    -v /opt/datadog-agent/run:/opt/datadog-agent/run:rw \
+    -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
+    datadog/agent:latest
+
+statusupdate complete

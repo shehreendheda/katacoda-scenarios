@@ -13,7 +13,9 @@ The filter accounts for the following:
 | quotingStr | Defines quotes, replacing the default quotes detection: `<>`, `""`, `''` |
 | delimiter | Defines the separator between the different key values pairs (e.g. <code>&#124;</code> is the delimiter in `key1=value1`<code>&#124;</code>`key2=value2`). Defaults to `(normal space)` , `,` and `;` |
 
-Let's use the key-value filter to create rules for the following logs.
+The %{MATCHER:EXTRACT:FILTER} syntax for key-value pairs is `%{data::keyvalue([separatorStr[, characterWhiteList[, quotingStr[, delimiter]]]])}` (when no destination attribute for EXTRACT is included). This syntax looks complex but can be simple depending on the log. For example, the key-value pair `user:jane` only has the separatorStr `:`, so the syntax is `%{data::keyvalue(":")`.
+
+Let's use this syntax to create rules for the following key-value pair logs.
 
 Log 3 - `user=john action=connection app=datadog page=logs`
 
@@ -25,7 +27,7 @@ Log 5 -  `url=https://app.datadoghq.com/event/stream user=john`
 
 2. Clear the **Log samples** field. Then, copy and paste the log: `user=john action=connection app=datadog page=logs`{{copy}}.
 
-    The `key-value` filter defaults to a separatorStr `=` and delimiter `(normal space)`, so you can use the syntax `%{data::keyvalue}` for the rule.
+    The `key-value` filter defaults to a separatorStr `=` and delimiter `(normal space)`, so you can use the syntax `%{data::keyvalue}` for the rule. That is, you don't need to explicitly list the `=` or `(normal space)` in the `key-value` filter.
     
     Clear the **Define parsing rules** field. Then, copy and paste the rule: `rule_3 %{data::keyvalue}`{{copy}}.
 

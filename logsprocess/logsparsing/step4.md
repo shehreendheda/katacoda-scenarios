@@ -1,4 +1,4 @@
-You just listed multiple log samples to the same Grok Parser. You can also list multiple rules in the same Grok Parser. Let's create a Grok Parser for the following log samples. 
+You just listed multiple log samples in the same Grok Parser. You can also list multiple rules in the same Grok Parser. Let's create a Grok Parser for the following log samples. 
 
 Logs - 
 ``` 

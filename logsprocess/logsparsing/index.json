@@ -5,7 +5,9 @@
   "difficulty": "Intermediate",
   "details": {
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "courseData": "background.sh"
     },
     "steps": [
       {
@@ -39,8 +41,8 @@
       {
         "title": "Automatic Parsing in Datadog",
         "text": "step8.md",
-        "code": "foreground.sh",
-        "courseData": "background.sh"
+        "code": "foreground8.sh",
+        "courseData": "background8.sh"
       }
     ],
     "finish": {

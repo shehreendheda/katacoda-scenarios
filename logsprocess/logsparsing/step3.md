@@ -20,7 +20,7 @@ Log 2b - `John connected to the instance i-023vseq123`
 
     `instance.name` &rarr; `%{notSpace:instance.name}`
     
-    The matcher `notSpace` matches any string value until the next space. The instance name is a collection of characters including alphabets, numbers, and a dash. The `notSpace` matcher will allow for any instance name to be extracted.
+    The matcher `notSpace` matches any string value until the next space. The instance name is a collection of characters including letters, numbers, and a dash. The `notSpace` matcher will allow for any instance name to be extracted.
 
     Putting together the matchers listed above and the text that needs to be hard-coded for these logs, the rule is `%{word:user.name} %{word:user.familyname} connected to the instance %{notSpace:instance.name}.*`. 
 
@@ -30,7 +30,7 @@ Log 2b - `John connected to the instance i-023vseq123`
     
     ![log2a](logsparsing/assets/log2a.png)
 
-4. Log 2b is variation of Log 2a that does not include the `user.familyname` attribute. Let's create a rule that takes into account logs with look like Log 2a and Log 2b.
+4. Log 2b is variation of Log 2a that does not include the `user.familyname` attribute. Let's create a rule that parses logs that look like Log 2a and Log 2b.
 
     Click **Add** below the **Log samples** field. Copy and paste this log into the new field: `John connected to the instance i-02312aavseq123`{{copy}}
     
@@ -44,4 +44,4 @@ Log 2b - `John connected to the instance i-023vseq123`
 
     ![log2b](logsparsing/assets/log2b_2.png)
 
-    Notice that both log samples match the rule. This indicated by the label **Match** next to both log samples. You can click each log samples to see that extracted attributes below the parsing rule.
+    Notice that both log samples match the rule. This is indicated by the label **Match** next to both log samples. You can click each log sample to see the list of extracted attributes below the parsing rule.
