@@ -8,7 +8,9 @@ The lab environment for this activity is being prepared in the terminal on the r
 
 2. If you've previously used **Logs** in the Datadog organization you are working in, move on to the next step. 
 
-    If you are working in a new Datadog organization, you have to first enable **Logs** before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Getting Started** again.
+    If you are working in a new Datadog organization, you may need to first enable **Logs** before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a>. Click **Getting Started**, then click **Getting Started** again. If you see the Logs List, move on to the next step.
+    
+    If you don't see the Logs List. Wait a minute or so while Datadog's Autodiscovery feature detects that logs are being collected in the organization. Try navigating to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a> again. You may need to repeat until you see the Logs List, then continue.
 
 3. Navigate to <a href="https://app.datadoghq.com/logs/pipelines" target="_datadog">**Logs > Configuration**</a>.
 
