@@ -107,3 +107,5 @@ To help you further with grok parsing logs, Datadog also offers automatic parsin
 Before you continue to the next page, click **Cancel** in the **New Processor** window. Click the blue toggle button on the right of the `nginx - custom` pipeline to disable the pipeline.
 
 ![nginx-custom-disabled](logsparsing/assets/nginx-custom-disabled.png)
+
+If there already is an **Nginx** pipeline installed in the Datadog organization, make sure the blue toggle button on the right of the pipeline is enabled.
