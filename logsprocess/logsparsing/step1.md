@@ -1,5 +1,7 @@
 Datadog automatically parses JSON-formatted logs to extract attributes. For logs with other formats, Datadog has a <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#grok-parser" target="_blank">Grok Parser</a> that can be added to <a href="https://docs.datadoghq.com/logs/processing/pipelines/" target="_blank">Pipelines</a> to help extract attributes. Let's take a look at the Grok Parser.
 
+The lab environment for this activity is being prepared in the terminal on the right. When the environment is ready, you will see the message `Provisioning Complete` in the terminal along with your Datadog login credentials.
+
 1. In a new browser window/tab, use the login credentials provided in the terminal to log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you for this activity.
 
     Note: If the credentials are not displayed in the terminal, run the command `creds`{{execute}} in the terminal.
