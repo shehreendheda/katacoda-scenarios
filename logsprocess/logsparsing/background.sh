@@ -13,7 +13,7 @@ docker run -d --name datadog-agent \
     -e DD_LOGS_ENABLED=true \
     -e DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true \
     -e DD_CONTAINER_EXCLUDE_LOGS="image:datadog/agent" \
-    -e DD_ENV="logspipeline" \
+    -e DD_ENV="logparsing" \
     -v /var/run/docker.sock:/var/run/docker.sock:ro \
     -v /proc/:/host/proc/:ro \
     -v /opt/datadog-agent/run:/opt/datadog-agent/run:rw \

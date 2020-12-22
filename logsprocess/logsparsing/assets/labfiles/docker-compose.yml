@@ -8,6 +8,7 @@ services:
       - DD_HOSTNAME=datadog
       - DD_LOGS_ENABLED=true
       - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true
+      - DD_TAGS='env:logparsing'
     ports:
       - 10520:10520
     volumes:
