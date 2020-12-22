@@ -86,12 +86,10 @@ Grok Parsers in OOTB Integration Pipelines, Parse My Logs, and Patterns are grea
 
     Notice that the **Event Attributes** are now listed. Compared to the logs processed by the Nginx Integration Pipeline, this list of Event Attributes is simple. This is because the pipeline that processed this log has only the Grok Parser while the Integration Pipeline also includes other processors that further process the attributes extracted by the Grok Parser. Extracting attributes from the log message is usually a first step in log processing.
 
-13. In the browser tab with the Pipelines list, hover over the **nginx - custom**  pipeline. Click the toggle switch to disable the pipeline or click the trash icon to delete the pipeline.
+13. Click the command `grademe`{{execute}} to receive credit for creating the **nginx - custom** pipeline.
+
+14. In the browser tab with the Pipelines list, hover over the **nginx - custom**  pipeline. Click the toggle switch to disable the pipeline or click the trash icon to delete the pipeline.
 
     On the right of the **Nginx** pipeline, click the toggle switch to enable the pipeline. If another lab on learn.datadoghq.com uses the **Nginx** Integration Pipeline, this will make sure that this pipeline is enabled and used for processing the logs in that lab.  
 
 In general, Datadog provides these automatic parsing features to help you get started with Grok parsing your logs. If needed, you can modify the log samples and parsing rules created from these features to account for all possible log patterns from your log source.
-
-#### Assessment
-
-To receive a grade for this activity, click `grademe`{{execute}}.

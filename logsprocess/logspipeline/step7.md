@@ -44,13 +44,10 @@ Let's install the Apache Integration Pipeline and take a look at its processed l
 
 5. Repeat step 4 for the other processors in the list.
 
+6. Click the command `grademe`{{execute}} to receive credit for creating the custom pipeline.
+
 Overall, you were able to build a custom Apache pipeline that is very similar to the Apache Integration Pipeline. Although, you can use the Integration Pipeline to successfully process logs from the live source, this may not always be the case. You can have custom log sources that do not have a matching Integration Pipeline. Or, you can have custom logs coming from a source that has an Integration Pipeline, but the log details don't quite match the Integration Pipelines. In the latter case, you can clone the Integration Pipeline and modify it as needed.
 
 As optional exercises, you can try the following:
 * Add a Date Remapper to your custom pipeline. But, remember that you named the date attribute `date` (while it is named `date_access` in the Apache pipeline), so you'll have to remap the attribute `date` to be the official log date.
 * Add a <a href="https://app.datadoghq.com/logs/pipelines/standard-attributes" target="_datadog">Standard Attribute</a> for the date attributes that are used for the official log date. <a href="https://docs.datadoghq.com/logs/processing/attributes_naming_convention/" target="_blank">Standard attributes</a> help ensure naming consistency throughout your organization.
-
-#### Assessment
-
-To receive a grade for this activity, click `grademe`{{execute}}.
-
