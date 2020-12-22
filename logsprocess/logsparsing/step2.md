@@ -16,7 +16,7 @@ Log 1 - `John 12312 connected in Datadog`
 
 2. Click the log `John 12312 connected in Datadog`{{copy}} to copy it. Paste it into the **Log samples** field. 
 
-    The structure of this log looks like  `username userid ‘connected in’ application_name`. 
+    The structure of this log looks like  `username userid connected in application_name`. 
 
     The important attributes that need to be extracted from any log like this one are `username`, `userid`, and `application_name`, so a rule is needed to extract each attribute from the log. 
 
@@ -52,7 +52,7 @@ Log 1 - `John 12312 connected in Datadog`
 
 5. To extract the last attribute in the log, `application_name`, you can use the matcher `%{word:application_name}`. 
 
-    Before adding the matcher syntax to the rule, you need to hard code `connected in` into the rule because the structure of the log is `username userid ‘connected in’ application_name`. 
+    Before adding the matcher syntax to the rule, you need to hard code `connected in` into the rule because the structure of the log is `username userid connected in application_name`. 
 
     The rule becomes `%{word:user.name} %{number:user.id} connected in %{word:application_name}.*`. 
 

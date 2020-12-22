@@ -8,7 +8,7 @@ Log 8 - `jenny doe connected on server ABC in development`
 
 2. Clear the **Log samples** field. Then, copy and paste the log: `john id:12345 connected on 11/08/2017 on server XYZ in production`{{copy}} 
 
-    The structure of this log is `user.name user.id 'connected on' connect_date 'on server' server.name 'in' server.env`.
+    The structure of this log is `user.name user.id connected on connect_date on server server.name in server.env`.
 
     You can create helper rules for `user`, `connection`, `server`.
 
@@ -44,9 +44,9 @@ Log 8 - `jenny doe connected on server ABC in development`
 
     Compare the two log samples. 
 
-    Log 7 looks like `user.name user.id 'connected on' connect_date 'on server' server.name 'in' server.env`.
+    Log 7 looks like `user.name user.id connected on connect_date on server server.name in server.env`.
 
-    Log 8 looks like `user.name user.familyname 'connected on server' server.name 'in' server.env`.
+    Log 8 looks like `user.name user.familyname connected on server server.name in server.env`.
 
     Notice the following differences:
     

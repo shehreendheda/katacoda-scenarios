@@ -8,7 +8,7 @@ Log 2b - `John connected to the instance i-023vseq123`
 
 2. Clear the **Log samples** field. Then, copy and paste the log: `John Doe connected to the instance i-02312aavseq123`{{copy}}
 
-    The structure of this log looks like  `user.name user.familyname ‘connected to the instance’ instance.name`.
+    The structure of this log looks like  `user.name user.familyname connected to the instance instance.name`.
 
     Take a look at to the <a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=matcher#matcher-and-filter" target="_blank">Matchers</a> table to find matchers for each of the attributes.
 
