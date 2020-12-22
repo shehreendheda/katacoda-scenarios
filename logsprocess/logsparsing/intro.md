@@ -1,3 +1,3 @@
-In this activity, you'll practice creating custom parsing rules using the Grok Parser for a series of example Nginx logs. Then, you'll use the **Parse my Logs** and **Patterns** features to automatically create parsing rules. Finally, you'll view the Grok Parser in the Nginx Integration Pipeline to see the out-of-the-box (OOTB) solution provided by Datadog.
+In this activity, you'll practice creating custom parsing rules using the Grok Parser for a series of example Nginx logs. Then, you'll use the Parse my Logs and Patterns features to automatically create parsing rules. Finally, you'll view the Grok Parser in the Nginx Integration Pipeline to see the out-of-the-box (OOTB) solution provided by Datadog.
 
 When you are ready to continue, click **Start Scenario**.
