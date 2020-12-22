@@ -18,7 +18,7 @@ Let's install the Apache Integration Pipeline and take a look at its processed l
 
     Note: In Datadog Agent 6.8+, the `source` and `service` default to the `short_image` tag value, which is why the flog logs so far have the tags `source:flog` and `service:flog`. If the `short_image` tag value matches an Integration name, such as for the `agent`, it is not necessary to set these values because Datadog's Autodiscovery will recognize the `source` tag value and use the corresponding Integration. Because `flog` is not an Integration name, you have to update the `source` tag using `labels` to make sure that the Apache Intergration Pipeline is installed and is used to process the logs.
 
-2. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs. Clear the search field and enter `env:logspipeline`{{copy}} to make sure you are only seeing logs from this environment.
+2. In the **Logs** browser tab, close the log details if it is open. Scroll to the top of the list for the most recent logs. Clear the search field and enter `env:logpipeline`{{copy}} to make sure you are only seeing logs from this environment.
 
     ![logs-apache-source](logspipeline/assets/logs-apache-source2.png)
 

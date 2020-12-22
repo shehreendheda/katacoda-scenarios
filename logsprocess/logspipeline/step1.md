@@ -12,7 +12,7 @@ Let's log in to Datadog to see the logs that are being collected by the Datadog 
 
 3. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>.
 
-    In the search field above the Log List, enter `env:logspipeline`{{copy}} to make sure you are only seeing logs from this environment. 
+    In the search field above the Log List, enter `env:logpipeline`{{copy}} to make sure you are only seeing logs from this environment. 
 
     ![logs-raw](logspipeline/assets/logs-raw2.png)
 
