@@ -6,9 +6,4 @@ statuscheck agentrmed
 
 cd /root/lab-files
 
-cat > apikey.env <<EOL
----
-DD_API_KEY=${DD_API_KEY}
-EOL
-
 docker-compose up
