@@ -6,7 +6,7 @@ statusupdate tools
 
 statuscheck apikey
 
-DD_API_KEY=`cat /root/.dd_api_key`
+DD_API_KEY=$(cat /root/.dd_api_key)
 
 docker run -d --name datadog-agent \
     -e DD_API_KEY=${DD_API_KEY} \
