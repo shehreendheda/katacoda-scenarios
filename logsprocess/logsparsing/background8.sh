@@ -1,9 +1,9 @@
 #!/bin/bash
 
 docker kill datadog-agent
-docker container rm datadog-agent && wall -n $(docker ps -a)
+docker container rm datadog-agent
 
-statusupdate agentkilled
+statusupdate agentrmed
 
 while true
 do
