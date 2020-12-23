@@ -99,16 +99,6 @@
           "file": "labfiles/app/Dockerfile",
           "target": "/root/lab-files/app/",
           "chmod": "+x"
-        },
-        {
-          "file": "labfiles/datadog_agent/Dockerfile",
-          "target": "/root/lab-files/datadog_agent/",
-          "chmod": "+x"
-        },
-        {
-          "file": "labfiles/datadog_agent/training.yaml",
-          "target": "/root/lab-files/datadog_agent/",
-          "chmod": "+x"
         }
       ]
     }

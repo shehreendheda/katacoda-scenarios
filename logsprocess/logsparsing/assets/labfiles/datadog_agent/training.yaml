@@ -1,6 +1,0 @@
-logs:
-  - type: tcp
-    port: 10520
-    service: testtcp
-    source: training
-    tags: course:logsparsing
