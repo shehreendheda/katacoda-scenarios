@@ -2,7 +2,7 @@
 
 #while [ ! -f /root/lab-files/docker-compose.yml ]; do sleep 1; done
 
-statuscheck agentrmed
+statuscheck envreset
 
 cd /root/lab-files
 

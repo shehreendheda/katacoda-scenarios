@@ -3,7 +3,7 @@
 docker kill datadog-agent
 docker container rm datadog-agent
 
-statusupdate agentrmed
+statusupdate envreset
 
 while true
 do
