@@ -4,7 +4,7 @@ Grok Parsers in OOTB Integration Pipelines, Parse My Logs, and Patterns are grea
 
     ![nginx_ready](logsparsing/assets/nginx_ready.gif)
 
-2. Navigate to the <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. 
+2. Navigate to the <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a>. 
 
     The Logs List should still be filtered by `env:logparsing` so that you are only seeing logs for the app environment. Enter `env:logparsing`{{copy}} in the search field if it is not listed.
 
