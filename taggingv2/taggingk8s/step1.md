@@ -1,4 +1,6 @@
-In the terminal on the right, the Kubernetes deployment for this activity is being brought online. This may take up to 2 minutes. The Datadog Agent is run as a DaemonSet to ensure that the Agent is deployed on all nodes. Using Autodiscovery, Datadog is able to detect that the deployment uses Kubernetes and Docker, so Datadog will install the Kubernetes and Docker Integrations for you as data starts coming in. 
+In the terminal on the right, the Kubernetes deployment for this activity is being brought online. This may take up to 2 minutes. When the deployment is created, you will see the message `Provisioning Complete` in the terminal along with your Datadog login credentials. 
+
+The Datadog Agent is run as a DaemonSet to ensure that the Agent is deployed on all nodes. Using Autodiscovery, Datadog is able to detect that the deployment uses Kubernetes and Docker, so Datadog will install the Kubernetes and Docker Integrations for you as data starts coming in. 
 
 In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for the deployment. The datadog.yaml file is the datadog agent configuration file, and the lotsofpods.yaml file defines the number and details of the pods that are being brought online.
 
