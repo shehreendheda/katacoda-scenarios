@@ -12,9 +12,9 @@
     },
     {
       "pathway_id": "datadog/logsintrov2",
-      "course_id": "managelogs",
-      "id": "managelogs",
-      "title": "Getting Started with Log Management",
+      "course_id": "managelogs2",
+      "id": "managelogs2",
+      "title": "Log Querying and Analytics",
       "description": "Based on Storedog APP"
     },
     {
