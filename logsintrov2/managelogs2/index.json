@@ -1,6 +1,6 @@
 {
-  "title": "Getting Started with Log Management",
-  "description": "Intro to log management in Datadog",
+  "title": "Log Querying and Analytics",
+  "description": "Intro to log querying and analytics in Datadog",
   "time": "20 minutes",
   "difficulty": "Beginner",
   "details": {
