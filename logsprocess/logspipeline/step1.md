@@ -6,17 +6,17 @@ Let's log in to Datadog to see the logs that are being collected by the Datadog 
 
     Note: If the credentials are not displayed in the terminal, run the command `creds`{{execute}} in the terminal.
 
-2. If you've previously used **Logs** in the Datadog organization you are working in, move on to the next step. 
-
-    If you are working in a new Datadog organization, you have to first enable **Logs** before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Getting Started** again.
-
-3. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>.
-
-    In the search field above the Log List, enter `env:logpipeline`{{copy}} to make sure you are only seeing logs from this environment. 
+2. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a>.
 
     ![logs-raw](logspipeline/assets/logs-raw2.png)
 
-4. Click one of the **flog** logs to view the log's details.
+    If you see the Logs List, enter `env:logpipeline`{{copy}} into the search field to see logs from this lab environment. Move on to the next step. 
+
+    If you see the Getting Started prompt, you need to first enable Logs before you can continue. Click **Getting Started**, then click **Getting Started** again. If you see the Logs List, enter `env:logpipeline`{{copy}} into the search field to see logs from this lab environment. Move on to the next step.
+    
+    If you don't see the Logs List, wait a minute or so while Datadog's Autodiscovery feature detects that logs are being collected in the organization. Try navigating to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a> again. You may need to repeat until you see the Logs List. When you see the Logs List, enter `env:logpipeline`{{copy}} into the search field to see logs from this lab environment. Move on to the next step.
+
+3. Click one of the **flog** logs to view the log's details.
 
     ![raw-details](logspipeline/assets/raw-details.png)
 
@@ -28,15 +28,15 @@ Let's log in to Datadog to see the logs that are being collected by the Datadog 
     
     Close the log details panel.
 
-5. In the list of facets on the left, browse and see what facets are available. 
+4. In the list of facets on the left, browse and see what facets are available. 
 
     As you add processors to the pipeline later in the activity, you'll see what facets become available. And, if some facets are not available, you'll learn how to add them. 
 
-6. Open <a href="https://app.datadoghq.com/logs/pipelines" target="_blank">**Logs > Configuration > Pipelines**</a> in a new browser tab.
+5. Open <a href="https://app.datadoghq.com/logs/pipelines" target="_blank">**Logs > Configuration > Pipelines**</a> in a new browser tab.
 
     You'll want to keep the **Logs** browser tab open so that you can see how the log details are processed by each processor you add to the pipeline.
 
-7. Click **New Pipeline** in the upper right to create the new pipeline.
+6. Click **New Pipeline** in the upper right to create the new pipeline.
 
     Enter `service:flog`{{copy}} as the **Filter**.
 
