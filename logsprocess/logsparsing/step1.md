@@ -8,6 +8,8 @@ The lab environment for this activity is being prepared in the terminal on the r
 
 2. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a>.
 
+    ![agentloglist](logsparsing/assets/agentloglist.png)
+
     If you see the Logs List, enter `env:logparsing`{{copy}} into the search field to see logs from this lab environment. Move on to the next step. 
 
     If you see the Getting Started prompt, you need to first enable Logs before you can continue. Click **Getting Started**, then click **Getting Started** again. If you see the Logs List, enter `env:logparsing`{{copy}} into the search field to see logs from this lab environment. Move on to the next step.
