@@ -10,11 +10,11 @@ Let's log in to Datadog to see the logs that are being collected by the Datadog 
 
     ![logs-raw](logspipeline/assets/logs-raw2.png)
 
-    If you see the Logs List, enter `env:logpipeline`{{copy}} into the search field to see logs from this lab environment. Move on to the next step. 
+    If you see the Logs List, enter `env:logspipeline`{{copy}} into the search field to see logs from this lab environment. Move on to the next step. 
 
-    If you see the Getting Started prompt, you need to first enable Logs before you can continue. Click **Getting Started**, then click **Getting Started** again. If you see the Logs List, enter `env:logpipeline`{{copy}} into the search field to see logs from this lab environment. Move on to the next step.
+    If you see the Getting Started prompt, you need to first enable Logs before you can continue. Click **Getting Started**, then click **Getting Started** again. If you see the Logs List, enter `env:logspipeline`{{copy}} into the search field to see logs from this lab environment. Move on to the next step.
     
-    If you don't see the Logs List, wait a minute or so while Datadog's Autodiscovery feature detects that logs are being collected in the organization. Try navigating to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a> again. You may need to repeat until you see the Logs List. When you see the Logs List, enter `env:logpipeline`{{copy}} into the search field to see logs from this lab environment. Move on to the next step.
+    If you don't see the Logs List, wait a minute or so while Datadog's Autodiscovery feature detects that logs are being collected in the organization. Try navigating to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a> again. You may need to repeat until you see the Logs List. When you see the Logs List, enter `env:logspipeline`{{copy}} into the search field to see logs from this lab environment. Move on to the next step.
 
 3. Click one of the **flog** logs to view the log's details.
 
