@@ -26,7 +26,7 @@ In the meantime, let’s explore the datadog.yaml and lotsofpods.yaml files for 
 
 8. In the menu at the top, change **Hosts** to **Containers** and delete `availability-zone` from the **Group hosts by Tags** field.
 
-9. Hover over the containers. In the bottom right, you should see that at least 50 containers running in the deployment. 
+9. Hover over the containers. In the bottom right, you should see that at least 50 containers are running in the deployment. 
 
     ![containers](taggingk8s/assets/containers-running.png)
 
