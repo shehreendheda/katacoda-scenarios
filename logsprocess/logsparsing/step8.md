@@ -86,7 +86,7 @@ Grok Parsers in OOTB Integration Pipelines, Parse My Logs, and Patterns are grea
 
     Notice that the **Event Attributes** are now listed. Compared to the logs processed by the Nginx Integration Pipeline, this list of Event Attributes is simple. This is because the pipeline that processed this log has only the Grok Parser while the Integration Pipeline also includes other processors that further process the attributes extracted by the Grok Parser. Extracting attributes from the log message is usually a first step in log processing.
 
-13. Click the command `grademe`{{execute}} to receive credit for creating the **nginx - custom** pipeline.
+13. Click the **Terminal 2** tab on the right. Then, click this command `grademe`{{execute}} to receive credit for creating the **nginx - custom** pipeline.
 
 14. In the browser tab with the Pipelines list, hover over the **nginx - custom**  pipeline. Click the toggle switch to disable the pipeline or click the trash icon to delete the pipeline.
 
