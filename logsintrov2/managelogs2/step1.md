@@ -47,3 +47,6 @@ Generate Metrics
 
 
 step 13,15&16,18&19,21&22
+
+
+`store-frontend-instrumented-fixed/store-frontend/config/initializers/lograge.rb`{{open}}

@@ -3,6 +3,7 @@
 curl -s https://datadoghq.dev/katacodalabtools/r?raw=true|bash
 
 mv /root/docker-compose-fixed.yml /ecommworkshop/
+mv /root/docker-compose-broken.yml /ecommworkshop/
 
 cd /ecommworkshop
 git fetch
