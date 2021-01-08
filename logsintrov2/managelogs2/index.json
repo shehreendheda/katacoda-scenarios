@@ -34,7 +34,7 @@
           "target": "/root"
         },
         {
-          "file": "docker-compose-fixed.yml",
+          "file": "docker-compose-broken.yml",
           "target": "/root"
         },
         {
