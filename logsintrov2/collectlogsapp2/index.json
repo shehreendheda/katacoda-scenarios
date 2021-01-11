@@ -53,6 +53,10 @@
         {
           "file": "docker-compose-no-logs.yml",
           "target": "/root"
+        },
+        {
+          "file": "frontend-docker-entrypoint.sh",
+          "target": "/root"
         }
       ]
     }
