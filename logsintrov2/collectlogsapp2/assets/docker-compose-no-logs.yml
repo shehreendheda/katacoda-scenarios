@@ -15,7 +15,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /proc/:/host/proc/:ro
       - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
-    labels:  
 # add agent log labels
   discounts:
     environment:
@@ -108,5 +107,4 @@ services:
     environment:
       - POSTGRES_PASSWORD
       - POSTGRES_USER
-    labels:
 # add db log labels
