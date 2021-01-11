@@ -5,7 +5,7 @@ services:
     environment:
       - DD_API_KEY
       - DD_APM_ENABLED=true
-      # add agent env variables
+# add agent env variables
       - DD_PROCESS_AGENT_ENABLED=true
       - DD_DOCKER_LABELS_AS_TAGS={"my.custom.label.team":"team"}
       - DD_TAGS='env:ruby-shop'
@@ -16,7 +16,7 @@ services:
       - /proc/:/host/proc/:ro
       - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
     labels:  
-      # add agent log labels
+# add agent log labels
   discounts:
     environment:
       - FLASK_APP=discounts.py
@@ -27,7 +27,7 @@ services:
       - DD_SERVICE=discounts-service
       - DD_VERSION=1.1
       - DD_AGENT_HOST=agent
-      # add discounts env variables
+# add discounts env variables
       - DD_TRACE_ANALYTICS_ENABLED=true
       - DD_PROFILING_ENABLED=true
     image: "ddtraining/discounts-service-fixed:latest"
@@ -40,7 +40,7 @@ services:
       - agent
       - db
     labels:
-      # add discounts log labels 
+# add discounts log labels 
       com.datadoghq.tags.env: "ruby-shop"
       com.datadoghq.tags.service: "discounts-service"
       com.datadoghq.tags.version: "1.1"
@@ -48,7 +48,7 @@ services:
   frontend:
     environment:
       - DD_AGENT_HOST=agent
-      # add frontend env variables
+# add frontend env variables
       - DD_TRACE_ANALYTICS_ENABLED=true
       - DD_ENV=ruby-shop
       - DD_SERVICE=store-frontend
@@ -69,7 +69,7 @@ services:
       - discounts
       - advertisements
     labels:
-      # add frontend log labels
+# add frontend log labels
       com.datadoghq.tags.env: "ruby-shop"
       com.datadoghq.tags.service: "store-frontend"
       com.datadoghq.tags.version: "1.1"
@@ -84,7 +84,7 @@ services:
       - DD_SERVICE=advertisements-service
       - DD_VERSION=1.1
       - DD_AGENT_HOST=agent
-      # add ads env variables
+# add ads env variables
       - DD_TRACE_ANALYTICS_ENABLED=true
       - DD_PROFILING_ENABLED=true
     image: "ddtraining/advertisements-service:latest"
@@ -97,7 +97,7 @@ services:
       - agent
       - db
     labels:
-      # add ads log labels
+# add ads log labels
       com.datadoghq.tags.env: "ruby-shop"
       com.datadoghq.tags.service: "advertisements-service"
       com.datadoghq.tags.version: "1.1"
@@ -109,4 +109,4 @@ services:
       - POSTGRES_PASSWORD
       - POSTGRES_USER
     labels:
-      # add db log labels
+# add db log labels
