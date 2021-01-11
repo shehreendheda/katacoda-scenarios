@@ -2,6 +2,8 @@
 
 curl -s https://datadoghq.dev/katacodalabtools/r?raw=true|bash
 
+while [ ! -f /root/docker-compose-no-logs.yml ]; do sleep 1; done
+
 mv /root/docker-compose-logs.yml /ecommworkshop/
 mv /root/docker-compose-no-logs.yml /ecommworkshop/
 
