@@ -2,14 +2,22 @@
 
 export POSTGRES_USER=postgres
 export POSTGRES_PASSWORD=postgres
-clear
-while [ ! -f /root/app-files/docker-compose-files/docker-compose-fixed-instrumented.yml ]; do sleep 2; done
-cd /root/app-files/docker-compose-files
-mv /root/docker-compose-no-logs.yml /root/app-files/docker-compose-files/docker-compose-no-logs.yml
-#mv docker-compose-broken-no-apm-instrumentation.yml docker-compose-broken-no-instrumentation.yml
-#rm docker-compose-broken-no-apm-instrumentation.yml
-#sed -i 's/ads-service/advertisements-service/' docker-compose-fixed-instrumented.yml
-clear
+
+statuscheck files
+
+cd /ecommworkshop
+
+sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./ads-service/requirements.txt
+sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./ads-service-fixed/requirements.txt
+sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./discounts-service/requirements.txt
+sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./discounts-service-fixed/requirements.txt
+cp /root/frontend-docker-entrypoint.sh ./store-frontend-instrumented-fixed/docker-entrypoint.sh
+cp /root/frontend-docker-entrypoint.sh ./store-frontend-broken-instrumented/docker-entrypoint.sh
+
 docker-compose -f docker-compose-no-logs.yml up -d
 clear
-prep-environment
+envready
+statusupdate complete
+clear
+
+prepenvironment

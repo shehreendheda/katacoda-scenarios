@@ -42,7 +42,7 @@
           "chmod": "+x"
         },
         {
-          "file": "prep-environment",
+          "file": "envready",
           "target": "/usr/local/bin/",
           "chmod": "+x"
         },
