@@ -6,7 +6,7 @@ In addition, to enable Autodiscovery and the `python` Integration and Integratio
 
 `source:python` will trigger the associated **python** Integration and Integration Pipeline to be used to collect and process the logs.
 
-`service:<SERVICE_NAME>` will correlate the logs for each service with APM Service Page and other associated metric and trace data with the `servcice` tag assigned by the `DD_SERVICE` environment variable.
+`service:<SERVICE_NAME>` will correlate the logs for each service with APM Service Page and other associated metric and trace data with the `service` tag assigned by the `DD_SERVICE` environment variable.
 
 1. Click `docker-compose-no-logs.yml`{{open}}. 
 
@@ -18,7 +18,6 @@ In addition, to enable Autodiscovery and the `python` Integration and Integratio
 3. Click **Copy to Editor** below to add the correct `source` and `service` tags under `discounts`. 
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add discounts log labels">
-       labels:
          com.datadoghq.ad.logs: '[{"source": "python", "service": "discounts-service"}]'</pre>
 
     The **discounts** section of the docker-compose file should now look like the screenshot below. 
@@ -33,12 +32,11 @@ In addition, to enable Autodiscovery and the `python` Integration and Integratio
 5. Click **Copy to Editor** below to add the following logs configuration label under `advertisements`. 
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add ads log labels">
-       labels:
          com.datadoghq.ad.logs: '[{"source": "python", "service": "advertisements-service"}]'</pre>
 
     The **advertisements** section of the docker-compose file should now look like the screenshot below. 
     
-    ![instrumented-adverstisements](collectlogsapp2/assets/instrumented-advertisements.png)
+    ![instrumented-advertisements](collectlogsapp2/assets/instrumented-advertisements.png)
 
     One more step is needed to finalize log collection for these services. These services are dependent on a postgres database. As a final step, let's enable log collection for the db.
 
@@ -50,7 +48,7 @@ In addition, to enable Autodiscovery and the `python` Integration and Integratio
 
 With these steps, the Python/Flask `discounts` and `advertisements` services are configured as needed for Log Management. 
 - The logs will have the correct `source` and `service` tags.
-- The logs will be collected and processed using the `ruby` source Integration and Integration Pipeline.
-- The logs will be correlated with associated traces. 
+- The logs will be processed using the `python` Integration Pipeline.
+- The logs will be correlated with associated traces using the `trace_id` tag. 
 
 Now that log collection by the Datadog Agent is enabled and the Storedog app services are configured, let's explore the logs for the Storedog App.

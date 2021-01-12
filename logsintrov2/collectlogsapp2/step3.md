@@ -23,7 +23,6 @@ The service has a Ruby/Rails framework. For the first step in log collection con
 4. Click **Copy to Editor** below to add the following logs configuration label under `frontend`.
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add frontend log labels">
-       labels:
          com.datadoghq.ad.logs: '[{"source": "ruby", "service": "store-frontend"}]'</pre>
 
     The `frontend` section of the docker-compose file should now look like the screenshot below. 
@@ -33,7 +32,7 @@ The service has a Ruby/Rails framework. For the first step in log collection con
 
 With these steps, the Ruby/Rails `store-frontend` service is configured as needed for Log Management as needed. 
 - The logs will have the correct `source` and `service` tags.
-- The logs will be collected and processed using the `ruby` source Integration and Integration Pipeline.
-- The logs will be correlated with associated traces. 
+- The logs will be processed using the `ruby` Integration Pipeline.
+- The logs will be correlated with associated traces using the `trace_id` tag. 
 
 Let's now complete configuration for the `discounts` and `advertisements` services.
