@@ -1,6 +1,6 @@
 To collect logs from the app, <a href="https://docs.datadoghq.com/agent/docker/log/?tab=containerinstallation" target="_datadog">Log collection</a> has to be enabled through the Datadog Agent so that logs from the application service containers, as well as the Agent container (if desired), can be collected by Datadog. You can also set specific log collection configuration parameters for the agent.
 
-1. Click `docker-compose-files/docker-compose-no-logs.yml`{{open}}.
+1. Click `docker-compose-no-logs.yml`{{open}}.
 
     Let's first enable log collection through the Datadog Agent.
 
