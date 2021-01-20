@@ -29,7 +29,7 @@
   },
   "environment": {
     "uilayout": "editor-terminal", 
-    "uieditorpath": "/root/app-files",
+    "uieditorpath": "/ecommworkshop",
     "hideHiddenFiles": true,
     "exclusionPatterns": ["**/store-frontend/tmp/*", "**/store-frontend/log/*"],
     "showdashboard": true,
