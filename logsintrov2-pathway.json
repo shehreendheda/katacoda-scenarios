@@ -5,17 +5,17 @@
   "courses": [
     {
       "pathway_id": "datadog/logsintrov2",
-      "course_id": "collectlogs",
-      "id": "collectlogs",
-      "title": "Setting up Log Collection and Integration Pipelines",
-      "description": "Using Nginx, Redis, Thinker API and microservice"
+      "course_id": "managelogs",
+      "id": "managelogs",
+      "title": "Working with Logs in Datadog",
+      "description": "Based on base-v1 Storedog APP"
     },
     {
       "pathway_id": "datadog/logsintrov2",
       "course_id": "managelogs2",
       "id": "managelogs2",
-      "title": "Log Querying and Analytics",
-      "description": "Based on Storedog APP"
+      "title": "Working with Logs in Datadog",
+      "description": "Based on versioned Storedog APP"
     },
     {
       "pathway_id": "datadog/logsintrov2",
