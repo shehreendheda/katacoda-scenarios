@@ -14,7 +14,7 @@ sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./discounts-service-fixed/requireme
 cp /root/frontend-docker-entrypoint.sh ./store-frontend-instrumented-fixed/docker-entrypoint.sh
 cp /root/frontend-docker-entrypoint.sh ./store-frontend-broken-instrumented/docker-entrypoint.sh
 
-docker-compose -f docker-compose-broken.yml up -d
+docker-compose -f docker-compose-fixed.yml up -d
 clear
 envready
 statusupdate complete
