@@ -1,6 +1,6 @@
 {
-  "title": "Getting Started with Log Management",
-  "description": "Intro to log management in Datadog",
+  "title": "Log Indexes, Archives, and Data Access",
+  "description": "Quick overview of Log Indexes, Archives, and Data Access",
   "time": "20 minutes",
   "difficulty": "Beginner",
   "details": {
@@ -11,7 +11,20 @@
     },
     "steps": [
       {
-        "text": "step1.md"
+        "text": "step1.md",
+        "title": "Indexes"
+      },
+      {
+        "text": "step2.md",
+        "title": "Archives"
+      },
+      {
+        "text": "step3.md",
+        "title": "Rehydrate from Archives"
+      },
+      {
+        "text": "step4.md",
+        "title": "Data Access"
       }
     ],
     "finish": {

@@ -1,5 +1,5 @@
 {
-  "title": "Introduction to Log Management",
+  "title": "Introduction to Logs V2",
   "description": "",
   "icon": "fa-katacoda",
   "courses": [
@@ -7,8 +7,8 @@
       "pathway_id": "datadog/logsintrov2",
       "course_id": "managelogs",
       "id": "managelogs",
-      "title": "Working with Logs in Datadog",
-      "description": "Based on base-v1 Storedog APP"
+      "title": "Log Indexes, Archives, and Data Access",
+      "description": "Quick overview of Log Indexes, Archives, and Data Access"
     },
     {
       "pathway_id": "datadog/logsintrov2",
