@@ -10,4 +10,7 @@ Inline
 &nbsp;
 
 kc
-<iframe width="560" height="315" src="https://fast.wistia.net/embed/iframe/gwtr59fjku" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="//fast.wistia.net/embed/iframe/gwtr59fjku?videoFoam=true"
+allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed"
+name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen
+oallowfullscreen msallowfullscreen width="640" height="360"></iframe>
