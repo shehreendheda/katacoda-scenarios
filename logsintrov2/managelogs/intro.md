@@ -1,0 +1,4 @@
+With Datadog's Logging without Limits*, you can collect all your logs. But, not all of you logs are of equal value. You'll want some logs on hand at all times, while others can be archived and rehydrated when needed. For cost-saving and organizing log management, Datadog provides features to help you with this area of log management. Datadog also allows you to set role-based read access permissions for your log data.
+*Logging without Limits is a trademark of Datadog, Inc.
+
+This acitivty provides an overview of the Logs Configuration features Indexes, Archives, Rehydrate from Archives, and Data Access.

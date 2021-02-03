@@ -1,7 +1,9 @@
+Not all logs collected in Datadog have equal value. Log <a href="https://docs.datadoghq.com/logs/indexes" target="_blank">Indexes</a> allow you to filter your logs into value groups with different retention periods, quotas, usage monitoring, and billing. 
 
-<iframe src="//fast.wistia.net/embed/iframe/gwtr59fjku?videoFoam=true"
-allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed"
-name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen
-oallowfullscreen msallowfullscreen width="640" height="360"></iframe>
+When you create an Index, you can set an <a href="https://docs.datadoghq.com/logs/indexes/#indexes-filters" target="_blank">index filter</a>, <a href="https://docs.datadoghq.com/logs/indexes#update-log-retention" target="_blank">retention period</a>, and <a href="https://docs.datadoghq.com/logs/indexes#set-daily-quota" target="_blank">daily quota</a>. All logs that match the index filter will flow through the index. When you have multiple indexes, logs flow through the first index in the Indexes list with matching filtering criteria. 
 
-https://wistia.com/support/developers/iframe-embed-options
+To investigate and analyze logs filtered through a specific index, you can select the index under Live Indexes in the Index facet in Log Explorer.
+
+At a more granular level, not all logs flowing through an index may have the same value. You can include <a href="https://docs.datadoghq.com/logs/indexes/#exclusion-filters" target="_blank">exclusion filters</a> in an index so that any logs matching these filters are discarded from the index. Keep in mind, excluded logs still flow through the <a href="https://docs.datadoghq.com/logs/live_tail/" target="_blank">Live Tail</a>, so can be used to <a href="https://docs.datadoghq.com/logs/logs_to_metrics/" target="_blank">generate metrics</a> and can be <a href="https://docs.datadoghq.com/logs/archives/" target="_blank">archived</a>. 
+
+By default, all Datadog organizations have a single index `main` representing a monolithic set of all your logs. You can contact <a href="https://docs.datadoghq.com/help/" target="_blank">Support</a> to have multiple indexes enabled.
