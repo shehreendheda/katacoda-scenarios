@@ -4,7 +4,7 @@ In addition to indexing logs into value groups for organized, cost-efficient log
 
 After logs are ingested and pass through configured processing pipelines, logs matching the filter query in an Archive are sent to a user-defined cloud storage. If you need access to archived logs, you can later <a href="https://docs.datadoghq.com/logs/archives/rehydrating" target="_blank">Rehydrate from Archives</a> (more details on the next page). Note: Archives can only be configured by users with admin permissions. Contact admin users on your team if you’re interested in using Archives for your logs workflows.
 
-Let's take a look at Archives in Datadog. Note: Because a cloud storage option is required, you won't set up an archive, but will go over the different 
+Let's take a look at Archives in Datadog. Note: Because a cloud storage option is required, you won't set up an archive, but will go over what's required to create the Archive. 
 
 1. Navigate to <a href="https://app.datadoghq.com/logs/pipelines/archives" target="_datadog">**Logs > Configuration > Archives**</a>.
 
@@ -16,8 +16,11 @@ Let's take a look at Archives in Datadog. Note: Because a cloud storage option i
 
     The sections **Name this Archive** and **(Optional) Tags** also expand automatically. These have default settings that you can change. You can click the questions marks next to fields to learn more about them.
 
-    Because you haven't filled in the cloud storage requirement, you can't click Save. That's alright! Click **Cancel**.
+    Because you haven't filled in the cloud storage requirement, the Save option is grayed out. Click **Cancel** to close the editor.
     
-If you were able to save this archive, you'd be redirected to the Archives list with the new Archive listed, like in the example below. 
+3. If you had been able to save the archive, you would be redirected to the Archives list with the new Archive listed, like in the example below. 
 
     [image]
+
+Once you've created Archives, you can "rehydrate" them using Rehydrate from Archives. Log Rehydration\* allows you to recall log events from an Archive so that you can analyze and investigate them in Datadog. 
+\*Log Rehydration is a trademark of Datadog, Inc.
