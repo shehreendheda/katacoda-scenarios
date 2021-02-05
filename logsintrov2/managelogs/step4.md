@@ -31,14 +31,14 @@ Let's take a look at Data Access in Datadog.
 
     The query `env:ruby-shop` will appear in the Restricted Access list. 
 
-    [image]
-
-4. Let's now move assign the restriction query to one of the existing role. 
+4. Let's now assign the restriction query to one of the existing role. 
     
     Under **Unrestricted Access**, hover over the `Datadog Read Only Role` and click the **Move Role** icon that appears.
 
     Select `env:ruby-shop` under **Custom**. You'll see that the role is no longer listed under Unrestricted Access and that the number of roles assigned to `env:ruby-shop` under Restricted Access is now `1`.
 
     Expand `env:ruby-shop` under Restricted Access to see that the `Datadog Read Only Role` is listed. Any users assigned this role will now only be able to read logs with the `env:ruby-shop` tags.
+
+    ![dataccess-readonlyrolerestricted](managelogs/assets/dataccess-readonlyrolerestricted.png)
 
     Hover over the role again and click the **Move Role** icon. Select `Unrestricted Access` to reassign the role its original access permission.     

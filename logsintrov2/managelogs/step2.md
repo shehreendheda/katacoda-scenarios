@@ -20,7 +20,7 @@ Let's take a look at Archives in Datadog. Note: Because a cloud storage option i
     
 3. If you had been able to save the archive, you would be redirected to the Archives list with the new Archive listed, like in the example below. 
 
-    [image]
+    ![example-archives](managelogs/assets/example-archives.png)
 
 Once you've created Archives, you can "rehydrate" them using Rehydrate from Archives. Log Rehydration\* allows you to recall log events from an Archive so that you can analyze and investigate them in Datadog. 
 \*Log Rehydration is a trademark of Datadog, Inc.

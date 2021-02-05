@@ -14,10 +14,10 @@ Let's take a look at Rehydrate from Archives in Datadog. Note: Because a cloud s
 
 3. If you were able to rehydrate an archive, you'd be redirected to the Historical Views list with the new historical view listed, like in the example below. 
 
-    [image]
+    ![rehydrated-archives-example](managelogs/assets/rehydrated-archives-example.png)
 
 4. Once logs are rehydrated, you can <a href="https://docs.datadoghq.com/logs/archives/rehydrating?tab=awss3#from-the-log-explorer">select the logs in the Log Explorer</a> under Historical Indexes in the Index facet. 
 
-    [image]
+    ![rehydrated-logs-example](managelogs/assets/rehydrated-logs-example.png)
 
 With Indexes, Archives, and Rehydrate from Archives, you have granular control over the logs you want at available all the time, the logs you want to store long-term and the archived logs you want to rehydrate when needed.
