@@ -3,8 +3,11 @@ Another feature that gives you (that is, your organization admin) granular contr
 Depending on the log data you are collecting in your Datadog organization and the different roles users have, you may want to set role-based read access for logs. 
 
 In <a href="https://docs.datadoghq.com/account_management/rbac/permissions/?tab=ui#log-management" target="_blank">Data Access</a>, you can set Unrestricted Access, Restricted Access, and No Access based on user roles (like Datadog Admin Role, Datadog Standard Role, Datadog Read Only Role). 
-- Unrestricted access allows read access to all logs
-- Restricted access grants read access to a specified subset of logs. 
+
+- Unrestricted access allows read access to all logs.
+
+- Restricted access grants read access to a specified subset of logs.
+
 - No Access blocks read access to all logs.
 
 You can build Restriction Queries using log search syntax to specify the subset of logs that different roles/users can view.
