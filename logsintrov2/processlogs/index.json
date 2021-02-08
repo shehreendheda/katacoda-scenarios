@@ -11,7 +11,16 @@
     },
     "steps": [
       {
-        "text": "step1.md"
+        "text": "step1.md",
+        "title": "Pipelines and Processors"
+      },
+      {
+        "text": "step2.md",
+        "title": "More on Pipelines and Processors"
+      },
+      {
+        "text": "step3.md",
+        "title": "Standard Attributes"
       }
     ],
     "finish": {
@@ -23,18 +32,6 @@
           "file": "envready",
           "target": "/usr/local/bin/",
           "chmod": "+x"
-        },
-        {
-          "file": "docker-compose-fixed.yml",
-          "target": "/root"
-        },
-        {
-          "file": "docker-compose-broken.yml",
-          "target": "/root"
-        },
-        {
-          "file": "frontend-docker-entrypoint.sh",
-          "target": "/root"
         }
       ]
     }
