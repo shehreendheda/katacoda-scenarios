@@ -1,7 +1,7 @@
 {
-  "title": "Setting up Log Collection for an App",
+  "title": "Configuring Log Collection for an App",
   "description": "Intro to log management in Datadog",
-  "time": "20 minutes",
+  "time": "45 minutes",
   "difficulty": "Beginner",
   "details": {
     "intro": {
@@ -19,15 +19,15 @@
         "text": "step2.md"
       },
       {
-        "title": "Enabling Log Collection for a Ruby App Service",
+        "title": "Configuring Log Collection for a Ruby App Service",
         "text": "step3.md"
       },
       {
-        "title": "Viewing Collected Logs in Datadog",
+        "title": "Configuring Log Collection for Python App Services",
         "text": "step4.md"
       },
       {
-        "title": "Enabling Log Collection for Python App Services",
+        "title": "Exploring Collected Logs in Datadog",
         "text": "step5.md"
       }
     ],
@@ -42,12 +42,7 @@
           "chmod": "+x"
         },
         {
-          "file": "prep-environment",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        },
-        {
-          "file": "check-file",
+          "file": "envready",
           "target": "/usr/local/bin/",
           "chmod": "+x"
         },
@@ -58,19 +53,23 @@
         {
           "file": "docker-compose-no-logs.yml",
           "target": "/root"
+        },
+        {
+          "file": "frontend-docker-entrypoint.sh",
+          "target": "/root"
         }
       ]
     }
   },
   "environment": {
     "uilayout": "editor-terminal", 
-    "uieditorpath": "/root/app-files",
+    "uieditorpath": "/ecommworkshop",
     "hideHiddenFiles": true,
     "exclusionPatterns": ["**/store-frontend/tmp/*", "**/store-frontend/log/*"],
     "showdashboard": true,
     "dashboards": [{"name": "storedog", "port": 3000}]
   },
   "backend": {
-    "imageid": "datadog-ecommerce-observability"
+    "imageid": "datadog-base-v1"
   }
 }

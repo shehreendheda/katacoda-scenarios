@@ -5,17 +5,10 @@
   "courses": [
     {
       "pathway_id": "datadog/logsintrov2",
-      "course_id": "managelogs",
-      "id": "managelogs",
-      "title": "Log Indexes, Archives, and Data Access",
-      "description": "Quick overview of Log Indexes, Archives, and Data Access"
-    },
-    {
-      "pathway_id": "datadog/logsintrov2",
-      "course_id": "managelogs2",
-      "id": "managelogs2",
-      "title": "Working with Logs in Datadog",
-      "description": "Based on versioned Storedog APP"
+      "course_id": "collectlogsapp",
+      "id": "collectlogsapp2",
+      "title": "Configuring Log Collection for an App",
+      "description": "Configure Agent, Finalize service configurations, View in App"
     },
     {
       "pathway_id": "datadog/logsintrov2",
@@ -26,10 +19,17 @@
     },
     {
       "pathway_id": "datadog/logsintrov2",
-      "course_id": "collectlogsapp2",
-      "id": "collectlogsapp2",
-      "title": "Configuring Log Collection for an App",
-      "description": "Configure Agent, Finalize service configurations, View in App"
-    }  
+      "course_id": "processlogs",
+      "id": "processlogs",
+      "title": "Pipelines, Processors, and Standard Attributes",
+      "description": "Quick overview of Log Pipelines, Processors, and Standard Attributes"
+    },
+    {
+      "pathway_id": "datadog/logsintrov2",
+      "course_id": "managelogs",
+      "id": "managelogs",
+      "title": "Indexes, Archives, and Data Access",
+      "description": "Quick overview of Log Indexes, Archives, and Data Access"
+    }
   ]
 }

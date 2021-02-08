@@ -1,6 +1,6 @@
 To collect logs from the app, <a href="https://docs.datadoghq.com/agent/docker/log/?tab=containerinstallation" target="_datadog">Log collection</a> has to be enabled through the Datadog Agent so that logs from the application service containers, as well as the Agent container (if desired), can be collected by Datadog. You can also set specific log collection configuration parameters for the agent.
 
-1. Click `docker-compose-no-logs.yml`{{open}}.
+1. Click `docker-compose-files/docker-compose-no-logs.yml`{{open}}.
 
     Let's first enable log collection through the Datadog Agent.
 
@@ -14,7 +14,7 @@ To collect logs from the app, <a href="https://docs.datadoghq.com/agent/docker/l
     
     `DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true` enable log collection from the all other containers. 
     
-    To learn more about the environment variables and volume mounts for log collection from Docker environments, you can view the <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#one-step-install-to-collect-all-the-container-logs" target="_blank">Docker Log Collection</a> documentation.
+    To learn more, view the <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#one-step-install-to-collect-all-the-container-logs" target="_blank">Docker Log Collection</a> documentation.
 
     Now, let's also specify certain log collection configuration parameters for the agent.
 
@@ -30,10 +30,10 @@ To collect logs from the app, <a href="https://docs.datadoghq.com/agent/docker/l
 
     `service` - The name of the service owning the log. If you instrumented your service with <a href="https://docs.datadoghq.com/tracing/" target="_blank">Datadog APM</a>, this must be the same service name. Check the <a href="https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging" target="_blank">unified service tagging</a> instructions when configuring `service` across multiple data types.
 
-    Note: In Datadog Agent 6.8+, the `source` and `service` default to the `short_image` tag value. If the `short_image` tag value matches an Integration name, such as for the Agent, Redis, and Nginx, it is not necessary to set these values because Autodiscovery will recognize the tag value and use the corresponding Integration. (In essence, this step was not necessary here because you're running Agent 7.21.1, but this step will be necessary for the Storedog application services.)
+    Note: In Datadog Agent 6.8+, the `source` and `service` default to the `short_image` tag value. If the `short_image` tag value matches an Integration name, such as for the Agent, Redis, and Nginx, it is not necessary to set these values because Autodiscovery will recognize the tag value and use the corresponding Integration. (In essence, this step was not necessary here because you're running Agent 7.21.1, but will be necessary for some of the Storedog application services.)
 
-The **agent** section of the docker-compose file should now look like the screenshot below. 
+The **agent** section of the docker-compose file should now look like the screenshot below. <p> ![instrumented-agent](collectlogsapp/assets/instrumented-agent.png)
 
-![instrumented-agent](collectlogsapp2/assets/instrumented-agent.png)
+Note: If you want to exclude logs collected from the Datadog Agent, you can add the environment variable `DD_CONTAINER_EXCLUDE="name:datadog-agent"` under `agent`.
 
-With log collection enabled for the Datadog Agent and for all containers, let's configure the `store-frontend` service of the Storedog app.
+With log collection enabled for the Datadog Agent and for all containers, let's see what logs are being collected from the application environment.
