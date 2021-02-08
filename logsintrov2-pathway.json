@@ -6,14 +6,14 @@
     {
       "pathway_id": "datadog/logsintrov2",
       "course_id": "collectlogsapp",
-      "id": "collectlogsapp2",
+      "id": "collectlogsapp",
       "title": "Configuring Log Collection for an App",
       "description": "Configure Agent, Finalize service configurations, View in App"
     },
     {
       "pathway_id": "datadog/logsintrov2",
-      "course_id": "collectlogsapp",
-      "id": "collectlogsapp",
+      "course_id": "collectlogsapp2",
+      "id": "collectlogsapp2",
       "title": "Setting up Log Collection for an App",
       "description": "Configure Agent, View in App, Finalize service configurations"
     },
