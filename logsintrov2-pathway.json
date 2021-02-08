@@ -12,13 +12,6 @@
     },
     {
       "pathway_id": "datadog/logsintrov2",
-      "course_id": "collectlogsapp2",
-      "id": "collectlogsapp2",
-      "title": "Setting up Log Collection for an App",
-      "description": "Configure Agent, View in App, Finalize service configurations"
-    },
-    {
-      "pathway_id": "datadog/logsintrov2",
       "course_id": "processlogs",
       "id": "processlogs",
       "title": "Pipelines, Processors, and Standard Attributes",
