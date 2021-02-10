@@ -1,7 +1,7 @@
 {
-  "title": "Log Indexing, Storage, and Data Access",
-  "description": "Quick overview of Log Indexes, Archives, Rehydrate from Archives, and Data Access",
-  "time": "30 minutes",
+  "title": "Log Querying and Analytics",
+  "description": "Quick overview of Search, Groups, Patterns, and Transactions",
+  "time": "20 minutes",
   "difficulty": "Beginner",
   "details": {
     "intro": {
@@ -12,19 +12,15 @@
     "steps": [
       {
         "text": "step1.md",
-        "title": "Indexes"
+        "title": "title"
       },
       {
         "text": "step2.md",
-        "title": "Archives"
+        "title": "title"
       },
       {
         "text": "step3.md",
-        "title": "Rehydrate from Archives"
-      },
-      {
-        "text": "step4.md",
-        "title": "Data Access"
+        "title": "title"
       }
     ],
     "finish": {
@@ -49,6 +45,6 @@
     "dashboards": [{"name": "storedog", "port": 3000}]
   },
   "backend": {
-      "imageid": "datadog-base-v1"
+    "imageid": "datadog-base-v2"
   }
 }

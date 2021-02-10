@@ -12,17 +12,31 @@
     },
     {
       "pathway_id": "datadog/logsintrov2",
+      "course_id": "querylogs",
+      "id": "querylogs",
+      "title": "Log Querying and Analytics",
+      "description": "Quick overview of Search, Groups, Patterns, and Transactions"
+    },
+    {
+      "pathway_id": "datadog/logsintrov2",
+      "course_id": "monitorlogs",
+      "id": "monitorlogs",
+      "title": "Log Metrics and Monitoring",
+      "description": "Quick overview of Generate Metrics, Log Monitors, and Dashboard Widgets"
+    },
+    {
+      "pathway_id": "datadog/logsintrov2",
       "course_id": "processlogs",
       "id": "processlogs",
-      "title": "Pipelines, Processors, and Standard Attributes",
-      "description": "Quick overview of Log Pipelines, Processors, and Standard Attributes"
+      "title": "Log Processing",
+      "description": "Quick overview of Pipelines, Processors, and Standard Attributes"
     },
     {
       "pathway_id": "datadog/logsintrov2",
       "course_id": "managelogs",
       "id": "managelogs",
-      "title": "Indexes, Archives, and Data Access",
-      "description": "Quick overview of Log Indexes, Archives, and Data Access"
+      "title": "Log Indexing, Storage, and Data Access",
+      "description": "Quick overview of Log Indexes, Archives, Rehydrate from Archives, and Data Access"
     }
   ]
 }

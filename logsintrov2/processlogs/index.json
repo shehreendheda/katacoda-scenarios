@@ -1,6 +1,6 @@
 {
-  "title": "Log Querying and Analytics",
-  "description": "Intro to log querying and analytics in Datadog",
+  "title": "Log Processing",
+  "description": "Quick overview of Pipelines, Processors, and Standard Attributes",
   "time": "20 minutes",
   "difficulty": "Beginner",
   "details": {
