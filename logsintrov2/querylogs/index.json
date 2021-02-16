@@ -36,6 +36,10 @@
         {
           "file": "docker-compose-fixed.yml",
           "target": "/root"
+        },
+        {
+          "file": "frontend-docker-entrypoint.sh",
+          "target": "/root"
         }
       ]
     }

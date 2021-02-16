@@ -15,12 +15,12 @@ cp /root/frontend-docker-entrypoint.sh ./store-frontend-broken-instrumented/dock
 
 cd /ecommworkshop/deploy/docker-compose
 docker-compose -f docker-compose-fixed-instrumented.yml up -d
-clear
+
 
 envready
-clear
+
 
 statusupdate complete
-clear
+
 
 prepenvironment
