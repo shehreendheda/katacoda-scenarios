@@ -3,8 +3,6 @@
 export POSTGRES_USER=postgres
 export POSTGRES_PASSWORD=postgres
 
-cp /root/docker-compose-fixed.yml /ecommworkshop/deploy/docker-compose-fixed-instrumented.yml
-
 cd /ecommworkshop
 sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./ads-service/requirements.txt
 sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./ads-service-fixed/requirements.txt
@@ -23,4 +21,4 @@ envready
 statusupdate complete
 
 
-prepenvironment
+#prepenvironment
