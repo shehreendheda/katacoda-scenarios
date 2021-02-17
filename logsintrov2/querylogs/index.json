@@ -12,15 +12,19 @@
     "steps": [
       {
         "text": "step1.md",
-        "title": "title"
+        "title": "Logs Search"
       },
       {
         "text": "step2.md",
-        "title": "title"
+        "title": "Simple Groups Aggregation"
       },
       {
         "text": "step3.md",
-        "title": "title"
+        "title": "Patterns Aggregation"
+      },
+      {
+        "text": "step4.md",
+        "title": "Transactions Aggregation"
       }
     ],
     "finish": {
