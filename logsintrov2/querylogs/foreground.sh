@@ -16,9 +16,9 @@ cp /root/frontend-docker-entrypoint.sh ./store-frontend-broken-instrumented/dock
 cd /ecommworkshop/deploy/docker-compose
 docker-compose -f docker-compose-fixed.yml up -d
 
-
 envready
 
+docker kill docker-compose_db_1
 
 statusupdate complete
 
