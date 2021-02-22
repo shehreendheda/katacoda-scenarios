@@ -6,6 +6,40 @@ In addition to exploring and analyzing your logs, you can also <a href="https://
 
 3. Under **Define query**, enter `service:advertisements-service`{{copy}}, `service:discounts-service`{{copy}}, `status:error`{{copy}}.
 
-    Below the query field, update group by to `Service`.
+    Below the query field, update **group by** to `Service`.
 
-    Name the metric, `storedog.ads_discounts.errors.count`{{copy}}.
+    Name the metric `storedog.ads_discounts.errors.count`{{copy}}.
+
+    Click **Create Metric**.
+
+    The new metric will appear in the custom metrics list.
+
+    [screenshot/gif]
+
+4. Hover over the new metric you created. On the right, you see different icons appear. 
+
+    Hover over the icons and select the one for **See in Metric Explorer**. A new tab will open for the Metric Explorer.
+    
+    The new metric is already selected under **Graph** and the timeseries for the graph is visualized.
+
+    In the bottom left, under **Export these graphs to** select **Existing dashboard**. 
+    
+    In the Export to dashboard window that appeared, select the dashboard you created earlier `Storedog Logs` and click **Export**. 
+    
+    You will see a message that says `Graphs exported to **Storedog Logs**!`. Click **View dashboard** to open the dashboard in a new tab.
+
+5. In the `Storedog Logs` dashboard, notice that there is now a Timeseries widget in the dashboard for the new metric you just created.
+
+    Click **Edit Widgets**. Click and drag the new widget to closer to the `count of advertisements and discounts error logs` Timeseries widget you created earlier.
+
+    Click the edit icon for the new widget. 
+
+    Under Set display preferences, select **Show legend on graph**.
+
+    Leave the graph title as is, and click **Save**.
+
+    Click **Save Changes** above the dashboard.
+
+    Notice that the two timeseries graphs are identical.
+
+    [screenshot/gif]
