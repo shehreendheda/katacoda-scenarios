@@ -19,13 +19,13 @@ cp /root/frontend-docker-entrypoint.sh ./store-frontend-instrumented-fixed/docke
 cp /root/frontend-docker-entrypoint.sh ./store-frontend-broken-instrumented/docker-entrypoint.sh
 
 cd /ecommworkshop/deploy/docker-compose
-docker-compose -f docker-compose-fixed.yml up
+docker-compose -f docker-compose-fixed.yml up -d
 
-#envready
+envready
 
-#docker kill docker-compose_db_1
+docker kill docker-compose_db_1
 
-#statusupdate complete
+statusupdate complete
 
 
 #prepenvironment
