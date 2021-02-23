@@ -14,11 +14,11 @@ Let's start working with the Logs Search.
 
     In the Facets on the left of the Log List, select `advertisements-service` and `discounts-service` under **Service** and `Error` under the **Status** to filter logs just those for these services. 
 
-    [screenshot]
+    ![facets-search](querylogs/assets/facets-search.png)
 
 4. When you click a log in the Log List, the <a href="https://docs.datadoghq.com/logs/explorer/#the-log-side-panel" target="_blank">Log Side Panel</a> opens with the log details including assigned tags, the log message, any extracted attributes, related traces, and related infrastructure metrics.
 
-    [gif]
+    ![logs-side-panel](querylogs/assets/logs-side-panel.gif)
 
     Click a log in the list and view the details of the side panel. Click the **Traces** tab to view the associated trace. Click the **Metrics** tab to view the associated infrastructure metric.
     
@@ -64,7 +64,7 @@ Let's start working with the Logs Search.
 
     <a href="https://docs.datadoghq.com/logs/explorer/live_tail/" target="_blank">Live Tail</a> is all logs ingested by Datadog after processing, but before indexing (or archiving). These logs do not persist in this list, so you can’t see past logs that have been displayed. A search query in Live Tail displays all live logs that match the query.
 
-    [screenshot]
+    ![live-search](querylogs/assets/live-search.png)
 
     In the time range above the Log List, select `15 minutes`.
 
