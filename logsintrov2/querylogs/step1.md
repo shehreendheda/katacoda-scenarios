@@ -32,7 +32,7 @@ Let's start working with the Logs Search.
 
 5. Common tags and attributes appear in the <a href="https://docs.datadoghq.com/logs/explorer/facets/" target="_blank">Facets</a> list on the left of the Log List automatically. But, to add or edit a tag or attribute to the Facets panel, click the corresponding tag or attribute in a log detail and select Create/Edit Facet.
 
-    [screenshot/gif]
+    ![create-facet](querylogs/assets/create-facet.gif)
 
     Click one of the logs to open the log side panel. Scroll down to view the list of **Event Attributes**.
 
