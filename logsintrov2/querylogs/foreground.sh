@@ -6,6 +6,11 @@ export POSTGRES_PASSWORD=postgres
 statuscheck files
 
 cd /ecommworkshop
+rm ./store-frontend-instrumented-fixed
+git fetch
+git checkout 3466aae ./store-frontend-instrumented-fixed
+
+
 sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./ads-service/requirements.txt
 sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./ads-service-fixed/requirements.txt
 sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./discounts-service-fixed/requirements.txt
