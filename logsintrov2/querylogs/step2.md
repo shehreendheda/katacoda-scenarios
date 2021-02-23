@@ -1,6 +1,6 @@
 With the <a href="https://docs.datadoghq.com/logs/explorer/#fields" target="_blank">Fields</a> aggregation, all logs matching the query filter are aggregated into groups based on the value of a log facet. For these groups, you can extract counts of logs per group, unique count of coded values for a facet per group, and statistical operations on numerical values of a facet per group.
 
-1. In <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>, filter the list to the `service:advertisements-service`, `service:discounts-service`, `ERROR`.
+1. In <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>, filter the list to the `service:advertisements-service`, `service:discounts-service`, `status:error`.
 
 2. Select `Fields` for **Aggregate as** below the search field. A graph visualization of the filtered logs will appear.  
 
