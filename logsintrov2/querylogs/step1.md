@@ -50,9 +50,9 @@ Let's start working with the Logs Search.
 
     The **Views** panel will open with a list of <a href="https://docs.datadoghq.com/logs/explorer/saved_views/" target="_blank">Saved Views</a>. (This will only have the Default View listed if you have not yet saved a Logs view.) 
     
-    Enter `Ads+Discounts`{{copy}} as the name of the **New View** and click **Save**. The new saved view will appear in the list.  
+    Enter `Ads_Discounts_Errors`{{copy}} as the name of the **New View** and click **Save**. The new saved view will appear in the list.  
 
-    [gif] 
+    ![saved-views](querylogs/assets/saved-views.gif) 
 
     Click the **Default view** option. You'll see the Log List on the right change.
 

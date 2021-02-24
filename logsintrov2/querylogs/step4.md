@@ -10,7 +10,7 @@ Transactions aggregate indexed logs according to instances of a sequence of even
 
     The Transactions list will display each service along with the the total count of logs.
 
-    [gif]
+    ![ads_discounts_transactions](querylogs/assets/ads_discounts_transactions.png)
 
 3. Clear the search field above the Log List and enter `service:store-frontend`{{copy}}.
 
@@ -18,4 +18,4 @@ Transactions aggregate indexed logs according to instances of a sequence of even
 
     The Transactions list will display each url path along with the the total count of logs.
 
-    [gif]
+    ![frontend_urlpath_transactions](querylogs/assets/frontend_urlpath_transactions.png)
