@@ -2,7 +2,9 @@ You can create <a href="https://docs.datadoghq.com/monitors/monitor_types/log/" 
 
 1. In Datadog, navigate to <a href="https://app.datadoghq.com/monitors#/create" target="_datadog">**Monitors** > **New Monitor**</a> to start creating a new monitor.
 
-2. Select **Logs** from the list of monitors.
+2. Select **Logs** from the list of monitors to create a monitor using logs events
+
+    ![logsmonitor](monitorlogs/assets/logsmonitor.gif)
 
 3. Under **Define the search query**, enter `service:advertisements-service`{{copy}}, `service:discounts-service`{{copy}}, `status:error`{{copy}}.
 
@@ -10,11 +12,11 @@ You can create <a href="https://docs.datadoghq.com/monitors/monitor_types/log/" 
 
 4. Under **Set alert conditions**, update the **Alert threshold** to `5`.
 
-5. Under **Say what's happening**, enter `High Count of Advertisements/Discounts Error Logs`{{copy}} for the Monitor Name and `The count of {{service.name}} logs is greater than 5.`{{copy}}.
+5. Under **Say what's happening**, enter the `High Count of Advertisements/Discounts Error Logs`{{copy}} for the Monitor Name and `The count of {{service.name}} logs is greater than 5.`{{copy}}.
+
+    For Tags, enter `service:advertisements-service`{{copy}} `service:discounts-service`{{copy}} `env:ruby-shop`{{copy}}
 
 6. Leave **Notify your team** blank, and click **Save**.
-
-    [screenshot]
 
 7. The monitor will be saved. In the upper right, select the **Status** tab to view the monitor status page. 
 

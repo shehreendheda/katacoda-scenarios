@@ -31,7 +31,7 @@ Let's create a screenboard with these widgets. You'll add a Timeseries widget fo
 
     Click **Save**. The new Timeseries widget will appear on the board. (You can click the widget and drag it to move it on the board.)
 
-    [screenshot/gif]
+    ![timeseries](monitorlogs/assets/timeseries.gif)
 
 5. In the widget options, click the right arrow until you see the **Log Stream** widget. 
 
@@ -41,8 +41,8 @@ Let's create a screenboard with these widgets. You'll add a Timeseries widget fo
 
     Under Widget title, enter `advertisements and discounts error logs`{{copy}}.
 
-    Click **Done**. The new Logs Stream widger will appear on the board. (You can click the widget and drag it to move it on the board.)
+    Click **Done**. The new Logs Stream widget will appear on the board. (You can click the widget and drag it to move it on the board.)
 
-    [screenshot/gif]
+    ![logstream](monitorlogs/assets/logstream.gif)
 
 6. Click **Save Changes** above the widget options to save the widgets on the dashboard.

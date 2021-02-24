@@ -14,7 +14,7 @@ In addition to exploring and analyzing your logs, you can also <a href="https://
 
     The new metric will appear in the custom metrics list.
 
-    [screenshot/gif]
+    ![generatemetric](monitorlogs/assets/generatemetric.gif)
 
 4. Hover over the new metric you created. On the right, you see different icons appear. 
 
@@ -42,4 +42,4 @@ In addition to exploring and analyzing your logs, you can also <a href="https://
 
     Notice that the two timeseries graphs are identical.
 
-    [screenshot/gif]
+    ![newmetric-timeseries](monitorlogs/assets/newmetric-timeseries.gif)
