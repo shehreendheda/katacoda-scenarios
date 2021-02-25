@@ -1,4 +1,4 @@
-In this activity, you'll configure log collection for the services of an e-commerce application, Storedog. The application is deployed in a Docker (containerized) envirionment, so the containerized Datadog Agent will be used. The `strore-frontend` service of the Storedog app has a Ruby/Rails frameworks and the `discounts` and `advertisements` services have Python/Flask frameworks. You'll see that different the different language framework require different approaches to log collection configuration.
+In this activity, you'll configure log collection for the services of an e-commerce application, Storedog. The application is deployed in a Docker (containerized) envirionment, so the containerized Datadog Agent will be used. The `store-frontend` service of the Storedog app has a Ruby/Rails frameworks and the `discounts` and `advertisements` services have Python/Flask frameworks. You'll see that different the different language framework require different approaches to log collection configuration.
 
 
 To configure the log collection for the Storedog app, you will complete the following steps:

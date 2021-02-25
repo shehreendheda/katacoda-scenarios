@@ -1,6 +1,6 @@
 In the terminal on the right, the Storedog app is being deployed using Docker. Live traffic to the app is also being simulated. This may take up to 3 minutes. Once the app is instrumented, you will see the following message in the terminal: `The environment is prepared!`
 
-1. When files appear in the editor directory on the right, click `docker-compose-no-logs.yml`{{open}} to view the file in the editor. 
+1. When files appear in the editor directory on the right, click `deploy/docker-compose/docker-compose-fixed.yml`{{open}} to view the file in the editor. 
 
      This docker-compose file instruments the Datadog agent and app services for monitoring with Datadog. 
      
