@@ -37,21 +37,12 @@
     "assets": {
       "host01": [
         {
-          "file": "grademe",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        },
-        {
           "file": "envready",
           "target": "/usr/local/bin/",
           "chmod": "+x"
         },
         {
-          "file": "docker-compose-logs.yml",
-          "target": "/root"
-        },
-        {
-          "file": "docker-compose-no-logs.yml",
+          "file": "docker-compose-fixed.yml",
           "target": "/root"
         },
         {
@@ -70,6 +61,6 @@
     "dashboards": [{"name": "storedog", "port": 3000}]
   },
   "backend": {
-    "imageid": "datadog-base-v1"
+    "imageid": "datadog-base-v2"
   }
 }

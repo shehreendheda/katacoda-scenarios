@@ -2,15 +2,7 @@
 
 curl -s https://datadoghq.dev/katacodalabtools/r?raw=true|bash
 
-while [ ! -f /root/docker-compose-no-logs.yml ]; do sleep 1; done
-
-mv /root/docker-compose-logs.yml /ecommworkshop/
-mv /root/docker-compose-no-logs.yml /ecommworkshop/
-
-cd /ecommworkshop
-git fetch
-git checkout e400e3fc ./ads-service-fixed
-
+mv /root/docker-compose-fixed.yml /ecommworkshop/deploy/docker-compose/
 statusupdate files
 
-/ecommworkshop/gor --input-file-loop --input-file /ecommworkshop/requests_0.gor --output-http "http://localhost:3000" >> /dev/null 2>&1
+/ecommworkshop/gor --input-file-loop --input-file "/ecommworkshop/requests_0.gor|200%" --output-http "http://localhost:3000" >> /dev/null 2>&1
