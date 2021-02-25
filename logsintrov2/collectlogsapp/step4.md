@@ -8,7 +8,7 @@ In addition, to enable Autodiscovery and the `python` Integration and Integratio
 
 `service:<SERVICE_NAME>` will correlate the logs for each service with APM Service Page and other associated metric and trace data with the `service` tag assigned by the `DD_SERVICE` environment variable.
 
-1. Click `docker-compose-no-logs.yml`{{open}}. 
+1. Click `deploy/docker-compose/docker-compose-fixed.yml`{{open}}. 
 
 2. Click **Copy to Editor** below to add the `DD_LOGS_INJECTION=true` environment variables under `discounts`.
 
