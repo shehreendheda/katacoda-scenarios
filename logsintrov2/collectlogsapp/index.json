@@ -42,7 +42,7 @@
           "chmod": "+x"
         },
         {
-          "file": "docker-compose-fixed.yml",
+          "file": "docker-compose-no-logs.yml",
           "target": "/root"
         },
         {

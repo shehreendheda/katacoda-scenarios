@@ -1,6 +1,6 @@
 In Datadog, you can search and analyze your log data in the <a href="https://docs.datadoghq.com/logs/explorer/" target="_blank">Log Explorer</a>. Let's apply log collection configurations you added and start exploring the log data for the Storedog app.
 
-1. Click `docker-compose -f docker-compose-fixed.yml up -d --build`{{execute}} to rebuild the docker environment to apply the log collection configurations you added. 
+1. Click `docker-compose -f docker-compose-no-logs.yml up -d --build`{{execute}} to rebuild the docker environment to apply the log collection configurations you added. 
 
     ![restarted-agent-frontend](collectlogsapp2/assets/restarted-agent-frontend.png)
 

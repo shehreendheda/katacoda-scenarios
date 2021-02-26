@@ -6,7 +6,7 @@ export POSTGRES_PASSWORD=postgres
 statuscheck files
 
 cd /ecommworkshop
-rm ./store-frontend-instrumented-fixed
+#rm ./store-frontend-instrumented-fixed
 git fetch
 git checkout 3466aae ./store-frontend-instrumented-fixed
 
@@ -19,7 +19,7 @@ cp /root/frontend-docker-entrypoint.sh ./store-frontend-instrumented-fixed/docke
 cp /root/frontend-docker-entrypoint.sh ./store-frontend-broken-instrumented/docker-entrypoint.sh
 
 cd /ecommworkshop/deploy/docker-compose
-docker-compose -f docker-compose-fixed.yml up -d
+docker-compose -f docker-compose-no-logs.yml up -d
 
 envready
 

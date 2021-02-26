@@ -18,7 +18,7 @@ The service has a Ruby/Rails framework. For the first step in log collection con
 
     With the app service configured, the last step for completing log collection configuration is adding the correct `source` and `service` tags for logs in the docker-compose file. 
 
-3. Click `deploy/docker-compose/docker-compose-fixed.yml`{{open}} to open the docker-compose file.
+3. Click `deploy/docker-compose/docker-compose-no-logs.yml`{{open}} to open the docker-compose file.
 
 4. Click **Copy to Editor** below to add the following logs configuration label under `frontend`.
 
