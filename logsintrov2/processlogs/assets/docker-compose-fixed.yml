@@ -31,7 +31,7 @@ services:
       - DD_LOGS_INJECTION=true
       - DD_TRACE_ANALYTICS_ENABLED=true
       - DD_PROFILING_ENABLED=true
-    image: "ddtraining/discounts-service-fixed:latest"
+    image: "ddtraining/discounts-fixed:latest"
     command: [sh, -c, "pip install ddtrace -U && ddtrace-run flask run --port=5001 --host=0.0.0.0"]
     ports:
       - "5001:5001"
@@ -58,7 +58,7 @@ services:
       - DB_PASSWORD
       - DD_CLIENT_TOKEN
       - DD_APPLICATION_ID
-    image: "ddtraining/ecommerce-frontend:latest"
+    image: "ddtraining/storefront-fixed:latest"
     command: sh docker-entrypoint.sh
     ports:
       - "3000:3000"
@@ -88,7 +88,7 @@ services:
       - DD_LOGS_INJECTION=true
       - DD_TRACE_ANALYTICS_ENABLED=true
       - DD_PROFILING_ENABLED=true
-    image: "ddtraining/advertisements-service:latest"
+    image: "ddtraining/advertisements-fixed:latest"
     command: [sh, -c, "pip install ddtrace -U && ddtrace-run flask run --port=5002 --host=0.0.0.0"]
     ports:
       - "5002:5002"
