@@ -4,37 +4,41 @@ In addition, Datadog has a <a href="https://docs.datadoghq.com/logs/processing/a
 
 Let's take a look at Standard Attributes in Datadog. 
 
-1. Navigate to <a href="https://app.datadoghq.com/logs/pipelines/standard-attributes" target="_datadog">**Logs > Configuration > Standard Attributes**</a>.
+1. Let's first find an attribute in the store-frontend logs that you can use.
 
-2. A list of <a href="https://docs.datadoghq.com/logs/processing/attributes_naming_convention/" target="_blank">predefined (default) standard attributes</a> is displayed.  
-    
-    Hover over each attribute and click the **Edit** icon that appears to learn more about these attributes.
+    Navigate to the Log List in <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a> and filter the list to the `service:store-frontend` logs.
 
-3. Let's create a new standard attribute. You can browse the Log List in <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a> to get ideas for an attribute to use.
+    Click a `store-frontend` log to view it's attributes list. Use the up and down arrow keys to view different logs. Notice that the attribute `controller` is extracted from the store-frontend logs, so you can use this one.
 
-    The attribute `process.name` is extracted from the advertisements-service and discounts-service logs, so you can use this one.
+    Create a facet for `controller` attribute by clicking the wheel icon next to the attribute and selecing **Create facet for @controller**. In the window that opens, click **Add**. Once it is added, scroll to the bottom of the facets list and view the added the facet.
 
     [image]
 
-4. Click **New Standard Attribute** to open the **Add new standard attribute** editor.
+2. Navigate to <a href="https://app.datadoghq.com/logs/pipelines/standard-attributes" target="_datadog">**Logs > Configuration > Standard Attributes**</a>.
+
+3. A list of <a href="https://docs.datadoghq.com/logs/processing/attributes_naming_convention/" target="_blank">predefined (default) standard attributes</a> is displayed.  
+    
+    Hover over each attribute and click the **Edit** icon that appears to learn more about these attributes. 
+
+4. In Click **New Standard Attribute** to open the **Add new standard attribute** editor.
 
     Click the question mark icon next to editor name to learn more about the fields in the editors. 
 
-    Under **Define standard attribute**, enter `process`, leave **Type** as `string`, and enter **...**.
+    Under **Define standard attribute**, enter `controller`, leave **Type** as `string`, and enter **...**.
 
-    Under **(optional) Define attribute(s) to remap**, enter `process.name`{{copy}}.
+    Under **(optional) Define attribute(s) to remap**, enter `controller.name`{{copy}}.
 
     Click **Save**. You'll be redirected to the standard attribute list.
 
     [image]
 
-5. In the **Filter Attributes** field, enter `process` to find the new standard attribute.
+5. In the **Filter Attributes** field, enter `controller.name` to find the new standard attribute.
 
-    Hover over the attribute and click the **View in Explorer** icon that appears. A new tab will open for <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a> with the Log List filtered to the attributes `process:*` and `process.name:*`
+    Hover over the attribute and click the **View in Explorer** icon that appears. A new tab will open for <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a> with the Log List filtered to the attributes `controller:*` and `controller:*`
 
     [gif]
 
-    Add `service:advertisements-service`{{copy}} and `service:discounts-service`{{copy}} to the search field so that you are only viewing logs from these services
+    Add `service:store-frontend`{{copy}} to the search field so that you are only viewing logs from these services
 
 6. There may be a pause in the Log Stream as the new standard attribute is applied. Wait for new advertisements-service and discounts-service logs appear. 
 
