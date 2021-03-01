@@ -21,7 +21,7 @@
       "pathway_id": "datadog/logsintrov2",
       "course_id": "monitorlogs",
       "id": "monitorlogs",
-      "title": "Log Metrics and Monitoring",
+      "title": "Log Monitoring and Metrics",
       "description": "Quick overview of Generate Metrics, Log Monitors, and Dashboard Widgets"
     },
     {

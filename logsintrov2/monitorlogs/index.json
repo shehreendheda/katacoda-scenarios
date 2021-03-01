@@ -1,6 +1,6 @@
 {
-  "title": "Log Metrics and Monitoring",
-  "description": "Quick overview of Generate Metrics, Log Monitors, and Dashboard Widgets",
+  "title": "Log Monitoring and Metrics",
+  "description": "Quick overview of Dashboard Widgets using log events, Log Monitors, and Generate Metrics",
   "time": "20 minutes",
   "difficulty": "Beginner",
   "details": {
