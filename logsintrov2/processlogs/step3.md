@@ -10,7 +10,7 @@ Let's take a look at Standard Attributes in Datadog.
 
     Click a `store-frontend` log to view it's attributes list. Use the up and down arrow keys to view different logs. Notice that the attribute `controller` is extracted from the store-frontend logs, so you can use this one.
 
-    ![before-standard](logspipeline/assets/before-standard2.png)
+    ![before-standard](processlogs/assets/before-standard2.png)
 
 2. Navigate to <a href="https://app.datadoghq.com/logs/pipelines/standard-attributes" target="_datadog">**Logs > Configuration > Standard Attributes**</a>.
 
@@ -28,7 +28,7 @@ Let's take a look at Standard Attributes in Datadog.
 
     Click **Save**. You'll be redirected to the standard attribute list.
 
-    ![standard-attribute](logspipeline/assets/standard-attribute.gif)
+    ![standard-attribute](processlogs/assets/standard-attribute.gif)
 
 6. Navigate to the Log List in <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a> and filter the list to the `service:store-frontend` logs.
 
@@ -36,7 +36,7 @@ Let's take a look at Standard Attributes in Datadog.
 
     Click the new logs to see the attribute `controller` has been replaced by the attribute `controller.name`.
 
-    ![after-standard](logspipeline/assets/after-standard2.png)
+    ![after-standard](processlogs/assets/after-standard2.png)
 
 7. Go back to the tab with the standard attributes list. 
 

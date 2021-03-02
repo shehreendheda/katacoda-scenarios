@@ -37,13 +37,13 @@ Right now, the `store-frontend` logs in the Logs List do not display the officia
 
     Enter `Assign http.status_code to severity level`{{copy}} for **Name the processor** and click **Save**. The category processor will be added to the bottom of the processor list.
 
-    ![level-categories](logspipeline/assets/level-categories.png)
+    ![level-categories](processlogs/assets/level-categories.png)
 
 3. For the correct severity level to be remapped to the official log status, you'll need to move the <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#log-status-remapper" target="_blank">Status Remapper</a> below the new Catagory Processor.
 
     In the processors list, click the six dot icon for the **Status Remapper** and drag and drop the processor below the **Category Processor**. You see a warning pop up about the change in the order of the processors affecting processing. Click **Reorder**.
 
-    ![reorderingprocessors](logspipeline/assets/reorderingprocessors.gif)
+    ![reorderingprocessors](processlogs/assets/reorderingprocessors.gif)
 
 4. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a> and enter `service:store-frontend` as the search query.
 
@@ -51,7 +51,7 @@ Right now, the `store-frontend` logs in the Logs List do not display the officia
 
     There may be a pause in the log stream while the new processor is starting to process incoming logs. When new logs start coming in, click a new **store-frontend** log.
 
-    ![logs-new-status](logspipeline/assets/new-log-status2.png)
+    ![logs-new-status](processlogs/assets/new-log-status2.png)
 
     You can compare with the older logs by highlighting a region of the bar chart above the Logs List that corresponds to logs before you added the URL Parser. You'll see that the **URL Path** facet is empty. Reset the time range to **Past 15 minutes** using the time range selector. The **URL Path** facet will fill up again.
 
@@ -59,10 +59,10 @@ Right now, the `store-frontend` logs in the Logs List do not display the officia
 
     Notice that the new logs in the list and in the chart above the list have different color bars and that the **Status** Facet has more options.
     
-    ![logs-new-status](logspipeline/assets/new-log-status2.png)
+    ![logs-new-status](processlogs/assets/new-log-status2.png)
 
     Click a new **flog** log. Notice that the official status now matches the `http.status_code_category` value. Use your up and down arrow keys to look at the statuses of more logs.
 
-    ![log-status-full-m](logspipeline/assets/log-status-full-m.png)
+    ![log-status-full-m](processlogs/assets/log-status-full-m.png)
 
     The official log statuses are now assigned based on the severity derived from http.status_codes in the logs. 
