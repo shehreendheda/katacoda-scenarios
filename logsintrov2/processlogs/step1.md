@@ -12,6 +12,8 @@ Let's explore the different ways to add/create a Pipeline in Datadog: Adding an 
 
     Click the pipeline again to collapse its processors list.
 
+    [gif]
+
     Let's explore more options for Integration Pipelines.
 
 2. In the upper right, click **Browse Pipeline Library** to open the Pipeline Libary side panel. For any one of the pipelines in the library, do the following.
@@ -30,6 +32,8 @@ Let's explore the different ways to add/create a Pipeline in Datadog: Adding an 
 
     Close the Pipeline Library side panel.
 
+    [gif]
+
 3. Let's now take a look at creating a custom pipeline. 
 
     In the upper right, click **New Pipeline**. 
@@ -46,7 +50,7 @@ Let's explore the different ways to add/create a Pipeline in Datadog: Adding an 
 
 5. Now, let's clone the **Ruby** Integration pipeline to create modified this pipeline.
 
-    Hover over the **Ruby** pipeline and click the **Clone** icon that appears on the right. You'll see `Are you sure? \*\*Clone\*\* \*\*Cancel\*\*` appear where the icon was. Click **Clone**. You'll see a message appear that the clone pipeline was create and that the **Ruby** pipeline was disable to avoid duplication. 
+    Hover over the **Ruby** pipeline and click the **Clone** icon that appears on the right. You'll see **Are you sure? Clone Cancel** appear where the icon was. Click **Clone**. You'll see a message appear that the clone pipeline was create and that the **Ruby** pipeline was disable to avoid duplication. 
 
     Hover over the new **Ruby** pipeline and click the **Edit** icon that appear on the right.
 
@@ -56,15 +60,14 @@ Let's explore the different ways to add/create a Pipeline in Datadog: Adding an 
 
     Click **Save** to update the name and filters for the pipeline in the list. 
 
-6. Because the pipelines are applied in the order they appear in the Pipelines list, let's rearrange the pipeline so that all `env:ruby-shop service:store-frontend` logs flow through the new processor and all other `source:ruby` logs would flow through the **Ruby** pipeline.
+    [gif]
+
+6. Because the pipelines are applied in the order they appear in the Pipelines list, let's rearrange the pipelines so that all `env:ruby-shop service:store-frontend` logs flow through the new processor and all other `source:ruby` logs would flow through the **Ruby** pipeline.
 
     Click the six dot icon on the right of the new pipeline and move it above the **Ruby** pipeline.
 
     Click the enable/disable toggle for the **Ruby** to enable the pipeline (because it was disabled when you cloned the pipeline).
 
+    [gif]
+
     With this ordering, when `source:ruby` logs flow through the processing pipelines, the logs that also have `env:ruby-shop` and `service:store-frontend` tags are filtered into the **ruby clone for store-frontend** pipeline, while all the logs that do not have these two tags are filtered into the **Ruby** pipeline.
-
-
-
-    
-

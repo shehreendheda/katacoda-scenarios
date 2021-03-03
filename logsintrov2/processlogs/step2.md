@@ -61,8 +61,4 @@ Right now, the `store-frontend` logs in the Logs List do not display the officia
     
     ![logs-new-status](processlogs/assets/new-log-status2.png)
 
-    Click a new **flog** log. Notice that the official status now matches the `http.status_code_category` value. Use your up and down arrow keys to look at the statuses of more logs.
-
-    ![log-status-full-m](processlogs/assets/log-status-full-m.png)
-
     The official log statuses are now assigned based on the severity derived from http.status_codes in the logs. 

@@ -40,5 +40,4 @@ Let's take a look at Standard Attributes in Datadog.
 
 7. Go back to the tab with the standard attributes list. 
 
-    Hover over the `controller` attribute and click the **Delete** icon that appears (to clean up your account for future labs).
-
+    Hover over the `controller.name` attribute and click the **Delete** icon that appears (to clean up your account for future labs).
