@@ -48,7 +48,7 @@ Let's explore the different ways to add/create a Pipeline in Datadog: Adding an 
 
     Hover over the new pipeline and click the **Delete** icon that appears. In the next step, you'll create a clone of the **Ruby** pipeline using the same search query filter.
 
-5. Now, let's clone the **Ruby** Integration pipeline to create modified this pipeline.
+5. Now, let's clone the **Ruby** Integration pipeline to create a modified version of this pipeline.
 
     Hover over the **Ruby** pipeline and click the **Clone** icon that appears on the right. You'll see **Are you sure? Clone Cancel** appear where the icon was. Click **Clone**. You'll see a message appear that the clone pipeline was create and that the **Ruby** pipeline was disable to avoid duplication. 
 
