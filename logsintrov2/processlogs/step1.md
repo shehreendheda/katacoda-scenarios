@@ -68,6 +68,6 @@ Let's explore the different ways to add/create a Pipeline in Datadog: Adding an 
 
     Click the enable/disable toggle for the **Ruby** to enable the pipeline (because it was disabled when you cloned the pipeline).
 
-    [gif]
+    ![reorder-pipelines](processlogs/assets/reorder-pipelines.gif)
 
     With this ordering, when `source:ruby` logs flow through the processing pipelines, the logs that also have `env:ruby-shop` and `service:store-frontend` tags are filtered into the **ruby clone for store-frontend** pipeline, while all the logs that do not have these two tags are filtered into the **Ruby** pipeline.

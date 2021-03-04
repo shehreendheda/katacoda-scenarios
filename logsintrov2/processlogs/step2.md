@@ -45,7 +45,7 @@ Right now, the `store-frontend` logs in the Logs List do not display the officia
 
     In the processors list, click the six dot icon for the **Status Remapper** and drag and drop the processor below the **Category Processor**. You see a warning pop up about the change in the order of the processors affecting processing. Click **Reorder**.
 
-    ![reordering-processors](processlogs/assets/reordering-processors.gif)
+    ![reorder-processors](processlogs/assets/reorder-processors.gif)
 
 4. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a> and enter `service:store-frontend` as the search query. There may be a pause in the log stream while the new processor is starting to be applied to incoming logs. 
 
