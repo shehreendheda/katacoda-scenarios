@@ -34,9 +34,9 @@ Right now, the `store-frontend` logs in the Logs List do not display the officia
     * `@http.status_code:[300 TO 399]`{{copy}} and `notice`{{copy}}
 
     * `@http.status_code:[400 TO 499]`{{copy}} and `warning`{{copy}}
-    
-    * `@http.status_code:[500 TO 599]`{{copy}} and `error`{{copy}}
 
+    * `@http.status_code:[500 TO 599]`{{copy}} and `error`{{copy}}
+    &nbsp;
     Enter `Assign http.status_code to severity level`{{copy}} for **Name the processor** and click **Save**. The category processor will be added to the bottom of the processor list.
 
     ![level-categories](processlogs/assets/level-categories.png)
