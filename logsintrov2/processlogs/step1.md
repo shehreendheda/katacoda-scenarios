@@ -28,11 +28,11 @@ Let's explore the different ways to add/create a Pipeline in Datadog: Adding an 
     
     Click **Installation Instructions** to view how to install the pipeline. Notice that you are instructed to use the `source: XXX` label. Click **Close** in the **Installation Instructions**. If you have clicked **Integration Documentation** instead, a tab would open for more information about the Integration.
 
-    Click `/deploy/docker-compose/docker-compose-broken.yml`{{open}} in the editor on the right to see that the services have been configured with the `source:xxx` label, which is why the **Datadog Agent**, **Ruby**, and **python** Integration Pipelines have been installed automatically.
-
     Close the Pipeline Library side panel.
 
-    [gif]
+    ![pipeline-library](processlogs/assets/pipeline-library.gif)
+
+    Click `/deploy/docker-compose/docker-compose-broken.yml`{{open}} to view the file in the editor on the right. Notice that the services have been configured with the `source:xxx` label, which is why the **Datadog Agent**, **Ruby**, and **python** Integration Pipelines have been installed automatically.
 
 3. Let's now take a look at creating a custom pipeline. 
 
