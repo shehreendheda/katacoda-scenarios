@@ -22,6 +22,9 @@ cp /root/frontend-docker-entrypoint.sh ./store-frontend-instrumented-fixed/docke
 cp /root/frontend-docker-entrypoint.sh ./store-frontend-broken-instrumented/docker-entrypoint.sh
 
 cd /ecommworkshop/deploy/docker-compose
+
+docker system prune --all --force
+
 docker-compose -f docker-compose-broken.yml up -d
 
 envready
