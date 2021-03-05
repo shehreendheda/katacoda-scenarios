@@ -10,8 +10,8 @@ statuscheck files
 cd /ecommworkshop
 rm ./store-frontend-instrumented-fixed
 git fetch
-git checkout f33de79 ./store-frontend-instrumented-fixed
-git checkout f33de79 ./store-frontend-broken-instrumented
+git checkout 7d6c0b3 ./store-frontend-instrumented-fixed
+git checkout 7d6c0b3 ./store-frontend-broken-instrumented
 
 
 sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./ads-service/requirements.txt
