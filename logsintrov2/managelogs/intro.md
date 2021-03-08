@@ -3,6 +3,6 @@ With Datadog's Logging without Limits\*, you can collect all your logs. But, not
 
 This activity provides an overview of Indexes, Archives, Rehydrate from Archives, and Data Access in Logs Configuration.
 
-When you start activity, a fictional ecommerce app, Storedog, will be brought online and instrumented with Datadog for data collection. The app has a Ruby-based store-frontend and Python-based discounts and advertisements services.
+When you start activity, a fictional ecommerce app, Storedog, will be brought online in a Docker environment and instrumented with Datadog for data collection. The app has a Ruby store-frontend and Python discounts and advertisements services.
 
 When you are ready to begin, click **Start Scenario**.
