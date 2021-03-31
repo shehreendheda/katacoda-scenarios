@@ -9,6 +9,7 @@ cd /ecommworkshop
 rm ./store-frontend-instrumented-fixed
 git fetch
 git checkout 3466aae ./store-frontend-instrumented-fixed
+git checkout 3466aae ./store-frontend-broken-instrumented
 
 
 sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./ads-service/requirements.txt
