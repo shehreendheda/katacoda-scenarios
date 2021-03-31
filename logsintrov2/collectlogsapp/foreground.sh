@@ -25,7 +25,7 @@ cd /ecommworkshop/deploy/docker-compose
 
 #docker system prune --all --force
 
-docker-compose -f docker-compose-broken.yml up -d
+docker-compose -f docker-compose-no-logs.yml up -d
 
 envready
 
