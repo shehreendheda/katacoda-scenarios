@@ -29,7 +29,7 @@ services:
 # add discounts env variables
       - DD_TRACE_ANALYTICS_ENABLED=true
       - DD_PROFILING_ENABLED=true
-    image: "ddtraining/discounts-fixed:latest"
+    image: "ddtraining/discounts:latest"
     command: [sh, -c, "pip install ddtrace -U && ddtrace-run flask run --port=5001 --host=0.0.0.0"]
     ports:
       - "5001:5001"
@@ -55,7 +55,7 @@ services:
       - DB_PASSWORD
       - DD_CLIENT_TOKEN
       - DD_APPLICATION_ID
-    image: "ddtraining/storefront-fixed:latest"
+    image: "ddtraining/storefront:latest"
     command: sh docker-entrypoint.sh
     ports:
       - "3000:3000"
@@ -85,7 +85,7 @@ services:
 # add ads env variables
       - DD_TRACE_ANALYTICS_ENABLED=true
       - DD_PROFILING_ENABLED=true
-    image: "ddtraining/advertisements-fixed:latest"
+    image: "ddtraining/advertisements:latest"
     command: [sh, -c, "pip install ddtrace -U && ddtrace-run flask run --port=5002 --host=0.0.0.0"]
     ports:
       - "5002:5002"
