@@ -8,9 +8,9 @@ To configure the log collection for the Storedog app, you will complete the foll
 5. Exploring Collected Logs in Datadog
 
 The final collected logs for each application service will have the following:
-- The correct `source` tag for the corresponding Integration Pipeline and the correct `service` tag for correlation with associated trace data
-- A list of processed Event Attributes for each log
-- Direct correlation to associated trace data
-- Direct correlation to associated host metric data
+1. The correct `source` tag for the corresponding Integration Pipeline and the correct `service` tag for correlation with associated trace data
+2. A list of processed Event Attributes for each log
+3. Direct correlation to associated trace data
+4. Direct correlation to associated host metric data
 
 When you are ready to continue, click **Start Scenario**.
