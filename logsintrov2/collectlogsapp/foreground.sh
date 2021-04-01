@@ -6,7 +6,8 @@ export POSTGRES_PASSWORD=postgres
 statuscheck files
 
 cd /ecommworkshop
-rm ./store-frontend-instrumented-fixed
+rm -r ./store-frontend-instrumented-fixed
+rm -r ./store-frontend-broken-instrumented
 git fetch
 git checkout 742bc3952471d58027b1aab305107f0bb113f6b5 ./store-frontend-instrumented-fixed
 git checkout 742bc3952471d58027b1aab305107f0bb113f6b5 ./store-frontend-broken-instrumented
