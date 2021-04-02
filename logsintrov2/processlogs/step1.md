@@ -48,26 +48,4 @@ Let's explore the different ways to add/create a Pipeline in Datadog: Adding an 
 
     Hover over the new pipeline and click the **Delete** icon that appears. In the next step, you'll create a clone of the **Ruby** pipeline using the same search query filter.
 
-5. Now, let's clone the **Ruby** Integration pipeline to create a modified version of this pipeline.
-
-    Hover over the **Ruby** pipeline and click the **Clone** icon that appears on the right. You'll see **Are you sure? Clone Cancel** appear where the icon was. Click **Clone**. You'll see a message appear that the clone pipeline was create and that the **Ruby** pipeline was disable to avoid duplication. 
-
-    Hover over the new **Ruby** pipeline and click the **Edit** icon that appear on the right.
-
-    Under **Filter**, delete `source:ruby` and enter `env:ruby-shop`{{copy}} and `service:store-frontend`{{copy}}.
-
-    Under **Name**, enter `ruby clone for store-frontend`{{copy}}.
-
-    Click **Save** to update the name and filters for the pipeline in the list. 
-
-    [gif]
-
-6. Because the pipelines are applied in the order they appear in the Pipelines list, let's rearrange the pipelines so that all `env:ruby-shop service:store-frontend` logs flow through the new processor and all other `source:ruby` logs would flow through the **Ruby** pipeline.
-
-    Click the six dot icon on the right of the new pipeline and move it above the **Ruby** pipeline.
-
-    Click the enable/disable toggle for the **Ruby** to enable the pipeline (because it was disabled when you cloned the pipeline).
-
-    ![reorder-pipelines](processlogs/assets/reorder-pipelines.gif)
-
-    With this ordering, when `source:ruby` logs flow through the processing pipelines, the logs that also have `env:ruby-shop` and `service:store-frontend` tags are filtered into the **ruby clone for store-frontend** pipeline, while all the logs that do not have these two tags are filtered into the **Ruby** pipeline.
+On the following page, you will create a clone of the **Ruby** pipeline so that you can edit the processors in the pipeline.

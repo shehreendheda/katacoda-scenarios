@@ -1,3 +1,5 @@
+In a custom or cloned pipeline, you can add and rearrange processors that are in the pipeline. Let's do this in the **ruby clone for store-frontend** pipeline.
+
 1. Navigate to the Log List in <a href="https://app.datadoghq.com/logs" target="_blank">**Logs > Search**</a> and filter the list to the `service:store-frontend` logs.
 
 2. Click a log detail that has content `Completed ...`.
