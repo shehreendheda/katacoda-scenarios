@@ -1,12 +1,12 @@
-In Log Configuration, you can add OOTB Integration Pipelines for common log sources and create custom pipelines for custom log sources to process your logs.
+In Logs Configuration, you can add OOTB Integration Pipelines for common log sources and create custom pipelines for custom log sources to process your logs.
 
-<a href="https://docs.datadoghq.com/logs/processing/pipelines/" target="_blank">Pipelines</a> are an ordered set of <a href="https://docs.datadoghq.com/logs/processing/processors/" target="_blank">processors</a> that are applied to a filtered subset of logs (after collection, but before indexing so all logs are processed). The resulting logs have a uniform structure with standard attribute names so that you can use them, along with assigned tags, to build search queries for log data throughout Datadog.
+<a href="https://docs.datadoghq.com/logs/processing/pipelines/" target="_blank">Pipelines</a> are an ordered set of <a href="https://docs.datadoghq.com/logs/processing/processors/" target="_blank">processors</a> that are applied to a filtered subset of logs (after collection, but before indexing so all logs are processed). The resulting logs have a uniform structure and attribute with standard naming convention so that you can use the attributes, along with assigned tags, to build search queries for log data throughout Datadog.
 
 Let's explore the different ways to add/create a Pipeline in Datadog: Adding an Integration Pipeline, creating a new custom pipeline, and cloning an existing pipeline.
 
 1. Navigate to <a href="https://app.datadoghq.com/logs/pipelines/" target="_datadog">**Logs > Configuration > Pipelines**</a>.
 
-    Because the log collection by Datadog is set up for the app, you'll see the **Datadog Agent**, **Ruby**, and **python** Integration Pipelines in the Pipelines list.
+    Because the log collection by Datadog is set up for the Storedog app, you'll see the **Datadog Agent**, **Ruby**, and **python** Integration Pipelines in the Pipelines list.
 
     Click the **Ruby** pipeline to view its list of processors. Hover over the processors. You'll see the view icon appear on the right. For some of the processors, click the icon to view their details. Note that you cannot edit an Integration Pipeline and its processors.
 
@@ -24,9 +24,9 @@ Let's explore the different ways to add/create a Pipeline in Datadog: Adding an 
     
     Click **View** to see the pipeline filter query. Click **Close**. 
     
-    Click **Clone** to update the filter query and name of of the pipeline clone. Click **Cancel**. If you had clicked **Clone** instead, a modifiable version of the pipeline would appear in the Pipelines list.
+    Click **Clone** to view and update the filter query and name of the pipeline clone. Click **Cancel**. If you had clicked **Clone** instead, a customizable version of the pipeline would appear in the Pipelines list.
     
-    Click **Installation Instructions** to view how to install the pipeline. Notice that you are instructed to use the `source: XXX` label. Click **Close** in the **Installation Instructions**. If you have clicked **Integration Documentation** instead, a tab would open for more information about the Integration.
+    Click **Installation Instructions** to view how to install the pipeline. Notice that you are instructed to use the `source: XXX` label. Click **Close** in the **Installation Instructions**. If you had clicked **Integration Documentation** instead, a tab would open to the Datadog documentation for Integrations.
 
     Close the Pipeline Library side panel.
 
@@ -38,14 +38,10 @@ Let's explore the different ways to add/create a Pipeline in Datadog: Adding an 
 
     In the upper right, click **New Pipeline**. 
     
-    Under **Filter**, enter `env:ruby-shop`{{copy}} and `service:store-frontend`{{copy}}. Notice that the logs in the Preview filtered based on this query.
+    Under **Filter**, enter `env:ruby-shop`{{copy}} and `service:store-frontend`{{copy}}. Notice that the logs in the Preview are filtered based on this query.
 
-    Under **Name**, enter `ruby - store-frontend`{{copy}}.
+    Click **Cancel**. You don't need to create a new pipeline now. If you were going to create the pipeline, you would have entered a descriptive name and clicked Save.
 
-    Click **Save**. The new pipeline would have appeared at the bottom in the **Pipelines** list.
+    ![create-new-pipeline](processlogs/assets/create-new-pipeline.png)
 
-    [image]
-
-    Hover over the new pipeline and click the **Delete** icon that appears. In the next step, you'll create a clone of the **Ruby** pipeline using the same search query filter.
-
-On the following page, you will create a clone of the **Ruby** pipeline so that you can edit the processors in the pipeline.
+Next, you'll create a clone of the **Ruby** pipeline so that you can edit the processors in the pipeline.

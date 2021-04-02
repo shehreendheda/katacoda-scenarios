@@ -1,4 +1,4 @@
-Once you've created a Pipeline, you can add and edit processors to it based on the log processing needs.
+Once you've created or cloned a Pipeline, you can add and edit processors to it based on the log processing needs.
 
 Available processors include the following:
 
@@ -10,7 +10,7 @@ Available processors include the following:
 
 - <a href="https://docs.datadoghq.com/logs/processing/processors/?tab=ui#lookup-processor" target="_blank">Lookup Processor</a>, which defines a mapping between a log attribute and a human readable value saved in an Enrichment Table (beta) or the processors mapping table.
 
-In the following steps, you'll update and add processors to the pipeline that is processing logs from the Storedog app store-frontend service. But, first you'll need to create a clone of the pipeline so that you can edit the pipeline. 
+Let's create a clone of the **Ruby** pipeline so that you can edit the processors in the pipeline to process the custom Ruby logs being collected from the Storedog app store-frontend service. 
 
 1. Navigate to <a href="https://app.datadoghq.com/logs/pipelines/" target="_datadog">**Logs > Configuration > Pipelines**</a>.
 
@@ -26,7 +26,7 @@ In the following steps, you'll update and add processors to the pipeline that is
 
     Click **Save** to update the name and filters for the pipeline in the list. 
 
-    [gif]
+    ![clone-pipeline](processlogs/assets/clone-pipeline.png)
 
 3. Because the pipelines are applied in the order they appear in the Pipelines list, let's rearrange the pipelines so that all `env:ruby-shop service:store-frontend` logs flow through the new processor and all other `source:ruby` logs would flow through the **Ruby** pipeline.
 
@@ -39,3 +39,5 @@ In the following steps, you'll update and add processors to the pipeline that is
     With this ordering, when `source:ruby` logs flow through the processing pipelines, the logs that also have `env:ruby-shop` and `service:store-frontend` tags are filtered into the **ruby clone for store-frontend** pipeline, while all the logs that do not have these two tags are filtered into the **Ruby** pipeline.
 
 4. Expand the **ruby clone for store-frontend** pipeline to see the list of processors. As logs are filtered into the pipeline, each processor processes the logs in sequential order. 
+
+In the following steps, you'll update and add processors to this pipeline.
