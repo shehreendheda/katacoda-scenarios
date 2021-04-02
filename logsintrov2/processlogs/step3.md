@@ -1,43 +1,47 @@
-One complication when collecting logs generated from different sources set up by different teams is that the name for the same attribute can vary. For example, the `http.status_code` can be also be named `status_code` or `http_code` or `response_code` or another relevant name. To address this complication, Datadog recommends using <a href="https://docs.datadoghq.com/logs/processing/attributes_naming_convention/" target="_blank">standard attributes and aliasing</a> so that all logs from different sources display attributes with the same name convention. 
+1. Navigate to the Log List in <a href="https://app.datadoghq.com/logs" target="_blank">**Logs > Search**</a> and filter the list to the `service:store-frontend` logs.
 
-In addition, Datadog has a <a href="https://docs.datadoghq.com/logs/processing/attributes_naming_convention/#standard-attributes-in-log-configuration" target="_blank">Standard Attributes</a> feature that allows you to alias (or remap) a list of source attributes to a destination/standard attribute. You can search, create, and edit the standard attributes shared in a Datadog organization. A benefit of this is that you don't have to add a remapping processer to all custom pipelines that you need to remap the an attribute to. You can create one Standard Attribute that will apply to all pipelines. 
+2. Click a log detail that has content `Completed ...`.
 
-Let's take a look at Standard Attributes in Datadog. 
+    Notice that the `method`, `status_code`, and `path` are listed in the `payload` attributes group. 
 
-1. Let's first find an attribute in the store-frontend logs that you can use.
+    In the list of facets on the left, expand **URL path** and **Status** under **Web Access**. Notice that there are no values listed.
 
-    Navigate to the Log List in <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a> and filter the list to the `service:store-frontend` logs.
+    The processors in the pipeline will need to be updated so that the logs are processed with these attributes.
 
-    Click a `store-frontend` log to view it's attributes list. Use the up and down arrow keys to view different logs. Notice that the attribute `controller` is extracted from the store-frontend logs, so you can use this one.
+3. In a new tab or browser, navigate to <a href="https://app.datadoghq.com/logs/pipelines/" target="_datadog">**Logs > Configuration > Pipelines**</a> and expand the **ruby clone for store-frontend** pipeline in the Pipelines list.
 
-    ![before-standard](processlogs/assets/before-standard2.png)
+4. In the list of processors, locate the **Remapper: remap method to http.method**. 
 
-2. Navigate to <a href="https://app.datadoghq.com/logs/pipelines/standard-attributes" target="_datadog">**Logs > Configuration > Standard Attributes**</a>.
-
-3. A list of <a href="https://docs.datadoghq.com/logs/processing/attributes_naming_convention/" target="_blank">predefined (default) standard attributes</a> is displayed.  
+    Hover over the processer and click **Edit** to open the Edit Remapper window. 
     
-    Hover over each attribute and click the **Edit** icon that appears to learn more about these attributes. 
+    Under **Set attribute(s) or tag key to remap**, update `method` to `payload.method`. 
+    
+    Under the **Name the processor**, update `remap method to http.method` to `remap payload.method to http.method`.
 
-4. In Click **New Standard Attribute** to open the **Add new standard attribute** editor.
+    Click **Save**.
 
-    Click the question mark icon next to editor name to learn more about the fields in the editors. 
+5. In the list of processors, locate the **Remapper: remap path to http.url_details.path**. 
 
-    Under **Define standard attribute**, enter `controller`, leave **Type** as `string`, and enter **...**.
+    Hover over the processer and click **Edit** to open the Edit Remapper window. 
+    
+    Under **Set attribute(s) or tag key to remap**, update `path` to `payload.path`. 
+    
+    Under the **Name the processor**, update `remap method to http.method` to `remap payload.path to http.url_details.path`.
 
-    Under **(optional) Define attribute(s) to remap**, enter `controller.name`{{copy}}.
+    Click **Save**.
 
-    Click **Save**. You'll be redirected to the standard attribute list.
+6. In the list of processors, locate the **Remapper: remap status to http.status_code**. 
 
-    ![standard-attribute](processlogs/assets/standard-attribute.gif)
+    Hover over the processer and click **Edit** to open the Edit Remapper window. 
+    
+    Under **Set attribute(s) or tag key to remap**, update `status` to `payload.status`. 
+    
+    Under the **Name the processor**, update `remap status to http.status_code` to `remap payload.status to http.status_code`.
 
-6. Navigate to the Log List in <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a> and filter the list to the `service:store-frontend` logs.
+7. In the tab/browser with **Logs Search**, wait for new logs to come in. There may be a pause in the log stream as new logs come in. 
 
-    There may be a pause in the Log Stream as the new standard attribute is applied. Wait for new **store-frontend** logs appear. 
-
-    Click the new logs to see the attribute `controller` has been replaced by the attribute `controller.name`.
-
-    ![after-standard](processlogs/assets/after-standard2.png)
-
-7. Go back to the tab with the standard attributes list. 
-
-    Hover over the `controller.name` attribute and click the **Delete** icon that appears (to clean up your account for future labs).
+    In the facets on the left, expand **URL path** and **Status** under **Web Access**. Notice that there are are now values listed. 
+    
+    You could add the `http.method` attribute as a facet from a log detail if you want to list that attribute as well. 
+    
+    Click a log detail that has content `Completed ...`. Notice that the `http` attribute group now appears with the three attributes listed. Press the up/down arrow keys to view more logs details. Close the log details.

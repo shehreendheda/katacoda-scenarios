@@ -20,6 +20,14 @@
       },
       {
         "text": "step3.md",
+        "title": "Updating Processors in a Pipeline"
+      },
+      {
+        "text": "step4.md",
+        "title": "Adding Processors to a Pipeline"
+      },
+      {
+        "text": "step5.md",
         "title": "Standard Attributes"
       }
     ],
