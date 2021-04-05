@@ -24,13 +24,13 @@ Let's start working with the Logs Search.
     
     Notice the log message. Instead of using the ERROR status, let's use the log message to filter log error logs for these services. 
     
-    Copy the part of the log message that reads `An error occured`{{copy}}
+    Copy the part of the log message that reads `An error occured`{{copy}}, and close the log side panel.
 
-    In the search field, click the X for `ERROR` to delete it. Now, paste the log message text `An error occured`{{copy}} in the search field. Notice the same list of logs appears. 
+    In the search field, click the X for `ERROR` to delete it. Now, paste the log message text `"An error occured"`{{copy}} in the search field. Notice the same list of logs appears. 
 
-    Delete the `An error occured` text from the search field.
+    Delete the `An error occured` text from the search field and press Enter. Select `Error` under the **Status** facet again.
 
-5. Common tags and attributes appear in the <a href="https://docs.datadoghq.com/logs/explorer/facets/" target="_blank">Facets</a> list on the left of the Log List automatically. But, to add or edit a tag or attribute to the Facets panel, click the corresponding tag or attribute in a log detail and select Create/Edit Facet.
+5. Common tags and attributes appear in the <a href="https://docs.datadoghq.com/logs/explorer/facets/" target="_blank">Facets</a> list on the left of the Log List automatically. You can add or edit a tag or attribute to the Facets panel from the log details in the log side panel.
 
     ![create-facet](querylogs/assets/create-facet.gif)
 
@@ -42,30 +42,37 @@ Let's start working with the Logs Search.
     
     You'll see a message confirming that the facet has been successfully added. Close the logs side panel. 
 
-    Scroll to the bottom of the Facets list. Under the **OTHERS** facet group, expand the **process.name** facet. You'll see the values of this attribute that are found in this filtered set of the logs.
+    Scroll to the bottom of the Facets list. Under the **OTHERS** facet group, expand the **process.name** facet. You may need to wait for new logs to be collcted and processed. Then, you'll see the values of this attribute that are found in new filtered set of the logs.
 
     It’s important to remember, though, that the tags and attributes available to you for creating search contexts depends on the tags you assign to the logs and the attributes you extract from the logs. 
 
-6. To save a search query, click **Save As** above the search field. 
+6. You can save search queries as <a href="https://docs.datadoghq.com/logs/explorer/saved_views/" target="_blank">Saved Views</a>.
 
-    The **Views** panel will open with a list of <a href="https://docs.datadoghq.com/logs/explorer/saved_views/" target="_blank">Saved Views</a>. (This will only have the Default View listed if you have not yet saved a Logs view.) 
+    Click **Save** above the search field to save your search query.
+
+    The **Views** panel will open with a list of Saved Views. (This will only have the Default View listed if you have not yet saved a Logs view.) 
     
-    Enter `Ads_Discounts_Errors`{{copy}} as the name of the **New View** and click **Save**. The new saved view will appear in the list.  
+    Enter `Ads_Discounts_Errors`{{copy}} as the name of the **New View** and click **Save**. The new view will appear in the list.  
 
     ![saved-views](querylogs/assets/saved-views.gif) 
 
-    Click the **Default view** option. You'll see the Log List on the right change.
+    Clear the search field above the Log List.
 
-    Click the **Ads+Discounts** option. You'll see the Log List change to the filtered list you have earlier.
+    Click the **Ads+Discounts** option. You'll see the search query populate with the saved view.
 
     Click **Hide** above the filtered views.
 
-7. In the time range above the Log List, select `Live Tail`. 
+7. <a href="https://docs.datadoghq.com/logs/explorer/live_tail/" target="_blank">Live Tail</a> is all logs ingested by Datadog after processing, but before indexing (or archiving). These logs do not persist in this list, so you can’t see past logs that have been displayed. 
 
-    <a href="https://docs.datadoghq.com/logs/explorer/live_tail/" target="_blank">Live Tail</a> is all logs ingested by Datadog after processing, but before indexing (or archiving). These logs do not persist in this list, so you can’t see past logs that have been displayed. A search query in Live Tail displays all live logs that match the query.
+    In the time range above the Log List, select `Live Tail` and wait for the list to start populating.
+
+    The logs displayed in the Live Tail logs list match the search query.
+
+    Clear the search query. Wait for new logs to be collected. Notice that the Live Tail list displayed all the logs that are being collected from the app. 
 
     ![live-search](querylogs/assets/live-search.png)
 
-    In the time range above the Log List, select `15 minutes`.
+    In the time range above the Log List, select `15 minutes` to go back to Logs Search.
 
+Now that you've gone over the Log Search and querying, let's look at the different Aggregation features for analyzing logs.
 
