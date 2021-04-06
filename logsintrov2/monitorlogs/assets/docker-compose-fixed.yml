@@ -36,7 +36,7 @@ services:
     ports:
       - "5001:5001"
     volumes:
-      - "/ecommworkshop/discounts-service-fixed:/app"
+      - "/ecommworkshop/discounts-fixed:/app"
     depends_on:
       - agent
       - db
@@ -93,7 +93,7 @@ services:
     ports:
       - "5002:5002"
     volumes:
-      - "/ecommworkshop/ads-service-fixed:/app"
+      - "/ecommworkshop/advertisements-fixed:/app"
     depends_on:
       - agent
       - db
