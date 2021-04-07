@@ -12,7 +12,7 @@ You can create <a href="https://docs.datadoghq.com/monitors/monitor_types/log/" 
 
 4. Under **Set alert conditions**, update the **Alert threshold** to `5`.
 
-5. Under **Say what's happening**, enter the `High Count of Advertisements/Discounts Error Logs`{{copy}} for the Monitor Name and `The count of {{service.name}} logs is greater than 5.`{{copy}}.
+5. Under **Say what's happening**, enter the `High Count of Advertisements/Discounts Error Logs`{{copy}} for the Monitor Name and `The count of {{service.name}} logs is greater than 5.`{{copy}}. 
 
     For Tags, enter `service:advertisements-service`{{copy}} `service:discounts-service`{{copy}} `env:ruby-shop`{{copy}}
 
