@@ -4,7 +4,7 @@ In addition to exploring and analyzing your logs, you can also <a href="https://
 
 2. Click **New Metric** in the upper right to open the Genetric Metric editor. 
 
-3. Under **Define query**, enter `service:advertisements-service`{{copy}}, `service:discounts-service`{{copy}}, `status:error`{{copy}}.
+3. Under **Define query**, enter `service:(advertisements-service OR discounts-service) status:error`{{copy}}.
 
     Below the query field, update **group by** to `Service`.
 
@@ -32,7 +32,9 @@ In addition to exploring and analyzing your logs, you can also <a href="https://
 
     Click **Edit Widgets**. Click and drag the new widget closer to the `count of advertisements and discounts error logs` Timeseries widget you created earlier.
 
-    Click the edit icon for the new widget. 
+    Click the edit icon for the new widget.
+
+    Under **Graph your data**, update **avg by** to `service`.
 
     Under **Graph your data**, expand **Legend** and select **Compact**.
 
@@ -40,6 +42,6 @@ In addition to exploring and analyzing your logs, you can also <a href="https://
 
     Click **Save Changes** above the dashboard.
 
-    Notice that the two timeseries graphs are identical.
+    Notice that the two timeseries graphs display the same data. (The width of the bars in the two graphs may be different depending on rool up window.)
 
     ![newmetric-timeseries](monitorlogs/assets/newmetric-timeseries.gif)
