@@ -1,4 +1,4 @@
-In addition to indexing logs into value groups for organized, cost-efficient logs workflows, you can archive logs (even those that are filtered and excluded by Indexes) that you don't need on hand all the time, but that you may need to access at a later point in time. 
+In addition to indexing logs into value groups, you can archive logs (even those that are filtered and excluded by Indexes) that you don't need on hand all the time, but that you may need to access at a later point in time. 
 
 <a href="https://docs.datadoghq.com/logs/archives" target="_blank">Archives</a> allows you to store logs in a user-provided cloud storage for long-term retention and quick rehydration (more details on the next page) whenever needed.
 
@@ -10,13 +10,13 @@ Let's take a look at Archives in Datadog. Note: Because a cloud storage option i
 
 2. Click **New Archives** above the archives list to open the Add an Archive editor. 
 
-    Under **Define which data to store**, enter `env:ruby-shop`{{copy}}, `service:store-frontend`{{copy}}, `status:info`{{copy}} in the **Filter**. Notice the preview list above this field is filtered to the selection.
+    Under **Define which data to store**, enter `env:ruby-shop`{{copy}}, `service:store-frontend`{{copy}}, `status:ok`{{copy}} in the **Filter**. Notice the preview list above this field is filtered to the selection.
 
-    Under **Select Archive Type**, select the cloud storage selection you would use for your workflows. The **Configure Bucket** section below expands automatically. Notice the information you'd need to set up the archive storage. Note: Do **not** set up a cloud storage for this exercise because you will incur a cost and this Datadog account may not have the security permissions that your company requires.
+    Under **Select Archive Type**, select the cloud storage selection you would use for your workflows. The **Configure Bucket** section below expands automatically. View the information you'd need to set up the archive storage. Note: Do **not** set up a cloud storage for this exercise because you will incur a cost and this Datadog account may not have the security permissions that your company requires.
 
-    The sections **Name this Archive** and **(Optional) Tags** also expand automatically. These have default settings that you can change. You can click the questions marks next to fields to learn more about them.
+    The sections **Name this Archive** and **(Optional) Tags** also expand automatically. These have default settings that you can change. You can click the questions marks next to the fields to learn more about them.
 
-    Because you haven't filled in the cloud storage requirement, the Save option is grayed out. Click **Cancel** to close the editor.
+    Because you haven't filled in the cloud storage requirement, the **Save** option is grayed out. Click **Cancel** to close the editor.
     
 3. If you had been able to save the archive, you would be redirected to the Archives list with the new Archive listed, like in the example below. 
 

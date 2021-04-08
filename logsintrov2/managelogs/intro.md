@@ -5,4 +5,6 @@ This activity provides an overview of Indexes, Archives, Rehydrate from Archives
 
 When you start activity, a fictional ecommerce app, Storedog, will be brought online in a Docker environment and instrumented with Datadog for data collection. The app has a Ruby store-frontend and Python discounts and advertisements services.
 
+Note: You should have completed the **Log Processing** activity before starting this activity.
+
 When you are ready to begin, click **Start Scenario**.
