@@ -29,7 +29,7 @@ Let's create a screenboard with these widgets. You'll add a Timeseries widget fo
 
     Click **Save**. The new Timeseries widget will appear on the board. (You can move and resize the widget as needed.)
 
-    ![timeseries](monitorlogs/assets/timeseries.gif)
+    ![timeseries](monitorlogs/assets/timeseries_update.gif)
 
 5. In the widget options, click the right arrow until you see the **Log Stream** widget. 
 
