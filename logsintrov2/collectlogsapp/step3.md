@@ -16,11 +16,11 @@ The service has a Ruby/Rails framework. For the first step in log collection con
         
     `ddsource` is the <a href="https://docs.datadoghq.com/logs/processing/#source-attribute" target="_blank">attribute</a> defines the log source. Datadog's Autodiscovery recognizes the attribute and uses the corresponding Integration and Integration Pipeline to collect and process the logs.
 
-    With the app service configured, the last step for completing log collection configuration is adding the correct `source` and `service` tags for logs in the docker-compose file. 
+3. With the app service configured, the last step for completing log collection configuration is adding the correct `source` and `service` tags for logs in the docker-compose file. 
 
-3. Click `deploy/docker-compose/docker-compose-no-logs.yml`{{open}} to open the docker-compose file.
+    Click `deploy/docker-compose/docker-compose-no-logs.yml`{{open}} to open the docker-compose file.
 
-4. Click **Copy to Editor** below to add the following logs configuration label under `frontend`.
+    Click **Copy to Editor** in the block below or manually copy and paste the text where indicated to add the following logs configuration label under `frontend`.
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add frontend log labels">
          com.datadoghq.ad.logs: '[{"source": "ruby", "service": "store-frontend"}]'</pre>

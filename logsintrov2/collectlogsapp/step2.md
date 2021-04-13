@@ -2,9 +2,9 @@ To collect logs from the app, <a href="https://docs.datadoghq.com/agent/docker/l
 
 1. Click `deploy/docker-compose/docker-compose-no-logs.yml`{{open}}.
 
-    Let's first enable log collection through the Datadog Agent.
+2. Let's first enable log collection through the Datadog Agent.
 
-3. Click **Copy to Editor** in the block below to add the following to the list of environment variables under `agent`.
+    Click **Copy to Editor** in the block below or manually copy and paste the text where indicated to add the following to the list of environment variables under `agent`.
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add agent env variables">
          - DD_LOGS_ENABLED=true
@@ -16,9 +16,9 @@ To collect logs from the app, <a href="https://docs.datadoghq.com/agent/docker/l
     
     To learn more about the environment variables and volume mounts for log collection from Docker environments, you can view the <a href="https://docs.datadoghq.com/agent/docker/log/?tab=dockercompose#one-step-install-to-collect-all-the-container-logs" target="_blank">Docker Log Collection</a> documentation.
 
-    Now, let's also specify certain log collection configuration parameters for the agent.
+3. Now, let's also specify certain log collection configuration parameters for the agent.
 
-4. Click **Copy to Editor** below to add the following logs configuration label under `agent`. 
+    Click **Copy to Editor** in the block below or manually copy and paste the text where indicated to add the following logs configuration label under `agent`. 
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add agent log labels">
        labels:

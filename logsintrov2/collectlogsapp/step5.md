@@ -4,11 +4,13 @@ In Datadog, you can search and analyze your log data in the <a href="https://doc
 
     ![restarted-agent-frontend](collectlogsapp2/assets/restarted-agent-frontend.png)
 
-2. If you've previously used the **Log Explorer** in the Datadog organization you are working in, move on to the next step. 
+2. In the terminal on the right, run the command `creds`{{execute}} in the terminal to display your Datadog app login credentials for this activity.
 
-    If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Getting Started** again.
+    In a new browser window/tab, navigate to <a href="https://app.datadoghq.com/account/login" target="_datadog">app.datadoghq.com</a> to log in to the Datadog account/organization using the login credentials provided in the terminal.  
 
-3. Navigate to the <a href="https://app.datadoghq.com/logs" target="_datadog">**Log Explorer**</a> in Datadog to view the <a href="https://docs.datadoghq.com/logs/explorer/list/" target="_blank">Log List</a>. 
+3. If you've previously used the **Log Explorer** in the Datadog organization you are working in, navigate to the <a href="https://app.datadoghq.com/logs" target="_datadog">**Log Explorer**</a> in Datadog to view the <a href="https://docs.datadoghq.com/logs/explorer/list/" target="_blank">Log List</a>. 
+
+    If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Getting Started** again to view the Log List.
 
 4. In the search field, enter `env:ruby-shop` as the search query if it is not listed so that the Log List displays logs for the Storedog app only.
 

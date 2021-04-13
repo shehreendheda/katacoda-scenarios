@@ -10,37 +10,37 @@ In addition, to enable Autodiscovery and the `python` Integration and Integratio
 
 1. Click `deploy/docker-compose/docker-compose-no-logs.yml`{{open}}. 
 
-2. Click **Copy to Editor** below to add the `DD_LOGS_INJECTION=true` environment variables under `discounts`.
+2. Click **Copy to Editor** in the block below or manually copy and paste the text where indicated to add the `DD_LOGS_INJECTION=true` environment variables under `discounts`.
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add discounts env variables">
          - DD_LOGS_INJECTION=true</pre> 
 
-3. Click **Copy to Editor** below to add the correct `source` and `service` tags under `discounts`. 
+3. Click **Copy to Editor** in the block below or manually copy and paste the text where indicated to add the correct `source` and `service` tags under `discounts`. 
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add discounts log labels">
          com.datadoghq.ad.logs: '[{"source": "python", "service": "discounts-service"}]'</pre>
 
     The **discounts** section of the docker-compose file should now look like the screenshot below. 
     
-    <p> ![instrumented-discounts](collectlogsapp2/assets/instrumented-discounts.png)
+    ![instrumented-discounts](collectlogsapp2/assets/instrumented-discounts.png)
 
-4. Click **Copy to Editor** below to add the following to the `DD_LOGS_INJECTION=true` environment variable under `advertisements`.
+4. Click **Copy to Editor** in the block below or manually copy and paste the text where indicated to add the following to the `DD_LOGS_INJECTION=true` environment variable under `advertisements`.
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add ads env variables">
          - DD_LOGS_INJECTION=true</pre> 
 
-5. Click **Copy to Editor** below to add the following logs configuration label under `advertisements`. 
+5. Click **Copy to Editor** in the block below or manually copy and paste the text where indicated to add the following logs configuration label under `advertisements`. 
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add ads log labels">
          com.datadoghq.ad.logs: '[{"source": "python", "service": "advertisements-service"}]'</pre>
 
     The **advertisements** section of the docker-compose file should now look like the screenshot below. 
     
-    ![instrumented-advertisements](collectlogsapp2/assets/instrumented-advertisements.png)
+    ![instrumented-ads](collectlogsapp2/assets/instrumented-ads.png)
 
-    One more step is needed to finalize log collection for these services. These services are dependent on a postgres database. As a final step, let's enable log collection for the db.
+6. One more step is needed to finalize log collection for these services. These services are dependent on a postgres database. As a final step, let's enable log collection for the db.
 
-6. Click **Copy to Editor** below to add labels to enable logs. 
+    Click **Copy to Editor** in the block below or manually copy and paste the text where indicated to add labels to enable logs. 
 
     <pre class="file" data-filename="docker-compose-no-logs.yml" data-target="insert" data-marker="# add db log labels">
        labels:
