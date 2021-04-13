@@ -32,13 +32,13 @@ Let's create an index for the store-frontend logs that excludes some of logs wit
 
     Click **Save**. You'll see the new index in the Indexes list.
 
-    [gif]
+    ![create-index](managelogs/assets/create-index.png)
 
 5. Because the order of the Indexes matter, let's move the new `storedog-frontend` index to above the main index so that all the `env:ruby-shop,service:store-frontend` logs get filtered to this index.
 
     On the right of the `storedog-frontend` index, click the six dots icon and drag then drop the index above the `main` index. 
 
-    [gif]
+    ![reorder-index](managelogs/assets/reorder-index.png)
 
 6. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a> and wait for some new logs to come in.
 
@@ -48,7 +48,7 @@ Let's create an index for the store-frontend logs that excludes some of logs wit
     
     Click `storedog-frontend` to filter the Log List to these logs. You'll see the list only display logs for the store-frontend.
 
-    [gif]
+    ![select-index](managelogs/assets/select-index.png)
 
 7. Navigate to <a href="https://app.datadoghq.com/logs/pipelines/indexes" target="_datadog">**Logs > Configuration >Indexes**</a> to add an exclusion filter to the index.
 
@@ -64,7 +64,7 @@ Let's create an index for the store-frontend logs that excludes some of logs wit
 
     ![exclusion-filter](managelogs/assets/exclusion-filter.png)
 
-. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a> and wait for some new logs to come in.
+8. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a> and wait for some new logs to come in.
 
     In the list of facets on the left, click **Info** under **Status** to filter the Log List to just the `INFO` logs in this index.
 
