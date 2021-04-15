@@ -26,7 +26,7 @@ Let's start working with the Logs Search.
     
     Copy the part of the log message that reads `An error occured`{{copy}}, and close the log side panel.
 
-    In the search field, click the X for `ERROR` to delete it. Now, paste the log message text `"An error occured"`{{copy}} in the search field. Notice the same list of logs appears. 
+    In the search field, click the X for `ERROR` to delete it. Now, paste the log message text `"An error occured"`{{copy}} in the search field and press Enter. Notice the same list of logs appears. 
 
     Delete the `An error occured` text from the search field and press Enter. Select `Error` under the **Status** facet again.
 
