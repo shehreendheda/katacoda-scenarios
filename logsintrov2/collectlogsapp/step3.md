@@ -1,4 +1,4 @@
-The `store-frontend` service has already been configured so that emitted logs are processed and are tagged with the corresponding trace_IDs and span_IDs, but you will need to update the docker-compose file with the correct `source` and `service` tags. Let's first go through the service configuration.
+The `store-frontend` service has already been configured so that emitted logs are processed and tagged with the corresponding trace_IDs and span_IDs, but you will need to update the docker-compose file with the correct `source` and `service` tags. Let's first go through the service configuration.
 
 The service has a Ruby/Rails framework. For the first step in log collection configuration, the required Ruby log libraries have been installed. Next, an initializer file has been added to send logs to Datadog in the JSON format and to automatically injection of trace IDs and span IDs to correlate log and trace data. 
 
@@ -26,7 +26,7 @@ The service has a Ruby/Rails framework. For the first step in log collection con
     ![instrumented-frontend](collectlogsapp2/assets/instrumented-frontend.png)
 
 
-With these steps, the Ruby/Rails `store-frontend` service is configured as needed for Log Management as needed. 
+With these steps, the Ruby/Rails `store-frontend` service is configured as needed for Log Management. 
 - The logs will have the correct `source` and `service` tags.
 - The logs will be processed using the `ruby` Integration Pipeline.
 - The logs will be correlated with associated traces using the `trace_id` tag. 

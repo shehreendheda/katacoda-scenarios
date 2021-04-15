@@ -1,6 +1,6 @@
 The `discounts` and `advertisements` services have a Python Flask framework, so the services are instrumented using the <a href="http://pypi.datadoghq.com/trace/docs/web_integrations.html#flask" target="_blank">Python tracing library</a> `ddtrace`. 
 
-The standard `logging` library in `ddtrace` supports automatic trace ID and span ID injection. However, to enabling trace ID/span ID injection, you have to add the environment variable `DD_LOGS_INJECTION=true` to the services in the docker-compose file for this to happen. (For more details, you can view the <a href="https://docs.datadoghq.com/tracing/connect_logs_and_traces/python/#automatically-inject-trace-and-span-ids" target="_blank">Connecting Python Logs and Traces</a> documentation.)
+The standard `logging` library in `ddtrace` supports automatic trace ID and span ID injection. However, to enable trace ID/span ID injection, you must add the environment variable `DD_LOGS_INJECTION=true` to the services in the docker-compose file for this to happen. (For more details, you can view the <a href="https://docs.datadoghq.com/tracing/connect_logs_and_traces/python/#automatically-inject-trace-and-span-ids" target="_blank">Connecting Python Logs and Traces</a> documentation.)
 
 In addition, to enable Autodiscovery and the `python` Integration and Integration Pipeline, you'll need to add the `com.datadoghq.ad.logs` label to the docker-compose file to update the `source` and `service` tags. 
 
