@@ -12,13 +12,9 @@ In Datadog, you can search and analyze your log data in the <a href="https://doc
 
     If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Getting Started** again to view the Log List.
 
-4. In the search field, enter `env:ruby-shop` as the search query if it is not listed so that the Log List displays logs for the Storedog app only.
-
 5. Select `15 min` in the time range selector in the upper right.
 
 6. In the **Facets** list, expand the **Source** and **Service** lists. **Service** to view the services from the app that are injecting traces into Datadog. 
-
-    ![logs-sources-services](collectlogsapp/assets/logs-sources-services.png)
 
     Notice that they match the sources and services you added using the `com.datadoghq.ad.logs` Docker labels.
 
@@ -67,8 +63,3 @@ In Datadog, you can search and analyze your log data in the <a href="https://doc
     Also, notice that the **Traces** tab shows a linked trace.
 
 10. Navigate to <a href="https://app.datadoghq.com/logs/pipelines" target="_datadog">**Logs > Configurations > Pipelines**</a> to see the of Integration Pipelines for the log sources: **Datadog Agent**, **python**, **Ruby**.
-
-
-### Assessment
-
-You can continue to explore the log data from the Storedog App. When you are done, click `grademe`{{execute}} to receive a grade for this activity.
