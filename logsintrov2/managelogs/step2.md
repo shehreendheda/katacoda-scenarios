@@ -4,7 +4,9 @@ In addition to indexing logs into value groups, you can archive logs (even those
 
 After logs are ingested and pass through configured processing pipelines, logs matching the filter query in an Archive are sent to a user-defined cloud storage. If you need access to archived logs, you can later <a href="https://docs.datadoghq.com/logs/archives/rehydrating" target="_blank">Rehydrate from Archives</a> (more details on the next page). Note: Archives can only be configured by users with admin permissions. Contact admin users on your team if you’re interested in using Archives for your logs workflows.
 
-Let's take a look at Archives in Datadog. Note: Because a cloud storage option is required, you won't set up an archive, but will go over what's required to create the Archive. 
+Let's take a look at Archives in Datadog. 
+
+Note: Because a cloud storage option is required, you won't set up an archive, but will go over what's required to create the Archive. 
 
 1. Navigate to <a href="https://app.datadoghq.com/logs/pipelines/archives" target="_datadog">**Logs > Configuration > Archives**</a>.
 

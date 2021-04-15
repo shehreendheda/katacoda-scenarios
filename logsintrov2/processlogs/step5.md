@@ -40,8 +40,7 @@ Let's take a look at Standard Attributes in Datadog.
 
 7. Go back to the tab with the standard attributes list. 
 
-    Hover over the `controller.name` attribute and click the **Delete** icon that appears.
+    Hover over the `controller.name` attribute and click the **Delete** icon that appears to clean up your account for future labs
 
-    In the menu at the top, click **Pipelines**. Hover over the **ruby clone for store-frontend** pipeline and click **Delete** on the right for the pipeline.
+    Do **NOT** delete the **ruby clone for store-frontend** pipeline you created in **Pipelines**. You will need the pipeline for the next activity.
 
-    These steps were to clean up your account for future labs.

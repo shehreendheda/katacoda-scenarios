@@ -3,7 +3,9 @@ Once you've created Archives, you can "rehydrate" them using Rehydrate from Arch
 
 In <a href="https://docs.datadoghq.com/logs/archives/rehydrating" target="_blank">Rehydrate from Archives</a>, you can create a <a href="https://docs.datadoghq.com/logs/archives/rehydrating?tab=awss3#historical-views">Historical View</a> that defines the time period, Reload queries, Archive, number of logs, and retention period for the rehydrated logs. You can also set an optional notification so that you know when rehydration is complete. 
 
-Let's take a look at Rehydrate from Archives in Datadog. Note: Because a cloud storage option is required and you didn't set up an Archive in the previous page, you won't rehydrate an Archive here, but will go over what's required to rehydrate an Archive.
+Let's take a look at Rehydrate from Archives in Datadog. 
+
+Note: Because a cloud storage option is required and you didn't set up an Archive in the previous page, you won't rehydrate an Archive here, but will go over what's required to rehydrate an Archive.
 
 1. Navigate to <a href="https://app.datadoghq.com/logs/pipelines/historical-views" target="_datadog">**Logs > Configuration > Rehydrate from Archives**</a>. 
 
