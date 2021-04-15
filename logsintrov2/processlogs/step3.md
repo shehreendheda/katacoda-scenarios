@@ -4,7 +4,7 @@ In a custom or cloned pipeline, you can edit processors that are in the pipeline
 
 2. Click a log detail that has content `Completed ...`.
 
-    Notice that the `method`, `status_code`, and `path` are listed in the `payload` attributes group. 
+    Browse the **Event Attributes**. Notice that the `method`, `status_code`, and `path` are listed in the `payload` attributes group. 
 
     In the list of facets on the left, expand **URL Path** and **Status Code** under **Web Access**. Notice that there are no values listed.
 
@@ -48,7 +48,7 @@ In a custom or cloned pipeline, you can edit processors that are in the pipeline
     
     Click a log detail that has content `Completed ...`. Notice that the `http` attribute group now appears with the three attributes listed. Press the up/down arrow keys to view more logs details. 
     
-    In one of the logs detaisl, click the wheel icon next to the `http.method` attribute and select **Create facet for @http.method** to open the **Add Facet** window.
+    In one of the logs details, click the wheel icon next to the `http.method` attribute and select **Create facet for @http.method** to open the **Add Facet** window.
     
     Expand **Advanced**. Unselect **Use path as display name** and update **Display Name** to `Method`. Under **Group**, select **Web Access**. Click **Add**. You will see a confirmation message appear that the facet has been created. Close the log details.
 

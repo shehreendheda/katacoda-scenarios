@@ -18,7 +18,7 @@ Let's explore the different ways to add/create a Pipeline in Datadog: Adding an 
 
 2. In the upper right, click **Browse Pipeline Library** to open the Pipeline Libary side panel. For any one of the pipelines in the library, do the following.
 
-    Click the arrow on the right of the pipeline name to expand the pipeline list and see the list of processors in the pipeline. Hover over each processer, click the view icon that appears on the left to view its details.
+    Click the arrow on the left of the pipeline name to expand the pipeline list and see the list of processors in the pipeline. Hover over each processer, click the view icon that appears on the left to view its details.
     
     Hover of the pipeline name. You'll see different options appear. 
     

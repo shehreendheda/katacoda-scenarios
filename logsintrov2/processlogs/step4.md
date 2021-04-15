@@ -6,7 +6,7 @@ In a custom or cloned pipeline, you can add and rearrange processors that are in
 
     Notice that the official log status does not match severity level of the status_code. For example, a `status_code` of `200` should have a `level` of `ok` and a `status_code` of `500` should have a `level` of `error`.
 
-    In the list of facets on the left, expand **Status** under **Core**. Notice that logs with an `OK` status. 
+    In the list of facets on the left, expand **Status** under **Core**. Notice that there are no logs with an `OK` status. 
 
     The processors in the pipeline will need to be updated so that the logs are processed with these attributes.
 
@@ -22,7 +22,7 @@ In a custom or cloned pipeline, you can add and rearrange processors that are in
     
     Repeat for `@http.status_code:[300 TO 399]` and `notice`, `@http.status_code:[400 TO 499]` and `warn`, and `@http.status_code:[500 TO 599]` and `error`. 
     
-    Under **Name the processor**, enter `Assign severity level based on http.status_code`. Click **Save**.
+    Under **Name the processor**, enter `Assign severity level based on http.status_code` and click **Save**.
 
     The processor will appear in the processors list
 

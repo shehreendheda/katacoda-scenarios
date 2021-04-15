@@ -16,7 +16,7 @@ Let's create a clone of the **Ruby** pipeline so that you can edit the processor
 
 2. Now, let's clone the **Ruby** Integration pipeline to create a modified version of this pipeline.
 
-    Hover over the **Ruby** pipeline and click the **Clone** icon that appears on the right. You'll see **Are you sure? Clone Cancel** appear where the icon was. Click **Clone**. You'll see a message appear that the clone pipeline was create and that the **Ruby** pipeline was disable to avoid duplication. 
+    Hover over the **Ruby** pipeline and click the **Clone** icon that appears on the right. You'll see **Are you sure? Clone Cancel** appear where the icon was. Click **Clone**. You'll see a message appear that the clone pipeline was created and that the **Ruby** pipeline was disabled to avoid duplication. 
 
     Hover over the new **Ruby** pipeline and click the **Edit** icon that appear on the right.
 

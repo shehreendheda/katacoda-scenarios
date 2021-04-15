@@ -18,11 +18,11 @@ Let's take a look at Standard Attributes in Datadog.
     
     Hover over each attribute and click the **Edit** icon that appears to learn more about these attributes. 
 
-4. In Click **New Standard Attribute** to open the **Add new standard attribute** editor.
+4. Click **New Standard Attribute** to open the **Add new standard attribute** editor.
 
     Click the question mark icon next to editor name to learn more about the fields in the editors. 
 
-    Under **Define standard attribute**, enter `controller.name`, leave **Type** as `string`, and enter **...**.
+    Under **Define standard attribute**, enter `controller.name`, leave **Type** as `string`, and enter `name of controller`{{copy} under **Description**.
 
     Under **(optional) Define attribute(s) to remap**, enter `payload.controller`{{copy}}.
 
