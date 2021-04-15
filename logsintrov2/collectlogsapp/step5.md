@@ -2,7 +2,7 @@ In Datadog, you can search and analyze your log data in the <a href="https://doc
 
 1. Click `docker-compose -f docker-compose-no-logs.yml up -d --build`{{execute}} to build the docker environment and bring the app online. 
 
-    ![docker-compose-complete](collectlogsapp2/assets/docker-compose-complete.png)
+    ![docker-compose-complete](collectlogsapp/assets/docker-compose-complete.png)
 
 2. In the terminal on the right, run the command `creds`{{execute}} in the terminal to display your Datadog app login credentials for this activity.
 
@@ -18,7 +18,7 @@ In Datadog, you can search and analyze your log data in the <a href="https://doc
 
 6. In the **Facets** list, expand the **Source** and **Service** lists. **Service** to view the services from the app that are injecting traces into Datadog. 
 
-    ![logs-sources-services](collectlogsapp2/assets/logs-sources-services.png)
+    ![logs-sources-services](collectlogsapp/assets/logs-sources-services.png)
 
     Notice that they match the sources and services you added using the `com.datadoghq.ad.logs` Docker labels.
 
@@ -28,7 +28,7 @@ In Datadog, you can search and analyze your log data in the <a href="https://doc
 
     The <a href="https://docs.datadoghq.com/logs/explorer/#the-log-side-panel" target="_blank">Log Side Panel</a> with the log details will open.
 
-    ![frontend-log-detail](collectlogsapp2/assets/frontend-log-detail.png)
+    ![frontend-log-detail](collectlogsapp/assets/frontend-log-detail.png)
     
     Notice that the `source` is `ruby` and the `service` is `store-frontend`.
 
@@ -46,7 +46,7 @@ In Datadog, you can search and analyze your log data in the <a href="https://doc
 
     Click a log for the `discounts-service` service that has **Content** similar to `...INFO [bootstrap]...` to open the log side panel.
 
-    ![discounts-log-details](collectlogsapp2/assets/discounts-log-details.png)
+    ![discounts-log-details](collectlogsapp/assets/discounts-log-details.png)
     
     Notice that the `source` is `python` and the `service` is `discounts-service`. 
 
@@ -58,7 +58,7 @@ In Datadog, you can search and analyze your log data in the <a href="https://doc
 
     Click a log for the `advertisements-service` that has **Content** similar to `...INFO [bootstrap]...` to open the log side panel.
 
-    ![ads-log-details](collectlogsapp2/assets/ads-log-details.png)
+    ![ads-log-details](collectlogsapp/assets/ads-log-details.png)
     
     Notice that the `source` is `python` and the `service` is `advertisements-service`. 
 
