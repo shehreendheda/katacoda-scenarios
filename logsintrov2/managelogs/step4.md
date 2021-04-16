@@ -44,4 +44,6 @@ Let's take a look at Data Access in Datadog.
 
     ![dataccess-readonlyrolerestricted](managelogs/assets/dataccess-readonlyrolerestricted.png)
 
-    Hover over `Datadog Read Only Role` again and click the **Move Role** icon. Select `Unrestricted Access` to reassign the role its original access permission.     
+    Hover over `Datadog Read Only Role` again and click the **Move Role** icon. Select `Unrestricted Access` to reassign the role its original access permission.    
+
+5. To clean up the Datadog evironment for future labs, click **Pipelines** in the menu at the top. Hover over the **ruby clone for store-frontend** pipeline and click **Delete** on the right for the pipeline.

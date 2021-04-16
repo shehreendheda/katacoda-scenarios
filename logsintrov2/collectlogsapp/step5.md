@@ -2,6 +2,8 @@ In Datadog, you can search and analyze your log data in the <a href="https://doc
 
 1. Click `docker-compose -f docker-compose-no-logs.yml up -d --build`{{execute}} to build the docker environment and bring the app online. 
 
+    When the terminal on the right displays that the containers for the services have been brought online (as shown in the image below) continue to the next step. 
+
     ![docker-compose-complete](collectlogsapp/assets/docker-compose-complete.png)
 
 2. In the terminal on the right, run the command `creds`{{execute}} in the terminal to display your Datadog app login credentials for this activity.

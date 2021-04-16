@@ -10,6 +10,6 @@ In the terminal on the right, the environment is being prepared. When you will s
      
      Each application service runs in its own Docker container: `discounts`, `frontend`, `advertisements`, and `db`.
 
-     Metric and trace collection has been configured, but log collection is not yet configured.
+     Metric and trace collection have been configured, but log collection is not yet configured.
 
 Let's configure log collection for the app services.
