@@ -21,3 +21,7 @@ Transactions aggregate indexed logs according to instances of a sequence of even
     ![frontend_status_transactions](querylogs/assets/frontend_status_transactions.png)
 
 4. Click the X next to **Patterns** to return to the Log List.
+
+
+### Assessment
+Click `grademe`{{execute}} to receive a grade for this activity.

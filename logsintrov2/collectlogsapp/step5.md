@@ -65,3 +65,7 @@ In Datadog, you can search and analyze your log data in the <a href="https://doc
     Also, notice that the **Traces** tab shows a linked trace.
 
 10. Navigate to <a href="https://app.datadoghq.com/logs/pipelines" target="_datadog">**Logs > Configurations > Pipelines**</a> to see the of Integration Pipelines for the log sources: **Datadog Agent**, **python**, **Ruby**.
+
+
+### Assessment
+Click `grademe`{{execute}} to receive a grade for this activity.

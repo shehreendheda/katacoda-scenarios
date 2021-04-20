@@ -45,3 +45,7 @@ In addition to exploring and analyzing your logs, you can also <a href="https://
     Notice that the two timeseries graphs display the same data. (The width of the bars in the two graphs may be different depending on rool up window.)
 
     ![newmetric-timeseries](monitorlogs/assets/newmetric-timeseries.gif)
+
+
+### Assessment
+Click `grademe`{{execute}} to receive a grade for this activity.

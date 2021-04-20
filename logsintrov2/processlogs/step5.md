@@ -44,3 +44,6 @@ Let's take a look at Standard Attributes in Datadog.
 
     Do **NOT** delete the **ruby clone for store-frontend** pipeline you created in **Pipelines**. You will need the pipeline for the next activity.
 
+
+### Assessment
+Click `grademe`{{execute}} to receive a grade for this activity.
