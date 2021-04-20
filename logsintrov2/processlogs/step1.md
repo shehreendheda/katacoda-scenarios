@@ -12,8 +12,6 @@ Let's explore the different ways to add/create a Pipeline in Datadog: Adding an 
 
     Click the pipeline again to collapse its processors list.
 
-    [gif]
-
     Let's explore more options for Integration Pipelines.
 
 2. In the upper right, click **Browse Pipeline Library** to open the Pipeline Libary side panel. For any one of the pipelines in the library, do the following.
@@ -24,10 +22,12 @@ Let's explore the different ways to add/create a Pipeline in Datadog: Adding an 
     
     Click **View** to see the pipeline filter query. Click **Close**. 
     
-    Click **Clone** to view and update the filter query and name of the pipeline clone. Click **Cancel**. If you had clicked **Clone** instead, a customizable version of the pipeline would appear in the Pipelines list.
+    Click **Clone** to view and update the filter query and name of the pipeline clone. Click **Cancel**. If you had clicked **Clone** instead, a customizable version of the pipeline would be added to the Pipelines list. 
     
     Click **Installation Instructions** to view how to install the pipeline. Notice that you are instructed to use the `source: XXX` label. Click **Close** in the **Installation Instructions**. If you had clicked **Integration Documentation** instead, a tab would open to the Datadog documentation for Integrations.
 
+    To manually add an Integration Pipeline to the Pipelines list, use the **Clone** option, and to automatically add an Integration Pipeline to the Pipelines list, follow the **Installation Instructions** option
+    
     Close the Pipeline Library side panel.
 
     ![pipeline-library](processlogs/assets/pipeline-library.gif)

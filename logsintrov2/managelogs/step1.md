@@ -38,7 +38,7 @@ Let's create an index for the store-frontend logs that excludes some of logs wit
 
     On the right of the `storedog-frontend` index, click the six dots icon and drag then drop the index above the `main` index. 
 
-    ![reorder-index](managelogs/assets/reorder-index.png)
+    ![reorder-index](managelogs/assets/reorder-index.gif)
 
 6. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs > Search**</a> and wait for some new logs to come in.
 
@@ -48,7 +48,7 @@ Let's create an index for the store-frontend logs that excludes some of logs wit
     
     Click `storedog-frontend` to filter the Log List to these logs. You'll see the list only display logs for the store-frontend.
 
-    ![select-index](managelogs/assets/select-index.png)
+    ![select-index](managelogs/assets/select-index.gif)
 
 7. Navigate to <a href="https://app.datadoghq.com/logs/pipelines/indexes" target="_datadog">**Logs > Configuration >Indexes**</a> to add an exclusion filter to the index.
 
