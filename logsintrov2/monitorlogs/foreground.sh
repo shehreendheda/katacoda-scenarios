@@ -29,5 +29,4 @@ docker kill docker-compose_db_1
 
 statusupdate complete
 
-
-#prepenvironment
+prepenvironment

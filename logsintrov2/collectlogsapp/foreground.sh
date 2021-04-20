@@ -27,5 +27,4 @@ cd /ecommworkshop/deploy/docker-compose
 
 statusupdate complete
 
-
-#prepenvironment
+prepenvironment
