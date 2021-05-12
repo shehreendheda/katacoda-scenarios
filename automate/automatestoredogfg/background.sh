@@ -1,15 +1,9 @@
 #!/bin/bash
-mkdir /root/app-files
-git clone https://github.com/burningion/ecommerce-observability /root/app-files
-cd /root/app-files
-git checkout instrumented-fixed
-docker-compose pull
 
-#while [ ! -f /root/.kcrc ]; do sleep 1; done
-#source /root/.kcrc
+curl -s https://datadoghq.dev/katacodalabtools/r?raw=true|bash
 
-#export POSTGRES_USER=postgres
-#export POSTGRES_PASSWORD=postgres
-#docker-compose up -d
+mv /root/docker-compose-fixed.yml /ecommworkshop/deploy/docker-compose/
+mv /root/docker-compose-broken.yml /ecommworkshop/deploy/docker-compose/
+statusupdate files
 
-./gor --input-file-loop --input-file requests_0.gor --output-http "http://localhost:3000" >> /dev/null 2>&1
+/ecommworkshop/gor --input-file-loop --input-file "/ecommworkshop/requests_0.gor|300%" --output-http "http://localhost:3000" >> /dev/null 2>&1
