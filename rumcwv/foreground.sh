@@ -25,8 +25,6 @@ docker-compose -f docker-compose-fixed.yml up -d
 
 envready
 
-docker kill docker-compose_db_1
-
 statusupdate complete
 
-prepenvironment
+#prepenvironment
