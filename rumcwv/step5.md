@@ -1,6 +1,6 @@
 bbb
 
-1. To get started with RUM, you need to set up a Datadog RUM application. Navigate to the <a href="https://app.datadoghq.com/rum/list" target="_datadog">**UX Monitoring > Rum Applications**</a>.
+1. To get started with RUM in Datadog, you need to set up a Datadog RUM application. Navigate to the <a href="https://app.datadoghq.com/rum/list" target="_datadog">**UX Monitoring > Rum Applications**</a>.
 
 2. Click **New Application**.
 
@@ -11,13 +11,14 @@ bbb
     Click **Create New RUM Application**.
 
 4. If you are using NPM to manage dependencies for your project front end, you can integrate RUM using the `@datadog/browser-rum` package. However, here we are just going to add the JavaScript inline, so select the `CDN Sync` tab:
-    ![cdnsync](assets/cdnsync.png)
+
+    ![cdnsync](rumcwv/assets/cdnsync.png)
 
 5. On the right, click the `IDE` tab. It may take a few seconds to load. 
 
-    Once the IDE loads, open the file `store-frontend-instrumented-fixed/store-frontend/app/views/layouts/application.html.erb`{{open}}. This Ruby file is the main template for the Storedog app. By integrating the RUM script here, RUM will be available throughout the application.
+    Once the IDE loads, open the file `store-frontend-instrumented-fixed/app/views/layouts/application.html.erb`{{open}}. This Ruby file is the main template for the Storedog app. By integrating the RUM script here, RUM will be available throughout the application.
 
-    **Lines ##** are the RUM script in the front end and set the initialization arguments. This code may be slightly outdated (and different) than the current code snippet in the Datadog UI. It will still work.
+    **Lines 10-19** are the RUM script in the front end and set the initialization arguments. This code may be slightly outdated (and different) than the current code snippet in the Datadog UI. It will still work.
 
     Notice that you code snippet includes environment variables for `applicationId` and `clientToken`.
 

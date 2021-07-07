@@ -50,6 +50,10 @@
           "target": "/root"
         },
         {
+          "file": "docker-compose-fixed-slowads.yml",
+          "target": "/root"
+        },
+        {
           "file": "docker-compose-broken.yml",
           "target": "/root"
         },
