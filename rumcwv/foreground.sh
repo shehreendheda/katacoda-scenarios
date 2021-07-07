@@ -24,7 +24,7 @@ cd /ecommworkshop/deploy/docker-compose
 #docker-compose -f docker-compose-fixed.yml up -d
 #docker-compose -f docker-compose-broken.yml up -d
 
-envready
+#envready
 
 statusupdate complete
 
