@@ -12,11 +12,21 @@ bbb
 
 4. If you are using NPM to manage dependencies for your project front end, you can integrate RUM using the `@datadog/browser-rum` package. However, here we are just going to add the JavaScript inline, so select the `CDN Sync` tab:
     ![cdnsync](assets/cdnsync.png)
+
+5. On the right, click the `IDE` tab. It may take a few seconds to load. 
+
+    Once the IDE loads, open the file `store-frontend-instrumented-fixed/store-frontend/app/views/layouts/application.html.erb`{{open}}. This Ruby file is the main template for the Storedog app. By integrating the RUM script here, RUM will be available throughout the application.
+
+    **Lines ##** are the RUM script in the front end and set the initialization arguments. This code may be slightly outdated (and different) than the current code snippet in the Datadog UI. It will still work.
+
+    Notice that you code snippet includes environment variables for `applicationId` and `clientToken`.
+
+6. Click the Terminal tab on the right. Set the env `applicationId` and `clientToken` using environment variables:
     
-7. Back in the lab platform, open the `IDE` tab (it may take a few seconds to load) to navigate to our front end code. Within the IDE, open the file located at `store-frontend-instrumented-fixed/store-frontend/app/views/layouts/application.html.erb`{{open}} (you can click to load this file if the IDE is already displayed). This Ruby file is the main template for our application. By integrating the RUM script here, it will be available throughout our application.
-8. You'll see that we have already integrated the RUM script in the front end and set the initialization arguments. (The code block starts with `if (window.DD_RUM)`). This code may be slightly outdated (and different) than the current code snippet in the Datadog UI. It will still work.
-9. In this lab, we are setting the `applicationId` and `clientToken` using environment variables:
-    1. Copy the `applicationId` from the RUM page and assign it to `DD_APPLICATION_ID` in the terminal like: `export DD_APPLICATION_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
-    2. Copy the `clientToken` from the RUM page and assign it to `DD_CLIENT_TOKEN` in the terminal like: `export DD_CLIENT_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
-10. To verify, when you run this command, you should see YOUR keys displayed in the terminal: `echo $DD_CLIENT_TOKEN $DD_APPLICATION_ID`{{execute}}
-11. Start our StoreDog app using `docker-compose up -d`{{execute}}. Docker will pick up the environment variables you set in the host and pass them along to the containers. You should see the app starting.
+    Copy the `applicationId` from the RUM UI page. In the terminal, assign the value you copied to to `DD_APPLICATION_ID` using the `export` command: `export DD_APPLICATION_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+
+    Copy the `clientToken` from the RUM UI page. In the terminal, assign the value you copied to to `DD_CLIENT_TOKEN` using the `export` command: `export DD_CLIENT_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+    
+    Run this command to verify that you saved the variables: `echo $DD_CLIENT_TOKEN $DD_APPLICATION_ID`{{execute}}
+
+7. Click `docker-compose up -d`{{execute}} to start the storedog app. Docker will pick up the environment variables you set in the host and pass them along to the containers. Once the app is running, you will see the following in the terminal.

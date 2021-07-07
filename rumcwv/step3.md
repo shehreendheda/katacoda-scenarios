@@ -1,5 +1,7 @@
-### Auditing your Web App Synthetically in the Browser
-How and where do you correlate Core Web Vitals with your web app’s performance in the browser? A common place to start is within your browser’s dev tools.
+How and where do you correlate Core Web Vitals with your web app’s performance in the browser? A common place to start is within your browser’s dev tools. You can use the following to audit your web app synthetically in the browser:
+- Audit your web app with <a href="https://developers.google.com/web/tools/lighthouse" target="_blank">Google Lighthouse</a>.
+- Get more detailed insights into your app’s performance with the browser’s dev tools <a href="https://developer.chrome.com/docs/devtools/evaluate-performance/" target="_blank">performance tab</a> (vendor independent, available in all browsers).
+- Utilize framework profilers like the <a href="https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html" target="_blank">React Profiler</a>.
 
 The following video shows the steps involved for tracking CWVs in your browser. If you have a Chromium-based browser (Chrome, Edge, Brave, Opera, etc), you can follow the steps below the video to try this out yourself.
 

@@ -24,10 +24,14 @@
       },
       {
         "text": "step4.md",
-        "title": "Tracking Core Web Vitals with Datadog’s Real User Monitoring"
+        "title": "Tracking Core Web Vitals with Datadog Real User Monitoring"
       },
       {
         "text": "step5.md",
+        "title": "Setting up Datadog RUM to collect metrics for CWVs"
+      },
+      {
+        "text": "step6.md",
         "title": "Using Datadog RUM to understand your CWV report in Production"
       }
     ],
