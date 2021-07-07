@@ -23,7 +23,7 @@ sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./discounts-service/requirements.tx
 cd /ecommworkshop/deploy/docker-compose
 #docker-compose -f docker-compose-fixed.yml up -d
 #docker-compose -f docker-compose-broken.yml up -d
-#docker-compose -f docker-compose-fixed-slowads.yml up -d
+#docker-compose -f docker-compose-slowads.yml up -d
 
 #envready
 
