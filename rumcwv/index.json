@@ -12,27 +12,31 @@
     "steps": [
       {
         "text": "step1.md",
-        "title": "Step 1"
-      },
-      {
-        "text": "step2.md",
         "title": "What are Core Web Vitals?"
       },
       {
-        "text": "step3.md",
-        "title": "Tracking Core Web Vitals in the Browser"
-      },
-      {
-        "text": "step4.md",
-        "title": "Tracking Core Web Vitals with Datadog Real User Monitoring"
-      },
-      {
-        "text": "step5.md",
+        "text": "step2.md",
         "title": "Setting up Datadog RUM to collect metrics for CWVs"
       },
       {
-        "text": "step6.md",
+        "text": "step3.md",
+        "title": "Tracking CWVs in the Browser"
+      },
+      {
+        "text": "step4.md",
+        "title": "Tracking CWVs with Datadog Real User Monitoring"
+      },
+      {
+        "text": "step5.md",
         "title": "Using Datadog RUM to understand your CWV report in Production"
+      },
+      {
+        "text": "step6.md",
+        "title": "What to do with a bad CWV report"
+      },
+      {
+        "text": "step6.md",
+        "title": "Setting up alerts so you can maintain excellent CWV scores"
       }
     ],
     "finish": {
