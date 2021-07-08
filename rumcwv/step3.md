@@ -5,6 +5,14 @@ How and where do you correlate Core Web Vitals with your web app’s performance
 
 The following video shows the steps involved for tracking CWVs in your browser. If you have a Chromium-based browser (Chrome, Edge, Brave, Opera, etc), you can follow the steps below the video to try this out yourself.
 
+
+<iframe src="//fast.wistia.net/embed/iframe/gwtr59fjku?videoFoam=true"
+allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed"
+name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen
+oallowfullscreen msallowfullscreen width="640" height="360"></iframe>
+
+https://wistia.com/support/developers/iframe-embed-options
+
 1. Click the **Storedog** tab on the right.
 
     If you're using a Chromium browser, continue to the next step.
