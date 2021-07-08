@@ -20,9 +20,10 @@ Let’s set an alert for ...
 
     Under **Notify your team**, do not make any changes.
 
+    [image]
+
     Click **Save**. You will be redirected to the saved monitor.
 
 4. Above the monitor, click **Manage Monitors**. You will see your monitor in the list.
 
-    In the Facets on the left, select `RUM` under **Type**. Scroll up to see that the only monitor in the list is the one you just created.
-
+    In the Facets on the left, select `RUM` under **Type**. Scroll up to see that the only monitor in the list is the one you just created. Wait for the status of the monitor to update.
