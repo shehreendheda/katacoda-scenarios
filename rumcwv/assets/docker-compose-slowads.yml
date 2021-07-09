@@ -1,7 +1,7 @@
 version: '3'
 services:
   agent:
-    image: "datadog/agent:7.21.1"
+    image: "datadog/agent:7.29.0"
     environment:
       - DD_API_KEY
       - DD_APM_ENABLED=true
@@ -9,7 +9,7 @@ services:
       - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true
       - DD_PROCESS_AGENT_ENABLED=true
       - DD_DOCKER_LABELS_AS_TAGS={"my.custom.label.team":"team"}
-      - DD_TAGS='env:ruby-shop'
+      - DD_TAGS='env:development'
     ports:
       - "8126:8126"
     volumes:
@@ -24,7 +24,8 @@ services:
       - FLASK_DEBUG=1
       - POSTGRES_PASSWORD
       - POSTGRES_USER
-      - DD_ENV=ruby-shop
+      - POSTGRES_HOST=db
+      - DD_ENV=development
       - DD_SERVICE=discounts-service
       - DD_VERSION=1.1
       - DD_AGENT_HOST=agent
@@ -42,7 +43,7 @@ services:
       - db
     labels:
       com.datadoghq.ad.logs: '[{"source": "python", "service": "discounts-service"}]'
-      com.datadoghq.tags.env: "ruby-shop"
+      com.datadoghq.tags.env: "development"
       com.datadoghq.tags.service: "discounts-service"
       com.datadoghq.tags.version: "1.1"
       my.custom.label.team: "discounts"
@@ -51,7 +52,7 @@ services:
       - DD_AGENT_HOST=agent
       - DD_LOGS_INJECTION=true
       - DD_TRACE_ANALYTICS_ENABLED=true
-      - DD_ENV=ruby-shop
+      - DD_ENV=development
       - DD_SERVICE=store-frontend
       - DD_VERSION=1.1
       - DB_USERNAME
@@ -71,7 +72,7 @@ services:
       - advertisements
     labels:
       com.datadoghq.ad.logs: '[{"source": "ruby", "service": "store-frontend"}]'
-      com.datadoghq.tags.env: "ruby-shop"
+      com.datadoghq.tags.env: "development"
       com.datadoghq.tags.service: "store-frontend"
       com.datadoghq.tags.version: "1.1"
       my.custom.label.team: "frontend"
@@ -81,7 +82,8 @@ services:
       - FLASK_DEBUG=1
       - POSTGRES_PASSWORD
       - POSTGRES_USER
-      - DD_ENV=ruby-shop
+      - POSTGRES_HOST=db
+      - DD_ENV=development
       - DD_SERVICE=advertisements-service
       - DD_VERSION=1.1
       - DD_AGENT_HOST=agent
@@ -99,7 +101,7 @@ services:
       - db
     labels:
       com.datadoghq.ad.logs: '[{"source": "python", "service": "advertisements-service"}]'
-      com.datadoghq.tags.env: "ruby-shop"
+      com.datadoghq.tags.env: "development"
       com.datadoghq.tags.service: "advertisements-service"
       com.datadoghq.tags.version: "1.1"
       my.custom.label.team: "advertisements"
@@ -109,7 +111,7 @@ services:
     environment:
       - POSTGRES_PASSWORD
       - POSTGRES_USER
-      - POSTGRES_HOST=db
+      - DD_ENV=development
     labels:
       com.datadoghq.ad.logs: '[{"source": "postgresql", "service": "postgres"}]'
   traffic-replay:
