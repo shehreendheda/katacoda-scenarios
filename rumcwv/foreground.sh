@@ -22,9 +22,9 @@ git checkout ccf7325 ./discounts-service
 git checkout ccf7325 ./discounts-service-fixed
 git checkout ccf7325 ./traffic-replay
 
-
+sed -i 's/--input-file requests_0.gor/--input-file "requests_0.gor|300%"/g' ./traffic-replay/Dockerfile
 #sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./ads-service/requirements.txt
-##ed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./ads-service-fixed/requirements.txt
+#sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./ads-service-fixed/requirements.txt
 #sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./discounts-service-fixed/requirements.txt
 #sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./discounts-service/requirements.txt
 #cp /root/frontend-docker-entrypoint.sh ./store-frontend-instrumented-fixed/docker-entrypoint.sh
