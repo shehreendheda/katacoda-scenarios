@@ -1,4 +1,4 @@
-Now that we’ve seen that Storedog is reporting unacceptable Core Web Vital scores, let’s fix it. 
+
 
 Resolving this issue will involve using Datadog RUM in order to facilitate a familiar debugging workflow: verify the issue, make a code change to resolve it, and then ensure it was fixed.
 

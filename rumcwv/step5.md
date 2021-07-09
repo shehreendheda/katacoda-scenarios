@@ -1,9 +1,19 @@
 Now, let’s walk through a version of Storedog that has some performance issues that are generating some bad CWV scores.
     
+1. Navigate to the <a href="https://app.datadoghq.com/rum/list" target="_datadog">**UX Monitoring > Rum Applications**</a>.
 
-2. [Click here](link to RUM overview page with set time duration) to view the RUM overview page for Storedog.
+2. In the **Storedog** application panel, you will see visualizations for User Sessons, Loading Time, and % of views with errors. Click **Application Overview** for this application.
 
-    You can now review Storedog’s Core Web Vital P75 scores, and as you can see: the LCP score is much higher than it should be. If you click the ‘Device Type’ button in the filtering panel at the top of this view –– you also see how this CWV score differed between Mobile and Desktop environments.
+    Scroll through and view the visualizations. On the left, the top panel displays the Core Web Vitals P75. 
 
-3. Navigate to the [Performance Overview Dashboard](link to this app’s Performance Dashboard). Here we can see these CWV scores in the context of the overall UX performance of the app, and immediately correlate it with the P75 average loading time the app had during this duration of time. Still, the CWV scores are not where they should be, yet.
+    Above the dashboard area, toggle the Device Type to view the data for Mobile and for Desktop. Do you notice how the data differs based on device type?
 
+3. In the top menu, click **Dashboards** and select **Performance**.
+
+    Scroll through and view the visualizations in the dashboard.
+
+    In the **Overview** panel, notice the **P75 loading time**. 
+
+    In the **Core Web Vitals** panel, notice that the CWV scores are not where they should be. For example, the LCP score is > 2.5 seconds, much higher than it should be.
+
+Let's try to fix the unacceptable Core Web Vital scores that the Storedog app is reporting.
