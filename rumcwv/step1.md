@@ -2,7 +2,7 @@ Core Web Vitals (CWVs) are a set of quality signals that have become canonical a
 
 CWVs are distinct, measurable facets that represent the duration of time it took an application or site to perform a task that directly affected its user. These tasks are currently categorized by the following performance concerns: Loading, Interactivity, and Visual Stability. Each metric that fits within these categories has a defined range of timing thresholds that help you determine how a particular metric is faring. At Datadog, we recommend monitoring the 75th percentile for each of the following metrics:
 
-![core-web-vitals](rumcwv/assets/core-web-vitals.png)
+![core-web-vitals](assets/core-web-vitals.png)
 
 #### Largest Contentful Paint (LCP)
 This measures loading performance. Specifically: the moment in a page-loading timeline in which the largest DOM object in the viewport is rendered and becomes visible on the screen.

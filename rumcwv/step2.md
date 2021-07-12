@@ -30,7 +30,7 @@ Let's configure RUM for the app services.
 
     ![cdnsync](assets/cdnsync.png)
 
-    Adding RUM to Storedog like this propagates every app user’s session performance information up to Datadog, and this helps you retain and analyze not only the app’s CWV scores, but also every aspect of performance timing that is relevant to both UX and business concerns.
+    Adding RUM to Storedog like this propagates every app user’s session performance information up to Datadog and helps you retain and analyze not only the app’s CWV scores, but also every aspect of performance timing that is relevant to both UX and business concerns.
 
 6. On the right, click the `IDE` tab.  
 
@@ -48,6 +48,8 @@ Let's configure RUM for the app services.
     
     Run this command to verify that you saved the variables: `echo $DD_APPLICATION_ID $DD_CLIENT_TOKEN`{{execute}}
 
-8. Click `docker-compose up -d`{{execute}} to start the storedog app. Docker will pick up the environment variables you set in the host and pass them along to the containers. Once the app is running, you will see the following in the terminal.
+8. Click `docker-compose up -d`{{execute}} to start the storedog app. Docker will pick up the environment variables you set in the host and pass them along to the containers. Once the app is online, you will see the following in the terminal.
 
     ![docker-compose-up](assets/docker-compose-up.png)
+
+Before you start viewing the CWVs for the app in a RUM product, a helpful first step into getting some basic information about your web app’s UX performance is running a synthetic test on the app's performance in a browser.

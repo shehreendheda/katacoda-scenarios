@@ -2,12 +2,22 @@ Datadog RUM enables you to visualize and analyze the real-time performance and u
 
 The Applications page displays the list of applications that are being monitored using Datadog RUM, along with timeseries graphs for the User Sessions, Loading Times, and % of views with errors for each application. 
 
-The RUM Sessions Explorer allows you to explore all data collected from your different applications. It gives you access to granular information about your RUM events, allowing you to do the following and more:
+![applications-page](assets/applications-page.png)
+
+For each application, you can view the Application Overview dashboard or the Session Explorer filtered to that application.
+
+![rum-shopist-appdash](assets/rum-shopist-appdash.png) 
+
+The <a href="https://docs.datadoghq.com/real_user_monitoring/explorer/" target="_blank">RUM Sessions Explorer</a> allows you to explore all data collected from your different applications. It gives you access to granular information about your RUM events, allowing you to do the following and more:
 - Navigate user sessions
 - Investigate performance issues affecting views, resources or actions
 - Troubleshoot application errors
 
+![rum-explorer](assets/rum-explorer.png)
+
 A **session** consists of **views**. A **view** consists of **user actions**, **resources**, **errors**, and **long tasks**. (All six of these are RUM events.)
+
+![rumevent-hierarchy](assets/rumevent-hierarchy.png)
 
 A user session begins when a user starts browsing the web application. It contains high-level information about the user (browser, device, geolocation). It aggregates all RUM events collected during the user journey with a unique `session.id` attribute.
 
@@ -21,11 +31,10 @@ RUM collects every frontend error event emitted by the browser.
 
 RUM action events track user interactions during a user journey and can also be manually sent to monitor custom user actions.
 
-
-![rum-shopist-appdash](rumcwv/assets/rum-shopist-appdash.png) 
-
-The Performance Overview dashboard offers a bird’s-eye view of RUM applications. It is separated into three sections:
+When you create a RUM application dashboards are created within Datadog to analyze all the data collected. CWVs are visualized in the Performance Overview dashboard, which offers a bird’s-eye view of a RUM application. It is separated into three sections:
 - Performance metrics: For all views, four browser metrics are highlighted: Loading Time, First Contentful Paint, DOM Content Loaded, and Load Event. For each one of these metrics, widgets show the median, the 75th percentile, and the 90th percentile.
 - Trends: Visualize the evolution of page views, frontend errors related to backend calls failing, JS errors, and long tasks.
 - Page views breakdown: Analyze the nature of your traffic and the associated loading time for each segment.
+
+![performance-overview](assets/performance-overview.png)
 

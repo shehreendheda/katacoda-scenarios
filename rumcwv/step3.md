@@ -5,7 +5,6 @@ How and where do you correlate Core Web Vitals with your web app’s performance
 
 The following video shows the steps involved for tracking CWVs in your browser. If you have a Chromium-based browser (Chrome, Edge, Brave, Opera, etc), you can follow the steps below the video to try this out yourself.
 
-
 <iframe src="//fast.wistia.net/embed/iframe/gwtr59fjku?videoFoam=true"
 allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed"
 name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen
@@ -25,7 +24,7 @@ https://wistia.com/support/developers/iframe-embed-options
 
 4. Click on the ‘Generate Report’ button, and wait for a minute while Lighthouse audits the site.
 
-5. When it’s finished, scroll down to the ‘Performance’ section of the audit report. Note the best-estimate CWV scores that were generated.
+5. When it’s finished, scroll down to the ‘Performance’ section of the audit report. View the best-estimate CWV scores that were generated.
 
     Was the LCP target value is less than 2.5 seconds?
 
