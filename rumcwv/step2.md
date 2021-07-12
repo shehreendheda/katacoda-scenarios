@@ -28,7 +28,7 @@ Let's configure RUM for the app services.
 
 5. If you are using NPM to manage dependencies for your project front end, you can integrate RUM using the `@datadog/browser-rum` package. However, here you are just going to add the JavaScript inline, so select the `CDN Sync` tab:
 
-    ![cdnsync](rumcwv/assets/cdnsync.png)
+    ![cdnsync](assets/cdnsync.png)
 
     Adding RUM to Storedog like this propagates every app user’s session performance information up to Datadog, and this helps you retain and analyze not only the app’s CWV scores, but also every aspect of performance timing that is relevant to both UX and business concerns.
 
@@ -50,4 +50,4 @@ Let's configure RUM for the app services.
 
 8. Click `docker-compose up -d`{{execute}} to start the storedog app. Docker will pick up the environment variables you set in the host and pass them along to the containers. Once the app is running, you will see the following in the terminal.
 
-    ![docker-compose-up](rumcwv/assets/docker-compose-up.png)
+    ![docker-compose-up](assets/docker-compose-up.png)
