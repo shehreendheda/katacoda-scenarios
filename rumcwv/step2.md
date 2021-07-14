@@ -48,7 +48,7 @@ Let's configure RUM for the app services.
     
     Run this command to verify that you saved the variables: `echo $DD_APPLICATION_ID $DD_CLIENT_TOKEN`{{execute}}
 
-8. Click `docker-compose up -d`{{execute}} to start the storedog app. Docker will pick up the environment variables you set in the host and pass them along to the containers. Once the app is online, you will see the following in the terminal.
+8. Click `docker-compose -f docker-compose-broken.yml up -d`{{execute}} to start the storedog app. Docker will pick up the environment variables you set in the host and pass them along to the containers. Once the app is online, you will see the following in the terminal.
 
     ![docker-compose-up](assets/docker-compose-up.png)
 
