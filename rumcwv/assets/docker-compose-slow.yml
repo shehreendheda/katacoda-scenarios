@@ -37,7 +37,7 @@ services:
     ports:
       - "5001:5001"
     volumes:
-      - "/ecommworkshop/discounts-service-fixed:/app"
+      - "/ecommworkshop/discounts-service:/app"
     depends_on:
       - agent
       - db
@@ -90,7 +90,7 @@ services:
       - DD_LOGS_INJECTION=true
       - DD_TRACE_ANALYTICS_ENABLED=true
       - DD_PROFILING_ENABLED=true
-    image: "ddtraining/advertisements-fixed:2.0.0"
+    image: "ddtraining/advertisements:2.0.0"
     command: [sh, -c, "pip install ddtrace -U && ddtrace-run flask run --port=5002 --host=0.0.0.0"]
     ports:
       - "5002:5002"
