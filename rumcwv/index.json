@@ -54,7 +54,7 @@
           "target": "/root"
         },
         {
-          "file": "docker-compose-slowads.yml",
+          "file": "docker-compose-slow.yml",
           "target": "/root"
         },
         {

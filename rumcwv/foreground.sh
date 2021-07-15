@@ -33,7 +33,7 @@ sed -i 's/--input-file requests_0.gor/--input-file "requests_0.gor|300%"/g' ./tr
 cd /ecommworkshop/deploy/docker-compose
 #docker-compose -f docker-compose-fixed.yml up -d
 #docker-compose -f docker-compose-broken.yml up -d
-#docker-compose -f docker-compose-slowads.yml up -d
+#docker-compose -f docker-compose-slow.yml up -d
 
 #envready
 
