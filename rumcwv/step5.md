@@ -16,4 +16,4 @@ Now, let’s walk through a version of Storedog that has some performance issues
 
     In the **Core Web Vitals** panel, notice that the CWV scores are not where they should be. For example, the LCP score is > 2.5 seconds, much higher than it should be.
 
-Let's try to fix the unacceptable Core Web Vital scores that the Storedog app is reporting.
+To monitor and get notifications when app performance and the CWV scores are below expections, you can set up a RUM Monitor. 

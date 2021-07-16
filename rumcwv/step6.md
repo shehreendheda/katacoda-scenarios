@@ -8,11 +8,11 @@ Let’s set up an alert to monitor the LCP of the Storedog app.
     
     An option to create a new monitor will appear. 
     
-    Click **Create monitor**. A new browser tab will open with a RUM monitor.
+    Click **Create monitor**. A new browser tab will open with the RUM Monitor editor.
 
 2. Fill in the fields as follows:
 
-    Under **Define the search query**, the fields are already populated based on the dashbaord widget you used to create the monitor. You do not need to update these.
+    Under **Define the search query**, the fields are already populated based on the dashboard widget you used to create the monitor. You do not need to update these.
 
     Under **Set alert conditions**, leave the selections `above` and `5 minutes` as is. Enter `4000000000`{{copy}} (4000 ms) for **Alert threshold** and `2500000000`{{copy}} (2500 ms) for **Warning threshold**, which are baseline recommendations for LCP.
 
@@ -26,4 +26,10 @@ Let’s set up an alert to monitor the LCP of the Storedog app.
 
 4. Above the monitor, click **Manage Monitors**. You will see your monitor in the list.
 
-    In the Facets on the left, select `RUM` under **Type**. Scroll up to see that the only monitor in the list is the one you just created. Wait for the status of the monitor to update.
+    In the Facets on the left, select `RUM` under **Type**. Scroll up to see that the only monitor in the list is the one you just created. 
+    
+5. Wait for the status of the monitor to update. 
+
+    The monitor is in the `ALERT` status. 
+
+Let's try to fix the unacceptable Core Web Vital scores that the Storedog app is reporting.
