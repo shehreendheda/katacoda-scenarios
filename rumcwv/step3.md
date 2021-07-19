@@ -3,9 +3,11 @@ How and where do you correlate Core Web Vitals with your web app’s performance
 - Get more detailed insights into your app’s performance with the browser’s dev tools <a href="https://developer.chrome.com/docs/devtools/evaluate-performance/" target="_blank">performance tab</a> (vendor independent, available in all browsers).
 - Utilize framework profilers like the <a href="https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html" target="_blank">React Profiler</a>.
 
-The following video shows the steps involved for tracking CWVs in your browser. If you have a Chromium-based browser (Chrome, Edge, Brave, Opera, etc), you can follow the steps below the video to try this out yourself.
+In synthetic browser testing, the First Input Delay metric can not be measured because it can only be tracked for real inputs. The First Contentful Paint (or FCP), which can be tracked for both synthetic testing and RUM, is measured and displayed. The FCP is the time from when the page starts loading to when any part of the page's content is rendered on the screen.
 
-<iframe src="//fast.wistia.net/embed/iframe/gwtr59fjku?videoFoam=true"
+The following video shows the steps involved for tracking CWVs in your browser. If you have a Chromium-based browser (Chrome, Edge, Brave, Opera, etc), you can follow the steps below the video to try this out yourself. 
+
+<iframe src="//fast.wistia.net/embed/iframe/y5yjda5s78?videoFoam=true"
 allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed"
 name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen
 oallowfullscreen msallowfullscreen width="640" height="360"></iframe>
@@ -20,17 +22,19 @@ https://wistia.com/support/developers/iframe-embed-options
 
 2. Right-click on the app home page and select ‘Inspect’ to open the developer tools in your browser.
 
-3. Select the ‘Lighthouse’ tab in the developer tools.
+3. Select **Lighthouse** in the developer tools menu.
 
-4. Click on the ‘Generate Report’ button, and wait for a minute while Lighthouse audits the site.
+4. For **Device**, select `Desktop`.
+
+4. Click `Generate Report`, and wait for a minute while Lighthouse audits the site.
 
 5. When it’s finished, scroll down to the ‘Performance’ section of the audit report. View the best-estimate CWV scores that were generated.
 
-    Was the LCP target value is less than 2.5 seconds?
+    Was the First Contenful Paint target value is less than 1.8 seconds?
 
-    Was the FID range is around 100 milliseconds or less?
+    Was the Largest Contenful Paint range is around 100 milliseconds or less?
 
-    Was the CLS range is around 0.1 or less?
+    Was the Cumulative Layout Shift range is around 0.1 or less?
 
 This is a helpful first step into getting some basic information about your web app’s UX performance. However, this audit produces a generalized report for you through a series of synthetic tests and toggleable factors (good vs. bad network connection, fast vs. slow device, desktop vs. mobile, etc). This is not the same as being able to monitor what your web app’s CWV scores actually are in production though. To do that, you’ll need to implement or use a <a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Rum-vs-Synthetic" target="_blank">Real User Monitoring</a> solution.
 
