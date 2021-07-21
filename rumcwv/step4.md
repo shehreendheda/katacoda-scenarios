@@ -19,6 +19,8 @@ A **session** consists of **views**. A **view** consists of **user actions**, **
 
 ![rumevent-hierarchy](assets/rumevent-hierarchy.png)
 
+<img src="assets/rumevent-hierarchy.png" style="width:500px;height:600px;">
+
 A user session begins when a user starts browsing the web application. It contains high-level information about the user (browser, device, geolocation). It aggregates all RUM events collected during the user journey with a unique `session.id` attribute.
 
 A view event is generated each time a user visits a page of the web application. While the user remains on the same page, resource, long-task, error, and action events are linked to the related RUM view with the `view.id` attribute.

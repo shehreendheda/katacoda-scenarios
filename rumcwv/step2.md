@@ -1,6 +1,6 @@
 In the terminal on the right, the enviroment is being prepared. You will see a message `Provisioning Complete` along with some login credentials when the environment is prepared.
 
-Click the `IDE` tab. It may take a few seconds to load. Once the IDE loads, open the file `deploy/docker-compose/docker-compose-slowads.yml`{{open}} to view the file in the editor. 
+Click the `IDE` tab. It may take a few seconds to load. Once the IDE loads, open the file `deploy/docker-compose/docker-compose-slow.yml`{{open}} to view the file in the editor. 
 
 This docker-compose file brings the Storedog app online and instruments the Datadog agent and Storedog app services for monitoring with Datadog. 
      
