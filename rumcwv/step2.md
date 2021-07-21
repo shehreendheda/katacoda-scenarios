@@ -26,13 +26,13 @@ Let's configure RUM for the app services.
 
     Click **Create New RUM Application**.
 
-5. If you are using NPM to manage dependencies for your project front end, you can integrate RUM using the `@datadog/browser-rum` package. However, here you are just going to add the JavaScript inline, so select the `CDN Sync` tab:
+5. If you are using NPM to manage dependencies for your project front end, you can integrate RUM using the `@datadog/browser-rum` package. However, here you are just going to add the JavaScript inline, so select the **CDN Sync** tab:
 
     ![cdnsync](assets/cdnsync.png)
 
     Adding RUM to Storedog like this propagates every app user’s session performance information up to Datadog and helps you retain and analyze not only the app’s CWV scores, but also every aspect of performance timing that is relevant to both UX and business concerns.
 
-6. On the right, click the `IDE` tab.  
+6. On the right, click the **IDE** tab.  
 
     Open the file `store-frontend-instrumented-fixed/app/views/layouts/application.html.erb`{{open}}. This Ruby file is the main template for the Storedog app. By integrating the RUM script here, RUM will be available throughout the application.
 

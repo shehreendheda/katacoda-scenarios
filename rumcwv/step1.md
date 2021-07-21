@@ -22,4 +22,4 @@ An optimal CLS range is around 0.1 or less.
 ### Why is tracking Core Web Vitals Important?
 Tracking CWVs is a vital part of the development process because it fundamentally relates to the success of your web app, both in terms of the user experience and general customer adoption (more on the business impact of monitoring core web vitals can be found here). Also, these measurements were recently added to Google’s search algorithm and now directly affect the SEO ranking of your page.
 
-Ready to put Core Web Vitals into action? Let’s jump in!
+Ready to put CWVs into action? Let’s jump in!
