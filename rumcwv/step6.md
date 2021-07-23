@@ -1,6 +1,6 @@
-Up to this point, you’ve been able to both track and verify the optimization of the Storedog app’s Core Web Vital scores. However, the goal for maintaining this process should not result in having to periodically audit an app manually –– rather, the relevant stakeholders of the app should be alerted automatically if the scores and/or progress indicators they care about fall into an unacceptable range. This is what alert monitoring does for you, and is the next logical step in maintaining a valuable UX for your web app over time. 
+Up to this point, you’ve been able to both track and verify the optimization of the Storedog app’s CWV scores. However, the goal for maintaining this process should not result in having to periodically audit an app manually –– rather, the relevant stakeholders of the app should be alerted automatically if the scores and/or progress indicators they care about fall into an unacceptable range. This is what alert monitoring does for you and is the next step in maintaining a valuable UX for your web app over time. 
 
-Let’s set up an alert to monitor the LCP of the Storedog app.
+Let’s set up RUM Monitor for the LCP of the Storedog app.
 
 1. Return to the [Performance Overview Dashboard](link).
 
@@ -28,6 +28,8 @@ Let’s set up an alert to monitor the LCP of the Storedog app.
     
 5. Wait for the status of the monitor to update. 
 
-    The monitor is in the `ALERT` status. 
+    The monitor is in the `ALERT` status.
+
+    [image] 
 
 Let's try to fix the unacceptable Core Web Vital scores that the Storedog app is reporting.

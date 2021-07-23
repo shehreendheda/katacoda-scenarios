@@ -19,9 +19,9 @@ oallowfullscreen msallowfullscreen width="640" height="360"></iframe>
 
     If you're not using a Chromium-based browser, copy and paste the url for the Storedog app into a Chromium browser: `https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/`{{copy}} 
 
-2. Right-click on the app home page and select **Inspect** to open the developer tools in your browser.
+2. Right-click on the app home page and select **Inspect** to open the Developer Tools in your browser.
 
-3. Select **Lighthouse** in the developer tools menu.
+3. Select **Lighthouse** in the Developer Tools menu.
 
 4. Under **Categories**, select `Performance` to measure the CWV metrics. You can select the other options as well if you want to see their results in the report.
  
