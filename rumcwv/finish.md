@@ -1,3 +1,3 @@
 Congratulations! You've successfully completed the Introduction to Core Web Vitals using Datadog RUM scenario.
 
-Datadog RUM 
+In this scenario, you learned how to set up a fictional e-commerce app for monitoring with Datadog RUM. You learned how to audit web app performance synthethically in the browser. You also did a deeper dive into auditing web app performance for simulated user data in Datadog RUM. You worked with RUM Applications, the Application Overview and Perfomance Overview dashboards, and Views in the Sessions Explorer. You also set up a RUM Monitor and investigated and resolved bad app perfomance that was detected using CWVs.

@@ -9,6 +9,6 @@ In May 2020, Google introduced Core Web Vitals (CWVs), a set of three metrics th
 
 This scenario will provide an overview of monitoring CWVs for a fictional e-commerce app, Storedog, using Datadog RUM. You will see where CWVs are tracked on the frontend, to what they imply on the backend, and how to use RUM to gather and analyze CWVs insights to create and foster an optimized user experience for web applications. 
 
-Primary Audience: The primary audience for this scenario is frontend engineers and SREs who will use datadog to understand how to measure, track, and use CWVs to optimize the front end performance of Single Page Apps (SPAs) that are both in development and in production. Students are expected to have familiarity with the Datadog platform, The DOM, JavaScript, and Node.js, as well as a basic familiarity with component driven frameworks (eg. React, Angular, etc).
+Primary Audience: The primary audience for this scenario is frontend engineers and SREs who will use Datadog to understand how to measure, track, and use CWVs to optimize the front end performance of Single Page Apps (SPAs) that are both in development and in production. Students are expected to have familiarity with the Datadog platform, The DOM, JavaScript, and Node.js, as well as a basic familiarity with component driven frameworks (eg. React, Angular, etc).
 
 When you are ready to continue, click **Start Scenario**.
