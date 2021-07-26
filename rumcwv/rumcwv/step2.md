@@ -36,11 +36,13 @@ Let's configure Datadog RUM for the app.
 
 6. On the right, click the **IDE** tab.  
 
-    Open the file `store-frontend-instrumented-fixed/app/views/layouts/application.html.erb`{{open}}. This Ruby file is the main template for the Storedog app. By integrating the RUM script here, RUM will be available throughout the application.
+    Open the file `store-frontend-instrumented-fixed/app/spree/views/layouts/spree_application.html.erb`{{open}}. This Ruby file is the main template for the Storedog app. By integrating the RUM script here, RUM will be available throughout the application.
 
-    **Lines 10-19** are the RUM script in the front end and set the initialization arguments. This code may be slightly outdated (and different) than the current code snippet in the Datadog UI. It will still work.
+    **Lines 13-22** are the RUM script in the front end and set the initialization arguments. This code may be slightly different than the current code snippet in the Datadog UI. It will still work.
 
     Notice that the code snippet includes environment variables for `applicationId` and `clientToken`.
+
+    One functionatlity you can add is connecting the APM traces from the backend to the RUM data from the frontend. In the file, click the end of **line 20** and press **Enter** to create a new line below it. Copy `allowedTracingOrigins: [/https:\/\/.*\.environments.katacoda\.com/],`{{copy}} into the new line, making sure that the indentation matches the lines above and below this line. The change to the file will be automatically saved.
 
 7. Click the **Terminal** tab on the right. Let's set the environment variables for `applicationId` and `clientToken`.
     
@@ -50,8 +52,9 @@ Let's configure Datadog RUM for the app.
     
     Run this command to verify that you saved the variables: `echo $DD_APPLICATION_ID $DD_CLIENT_TOKEN`{{execute}}
 
-8. Click `docker-compose -f docker-compose-broken.yml up -d`{{execute}} to start the storedog app. Docker will pick up the environment variables you set in the host and pass them along to the containers. Once the app is online, you will see the following in the terminal.
+8. Click `docker-compose -f docker-compose-slow.yml up -d`{{execute}} to start the storedog app. Docker will pick up the environment variables you set in the host and pass them along to the containers. Once the app is online, you will see the following in the terminal.
 
     ![docker-compose-up](assets/docker-compose-up.png)
 
 Before you start viewing the CWVs for an app in a RUM product, a helpful first step for getting some basic information about your web app’s UX performance is running a synthetic test on the app's performance in a browser. Let's run this test next.
+

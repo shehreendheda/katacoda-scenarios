@@ -64,7 +64,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - "/ecommworkshop/store-frontend-instrumented-fixed:/spree"
+      - "/ecommworkshop/store-frontend-instrumented-fixed:/app"
     depends_on:
       - agent
       - db
