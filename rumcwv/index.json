@@ -71,7 +71,7 @@
   "environment": {
     "uilayout": "terminal",
     "showide": "true",
-    "uieditorpath": "/root", 
+    "uieditorpath": "/root/ecommworkshop", 
     "hideHiddenFiles": true,
     "exclusionPatterns": ["**/store-frontend/tmp/*", "**/store-frontend/log/*"],
     "showdashboard": true,
