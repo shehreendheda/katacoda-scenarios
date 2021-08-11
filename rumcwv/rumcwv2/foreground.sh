@@ -9,6 +9,6 @@ clear
 
 statuscheck environment
 
-cd /root/lab
+cd /ecommworkshop
 
 statusupdate complete

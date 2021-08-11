@@ -1,6 +1,6 @@
 Core Web Vitals (CWVs) are a set of quality signals that have become canonical across the web for measuring the core aspects of what comprises a great user experience in web apps and websites. They help developers understand where their application stands in terms of how delightful it is to use.
 
-CWVs are distinct, measurable facets that represent the duration of time it took an application or site to perform a task that directly affected its user. These tasks are currently categorized by the following performance concerns: Loading, Interactivity, and Visual Stability. Each metric that fits within these categories has a defined range of timing thresholds that helps you determine how a particular metric is faring. At Datadog, we recommend monitoring the 75th percentile for each of these metrics:
+CWVs are distinct, measurable facets that represent the duration of time it takes an application or site to perform a task that directly affected its user. These tasks are currently categorized by the following performance concerns: Loading, Interactivity, and Visual Stability. Each metric that fits within these categories has a defined range of timing thresholds that helps you determine how a particular metric is faring. At Datadog, we recommend monitoring the 75th percentile for each of these metrics:
 
 ![core-web-vitals](assets/core-web-vitals.png)
 

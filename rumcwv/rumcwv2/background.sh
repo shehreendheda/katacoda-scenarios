@@ -2,8 +2,7 @@
 
 curl -s https://datadoghq.dev/katacodalabtools/r?raw=true|bash
 
-mkdir /root/lab
-mv /root/docker-compose.yml /root/lab
+mv /root/docker-compose.yml /ecommworkshop/deploy/docker-compose
 
 cd /ecommworkshop
 git fetch
@@ -22,6 +21,6 @@ mv /root/ads-requirements.txt /ecommworkshop/ads-service/requirements.txt
 mv /root/ads.py /ecommworkshop/ads-service/ads.py
 ln -s /ecommworkshop/ads-service/ads.py /root/lab/ads.py
 
-docker-compose -f /root/lab/docker-compose.yml pull
+docker-compose -f /ecommworkshop/docker-compose.yml pull
 
 statusupdate environment
