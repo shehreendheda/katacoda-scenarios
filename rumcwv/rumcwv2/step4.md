@@ -1,10 +1,12 @@
 Datadog RUM enables you to visualize and analyze the real-time performance and user journeys of your application’s individual users.
 
-The **Applications** page displays the list of applications that are being monitored using Datadog RUM, along with timeseries graphs for the User Sessions, Loading Times, and % of views with errors for each application. 
+The **Applications** page displays the list of applications that are being monitored using Datadog RUM, along with timeseries graphs for the User Sessions, Loading Times, and % of views with errors for each application.
 
 ![applications-page](assets/applications-page.png)
 
 For each application, you can view the **Application Overview** dashboard or the **Sessions Explorer** filtered to that application.
+
+The Application Overview dashboard displays overviews for CWVs, Page Views by Version, Total Errors by Version, User Analytics, Performance Monitoring, and Errors.
 
 ![rum-shopist-appdash](assets/rum-shopist-appdash.png) 
 
@@ -31,10 +33,11 @@ RUM collects every frontend **error** event emitted by the browser.
 
 RUM **action** events track user interactions during a user journey and can also be manually sent to monitor custom user actions.
 
-When you create a RUM application, special **Dashboards** are created within Datadog to analyze all the RUM data collected. CWVs are visualized in the **Performance Overview dashboard**, which offers a bird’s-eye view of a RUM application. It is separated into three sections:
-- Performance metrics - Highlights four browser metrics for all views, : Loading Time, First Contentful Paint, DOM Content Loaded, and Load Event. For each one of these metrics, widgets show the median, the 75th percentile, and the 90th percentile.
+When you create a RUM application, special **Dashboards** are created within Datadog to analyze all the RUM data collected. CWVs are visualized in the **Performance Overview** dashboard, which offers a bird’s-eye view of a RUM application. It is separated into three sections:
+- Performance metrics - Highlights four browser metrics for all views: Loading Time, First Contentful Paint, DOM Content Loaded, and Load Event. CWVs are displayed in this dashboard. For each one of these metrics, widgets show the median, the 75th percentile, and the 90th percentile.
 - Trends - Visualizes the evolution of page views, frontend errors related to backend calls failing, JS errors, and long tasks.
 - Page views breakdown: Analyzes the nature of your traffic and the associated loading time for each segment.
 
 ![performance-overview](assets/performance-overview.png)
 
+Let's now take a look at the CWVs in RUM for the Storedog app.

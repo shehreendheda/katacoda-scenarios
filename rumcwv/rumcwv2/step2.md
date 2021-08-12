@@ -8,11 +8,11 @@ All <a href="https://docs.datadoghq.com/agent/docker/?tab=standard" target="_bla
 
 Because the application is run in a Docker (containerized) environment, the Datadog Agent runs in a container alongside the application containers: `agent`. 
      
-Each application service runs in its own Docker container: `discounts`, `frontend`, `advertisements`, and `db`. (The `traffic` service is an extraneuous container for simulated RUM traffic in this scenario.)
+Each application service runs in its own Docker container: `discounts`, `frontend`, `advertisements`, and `db`. (The `puppeteer` and `traffic` services are extraneuous containers to generate simulated RUM traffic in this scenario.)
 
 Let's configure Datadog RUM for the app.
 
-1. In a new browser window/tab, use the login credentials provided in the terminal to log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you for this activity.
+1. In a new browser window/tab, use the login credentials provided in the Terminal to log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you for this activity. Click the **Terminal** tab on the right to view the credentials.
 
     Note: If the credentials are not displayed in the terminal, run the command `creds`{{execute}} in the terminal.
 
@@ -22,7 +22,7 @@ Let's configure Datadog RUM for the app.
 
 4. Under **Set your application details**, select **JS** as the **Application type** because you are integrating the app using Javascript.
 
-    Enter **Storedog** as the **Application name**.
+    Enter `Storedog` as the **Application name**.
 
     Click **Create New RUM Application**.
 
@@ -30,15 +30,15 @@ Let's configure Datadog RUM for the app.
 
     ![cdnsync](assets/cdnsync.png)
 
-    Notice that values for `applicationId` and `clientToken`. You will need these to set up RUM in your application.
+    Notice that values for `applicationId` and `clientToken` are displayed in the generated code snippet. You will need these to set up RUM in your application.
     
     Adding RUM to Storedog like this propagates every app user’s session performance information up to Datadog and helps you retain and analyze not only the app’s CWV scores, but also every aspect of performance timing that is relevant to both UX and business concerns.
 
 6. On the right, click the **IDE** tab.  
 
-    Open the file `store-frontend-instrumented-fixed/app/spree/views/layouts/application.html.erb`{{open}}. This Ruby file is the main template for the Storedog app. By integrating the RUM script here, RUM will be available throughout the application.
+    Open the file `store-frontend-instrumented-fixed/app/views/spree/layouts/application.html.erb`{{open}}. This Ruby file is the main template for the Storedog app. By integrating the RUM script here, RUM will be available throughout the application.
 
-    **Lines 10-19** are the RUM script in the front end and set the initialization arguments. This code may be slightly outdated (and different) than the current code snippet in the Datadog UI. It will still work.
+    **Lines 13-23** are the RUM script in the front end and set the initialization arguments. This code may be slightly different (outdated) than the current code snippet in the Datadog UI. It will still work.
 
     Notice that the code snippet includes environment variables for `applicationId` and `clientToken`.
 

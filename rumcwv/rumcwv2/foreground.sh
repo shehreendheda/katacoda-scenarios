@@ -7,16 +7,8 @@ export RUM_START_URL=https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environme
 
 clear
 
-statuscheck checkout
-
-statuscheck frontend
-
-statuscheck discounts
-
-statuscheck ads
-
 statuscheck environment
 
-cd /ecommworkshop
+cd /ecommworkshop/deploy/docker-compose
 
 statusupdate complete

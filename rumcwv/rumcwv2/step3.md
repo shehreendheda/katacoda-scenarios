@@ -13,7 +13,7 @@ name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen
 oallowfullscreen msallowfullscreen width="640" height="360"></iframe>
 
 
-1. Click the **Storedog** tab on the right.
+1. Click the **storedog** tab on the right.
 
     If you're using a Chromium browser, continue to the next step.
 
