@@ -1,10 +1,6 @@
-In Datadog RUM, you can view the details for the RUM events, including associated APM traces (if configured when RUM is first brought online)
+You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP. You can view the details for the RUM events in the Sessions Explorer, including associated APM traces (which were connected during configuration), to try to find and troubleshoot the cause of the poor performance.  
 
-1. In the **Largest Contentful Paint** graph that you just viewed, click a data point that is greater than 4 seconds.
-
-    In the menu that appears, select **View RUM events**. A new tab for the **Sessions Explorer** will open with the **Views** tab selected.
-
-    ![highlcp-sessionview](assets/highlcp-sessionview.png)
+1. In the **Perfomance Overview** dashboard, scroll down to the **Most viewed pages** panel. Click **/** under the **VIEW PATH GROUP**. In the menu that appears, select **View RUM events**. A new tab will open in the Sessions Explorer with the list of **Views** filtered to .
 
 5. Select the **View** with the **Browser Name** `Chrome Mobile` from the list. The RUM Events side panel will open.
 
