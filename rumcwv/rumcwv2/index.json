@@ -32,11 +32,11 @@
       },
       {
         "text": "step6.md",
-        "title": "Setting up alerts so you can maintain excellent CWV scores"
+        "title": "What to do with a bad CWV report"
       },
       {
         "text": "step7.md",
-        "title": "What to do with a bad CWV report"
+        "title": "Setting up alerts so you can maintain excellent CWV scores"
       }
     ],
     "finish": {
@@ -90,7 +90,7 @@
   "environment": {
     "uilayout": "terminal",
     "showide": "true",
-    "uieditorpath": "/ecommworkshop", 
+    "uieditorpath": "/root/lab", 
     "hideHiddenFiles": true,
     "exclusionPatterns": ["**/store-frontend/tmp/*", "**/store-frontend/log/*"],
     "showdashboard": true,

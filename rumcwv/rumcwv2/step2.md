@@ -36,9 +36,11 @@ Let's configure Datadog RUM for the app.
 
 6. On the right, click the **IDE** tab.  
 
-    Open the file `store-frontend-instrumented-fixed/app/views/spree/layouts/application.html.erb`{{open}}. This Ruby file is the main template for the Storedog app. By integrating the RUM script here, RUM will be available throughout the application.
+    Open the file `spree_application.html.erb`{{open}}. This Ruby file is the main template for the Storedog app. By integrating the RUM script here, RUM will be available throughout the application.
 
     **Lines 13-23** are the RUM script in the front end and set the initialization arguments. This code may be slightly different (outdated) than the current code snippet in the Datadog UI. It will still work.
+
+    **Line 20** connects associated APM traces to the RUM events. When you view RUM event details in the RUM UI, any associated traces will be displayed in the RUM event details.
 
     Notice that the code snippet includes environment variables for `applicationId` and `clientToken`.
 

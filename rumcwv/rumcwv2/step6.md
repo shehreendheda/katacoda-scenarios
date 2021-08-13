@@ -1,35 +1,38 @@
-Up to this point, you’ve been able to both track and verify the optimization of the Storedog app’s CWV scores. However, the goal for maintaining this process should not result in having to periodically audit an app manually –– rather, the relevant stakeholders of the app should be alerted automatically if the scores and/or progress indicators they care about fall into an unacceptable range. This is what alert monitoring does for you and is the next step in maintaining a valuable UX for your web app over time. 
+In Datadog RUM, you can view the details for the RUM events, including associated APM traces (if configured when RUM is first brought online)
 
-Let’s set up RUM Monitor for the LCP of the Storedog app.
+1. In the **Largest Contentful Paint** graph that you just viewed, click a data point that is greater than 4 seconds.
 
-1. Return to the [Performance Overview Dashboard](link).
+    In the menu that appears, select **View RUM events**. A new tab for the **Sessions Explorer** will open with the **Views** tab selected.
 
-    In the upper right corner of the **Largest Contentful Paint** histogram within the **Core Web Vitals** panel, click the gear icon. An option to create a new monitor will appear. 
-    
-    Click **Create monitor**. A new browser tab will open with the RUM Monitor editor.
+    ![highlcp-sessionview](assets/highlcp-sessionview.png)
 
-2. Fill in the fields as follows:
+5. Select the **View** with the **Browser Name** `Chrome Mobile` from the list. The RUM Events side panel will open.
 
-    Under **Define the search query**, the fields are already populated based on the dashboard widget you used to create the monitor. You do not need to update these.
+    Above the flame graph, notice that the Largest Contentful Paint has a red triangle with an exclamation mark, indicating that the value is too high.
 
-    Under **Set alert conditions**, leave the selections `above` and `5 minutes` as is. Enter `4000000000`{{copy}} (4000 ms) for **Alert threshold** and `2500000000`{{copy}} (2500 ms) for **Warning threshold**, which are baseline recommendations for LCP.
+    Scroll through the flame graph to view the details. 
 
-    Under **Say what's happening**, enter `LCP is higher than recommended threshold for the Storedog app`{{copy}} for the **Monitor Name**. Enter `LCP is higher than recommended thresholds for the Storedog app. Warning threshold is >2500 ms and Alert threshold is >4000 ms.`{{copy}} for the **Monitor Message**. Enter `application_id:storedog`{{copy}} for the Tags.
+    Above the flame graph, select the **Traces** tab to view the APM flame graphs of traces associated with this view.
 
-    Under **Notify your team**, do not make any changes.
+    Select each trace in the menu to view the associated APM flame graph. Notice that traces for **/ads** and the **/discount** have long spans for the respective request to each service.
 
-    [image]
+    This is one place to start troubleshooting the high LCP value.
 
-    Click **Save**. You will be redirected to the saved monitor.
+    [GIF]
 
-4. Above the monitor, click **Manage Monitors**. You will see your monitor in the list.
+4. Then hover over the warning sign next to the LCP score, and you’ll see how the current score measures up to what’s needed for a good one. In this view, you’ll additionally be able to review measurements of every Core Web Vital across the timeline.
 
-    In the Facets on the left, select `RUM` under **Type**. Scroll up to see that the only monitor in the list is the one you just created. 
-    
-5. Wait for the status of the monitor to update. 
+5. Now let’s [review what the culprit is](link to a block of bad code in ‘instrumented-fixed’) in the code. As you can see (explanation of bad code goes here).
 
-    The monitor is in the `ALERT` status.
+6. In order to fix this replace the block on lines x through y with (block of good code). This will (explanation of what fixed code will do).
 
-    [image] 
+7. Now that we’ve put in our fix, let’s verify that it resolved the underlying issue!
 
-Let's try to fix the unacceptable Core Web Vital scores that the Storedog app is reporting.
+    Let’s [navigate back to Storedog](link to the fixed version of the app), and repeat some of the same UI interactions you performed before.
+
+8. Then we can take a look at the P75 average for Largest Contentful Paint, and see that the average initial loading time has increased dramatically, and is reporting within the desired 0-2.5s range. 
+
+9. Now return to the [views page](link to RUM Sessions/views) in the RUM sessions overview for this app, click on the most recent session, and verify that it shows that the Largest Contentful Paint is within the target range of 0-2500ms as well.
+
+    You’ve now verified that these changes have optimized the UX performance of this app, and the loading experience is currently acceptable for your users in production.
+

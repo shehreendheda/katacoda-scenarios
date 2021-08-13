@@ -18,23 +18,6 @@ Let's use Datadog RUM to see how the app is performing and investigate any bad p
 
     In the **Core Web Vitals** panel, notice that the average LCP score is > 2.5 seconds, which is undesireable for a good user experience.
 
-4. In the **Largest Contentful Paint** graph, click a data point > 4 seconds.
-
-    In the menu that appears, select **View RUM events**. A new tab for the **Sessions Explorer** will open with the **Views** tab selected.
-
-5. Select the **View** with the **Browser Name** `Chrome Mobile` from the list. The RUM Events side panel will open.
-
-    Above the flame graph, notice that the Largest Contentful Paint has a red triangle with an exclamation mark, indicating that the value is too high.
-
-    Scroll through the flame graph to view the details. 
-
-    Above the flame graph, select the **Traces** tab to view the APM flame graphs of traces associated with this view.
-
-    Select each trace in the menu to view the associated APM flame graph. Notice that traces for **/ads** and the **/discount** have long spans for the respective request to each service.
-
-    This is one place to start troubleshooting the high LCP value.
-
-    [GIF]
+    ![performance-dashboard](assets/performance-dashboard.png)
     
-
-Before you start troubleshooting, let's create a RUM Monitor to get notifications when app performance, specically the LCP scores are below expections. 
+Let's explore the LCP performance in more detail to understand why the score is so low and determine how to fix the poor performance.

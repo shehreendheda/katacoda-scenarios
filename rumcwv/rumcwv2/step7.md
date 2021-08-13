@@ -1,21 +1,33 @@
+Up to this point, you’ve been able to both track and verify the optimization of the Storedog app’s CWV scores. However, the goal for maintaining this process should not result in having to periodically audit an app manually –– rather, the relevant stakeholders of the app should be alerted automatically if the scores and/or progress indicators they care about fall into an unacceptable range. This is what alert monitoring does for you and is an important step in maintaining a valuable UX for your web app over time. 
 
+Let’s set up RUM Monitor for the LCP of the Storedog app.
 
-Resolving this issue will involve using Datadog RUM in order to facilitate a familiar debugging workflow: verify the issue, make a code change to resolve it, and then ensure it was fixed.
+1. Return to the [Performance Overview Dashboard](link).
 
-4. Then hover over the warning sign next to the LCP score, and you’ll see how the current score measures up to what’s needed for a good one. In this view, you’ll additionally be able to review measurements of every Core Web Vital across the timeline.
+    In the upper right corner of the **Largest Contentful Paint** histogram within the **Core Web Vitals** panel, click the gear icon. An option to create a new monitor will appear. 
+    
+    Click **Create monitor**. A new browser tab will open with the RUM Monitor editor.
 
-5. Now let’s [review what the culprit is](link to a block of bad code in ‘instrumented-fixed’) in the code. As you can see (explanation of bad code goes here).
+2. Fill in the fields as follows:
 
-6. In order to fix this replace the block on lines x through y with (block of good code). This will (explanation of what fixed code will do).
+    Under **Define the search query**, the fields are already populated based on the dashboard widget you used to create the monitor. You do not need to update these.
 
-7. Now that we’ve put in our fix, let’s verify that it resolved the underlying issue!
+    Under **Set alert conditions**, leave the selections `above` and `5 minutes` as is. Enter `4000000000`{{copy}} (4000 ms) for **Alert threshold** and `2500000000`{{copy}} (2500 ms) for **Warning threshold**, which are baseline recommendations for LCP.
 
-    Let’s [navigate back to Storedog](link to the fixed version of the app), and repeat some of the same UI interactions you performed before.
+    Under **Say what's happening**, enter `LCP is higher than recommended threshold for the Storedog app`{{copy}} for the **Monitor Name**. Enter `LCP is higher than recommended thresholds for the Storedog app. Warning threshold is >2500 ms and Alert threshold is >4000 ms.`{{copy}} for the **Monitor Message**. Enter `application_id:storedog`{{copy}} for the Tags.
 
-8. Then we can take a look at the P75 average for Largest Contentful Paint, and see that the average initial loading time has increased dramatically, and is reporting within the desired 0-2.5s range. 
+    Under **Notify your team**, do not make any changes.
 
-9. Now return to the [views page](link to RUM Sessions/views) in the RUM sessions overview for this app, click on the most recent session, and verify that it shows that the Largest Contentful Paint is within the target range of 0-2500ms as well.
+    [image]
 
-    You’ve now verified that these changes have optimized the UX performance of this app, and the loading experience is currently acceptable for your users in production.
+    Click **Save**. You will be redirected to the saved monitor.
 
-10. Check the alert status and see that it changes to OK.
+4. Above the monitor, click **Manage Monitors**. You will see your monitor in the list.
+
+    In the Facets on the left, select `RUM` under **Type**. Scroll up to see that the only monitor in the list is the one you just created. 
+    
+5. Wait for the status of the monitor to update. 
+
+    [image] 
+
+Now that you have a RUM monitor set up the LCP score performance of the app, anyone indicated in the **Notify your team** field would be alerted to LCP performance that does not meet the criteria in the alert query.

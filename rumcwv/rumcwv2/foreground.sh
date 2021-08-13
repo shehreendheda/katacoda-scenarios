@@ -9,6 +9,6 @@ clear
 
 statuscheck environment
 
-cd /ecommworkshop/deploy/docker-compose
+cd /root/lab
 
 statusupdate complete
