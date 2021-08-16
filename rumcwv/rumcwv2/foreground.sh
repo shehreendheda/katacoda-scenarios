@@ -12,3 +12,4 @@ statuscheck environment
 cd /root/lab
 
 statusupdate complete
+prepenvironment

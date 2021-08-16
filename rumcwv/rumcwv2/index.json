@@ -61,6 +61,10 @@
           "target": "/root"
         },
         {
+          "file": "frontend-config.rb",
+          "target": "/root"
+        },
+        {
           "file": "discounts.py",
           "target": "/root"
         },
