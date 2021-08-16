@@ -2,33 +2,52 @@ You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP
 
 1. In the **Perfomance Overview** dashboard, scroll down to the **Most viewed pages** panel. Click **/** under the **VIEW PATH GROUP**. In the menu that appears, select **View RUM events**. A new tab will open in the Sessions Explorer with the list of **Views** filtered to .
 
-5. Select the **View** with the **Browser Name** `Chrome Mobile` from the list. The RUM Events side panel will open.
+2. In the Sessions Explorer, notice that the search query contains filters for `Application Id`, `Type` and `View Path Group`, so that you are only seeing the  `view` events for related to the `/` (homepage) path group in the `Storedog` app. 
 
-    Above the flame graph, notice that the Largest Contentful Paint has a red triangle with an exclamation mark, indicating that the value is too high.
+3. Scroll down to the list of **Views**. 
 
-    Scroll through the flame graph to view the details. 
+    Notice that the **LOADING TIME** for the some of the view is `In Progress`. The data for these views is still bring processed.
 
-    Above the flame graph, select the **Traces** tab to view the APM flame graphs of traces associated with this view.
+    Let's select a View for which the data processing is complete. Click a View that as a time listed under **LOADING TIME**. The RUM events side panel will open.
 
-    Select each trace in the menu to view the associated APM flame graph. Notice that traces for **/ads** and the **/discount** have long spans for the respective request to each service.
+4. Below the **Perfomance** tab, notice that the **Largest Contentful Paint** is a > 2.5 seconds and is indicated with a read triangle and exclamation mark. Hover over the LCP value to view the legend. 
 
-    This is one place to start troubleshooting the high LCP value.
+    Scroll down and view the flame graph. Notice that many of the bars have of > 1 seconds. Also, notice the lines for the three CWVs is affected by these durations.
+    
+    Hover over the bars. Many display a url path starting with `https://..`. These resources should be cached, so that they do not slow down the page loads. Caching will need to be enabled on the frontend to reduce the loading duration of these files.  
+    
+    Hover over **discount** and **ads** resources for more details. Remember that these were the two resources with the longest median resource durations. Also, notice that APM Traces symbol next to these resourses. You may need to view the associated backend traces for these resources in order to troubleshoot the issue.
 
-    [GIF]
+    [image]
 
-4. Then hover over the warning sign next to the LCP score, and you’ll see how the current score measures up to what’s needed for a good one. In this view, you’ll additionally be able to review measurements of every Core Web Vital across the timeline.
+5. Let's start with the 
 
-5. Now let’s [review what the culprit is](link to a block of bad code in ‘instrumented-fixed’) in the code. As you can see (explanation of bad code goes here).
+6. Let's now troubleshoot the long durations of the ads and discount resources. Above the flame graph, select the **Traces** tab.  
 
-6. In order to fix this replace the block on lines x through y with (block of good code). This will (explanation of what fixed code will do).
+    In the menu below the tab, select `/discount` to view the associated flame graph. Looks like the spans for the **discount GET request** is > 2.5 seconds. Let's see if the associated logs provide more information.
 
-7. Now that we’ve put in our fix, let’s verify that it resolved the underlying issue!
+    Scroll down and select the **Logs** tab. Notice that there are two logs. Hover over each log. You will the time the log was collected appear over the flame graph. Based on the second log message, it looks like there is a delay in completing the request. The log indicates that the **discounts.py** script is being run. The second log indicates that a process runs after **Line 38** in the file that is extending the duration of the trace. Let's view the script.
 
-    Let’s [navigate back to Storedog](link to the fixed version of the app), and repeat some of the same UI interactions you performed before.
+    [gif] 
 
-8. Then we can take a look at the P75 average for Largest Contentful Paint, and see that the average initial loading time has increased dramatically, and is reporting within the desired 0-2.5s range. 
+    Click the **IDE** tab on the right, then click `discounts.py`{{open}} to open the file. Locate **Line 38**, and browse the code below this line. Notice that there is a sleep command on **Line 40** that has been left in during testing. Delete the sleep command. The change will be automatically saved and new data will reflect it. Before you check, let's look at the ads resource.
 
-9. Now return to the [views page](link to RUM Sessions/views) in the RUM sessions overview for this app, click on the most recent session, and verify that it shows that the Largest Contentful Paint is within the target range of 0-2500ms as well.
+    Back in the RUM event details, in the menu below the **Traces** tab, select `/ads` to view the associated flame graph. Looks like the spans for the **ads GET request** is also > 2.5 seconds. Let's see if the associated logs provide more information.
 
-    You’ve now verified that these changes have optimized the UX performance of this app, and the loading experience is currently acceptable for your users in production.
+    Scroll down and select the **Logs** tab. Notice that there is one log. Hover over the log. You will the time the log was collected appear over the flame graph. Based on the log message, it looks like there is a delay in completing the request. The log indicates that the **ads.py** script is being run. The log indicates that a process runs after **Line 44** in the file that is extending the duration of the trace. Let's view the script.
 
+    [gif] 
+
+    Click the **IDE** tab on the right, then click `ads.py`{{open}} to open the file. Locate **Line 44**, and browse the code below this line. Notice that there is a sleep command on **Line 46** that has also been left in this file during testing. Delete the sleep command. The change will be automatically saved and new data will reflect it.
+
+    With both the files updated, let's see if the changes had the intended effect. Close the RUM events side panel.
+
+    Scroll to the top of the **Views** list and select a View that has a time listed under **LOADING TIME**. 
+    
+    Scroll down to the flame graph under the **Performance** tab. Notice that the ads and discounts durations have gone down significantly. Also, notice that the LCP displayed above the flame graph is within the desired range < 2.5 second.
+
+    [image]
+
+6. Click the open browser tab with the **Perfomance Overview** dashboard, notice that the average **Largest Contentful Paint** score is now < 2.5 seconds as desired.
+
+    [image]
