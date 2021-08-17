@@ -13,6 +13,7 @@ git checkout tags/2.0.0
 mv /root/home_controller.rb /ecommworkshop/store-frontend-instrumented-fixed/app/controllers/spree/home_controller.rb
 mv /root/spree_application.html.erb /ecommworkshop/store-frontend-instrumented-fixed/app/views/spree/layouts/spree_application.html.erb
 mv /root/index.html.erb /ecommworkshop/store-frontend-instrumented-fixed/app/views/spree/home/index.html.erb
+ln -s /ecommworkshop/store-frontend-instrumented-fixed/app/views/spree/layouts/spree_application.html.erb /root/lab/spree_application.html.erb
 
 mv /root/discounts-requirements.txt /ecommworkshop/discounts-service/requirements.txt
 mv /root/discounts.py /ecommworkshop/discounts-service/discounts.py

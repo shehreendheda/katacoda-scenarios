@@ -1,4 +1,4 @@
-You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP. You can view the details for the RUM events in the Sessions Explorer, including associated APM traces (which were connected during configuration), to try to find and troubleshoot the cause of the poor performance.  
+You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP. You can view the details for the RUM events in the Sessions Explorer, including associated APM traces (which were connected during configuration), to try to find and troubleshoot the cause of the poor performance.
 
 1. In the **Perfomance Overview** dashboard, scroll down to the **Most viewed pages** panel. Click **/** under the **VIEW PATH GROUP**. In the menu that appears, select **View RUM events**. A new tab will open in the Sessions Explorer with the list of **Views** filtered to .
 
@@ -14,13 +14,27 @@ You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP
 
     Scroll down and view the flame graph. Notice that many of the bars have of > 1 seconds. Also, notice the lines for the three CWVs is affected by these durations.
     
-    Hover over the bars. Many display a url path starting with `https://..`. These resources should be cached, so that they do not slow down the page loads. Caching will need to be enabled on the frontend to reduce the loading duration of these files.  
+    Hover over the bars. Many display a url path starting with `https://...`. These javascript, CSS, and image resources are usually not cached during development, but should be cached in production so that they do not slow down the page loads. Caching will need to be enabled on the frontend to reduce the loading duration of these files.  
     
     Hover over **discount** and **ads** resources for more details. Remember that these were the two resources with the longest median resource durations. Also, notice that APM Traces symbol next to these resourses. You may need to view the associated backend traces for these resources in order to troubleshoot the issue.
 
-    [image]
+    ![bad-app-performance](assets/bad-app-performance.png)
 
-5. Let's start with the 
+5. Let's start with troubleshooting the resources that aren't being cached.
+
+    Click the **IDE** tab on the right, then click `config.rb`{{open}} to open the file. Update **Line 3** so that `enable_cache = true`. The change will be automatically saved. 
+
+    Click the **Terminal** tab on the right. Click `docker-compose restart frontend`{{execute}} to the run the command in the terminal. Although, the change was saved, the docker container running the frontend service had to restarted so that the change is applied to the app.
+
+    Click the open browser tab with the **Perfomance Overview** dashboard, notice that the average **Largest Contentful Paint** score has decreased and is now closer to 2.5 seconds, the desired threshold value.
+
+    ![LCP-enabled-caching](assets/LCP-enabled-caching.png)
+
+    Click the open browser tab with the Sessions Explorer. Scroll down to the list of **Views**. Notice that the times listed under the **LOADING TIME** are much lower than the earlier values. Click one of the views with a listed **LOADING TIME** to open the RUM events side panel. 
+
+    Scroll down and view the flame graph below the **Performance** tab. Notice that there are fewer bars for the frontend resources. Now that those resources are being cached, the load time has decreased.
+
+    ![resources-cached](assets/resources-cached.png)
 
 6. Let's now troubleshoot the long durations of the ads and discount resources. Above the flame graph, select the **Traces** tab.  
 
@@ -46,8 +60,8 @@ You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP
     
     Scroll down to the flame graph under the **Performance** tab. Notice that the ads and discounts durations have gone down significantly. Also, notice that the LCP displayed above the flame graph is within the desired range < 2.5 second.
 
-    [image]
+    ![sleeps-removed](assets/sleeps-removed.png)
 
 6. Click the open browser tab with the **Perfomance Overview** dashboard, notice that the average **Largest Contentful Paint** score is now < 2.5 seconds as desired.
 
-    [image]
+    ![LCP-removing-sleeps](assets/LCP-removing-sleeps.png)

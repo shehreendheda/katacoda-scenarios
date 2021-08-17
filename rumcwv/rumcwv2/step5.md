@@ -33,3 +33,5 @@ Let's use Datadog RUM to see how the app is performing and investigate any bad p
     ![xhrfetchanalysis](assets/xhrfetchanalysis.png)
 
 It's possible the high LCP scores are related to the calls made to the /discounts and /ads resources during page loads. Let's explore the RUM Events with high LCP performance in more detail to understand why the score is so low and determine how to fix the poor performance.
+
+![LCP-before-fixing](assets/LCP-before-fixing.png)
