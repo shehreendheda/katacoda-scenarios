@@ -7,6 +7,7 @@ Datadog’s Real User Monitoring (RUM) gives you end-to-end visibility into the 
 <li>Support - Retrieve all of the information related to one user session to troubleshoot an issue (session duration, pages visited, interactions, resources loaded, errors).</li>
 </ul>
 
+
 In May 2020, Google introduced Core Web Vitals (CWVs), a set of three metrics that serve as the gold standard for monitoring a site’s UX performance. These metrics, which focus on load performance, interactivity, and visual stability, simplify UX metric collection by signaling which frontend performance indicators matter the most.
 
 This scenario will provide an overview of monitoring CWVs for a fictional e-commerce app, Storedog, using Datadog RUM. You will see where CWVs are tracked on the frontend, to what they imply on the backend, and how to use RUM to gather and analyze CWVs insights to create and foster an optimized user experience for web applications. 

@@ -66,6 +66,6 @@ You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP
 
     ![LCP-removing-sleeps](assets/LCP-removing-sleeps.png)
 
-Using CWVs tracked by Datadog RUM and associated traces tracked by Datadog APM, you were investigate bad app performance that was caused by issues in the frontend and backend of the app and correct app performance to improve CWVs and the user experience.
+Using CWVs tracked by Datadog RUM and associated traces tracked by Datadog APM, you were able to investigate and correct undesirable app performance to improve CWVs and the user experience.
 
 ![LCP-corrected](assets/LCP-corrected.png)
