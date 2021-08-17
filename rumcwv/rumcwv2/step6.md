@@ -24,7 +24,7 @@ You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP
 
     Click the **IDE** tab on the right, then click `config.rb`{{open}} to open the file. Update **Line 3** so that `enable_cache = true`. The change will be automatically saved. 
 
-    Click the **Terminal** tab on the right. Click `docker-compose restart frontend`{{execute}} to the run the command in the terminal. Although, the change was saved, the docker container running the frontend service had to restarted so that the change is applied to the app.
+    Click the **Terminal** tab on the right. Click `docker-compose restart frontend`{{execute}} to the run the command in the terminal. Although, the change was saved, the docker container running the frontend service has to be restarted so that the change is applied to the app.
 
     Click the open browser tab with the **Perfomance Overview** dashboard, notice that the average **Largest Contentful Paint** score has decreased and is now closer to 2.5 seconds, the desired threshold value.
 
@@ -42,7 +42,7 @@ You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP
 
     Scroll down and select the **Logs** tab. Notice that there are two logs. Hover over each log. You will the time the log was collected appear over the flame graph. Based on the second log message, it looks like there is a delay in completing the request. The log indicates that the **discounts.py** script is being run. The second log indicates that a process runs after **Line 38** in the file that is extending the duration of the trace. Let's view the script.
 
-    [gif] 
+    ![discountstraces](assets/discountstraces.gif)
 
     Click the **IDE** tab on the right, then click `discounts.py`{{open}} to open the file. Locate **Line 38**, and browse the code below this line. Notice that there is a sleep command on **Line 40** that has been left in during testing. Delete the sleep command. The change will be automatically saved and new data will reflect it. Before you check, let's look at the ads resource.
 
@@ -50,7 +50,7 @@ You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP
 
     Scroll down and select the **Logs** tab. Notice that there is one log. Hover over the log. You will the time the log was collected appear over the flame graph. Based on the log message, it looks like there is a delay in completing the request. The log indicates that the **ads.py** script is being run. The log indicates that a process runs after **Line 44** in the file that is extending the duration of the trace. Let's view the script.
 
-    [gif] 
+    ![adstraces](assets/adstraces.gif)
 
     Click the **IDE** tab on the right, then click `ads.py`{{open}} to open the file. Locate **Line 44**, and browse the code below this line. Notice that there is a sleep command on **Line 46** that has also been left in this file during testing. Delete the sleep command. The change will be automatically saved and new data will reflect it.
 
@@ -65,3 +65,7 @@ You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP
 6. Click the open browser tab with the **Perfomance Overview** dashboard, notice that the average **Largest Contentful Paint** score is now < 2.5 seconds as desired.
 
     ![LCP-removing-sleeps](assets/LCP-removing-sleeps.png)
+
+Using CWVs tracked by Datadog RUM and associated traces tracked by Datadog APM, you were investigate bad app performance that was caused by issues in the frontend and backend of the app and correct app performance to improve CWVs and the user experience.
+
+![LCP-corrected](assets/LCP-corrected.png)
