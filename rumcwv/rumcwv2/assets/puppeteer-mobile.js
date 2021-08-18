@@ -32,6 +32,7 @@ const getNewBrowser = async () => {
   const browser = await puppeteer.launch({
     defaultViewport: null,
     timeout: 15000,
+    slowMo: 1000,
     args: [
       // Required for Docker version of Puppeteer
       '--no-sandbox',

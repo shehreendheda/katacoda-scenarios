@@ -126,5 +126,4 @@ services:
     depends_on:
       - frontend
     command: bash puppeteer.sh
-  traffic-replay:
-    image: "ddtraining/traffic-replay:latest"
+
