@@ -1,10 +1,10 @@
-You saw from the browser audit that some of the Storedog app's CWV scores from syntethic browser testing were undesirable.
+You saw from the browser audit that some of the Storedog app's CWV scores from synthetic browser testing were undesirable.
 
-Let's use Datadog RUM to see how the app is performing and investigate any bad performance.
+Let's use Datadog RUM to see how the app is performing and "investigate any critical performance issues.
     
-1. Navigate to the <a href="https://app.datadoghq.com/rum/list" target="_datadog">**UX Monitoring > Rum Applications**</a>.
+1. Navigate to the <a href="https://app.datadoghq.com/rum/list" target="_datadog">**UX Monitoring > RUM Applications**</a>.
 
-    Change the time range in the upper right to `Past 5 minutes`.
+    Change the time range in the upper right to `Past 5 minutes` to zoom in on the most recent events.
 
 2. In the **Storedog** application panel, you will see visualizations for User Sessons, Loading Time, and % of views with errors. Click **Application Overview** for this application.
 

@@ -8,7 +8,7 @@ All <a href="https://docs.datadoghq.com/agent/docker/?tab=standard" target="_bla
 
 Because the application is run in a Docker (containerized) environment, the Datadog Agent runs in a container alongside the application containers: `agent`. 
      
-Each application service runs in its own Docker container: `discounts`, `frontend`, `advertisements`, and `db`. (The `puppeteer` and `traffic` services are extraneuous containers to generate simulated RUM traffic in this scenario.)
+Each application service runs in its own Docker container: `discounts`, `frontend`, `advertisements`, and `db`. (The `puppeteer` service is an extraneous container to generate simulated RUM traffic in this scenario.)
 
 Let's configure Datadog RUM for the app.
 
@@ -16,7 +16,7 @@ Let's configure Datadog RUM for the app.
 
     Note: If the credentials are not displayed in the terminal, run the command `creds`{{execute}} in the terminal.
 
-2. To get started with RUM in Datadog, you need to set up a **RUM Application**. Navigate to <a href="https://app.datadoghq.com/rum/list" target="_datadog">**UX Monitoring > Rum Applications**</a>.
+2. To get started with RUM in Datadog, you need to set up a RUM Application. Navigate to <a href="https://app.datadoghq.com/rum/list" target="_datadog">**UX Monitoring > Real User Monitoring**</a>.
 
 3. Click **New Application**.
 
@@ -26,7 +26,7 @@ Let's configure Datadog RUM for the app.
 
     Click **Create New RUM Application**.
 
-5. If you are using NPM to manage dependencies for your project front end, you can integrate RUM using the `@datadog/browser-rum` package. However, here you are just going to add the JavaScript inline, so select the **CDN Sync** tab.
+5. If you are using NPM to manage dependencies for your project front end, you can integrate RUM using the `@datadog/browser-rum` package. However, Storedog uses the inline JavaScript method, so select the **CDN Sync** tab.
 
     ![cdnsync](assets/cdnsync.png)
 
@@ -38,7 +38,7 @@ Let's configure Datadog RUM for the app.
 
     Open the file `spree_application.html.erb`{{open}}. This Ruby file is the main template for the Storedog app. By integrating the RUM script here, RUM will be available throughout the application.
 
-    **Lines 13-23** are the RUM script in the front end and set the initialization arguments. This code may be slightly different (outdated) than the current code snippet in the Datadog UI. It will still work.
+    **Lines 13-23** are the RUM script in the front end and set the initialization arguments. This code may be slightly different than the current code snippet in the Datadog UI. It will still work.
 
     **Line 20** connects associated APM traces to the RUM events. When you view RUM event details in the RUM UI, any associated traces will be displayed in the RUM event details.
 
@@ -56,10 +56,10 @@ Let's configure Datadog RUM for the app.
 
     ![docker-compose-up](assets/docker-compose-up.png)
 
-9. One more thing. Let's make sure that Log Management is enabled in the Datadog organization. You will need to access the collected logs in a later step. 
+9. One more thing. Let's make sure that Log Management is enabled in the Datadog organization that you are working for this scenario. You will need to access the collected logs in a later step. 
 
     If you have previously used the **Log Explorer** in the Datadog organization you are working in, move on to the next step. 
 
     If you are working in a new Datadog organization, you have to first enable Log Management before you can continue. Navigate to <a href="https://app.datadoghq.com/logs" target="_datadog">**Logs**</a>. Click **Getting Started**, then click **Getting Started** again. You will be redirected to the Log Explorer. You should see logs listed in the explorer.
 
-Before you start viewing the CWVs for an app in a RUM product, a helpful first step for getting some basic information about your web app’s UX performance is running a synthetic test on the app's performance in a browser. Let's run this test next.
+Before you start viewing the CWVs for an app in a RUM product, a helpful first step for getting some basic information about your web app’s UX performance is running a synthetic test (that is, a test with with no user input) on the app's performance in a browser. Let's run this test next.
