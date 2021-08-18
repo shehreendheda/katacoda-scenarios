@@ -1,6 +1,6 @@
 You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP. You can view the details for the RUM events in the Sessions Explorer, including associated APM traces (which were connected during configuration), to try to find and troubleshoot the cause of the poor performance.
 
-1. In the **Perfomance Overview** dashboard you were just viewing, scroll down to the **Most viewed pages** panel. Click **/** under the **VIEW PATH GROUP**. In the menu that appears, select **View RUM events**. A new tab will open for the Sessions Explorer.
+1. In the **Performance Overview** dashboard you were just viewing, scroll down to the **Most viewed pages** panel. Click **/** under the **VIEW PATH GROUP**. In the menu that appears, select **View RUM events**. A new tab will open for the Sessions Explorer.
 
 2. In the Sessions Explorer, notice that the search query contains filters for `Type`, `Application Id`, and `View Path Group`, so that you are only seeing the  `view` events for related to the `/` (homepage) path group in the `Storedog` app. 
 
@@ -10,7 +10,7 @@ You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP
 
     Let's select a View for which the data processing is complete. Click a View that has a time listed under **LOADING TIME**. The RUM events side panel will open.
 
-4. Below the **Perfomance** tab, notice that the **Largest Contentful Paint** is a > 2.5 seconds and is indicated with a red triangle and exclamation mark. Hover over the LCP value to view the legend. 
+4. Below the **Performance** tab, notice that the **Largest Contentful Paint** is a > 2.5 seconds and is indicated with a red triangle and exclamation mark. Hover over the LCP value to view the legend. 
 
     Scroll down and view the RUM waterfall. Notice that many of the bars have of duration of > 1 second. Also, notice the lines for the three CWVs is affected by these durations.
     
@@ -28,7 +28,7 @@ You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP
 
     Click the **Terminal** tab on the right. Click `docker-compose restart frontend`{{execute}} to run the command in the terminal. Although, the change was saved, the docker container running the frontend service has to be restarted so that the change is applied to the app.
 
-    Click the open browser tab with the **Perfomance Overview** dashboard. Wait for about 2 minutes as new data is collected. 
+    Click the open browser tab with the **Performance Overview** dashboard. Wait for about 2 minutes as new data is collected. 
     
     Notice that the average **Largest Contentful Paint** score has decreased and is now closer to 2.5 seconds, the desired threshold value.
 
@@ -40,7 +40,7 @@ You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP
 
     ![resources-cached](assets/resources-cached.png)
 
-6. Let's now troubleshoot the long durations of the discount and ads resources. Above the flame graph, select the **Traces** tab.  
+6. Let's now troubleshoot the long durations of the discount and ads resources. Above the waterfall, select the **Traces** tab.  
 
     In the menu below the tab, select `/discount` to view the associated flame graph. This graph visualizes the processes that ran on the server in response to this request. Looks like the spans for the **discount GET request** is > 2.5 seconds. Let's see if the associated logs provide more information.
 
@@ -62,12 +62,14 @@ You've found that the home page (**/** VIEW PATH GROUP) has the highest PC75 LCP
 
     Scroll to the top of the **Views** list and select a View that has a time listed under **LOADING TIME**. 
     
-    Scroll down to the flame graph under the **Performance** tab. Notice that the ads and discounts durations have gone down significantly. Also, notice that the LCP displayed above the flame graph is within the desired range < 2.5 second.
+    Scroll down to the waterfall under the **Performance** tab. Notice that the ads and discounts durations have gone down significantly. Also, notice that the LCP displayed above the waterfall is within the desired range < 2.5 second.
 
     ![sleeps-removed](assets/sleeps-removed.png)
 
-7. Click the open browser tab with the **Perfomance Overview** dashboard, notice that the average **Largest Contentful Paint** score is now < 2.5 seconds as desired.
+7. Click the open browser tab with the **Performance Overview** dashboard. Wait for about 2 minutes as new data is collected.
+
+    Notice that the average **Largest Contentful Paint** score is now < 2.5 seconds.
 
     ![LCP-removing-sleeps](assets/LCP-removing-sleeps.png)
 
-The app is now performfing as desired! Using CWVs tracked by Datadog RUM and associated traces tracked by Datadog APM, you were able to investigate and correct undesirable app performance to improve CWVs and the user experience.
+The app is now performing as desired! Using CWVs tracked by Datadog RUM and associated traces tracked by Datadog APM, you were able to investigate and correct undesirable app performance to improve CWVs and the user experience.
