@@ -41,7 +41,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "terminal-iframe",
     "showide": true,
     "uieditorpath": "/ecommworkshop",
     "hideHiddenFiles": true,
