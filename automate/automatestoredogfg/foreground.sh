@@ -21,7 +21,7 @@ cd /ecommworkshop
 #cp /root/frontend-docker-entrypoint.sh ./store-frontend-broken-instrumented/docker-entrypoint.sh
 
 cd /ecommworkshop/deploy/docker-compose
-docker-compose -f docker-compose-fixed.yml up 
+docker-compose -f docker-compose-fixed-instrumented.yml up
 
 #envready
 
