@@ -1,0 +1,14 @@
+{
+    "title": "Security Monitoring Foundations",
+    "description": "",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "pathway_id": "security",
+        "course_id": "securitylogs",
+        "id": "securitylogs",
+        "title": "Logging and Log Management for Security Monitoring",
+        "description": "Basics for configuring logging ang log management for security monitoring in Datadog"
+      }
+    ]
+  }
