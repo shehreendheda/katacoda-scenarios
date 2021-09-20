@@ -1,0 +1,42 @@
+{
+    "title": "Logging and Log Management for Security Monitoring",
+    "description": "Basics for configuring logging ang log management for security monitoring in Datadog",
+    "difficulty": "Intermediate",
+    "time": "30 minutes",
+    "details": {
+      "steps": [
+        {
+          "title": "Step 1",
+          "text": "step1.md"
+        }
+      ],
+      "intro": {
+        "text": "intro.md",
+        "code": "foreground.sh",
+        "courseData": "background.sh"
+      },
+      "finish": {
+        "text": "finish.md"
+      },
+      "assets": {
+        "host01": [
+          {
+            "file": "docker-compose.yml",
+            "target": "/root"
+          }
+        ]
+      }
+    },
+    "environment": {
+      "uilayout": "terminal-iframe",
+      "showide": true,
+      "uieditorpath": "/ecommworkshop",
+      "hideHiddenFiles": true,
+      "exclusionPatterns": ["**/store-frontend/tmp/*", "**/store-frontend/log/*"],
+      "showdashboard": true,
+      "dashboards": [{"name": "storedog", "port": 3000}]
+    },
+    "backend": {
+      "imageid": "datadog-base-v3"
+    }
+  }
