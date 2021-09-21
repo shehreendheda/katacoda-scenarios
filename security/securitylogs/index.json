@@ -30,7 +30,7 @@
     "environment": {
       "uilayout": "terminal",
       "showide": true,
-      "uieditorpath": "/ecommworkshop",
+      "uieditorpath": "/root/lab",
       "hideHiddenFiles": true,
       "exclusionPatterns": ["**/store-frontend/tmp/*", "**/store-frontend/log/*"],
       "showdashboard": true,
