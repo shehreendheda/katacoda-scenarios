@@ -1,0 +1,69 @@
+{
+  "title": "Diagnose and Optimize CPU performance with Continuous Profiling",
+  "description": "In this workshop, you will learn to diagnose production CPU performance problems in your applications. By using Continuous Profiling, you will be able to quickly uncover costly bugs, and identify improvements that will lead to a happier end-user experience and a reduced infrastructure bill.",
+  "difficulty": "Beginner",
+  "time": "60 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Start the movies-api-java service",
+        "text": "step1.md"
+      },
+      {
+        "title": "Recognize performance issue",
+        "text": "step2.md"
+      },
+      {
+        "title": "Log in to Datadog workshop test account",
+        "text": "step3.md"
+      },
+      {
+        "title": "Enable Datadog APM and Continuous Profiling",
+        "text": "step4.md"
+      },
+      {
+        "title": "Pinpoint performance issue using Tracing",
+        "text": "step5.md"
+      },
+      {
+        "title": "Fix performance issue pinpointed using Tracing",
+        "text": "step6.md"
+      },
+      {
+        "title": "Diagnose performance issue using Profiling",
+        "text": "step7.md"
+      },
+      {
+        "title": "Fix performance issue and validate fix",
+        "text": "step8.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh",
+      "background": "background.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [ {"file": "**/*", "target": "/root"} ]
+    }
+  },
+  "environment": {
+    "uilayout": "vscode-terminal-split",
+    "uieditorpath": "/root/lab",
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "Access movies-api-java",
+        "port": 8081
+      }
+    ],
+    "terminals": [{"name": "Terminal for movies-api-java", "target": "host01"}],
+    "hideHiddenFiles": true
+  },
+  "backend": {
+    "imageid": "datadog-base-v3"
+  }
+}
