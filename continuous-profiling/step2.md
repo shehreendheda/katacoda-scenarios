@@ -1,25 +1,8 @@
-Up until now, everything seems to be going well in `movies-api-java`-land.
+You decide to investigate and troubleshoot application perfomance issues using Application Performance Monitoring (APM) and Continuour Profiling in Datadog.
 
-Let's try a different task: getting movie credits, for all movies with _Jurassic_ in their name.
+APM and the Continuous Profiler give deep visibility into your applications with out-of-the-box performance dashboards for web services, queues, and databases to monitor requests, errors, and latency. 
 
-1. Run `curl` to query for this information:
 
-  `time curl http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
 
-  (You can also use your browser or local terminal to query <https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com/credits?q=jurassic>)
+In Datadog, distributed traces can be seamlessly correlated to browser sessions, logs, profiles, synthetic checks, network, processes, and infrastructure metrics across hosts, containers, proxies, and serverless functions. You can navigate directly from investigating a slow trace to identifying the specific line of code causing performance bottlenecks with code hotspots.
 
-2. Observe that this endpoint seems to be quite slow:
-
-  ```
-  real    0m4.208s
-  user    0m0.042s
-  sys     0m0.012s
-  ```
-
-  `movies-api-java` is taking a lot of time to respond to these queries, which makes for a poor user experience.
-
-  Why are these requests taking so long? Let's use Datadog to find out.
-
----
-
-Proceed to the next step to add Datadog APM and Continuous Profiling to `movies-api-java`.

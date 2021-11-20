@@ -5,9 +5,9 @@ Imagine you have a `movies-api-service` service with the following features:
 [Jetty web server](https://www.eclipse.org/jetty/).
 * Uses [MongoDB](https://www.mongodb.com/) as a data store.
 
-You want to optimize the performance of the service to ensure that users have the best experience. To do so, you first bring the service online, and then make some requests to service to see how it performs. 
+You want to optimize the service's performance to ensure that users have the best experience. To start, you bring the service online and make some requests to service to see how it performs. 
 
-1. Run the `movies-api-java` service in the **Terminal for movies-api-java** tab to bring the service online.
+1. Click the command below to bring the `movies-api-java` service online in the **Terminal for movies-api-java** tab, or you can copy, paste, and run the command in that tab.
 
   `cd /root/lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute T2}} (👆_Double click_)
 
@@ -17,13 +17,13 @@ You want to optimize the performance of the service to ensure that users have th
 
   <https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com/>
 
-  You can also run the `curl` to interact with the service:
+  You can also click the `curl` command below to interact with the service in the **Terminal** tab, or you can copy, paste, and run the command in that tab.
 
   `curl http://localhost:8081/ | jq`{{execute T1}}
 
 2. The `movies-api-java` service came online successfully and is responding to requests. You now want to make sure that users can search for movies credits using keywords, so you try to search the service for all movies with _Jurassic_ in their name.
 
-  Click the `curl` command below to query for this information:
+  Click the `curl` command below to query for this information, or copy, paste, and run the command in the terminal:
 
   `time curl http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
 
@@ -39,4 +39,6 @@ You want to optimize the performance of the service to ensure that users have th
 
   The service is taking longer than expected to respond to these queries, which makes for a poor user experience.
 
-  Why are these requests taking so long? You decide to use Datadog to find out why.
+  Why are these requests taking so long? 
+  
+  You decide to use Datadog to investigate.
