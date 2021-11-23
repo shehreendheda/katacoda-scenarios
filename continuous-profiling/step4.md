@@ -1,64 +1,24 @@
-Let's follow along the getting started instructions from the <a href="https://app.datadoghq.com/apm/docs?architecture=container-based&collection=Same%20host&environment=docker&language=java" target="_datadog">APM Getting started page</a>:
+You navigate to APM to investigate the trace data for getting movie credits for all movies with _Jurassic_ in their title and determine how to improve performance of the service.
 
-* Step 1: Choose your Environment and Application Language. We pick **Docker** ➡ **Same host** → **Java**
+1. Click the `curl` command below to query for this information, or copy, paste, and run the command in the terminal:
 
-* Step 2: Run the Agent.
-  We can run the Datadog agent using the following snippet (which already includes the API key shown in the `creds`{{execute T1}}):
-  ```
-  docker run -d \
-    -v /var/run/docker.sock:/var/run/docker.sock:ro \
-    -v /proc/:/host/proc/:ro \
-    -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
-    -p 127.0.0.1:8126:8126/tcp \
-    -e DD_API_KEY=$DD_API_KEY \
-    datadog/agent:latest
-  ```{{execute T1}}
-  💡 Tip: We can check if the agent is healthy using:
+  `time curl http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
 
-  ``docker exec -it `docker ps --filter "expose=8126" -q` agent status``{{execute T1}}
+2. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> to view the traces list.
 
-* Step 3: Install the Java client.
+  In the Facets on the left, select `movies-api-java` under **Service** to filter the list to the trace for the request you made to the service.
 
-  `wget -O dd-java-agent.jar 'https://dtdg.co/latest-java-tracer'`{{execute T1}}
+  Click the `movies-api-java` trace that appears in the list. This trace corresponds to the request you made to the service in the earlier step.
 
-* Step 4: Instrument your application.
-  To do so, we will set the Service name to `movies-api-java`, the Environment name to `staging`, and enable all three of
+3. Notice that the top span corresponding to the `movies-api-java` service has many child spans. 
 
-  - ✅_Automatically Inject Trace and Span IDs into Logs_
-  - ✅_Tracing Without Limits_
-  - ✅_Continuous Profiling_
+  Hover over the childs spans. Notice that they are all for the `mongo` service.
 
-  We're now ready to apply the resulting configuration snippet to `movies-api-java`.
+  Above the flame graph, click **Span List** to view the list of spans. The `mongo` services keep  
 
-* Step 4.1: Open the Gradle build file:
 
-  `dd-continuous-profiler-dash2021/build.gradle`{{open}}
-
-* Step 4.2: Add the provided arguments as `applicationDefaultJvmArgs` (`build.gradle`, line 25):
-
-<pre class="file" data-filename="dd-continuous-profiler-dash2021/build.gradle" data-target="insert" data-marker="    applicationDefaultJvmArgs = ['-Xmx3g', '-Xms3g']">
-     applicationDefaultJvmArgs = [
-         '-Xmx3g',
-         '-Xms3g',
-         '-javaagent:dd-java-agent.jar',
-         '-Ddd.profiling.enabled=true',
-         '-XX:FlightRecorderOptions=stackdepth=256',
-         '-Ddd.logs.injection=true',
-         '-Ddd.trace.sample.rate=1',
-         '-Ddd.service=movies-api-java',
-         '-Ddd.env=staging',
-         "-Ddd.version=${new Date().toString()}", // Tag each run with a different version
-         '-Ddd.profiling.jfr-template-override-file=dd-profiler-overrides.jfp',
-     ]</pre>
+3. **Presented Live**: _What can we learn from the traced request using APM Traces?_
 
 ---
 
-After running through the steps, we're ready to re-run our application using:
-
-   `cd /root/lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
-
-You should see a `DATADOG TRACER CONFIGURATION` log message that confirms that the application is now collecting data.
-
----
-
-Proceed to the next step to continue analyzing `movies-api-java`.
+Proceed to the next step to fix this performance issue on `movies-api-java`.

@@ -27,7 +27,7 @@ You want to optimize the service's performance to ensure that users have the bes
 
   `time curl http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
 
-  (You can also click this link to view the results for this search in another browser tab: <https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com/credits?q=jurassic>)
+  (You may not be able to the view the full output in the terminal. You can click this link to view the full output for this search in another browser tab: <https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com/credits?q=jurassic>)
 
   In the terminal, you observe that this endpoint seems to be quite slow. For example, you may see a reults like the one below:
 

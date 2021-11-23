@@ -61,10 +61,4 @@ You log into Datadog and configure monitoring the `movies-api-java` service for 
 
     You should see a `DATADOG TRACER CONFIGURATION` log message that confirms that the application is now collecting data.
 
-
-
-
-
-
-
-
+Now that tracing is set up for the service and Datadog is collecting its trace data, you can start investigating the cause of the slow performance.
