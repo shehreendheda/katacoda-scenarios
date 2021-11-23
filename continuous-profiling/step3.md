@@ -36,7 +36,7 @@ You log into Datadog and configure monitoring the `movies-api-java` service for 
 
 9. Under **Instrument your application**, build the code snippet to automatically instrument your Java application. Set the **Service name** to `movies-api-java`, the **Environment name** to `staging`, and enable all three of **Automatically Inject Trace and Span IDs into Logs**, **Tracing Without Limits**, and **Continuous Profiling**.
 
-    In the editor on the right, open the Gradle build file by clicking this command `dd-continuous-profiler-dash2021/build.gradle`{{open}}.
+    In the editor on the right, open the Gradle build file by clicking this filename: `dd-continuous-profiler-dash2021/build.gradle`{{open}}.
 
     The code block below includes the code snippet you built in to **Instrument your application**. Click the code block to add the provided arguments as `applicationDefaultJvmArgs` under `build.gradle` on **line 25**:
 
