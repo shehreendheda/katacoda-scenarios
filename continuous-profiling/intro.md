@@ -10,4 +10,6 @@ With Continuous Profiling in Datadog, you can visualize all your stack traces in
 
 In this scenario, you will explore how to diagnose production CPU performance problems in a java application.
 
+Prerequisites: Familiarity with APM in Datadog and basic knowledge of Java programming langauge.
+
 When you are ready to continue, click **Start Scenario**.

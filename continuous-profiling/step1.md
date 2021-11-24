@@ -1,4 +1,4 @@
-Imagine you have a `movies-api-service` service with the following features:
+Imagine you have a `movies-api-java` service with the following features:
 
 * Provides an API to list and search for movies and movie metadata.
 * Is built using Java 17, using the [Gradle build tool](https://gradle.org/), the [Spark web framework](https://sparkjava.com/) and the
@@ -29,7 +29,7 @@ You want to optimize the service's performance to ensure that users have the bes
 
   (You may not be able to the view the full output in the terminal. You can click this link to view the full output for this search in another browser tab: <https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com/credits?q=jurassic>)
 
-  In the terminal, you observe that this endpoint seems to be quite slow. For example, you may see a reults like the one below:
+  In the terminal, you observe that this endpoint seems to be quite slow. For example, you may see a result like the one below:
 
   ```
   real    0m4.208s

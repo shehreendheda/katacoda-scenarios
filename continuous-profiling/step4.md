@@ -14,7 +14,7 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
 
   Hover over the childs spans. Notice that they are all for the `mongo` database service.
 
-  Above the flame graph, click **Span List** to view the list of spans. The `mongo` service is repeatedly called to fulfil the request to the `movies-api-java`.
+  Above the flame graph, click **Span List** to view the list of spans. The `mongo` service is repeatedly called to fulfil the request for movie credits data from `movies-api-java`.
   
 4. You check the source file to understand why repeated calls are being made to the database to fulfill the request for movie credits data.
 
@@ -26,11 +26,21 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
 
   Scroll to **Line 47**. When the application is started, `CREDITS` is used to warm up the service.
 
-  Scroll to **Line 76**. `CREDITS` is also used when a request is made to the service for movie credits data.   
+  Scroll to **Line 76**. `CREDITS` is also used when a request is made to the service for movie credits data. This means that, each time the movie credits data for a movie is retrieved, a connection is made to the database and the credits data for that movie is retrieved. The database is read for each movie that matches the query to the database.
 
-  The movie credits data is static. When `movies-api-java` is brought online, it should make one request to the database and cache the movie credits data. With the dataa cached, if the movie credits data is requested from the service later on, repeated calls to the database will not be made.
+5. You can check how many movies are retrieved with the query.
 
-5. With this in mind, you update the the `CREDITS` supplier with a version that caches (or _memoizes_) the credits. Click the code block to update the `CREDITS` supplier on **line 36**:
+  Click the `curl` command below to query for this information, or copy, paste, and run the command in the terminal:
+
+  `time curl http://localhost:8081/credits?q=jurassic | jq ".[] | .movie.title"`{{execute T1}}
+
+  You'll see tha eight movie titles are returned for this query.
+
+  View the **Span List** again. Notice that eight connections are made to the database to retrieve the movei credits data for the eight movies.     
+
+  The movie credits data is static. When `movies-api-java` is brought online, it should make one request to the database and cache the movie credits data. With the data cached during start up, if the movie credits data is requested from the service later on, repeated calls to the database will not be made.
+
+5. With this in mind, you update the the `CREDITS` supplier with a version that caches the movie credits the first time the data is retriebed by adding `memoizes` to the command. Click the code block to update the `CREDITS` supplier on **line 36**:
 
   <pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="CREDITS = Server::loadCredits">CREDITS = Suppliers.memoize(Server::loadCredits)</pre>
 
@@ -48,4 +58,4 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
 
   Notice that the top span corresponding to the `movies-api-java` service no longer has child spans for the `mongo` service. 
 
-You are able to solve this performance issue usng APM. However, other issues may also exist in the service that may not be visible in the apm traces. You decide to investigate the service further to ensure that there are no other performance issues.
+You were able to solve this performance issue usng APM. However, other issues may also exist in the service that may not be visible in the apm traces. You decide to investigate the service further to ensure that there are no other performance issues when requesting movie credits.
