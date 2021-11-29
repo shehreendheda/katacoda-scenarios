@@ -51,8 +51,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
-    "showide": "true",
+    "uilayout": "vscode-terminal-split",
     "uieditorpath": "/root/lab",
     "showdashboard": true,
     "dashboards": [
