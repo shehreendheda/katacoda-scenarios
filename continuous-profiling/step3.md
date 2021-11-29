@@ -1,64 +1,61 @@
-You log into Datadog and configure monitoring the `movies-api-java` service for APM.
+You navigate to APM in Datadog to investigate the trace data for requesting movie credits for all movies with _Jurassic_ in their title and determine how to improve performance of the service.
 
-1. Click this command `creds`{{execute}} to display the credentials for the Datadog account assigned to you for this scenario.
+1. Click the `curl` command below to query for this information, or copy, paste, and run the command in the **Terminal** tab:
 
-2. In a new browser window/tab, use the credentials to <a href="https://app.datadoghq.com/account/login" target="_datadog">log in to the Datadog account</a>.
-    
-    NOTE: If the link opens to a Datadog account you're already logged into, log out of that account and log into the account using the credentials in the termainal.
+  `time curl http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
 
-3. Once you have successfully logged into the Datadog account, navigate to <a href="https://app.datadoghq.com/apm/getting-started" target="_datadog">**APM** > **Setup & Configuration**</a>.
+2. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> to view the traces list.
 
-4. In the top menu, select **Service Setup**.
+  In the Facets on the left, select `movies-api-java` under **Service** to filter the list to the trace for the request you made to the service.
 
-5. Under **Where are your traces coming from?**, select **Container-Based**.
+  Click the `movies-api-java` trace that appears in the list. This trace corresponds to the request you made to the service in the earlier step.
 
-6. Under **Choose your Environment and Application Language**, select **docker**. Then, select **Same host** and **java**.
+3. Notice that the top span corresponding to the `movies-api-java` service has many child spans. 
 
-7. Under **Run the Agent**, you'll see a code block to enable trace collection in your environment. This code block is below. Click the code block below to run the code directly in the terminal.
+  Hover over the child spans. Notice that they are all for the `mongo` database service.
 
-  ```
-  docker run -d \
-    -v /var/run/docker.sock:/var/run/docker.sock:ro \
-    -v /proc/:/host/proc/:ro \
-    -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
-    -p 127.0.0.1:8126:8126/tcp \
-    -e DD_API_KEY=$DD_API_KEY \
-    datadog/agent:latest
-  ```{{execute T1}}
+  Above the flame graph, click **Span List** to view the list of spans. The `mongo` service is repeatedly called to fulfil the request for movie credits data from `movies-api-java`.
+  
+4. You check the source file to understand why repeated calls are being made to the database to fulfill the request for movie credits data.
 
-    💡 Tip: You can check if the agent is healthy using:
+  In the editor on the right, open the main `movies-api-java` server source file by clicking this filename: `dd-continuous-profiler-dash2021/src/main/java/movies/Server.java`{{open}}
 
-  ``docker exec -it `docker ps --filter "expose=8126" -q` agent status``{{execute T1}}
+  Scroll to **Line 36**. Here you see a java `Supplier` stores the results from the `Server::loadCredits` method as the constant `CREDITS`. (In Java 8, `Supplier` is a functional interface; it takes no arguments and returns a result.)
+  
+  Scroll to **Line 122** to view `Server::loadCredits` method. Notice that the method creates a new connection to the `mongo` database, then performs a request to the credits collection and uses the stream option to read the whole stream of credits.
 
-8. Under **Install the Java client**, you'll see a code block to install the Java tracing client.
+  Scroll to **Line 47**. When the application is started, `CREDITS` is used to warm up the service.
 
-  `wget -O dd-java-agent.jar 'https://dtdg.co/latest-java-tracer'`{{execute T1}}
+  Scroll to **Line 76**. `CREDITS` is also used when a request is made to the service for movie credits data. This means that, each time the movie credits data for a movie is retrieved, a connection is made to the database and the credits data for that movie is retrieved. The database is read for each movie that matches the query to the database.
 
-9. Under **Instrument your application**, build the code snippet to automatically instrument your Java application. Set the **Service name** to `movies-api-java`, the **Environment name** to `staging`, and enable all three of **Automatically Inject Trace and Span IDs into Logs**, **Tracing Without Limits**, and **Continuous Profiling**.
+5. You can check how many movies are retrieved with the query.
 
-    In the editor on the right, open the Gradle build file by clicking this filename: `dd-continuous-profiler-dash2021/build.gradle`{{open}}.
+  Click the `curl` command below to query for this information, or copy, paste, and run the command in the **Terminal** tab:
 
-    The code block below includes the code snippet you built in to **Instrument your application**. Click the code block to add the provided arguments as `applicationDefaultJvmArgs` under `build.gradle` on **line 25**:
+  `time curl http://localhost:8081/credits?q=jurassic | jq ".[] | .movie.title"`{{execute T1}}
 
-    <pre class="file" data-filename="dd-continuous-profiler-dash2021/build.gradle" data-target="insert" data-marker="    applicationDefaultJvmArgs = ['-Xmx3g', '-Xms3g']">
-         applicationDefaultJvmArgs = [
-            '-Xmx3g',
-            '-Xms3g',
-            '-javaagent:dd-java-agent.jar',
-            '-Ddd.profiling.enabled=true',
-            '-XX:FlightRecorderOptions=stackdepth=256',
-            '-Ddd.logs.injection=true',
-            '-Ddd.trace.sample.rate=1',
-            '-Ddd.service=movies-api-java',
-            '-Ddd.env=staging',
-            "-Ddd.version=${new Date().toString()}", // Tag each run with a different version
-            '-Ddd.profiling.jfr-template-override-file=dd-profiler-overrides.jfp',
-        ]</pre>
+  You'll see tha eight movie titles are returned for this query.
 
-10. Now that you've configured the service for APM in Datadog, rerun the service.
+  View the **Span List** again. Notice that eight connections are made to the database to retrieve the movie credits data for the eight movies.     
 
-    `cd /root/lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
+  The movie credits data doesn't change often. When `movies-api-java` is brought online, it should make one request to the database and cache the movie credits data. With the data cached during start up, if the movie credits data is requested from the service later on, repeated calls to the database will not be made.
 
-    You should see a `DATADOG TRACER CONFIGURATION` log message that confirms that the application is now collecting data.
+6. With this in mind, you update the `CREDITS` supplier with a version that caches the movie credits the first time the data is retrieved by adding `memoizes` to the command. Click the code block to update the `CREDITS` supplier on **line 36**:
 
-Now that tracing is set up for the service and Datadog is collecting its trace data, you can start investigating the cause of the slow performance.
+  <pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="CREDITS = Server::loadCredits">CREDITS = Suppliers.memoize(Server::loadCredits)</pre>
+
+7. Re-run the application by clicking this command to restart the service: `cd /root/lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
+
+8. Click the `curl` command below to rerun the query above, or copy, paste, and run the command in the **Terminal** tab:
+
+  `time curl http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
+
+  Notice that the performance of the endpoint, as measured using `time`, has now improved.
+
+9. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> to view the traces list.
+
+  Click the new `movies-api-java` trace that appeared in the list after you reran the query.
+
+  Notice that the top span corresponding to the `movies-api-java` service no longer has child spans for the `mongo` service. 
+
+You were able to solve this performance issue usng APM. However, other issues may also exist in the service that may not be visible in the APM traces. You decide to investigate the service further to ensure that there are no other performance issues when requesting movie credits.
