@@ -34,7 +34,7 @@ You log into Datadog and configure monitoring the `movies-api-java` service for 
 
   `wget -O dd-java-agent.jar 'https://dtdg.co/latest-java-tracer'`{{execute T1}}
 
-9. Under **Instrument your application**, build the code snippet to automatically instrument your Java application. Set the **Service name** to `movies-api-java`, the **Environment name** to `staging`, and enable all three of **Automatically Inject Trace and Span IDs into Logs**, **Tracing Without Limits**, and **Continuous Profiling**.
+9. Under **Instrument your application**, build the code snippet to automatically instrument your Java application. Set the **Service name** to `movies-api-java`, the **Environment name** to `staging`, and enable all three of **Automatically Inject Trace and Span IDs into Logs**, **Tracing Without Limits**, and **Continuous Profiling**. (You can refere to the <a href="https://docs.datadoghq.com/tracing/profiler/enabling/java/?tab=commandarguments" target="_blank">Enabling the Java Profiler</a> documentation for more details.)
 
     In the editor on the right, open the Gradle build file by clicking this filename: `dd-continuous-profiler-dash2021/build.gradle`{{open}}.
 

@@ -6,7 +6,7 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
 
 2. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> to view the traces list.
 
-  In the Facets on the left, select `movies-api-java` under **Service** to filter the list to the trace for the request you made to the service.
+  In the search query above the traces list, enter `env:staging`{{copy}} and `service:movies-api-java`{{copy}} to filter the list to the trace for the request you made to the service.
 
   Click the `movies-api-java` trace that appears in the list. This trace corresponds to the request you made to the service in the earlier step.
 
@@ -26,7 +26,7 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
 
   Scroll to **Line 47**. When the application is started, `CREDITS` is used to warm up the service.
 
-  Scroll to **Line 76**. `CREDITS` is also used when a request is made to the service for movie credits data. This means that, each time the movie credits data for a movie is retrieved, a connection is made to the database and the credits data for that movie is retrieved. The database is read for each movie that matches the query to the database.
+  Scroll to **Line 76**. This line is code for the `creditsForMovie` function. `CREDITS` is also used when a request is made to the service to retrieve movie credits data using this function. Each time the movie credits data for a movie is retrieved, a connection is made to the database and the credits data for that movie is retrieved. The database is read for each movie that matches the query to the database.
 
 5. You can check how many movies are retrieved with the query.
 
@@ -53,6 +53,8 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
   Notice that the performance of the endpoint, as measured using `time`, has now improved.
 
 9. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> to view the traces list.
+
+  Make sure the list is still filtered to `env:staging`{{copy}} and `service:movies-api-java`{{copy}}.
 
   Click the new `movies-api-java` trace that appeared in the list after you reran the query.
 
