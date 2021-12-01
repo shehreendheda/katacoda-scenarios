@@ -51,7 +51,12 @@ You previously requested the movie credits for all movies with _Jurassic_ in the
   
   Scroll to **Line 76** to view the code for the `creditsForMovie` function. The function retrieves all the credits data, turns them into a stream, filters the stream, and finds the credits that match for the title of one movie. This endpoint is very slow because there are thousands of movies with "the" in the title, so this function is getting called thousands of times to find the credits for all movies with "the" in the name. You want to optimize this function so that it gets called only one time. 
 
-7. There are different ways to optimize this function. One way is to create a data structure that is a hash table or hash map that stores a direct list of mappings between the movie.id and the matching movie credits. 
+7. There are different ways to optimize this function. One way is to create a data structure that is a hash map that stores a direct list of mappings between the movie.id and the matching movie credits. A map is a key-value mapping. Every key is mapped to exactly one value and the key to retrieve the corresponding value from a map. Right now, the time compleixtiy of finding the movie credits in the list is *O(n)*. The advantage of a hash map is that the time complexity to insert and retrieve a value is *O(1)* on average.
+
+  > The static factory method `Collectors.groupingBy()` provide functionality similar to the `GROUP BY` clause in the SQL language. This method is used for grouping objects by some property and storing the results in a `Map` instance. The `Map` interface, `java.util.Map`, represents a mapping between a key and a value. More specifically, a `Map` can store pairs of keys and values. Each key is linked to a specific value. Once stored in a `Map`, you can later look up the value using just the key. In this case, the key is the movie.id and the corresponding values are the movie credits.
+
+  With `Collectors.groupingBy`, you can convert a `Collection` to a `Map` with a specific classifier. The classifier is an element's attribute, we'll use this attribute to incorporate the elements into different groups. The `Stream.collect` method can be used to reduce the elements in a stream into a Collection of any type.
+
 
 
 
