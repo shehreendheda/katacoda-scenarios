@@ -1,6 +1,6 @@
 You navigate to APM in Datadog to investigate the trace data for requesting movie credits for all movies with _Jurassic_ in their title and determine how to improve performance of the service.
 
-1. Click the `curl` command below to query for this information, or copy, paste, and run the command in the **Terminal** tab:
+1. Click the `curl` command below to query for this information, or copy, paste, and run the command in the **Terminal** tab. Click the command two or three more times to generate multiple traces.
 
   `time curl http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
 
@@ -8,7 +8,7 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
 
   In the search query above the traces list, enter `env:staging`{{copy}} and `service:movies-api-java`{{copy}} to filter the list to the trace for the request you made to the service.
 
-  Click the `movies-api-java` trace that appears in the list. This trace corresponds to the request you made to the service in the earlier step.
+  Click one of the `movies-api-java` traces that appeared in the list. This trace corresponds to the request you made to the service in the earlier step.
 
 3. Notice that the top span corresponding to the `movies-api-java` service has many child spans. 
 
@@ -30,7 +30,7 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
 
 5. You can check how many movies are retrieved with the query.
 
-  Click the `curl` command below to query for this information, or copy, paste, and run the command in the **Terminal** tab:
+  Click the `curl` command below to query for this information, or copy, paste, and run the command in the **Terminal** tab. 
 
   `time curl http://localhost:8081/credits?q=jurassic | jq ".[] | .movie.title"`{{execute T1}}
 
@@ -46,7 +46,7 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
 
 7. Re-run the application by clicking this command to restart the service: `cd /root/lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
 
-8. Click the `curl` command below to rerun the query above, or copy, paste, and run the command in the **Terminal** tab:
+8. Click the `curl` command below to rerun the query above, or copy, paste, and run the command in the **Terminal** tab. Click the command two or three more times to generate multiple traces.
 
   `time curl http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
 
@@ -56,7 +56,7 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
 
   Make sure the list is still filtered to `env:staging`{{copy}} and `service:movies-api-java`{{copy}}.
 
-  Click the new `movies-api-java` trace that appeared in the list after you reran the query.
+  Click one of the new `movies-api-java` traces that appeared in the list after you reran the query.
 
   Notice that the top span corresponding to the `movies-api-java` service no longer has child spans for the `mongo` service. 
 

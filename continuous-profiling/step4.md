@@ -1,10 +1,8 @@
 You previously requested the movie credits for all movies with _Jurassic_ in their name. This retrieved credits for eight movies. You now try to request movie credits for all movies with the word _The_ in their title, which will return a significantly greater number of results.
 
-1. Click the `curl` command below to query for this information, or copy, paste, and run the command in the terminal:
+1. Click the `curl` command below to query for this information, or copy, paste, and run the command in the **Terminal** tab. 
 
   `time curl http://localhost:8081/credits?q=the >> /dev/null`{{execute T1}}
-
-  (You may not be able to the view the full output in the terminal. You can click this link to view the full output for this search in another browser tab: <https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com/credits?q=the>)
 
   In the terminal, you observe that this endpoint performs quite slowly when retrieving a significantly greater number of results. For example, you may see a result like the one below:
 
@@ -13,11 +11,14 @@ You previously requested the movie credits for all movies with _Jurassic_ in the
   user    0m0.011s
   sys     0m0.011s
   ```
+
+  Repeat this step two or three more times to generate multiple traces.
+
 2. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> to view the traces list.
 
   Make sure the list is still filtered to `env:staging`{{copy}} and `service:movies-api-java`{{copy}}.
 
-  Click the `movies-api-java` trace that appeared at the top of the list. This trace corresponds to the request you made to the service in the earlier step.
+  Click one of the `movies-api-java` traces that appeared at the top of the list. This trace corresponds to the request you made to the service in the earlier step.
 
   Notice that the top span corresponding to the `movies-api-java` service has no child spans. The APM trace provides no further visibility into the underlying processes that can explain why the service performed slowly to retrieve the result. 
 
@@ -41,58 +42,45 @@ You previously requested the movie credits for all movies with _Jurassic_ in the
 
   Above the flame graph, type `movies` into the **Filter flamegraph by method or package** field to filter by the `Movies` package. Notice that only spans that are associated with this package are highlighted.
 
-  The top highlighted span is now the `Server.creditsEndpoint`. This is where the user request actually comes into our code. The unhighlighted code is framework and web server code. The next span is the `Server.replyJSON`, which is called by this credits endpoint. There is more java code that is run, followed by the `Server.lambda$creditsEndpoint` function, which ultimately calls the `Server.creditsForMovie` function that you had updated earlier. 
+  The top highlighted span is now the `Server.creditsEndpoint`. This is where the user request actually comes into our code. The unhighlighted code is framework and web server code. The next span is the `Server.replyJSON`, which is called by this credits endpoint. There is more java code that is run, followed by the `Server.lambda$creditsEndpoint` method, which ultimately calls the `Server.creditsForMovie` method that you had updated earlier. 
 
-  Hover over the `Server.creditsForMovie` span. Notice that a large percentage over 90% (this percentage will vary based on the specific profile) that is spent on this function. The spans below this span are for functions from the Java standard library, which are optimized, so you investigate line #76 because this is a custom function you created and can potentially optimize.
+  Hover over the `Server.creditsForMovie` span. Notice that a large percentage over 90% (this percentage will vary based on the specific profile) that is spent on this method. The spans below this span are for methods from the Java standard library, which are optimized, so you investigate line #76 because this is a custom method you created and can potentially optimize.
 
-6. You check the source file again to understand why this function performs slowly.
+6. You check the source file again to understand why this method performs slowly.
 
   In the editor on the right, open the main `movies-api-java` server source file by clicking this filename: `dd-continuous-profiler-dash2021/src/main/java/movies/Server.java`{{open}} (Note: This file may already be open because you updated it earlier.)
   
-  Scroll to **Line 76** to view the code for the `creditsForMovie` function. The function retrieves all the credits data, turns them into a stream, filters the stream, and finds the credits that match for the title of one movie. This endpoint is very slow because there are thousands of movies with "the" in the title, so this function is getting called thousands of times to find the credits for all movies with "the" in the name. You want to optimize this function so that it gets called only one time. 
+  Scroll to **Line 76** to view the code for the `creditsForMovie` method. The method retrieves all the credits data, turns them into a stream, filters the stream, and finds the credits that match for the title of one movie. This endpoint is very slow because there are thousands of movies with "the" in the title, so this method is getting called thousands of times to find the credits for all movies with "the" in the name. You want to optimize this method so that it gets called only one time. 
 
-7. There are different ways to optimize this function. One way is to create a data structure that is a hash map that stores a direct list of mappings between the movie.id and the matching movie credits. A map is a key-value mapping. Every key is mapped to exactly one value and the key to retrieve the corresponding value from a map. Right now, the time compleixtiy of finding the movie credits in the list is *O(n)*. The advantage of a hash map is that the time complexity to insert and retrieve a value is *O(1)* on average.
+7. There are different ways to optimize this method. One way is to optimize the method is to create a data structure that is a (hash) map that stores a direct list of mappings between the movie.id and the matching movie credits, and then have the method use this map to look up all the requested credits. A map is a key-value mapping. Every key is mapped to exactly one value, and the key is used to retrieve the corresponding value from the map. Right now, the time complexity of finding the movie credits in the list is *O(n)*. The advantage of a (hash) map is that the time complexity to insert and retrieve a value is *O(1)* on average, which will improve performance of the method.
 
-  > The static factory method `Collectors.groupingBy()` provide functionality similar to the `GROUP BY` clause in the SQL language. This method is used for grouping objects by some property and storing the results in a `Map` instance. The `Map` interface, `java.util.Map`, represents a mapping between a key and a value. More specifically, a `Map` can store pairs of keys and values. Each key is linked to a specific value. Once stored in a `Map`, you can later look up the value using just the key. In this case, the key is the movie.id and the corresponding values are the movie credits.
-
-  With `Collectors.groupingBy`, you can convert a `Collection` to a `Map` with a specific classifier. The classifier is an element's attribute, we'll use this attribute to incorporate the elements into different groups. The `Stream.collect` method can be used to reduce the elements in a stream into a Collection of any type.
-
-
-
-
-
-
-
-
-
-As identified in the previous step, the current implementation of the `Server::creditsForMovie` method is rather inefficient.
-To fix it, let's use a _O(1)_ map lookup instead.
-
-1. Open the main `movies-api-java` source file:
-
-  `dd-continuous-profiler-dash2021/src/main/java/movies/Server.java`{{open}}
-
-2. Add a new `CREDITS_BY_MOVIE_ID` map (`Server.java`, line 37):
+  Scroll to **Line 37**. You can add the a new `CREDITS_BY_MOVIE_ID` map here. Click the code block below to add map on **line 37**:
 
   <pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="// Placeholder for future improvement">
 private static final Supplier&lt;Map&lt;String, List&lt;Credit&gt;&gt;&gt; CREDITS_BY_MOVIE_ID = Suppliers.memoize(() -> CREDITS.get().stream().collect(Collectors.groupingBy(c -> c.id)));
   </pre>
 
-3. ...and update the `creditsForMovie` method to use this map (`Server.java`, line 77):
+  Scroll to **line 77** (which **line 76**). Click the code block below to update the `creditsForMovie` method to use this map:
 
   <pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="CREDITS.get().stream().filter(c -> c.id.equals(movie.id)).collect(Collectors.toList())">CREDITS_BY_MOVIE_ID.get().get(movie.id)</pre>
 
-4. Re-run the application using:
+8. Re-run the application by clicking this command to restart the service: `cd /root/lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
 
-   `cd /root/lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
-
-5. Run `curl` to repeat our query:
+9. Click the `curl` command below to rerun the query above, or copy, paste, and run the command in the **Terminal** tab:
 
   `time curl http://localhost:8081/credits?q=the >> /dev/null`{{execute T1}}
 
-  Observe that the performance of the endpoint, as measured using `time`, has now improved.
+  Notice that the performance of the endpoint, as measured using `time`, has now improved.
 
-6. Locate the fixed request on the <a href="https://app.datadoghq.com/apm/traces" target="_datadog">Datadog APM Traces</a> page and confirm that the resulting code hotspot has changed.
+  Repeat this step two or three more times to generate multiple traces.
+
+10. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> to view the traces list.
+
+  Make sure the list is still filtered to `env:staging`{{copy}} and `service:movies-api-java`{{copy}}.
+
+  Click one of the new `movies-api-java` traces that appeared in the list after you reran the query. 
+
+  Click the **Code Hotspots** tab below. Notice that the CPU Time spent has reduced noticably because performance has improved.
 
 ---
 
