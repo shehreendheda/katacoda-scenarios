@@ -2,7 +2,7 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
 
 1. Click the `curl` command below to query for this information, or copy, paste, and run the command in the **Terminal** tab. Click the command two or three more times to generate multiple traces.
 
-  `time curl http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
+  `time curl http://localhost:8081/credits?q=jurassic >> /dev/null`{{execute T1}}
 
 2. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> to view the traces list.
 
@@ -48,7 +48,7 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
 
 8. Click the `curl` command below to rerun the query above, or copy, paste, and run the command in the **Terminal** tab. Click the command two or three more times to generate multiple traces.
 
-  `time curl http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
+  `time curl http://localhost:8081/credits?q=jurassic >> /dev/null`{{execute T1}}
 
   Notice that the performance of the endpoint, as measured using `time`, has now improved.
 
