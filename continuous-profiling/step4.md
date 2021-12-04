@@ -90,6 +90,6 @@ private static final Supplier&lt;Map&lt;String, List&lt;Credit&gt;&gt;&gt; CREDI
 
 ---
 
-This marks the end of the guided journey to `movies-api-java`.
+This marks the end of the guided part of the scenario.
 
 **Optional side quest**: The movies endpoint (e.g. `http://localhost:8081/movies?q=jurassic`) also has a few performance problems. Can you spot them? (Note: You can click **Solutions** below to see the answers.)
