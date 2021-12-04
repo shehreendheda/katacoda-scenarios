@@ -10,11 +10,15 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
 
   Click one of the `movies-api-java` traces that appeared in the list. This trace corresponds to the request you made to the service in the earlier step.
 
+  ![moviecredits-mongo-fg](./assets/moviecredits-mongo-fg.png)
+
 3. Notice that the top span corresponding to the `movies-api-java` service has many child spans. 
 
   Hover over the child spans. Notice that they are all for the `mongo` database service.
 
   Above the flame graph, click **Span List** to view the list of spans. The `mongo` service is repeatedly called to fulfil the request for movie credits data from `movies-api-java`.
+
+  ![moviecredits-mongo-sl](./assets/moviecredits-mongo-sl.png)
   
 4. You check the source file to understand why repeated calls are being made to the database to fulfill the request for movie credits data.
 
@@ -36,7 +40,9 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
 
   You'll see tha eight movie titles are returned for this query.
 
-  View the **Span List** again. Notice that eight connections are made to the database to retrieve the movie credits data for the eight movies.     
+  View the **Span List** again. Notice that eight connections are made to the database to retrieve the movie credits data for the eight movies.
+
+  ![moviecredits-mongocon-sl](./assets/moviecredits-mongocon-sl.png)     
 
   The movie credits data doesn't change often. When `movies-api-java` is brought online, it should make one request to the database and cache the movie credits data. With the data cached during start up, if the movie credits data is requested from the service later on, repeated calls to the database will not be made.
 
@@ -50,7 +56,7 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
 
   `time curl http://localhost:8081/credits?q=jurassic >> /dev/null`{{execute T1}}
 
-  Notice that the performance of the endpoint, as measured using `time`, has now improved.
+  Notice that the performance of the endpoint has now improved.
 
 9. Navigate to <a href="https://app.datadoghq.com/apm/traces" target="_datadog">**APM** > **Traces**</a> to view the traces list.
 
@@ -58,6 +64,8 @@ You navigate to APM in Datadog to investigate the trace data for requesting movi
 
   Click one of the new `movies-api-java` traces that appeared in the list after you reran the query.
 
-  Notice that the top span corresponding to the `movies-api-java` service no longer has child spans for the `mongo` service. 
+  Notice that the top span corresponding to the `movies-api-java` service no longer has child spans for the `mongo` service.
+
+  ![moviecredits-nomongo-fg](./assets/moviecredits-nomongo-fg.png)
 
 You were able to solve this performance issue usng APM. However, other issues may also exist in the service that may not be visible in the APM traces. You decide to investigate the service further to ensure that there are no other performance issues when requesting movie credits.

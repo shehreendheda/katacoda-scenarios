@@ -13,7 +13,7 @@ You want to optimize the service's performance to ensure that users have the bes
 
   When the service is online, you'll see the following in the terminal.
 
-  [IMAGE]
+  ![service-online](./assets/service-online.png)
 
   Click the link below to open the service in another browser tab:
 
@@ -39,8 +39,8 @@ You want to optimize the service's performance to ensure that users have the bes
   sys     0m0.012s
   ```
 
-  The service is taking longer than expected to respond to these queries, which makes for a poor user experience.
+  Notice that the performance of the service, as measured using `time` in the `curl` command, indicates that the service is taking longer than expected to respond to these queries. This makes for a poor user experience.
 
-  Why are these requests taking so long? 
+Why are these requests taking so long? 
   
-  You decide to use Datadog to investigate.
+You decide to use Datadog to investigate.

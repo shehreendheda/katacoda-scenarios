@@ -1,6 +1,6 @@
 # Diagnose and Optimize CPU performance with Continuous Profiling
 
-![cpexample](assets/cpexample.png)
+![cpexample](./assets/cpexample.png)
 
 The Continuous Profiler in Datadog is an always-on, production code profiler that enables you to analyze code-level performance across your entire environment, with minimal overhead. Profiles reveal which functions (or lines of code) consume the most resources, such as CPU and memory. With this information, you can optimize your code to reduce both your end-user latency and cloud provider costs.
 

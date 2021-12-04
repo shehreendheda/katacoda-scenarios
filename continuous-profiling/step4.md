@@ -20,15 +20,19 @@ You previously requested the movie credits for all movies with _Jurassic_ in the
 
   Click one of the `movies-api-java` traces that appeared at the top of the list. This trace corresponds to the request you made to the service in the earlier step.
 
-  Notice that the top span corresponding to the `movies-api-java` service has no child spans. The APM trace provides no further visibility into the underlying processes that can explain why the service performed slowly to retrieve the result. 
+  Notice that the top span corresponding to the `movies-api-java` service has no child spans. The trace provides no further visibility into the underlying processes that can explain why the service performed slowly to retrieve the result.
 
-3.  Scroll below the flame graph and click the tab labeled **Code Hotspots** to see the highlights for profiling data scoped on the selected span, trace, or full profile (the data to 60 seconds of the whole service process). Code Hotspots identification is enabled by default when you turn on profiling for your service. 
+3.  Scroll below the flame graph and click the tab labeled **Code Hotspots** to see the highlights for profiling data scoped on the selected span, trace, or full profile (the data to 60 seconds of the whole service process). Code Hotspots identification is enabled by default when you turn on profiling for your service.
+
+  ![moviecredits-hotspots](./assets/moviecredits-hotspots.png) 
 
   On the left side under the tab, you'll see a list of **Execution Time By Profile Type** for the span. (The list of types varies based on the runtime and language. To learn more about the various types you can view the <a href="https://docs.datadoghq.com/tracing/profiler/connect_traces_and_profiles/#link-from-a-span-to-profiling-data" target="_blank">Link from a span to profiling data</a> documentation.) 
   
-  Select **CPU Time** from the list to see a list of **Methods that used the most CPU Time** on the right. Notice that `ReferencePipeline$2$1.accept(Object)` is the method at the top. Scroll the to see the list of stacktraces. You want to look that the profile in more detail to understand what this method is. 
+  Select **CPU Time** from the list to see a list of **Methods that used the most CPU Time** on the right. Scroll the to see the list of stacktraces. You want to look that the profile in more detail to understand what this method is. 
 
 4. Click **View CPU Profile** above the list of the methods. A new broswer tab will open to the **Performance** tab in the **Continuous Profiler**. You see the profiler flame graph for the selected span.
+
+  ![cp-beforefix](./assets/cp-beforefix.gif)
 
   Browse the page to see the different options in the UI. Leave the **Type** selection as `CPU Time`. You can also leave the **View profile filtered by** as `Span & Children` because this span has no child spans. If the span had child spans, you may have filtered by `Span only`. 
 
@@ -81,6 +85,8 @@ private static final Supplier&lt;Map&lt;String, List&lt;Credit&gt;&gt;&gt; CREDI
   Click one of the new `movies-api-java` traces that appeared in the list after you reran the query. 
 
   Click the **Code Hotspots** tab below. Notice that the CPU Time spent has reduced noticably because performance has improved.
+
+  ![moviecredits-hotspots-fixed](./assets/moviecredits-hotspots-fixed.png) 
 
 ---
 
