@@ -30,7 +30,7 @@ You log into Datadog and configure monitoring the `movies-api-java` service for 
 
   ``docker exec -it `docker ps --filter "expose=8126" -q` agent status``{{execute T1}}
 
-8. Under **Install the Java client**, you'll see a code block to install the Java tracing client.
+8. Under **Install the Java client**, you'll see a code block to install the Java tracing client. Click the code block below to run the commands in the **Terminal** tab, or you can copy, paste, and run the command in that tab.
 
   `wget -O dd-java-agent.jar 'https://dtdg.co/latest-java-tracer'`{{execute T1}}
 

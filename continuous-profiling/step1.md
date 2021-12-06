@@ -7,7 +7,7 @@ Imagine you have a `movies-api-java` service with the following features:
 
 You want to optimize the service's performance to ensure that users have the best experience. To start, you bring the service online and make some requests to service to see how it performs. 
 
-1. Click the command below to bring the `movies-api-java` service online in the **Terminal for movies-api-java** tab on the right, or you can copy, paste, and run the command in that tab.
+1. Once the terminal on the right is ready, click the command below to bring the `movies-api-java` service online in the **Terminal for movies-api-java** tab on the right, or you can copy, paste, and run the command in that tab.
 
   `cd /root/lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute T2}} (👆_Double click_)
 

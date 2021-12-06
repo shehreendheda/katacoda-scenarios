@@ -6,19 +6,19 @@
   "details": {
     "steps": [
       {
-        "title": "Start the movies-api-java service",
+        "title": "Starting the movies-api-java service",
         "text": "step1.md"
       },
       {
-        "title": "Recognize performance issue",
+        "title": "Enabling Datadog APM and Continuous Profiling",
         "text": "step2.md"
       },
       {
-        "title": "Log in to Datadog workshop test account",
+        "title": "Investigating performance issues using APM",
         "text": "step3.md"
       },
       {
-        "title": "Enable Datadog APM and Continuous Profiling",
+        "title": "Investigating performance issues using Continuous Profiling",
         "text": "step4.md",
         "answer": "answer4.md"
       }

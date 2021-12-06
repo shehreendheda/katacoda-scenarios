@@ -64,7 +64,7 @@ You previously requested the movie credits for all movies with _Jurassic_ in the
 private static final Supplier&lt;Map&lt;String, List&lt;Credit&gt;&gt;&gt; CREDITS_BY_MOVIE_ID = Suppliers.memoize(() -> CREDITS.get().stream().collect(Collectors.groupingBy(c -> c.id)));
   </pre>
 
-  Scroll to **line 77** (which **line 76**). Click the code block below to update the `creditsForMovie` method to use this map:
+  Scroll to **line 77** (which was **line 76** in step 6). Click the code block below to update the `creditsForMovie` method to use this map:
 
   <pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="CREDITS.get().stream().filter(c -> c.id.equals(movie.id)).collect(Collectors.toList())">CREDITS_BY_MOVIE_ID.get().get(movie.id)</pre>
 

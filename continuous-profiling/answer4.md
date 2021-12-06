@@ -1,10 +1,14 @@
+There are two issues with the `movies` method in the service.
+
 Click the `curl` command below to query for this information, or copy, paste, and run the command in the **Terminal** tab. 
 
 `time curl http://localhost:8081/movies?q=jurassic >> /dev/null`{{execute T1}}
 
 In the editor on the right, open the main `movies-api-java` server source file by clicking this filename: `dd-continuous-profiler-dash2021/src/main/java/movies/Server.java`{{open}} (Note: This file may already be open because you updated it earlier.)
 
-The first part is to make the moviesEndpoint compile the regular expression once using Pattern.compile, rather than using Pattern.matches that internally compiles it again for every single movie:
+#### Issue 1
+
+You first want to make the moviesEndpoint compile the regular expression once using `Pattern.compile` instead of using `Pattern.matches`, which internally compiles the  again for every single movie:
 Instead of
 java
 	private static Object moviesEndpoint(Request req, Response res) {
