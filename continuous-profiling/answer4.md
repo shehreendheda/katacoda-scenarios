@@ -22,19 +22,8 @@ Scroll to **line 86**. Click the code block below to continue to update the `mov
 
 Date parsing inside `sortByDescReleaseDate` is really expensive. Since the dates are already in `yyyy-mm-dd` format, they can be sorted as strings without having to be parsed.
 
-Scroll to **line 86**.
+Scroll to **line 94**. Click the code block below to use the release dates in its original string format:
 
-			// Problem: We are parsing a datetime for each item to be sorted.
-			try {
-				return LocalDate.parse(m.releaseDate);
-			} catch (Exception e) {
-				return LocalDate.MIN;
-			}
+<pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="try {return LocalDate.parse(m.releaseDate);} catch (Exception e) {return LocalDate.MIN;}">return m.releaseDate;</pre>
 
-java
-	private static Stream<Movie> sortByDescReleaseDate(Stream<Movie> movies) {
-		return movies.sorted(Comparator.comparing((Movie m) -> {
-			return m.releaseDate;
-		}).reversed());
-	}
 With those two changes the performance of that endpoint is now better than the credits endpoint, as expected.
