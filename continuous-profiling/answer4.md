@@ -17,8 +17,8 @@ To improve performance, you first want to make the `moviesEndpoint` method to co
 Scroll to **line 85**. Manually replace **lines 85-86** with the following:
 
 ```
-var p = Pattern.compile(query, Pattern.CASE_INSENSITIVE);
-movies = movies.filter(m -> m.title != null && p.matcher(m.title).find());
+            var p = Pattern.compile(query, Pattern.CASE_INSENSITIVE);
+            movies = movies.filter(m -> m.title != null && p.matcher(m.title).find());
 ```{{copy}}
 
 The `moviesEndpoint` method now looks like:
@@ -40,7 +40,13 @@ private static Object moviesEndpoint(Request req, Response res) {
 
 Date parsing inside `sortByDescReleaseDate` is really expensive. Since the dates are already in `yyyy-mm-dd` format, they can be sorted as strings without having to be parsed.
 
-Scroll to **line 93**. Manually replace **lines 93-98** with `return m.releaseDate;`{{copy}}, so that the `sortByDescReleaseDate` method look like this:
+Scroll to **line 93**. Manually replace **lines 93-98** with the following:
+
+```
+            return m.releaseDate;
+```{{copy}}.
+
+The `sortByDescReleaseDate` method look like this:
 
 ```
 private static Stream<Movie> sortByDescReleaseDate(Stream<Movie> movies) {
