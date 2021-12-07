@@ -23,7 +23,8 @@ Scroll to **line 85**. Manually replace **lines 85-86** with the following:
 
 The `moviesEndpoint` method now looks like this:
 
-```private static Object moviesEndpoint(Request req, Response res) {
+```
+private static Object moviesEndpoint(Request req, Response res) {
     var movies = MOVIES.get().stream();
     movies = sortByDescReleaseDate(movies);
     var query = req.queryParamOrDefault("q", req.queryParams("query"));
@@ -47,7 +48,8 @@ Scroll to **line 93**. Manually replace **lines 93-98** with the following:
 
 The `sortByDescReleaseDate` method now looks like this:
 
-```private static Stream<Movie> sortByDescReleaseDate(Stream<Movie> movies) {
+```
+private static Stream<Movie> sortByDescReleaseDate(Stream<Movie> movies) {
 	return movies.sorted(Comparator.comparing((Movie m) -> {
 		return m.releaseDate;
 	}).reversed());
