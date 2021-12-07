@@ -21,10 +21,9 @@ Scroll to **line 85**. Manually replace **lines 85-86** with the following:
             movies = movies.filter(m -> m.title != null && p.matcher(m.title).find());
 ```{{copy}}
 
-The `moviesEndpoint` method now looks like:
+The `moviesEndpoint` method now looks like this:
 
-```
-private static Object moviesEndpoint(Request req, Response res) {
+```private static Object moviesEndpoint(Request req, Response res) {
     var movies = MOVIES.get().stream();
     movies = sortByDescReleaseDate(movies);
     var query = req.queryParamOrDefault("q", req.queryParams("query"));
@@ -36,7 +35,7 @@ private static Object moviesEndpoint(Request req, Response res) {
 }
 ```
 
-#### Issues 2
+#### Issue 2
 
 Date parsing inside `sortByDescReleaseDate` is really expensive. Since the dates are already in `yyyy-mm-dd` format, they can be sorted as strings without having to be parsed.
 
@@ -44,12 +43,11 @@ Scroll to **line 93**. Manually replace **lines 93-98** with the following:
 
 ```
             return m.releaseDate;
-```{{copy}}.
+```{{copy}}
 
-The `sortByDescReleaseDate` method look like this:
+The `sortByDescReleaseDate` method now looks like this:
 
-```
-private static Stream<Movie> sortByDescReleaseDate(Stream<Movie> movies) {
+```private static Stream<Movie> sortByDescReleaseDate(Stream<Movie> movies) {
 	return movies.sorted(Comparator.comparing((Movie m) -> {
 		return m.releaseDate;
 	}).reversed());
