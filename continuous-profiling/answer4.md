@@ -24,6 +24,6 @@ Date parsing inside `sortByDescReleaseDate` is really expensive. Since the dates
 
 Scroll to **line 94**. Click the code block below to use the release dates in its original string format:
 
-<pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="try {\n\treturn LocalDate.parse(m.releaseDate);\n} catch (Exception e) {\n\treturn LocalDate.MIN;\n}">return m.releaseDate;</pre>
+<pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="try {\n\treturn LocalDate.parse(m.releaseDate);\n\b} catch (Exception e) {\n\treturn LocalDate.MIN;\n\b}">return m.releaseDate;</pre>
 
 With those two changes the performance of that endpoint is now better than the credits endpoint, as expected.
