@@ -8,32 +8,29 @@ In the editor on the right, open the main `movies-api-java` server source file b
 
 #### Issue 1
 
-You first want to make the moviesEndpoint compile the regular expression once using `Pattern.compile` instead of using `Pattern.matches`, which internally compiles the  again for every single movie:
-Instead of
-java
-	private static Object moviesEndpoint(Request req, Response res) {
-		var movies = MOVIES.get().stream();
-		movies = sortByDescReleaseDate(movies);
-		var query = req.queryParamOrDefault("q", req.queryParams("query"));
-		if (query != null) {
-			// Problem: We are not compiling the pattern and there's a more efficient way of ignoring cases.
-			movies = movies.filter(m -> Pattern.matches(".*" + query.toUpperCase() + ".*", m.title.toUpperCase()));
-		}
-		return replyJSON(res, movies);
-	}
-change it to
-java
-	private static Object moviesEndpoint(Request req, Response res) {
-		var movies = MOVIES.get().stream();
-		movies = sortByDescReleaseDate(movies);
-		var query = req.queryParamOrDefault("q", req.queryParams("query"));
-		if (query != null) {
-			var p = Pattern.compile(query, Pattern.CASE_INSENSITIVE); // ⬅⬅⬅⬅⬅
-			movies = movies.filter(m -> m.title != null && p.matcher(m.title).find()); // ⬅⬅⬅⬅⬅
-		}
-		return replyJSON(res, movies);
-	}
-ii. The second part is that date parsing inside sortByDescReleaseDate is really expensive. One possible solution is to observe that the dates are already in yyyy-mm-dd format, which means we can sort them as strings, without parsing, with that method becoming
+To improve performance, you first want to make the `moviesEndpoint` method to compile the regular expression once using `Pattern.compile` instead of using `Pattern.matches`, which internally compiles for each movie that is queried.
+
+Scroll to **line 85**. Click the code block below to update the `moviesEndpoint` method to use `Pattern.compile`:
+
+<pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="// Problem: We are not compiling the pattern and there's a more efficient way of ignoring cases.">var p = Pattern.compile(query, Pattern.CASE_INSENSITIVE);</pre>
+
+Scroll to **line 86**. Click the code block below to continue to update the `moviesEndpoint` method to use `Pattern.compile`:
+
+<pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="movies = movies.filter(m -> Pattern.matches(".*" + query.toUpperCase() + ".*", m.title.toUpperCase()));">movies = movies.filter(m -> m.title != null && p.matcher(m.title).find());</pre>
+
+#### Issues 2
+
+Date parsing inside `sortByDescReleaseDate` is really expensive. Since the dates are already in `yyyy-mm-dd` format, they can be sorted as strings without having to be parsed.
+
+Scroll to **line 86**.
+
+			// Problem: We are parsing a datetime for each item to be sorted.
+			try {
+				return LocalDate.parse(m.releaseDate);
+			} catch (Exception e) {
+				return LocalDate.MIN;
+			}
+
 java
 	private static Stream<Movie> sortByDescReleaseDate(Stream<Movie> movies) {
 		return movies.sorted(Comparator.comparing((Movie m) -> {
