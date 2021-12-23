@@ -1,0 +1,29 @@
+{
+  "title": "Everything You Wanted to Know About Cloud Control Plane Threat Detection But Were Afraid to Ask",
+  "description": "Datadog’s Security Signals product comes with many useful out of box threat detections for AWS, GCP, and Azure. Depending on your business needs, you may want to develop some custom alerts of your own to recognize and surface specific behaviors. Every organization is going to have different concerns with methods of authentication, usage of advanced features, and cross account access. In this 2.5 hour session you will become familiar with conducting investigations with Cloudtrail logs, as well as writing threat detection rules in the Datadog platform.",
+  "difficulty": "Intermediate",
+  "time": "2 hours",
+  "details": {
+    "steps": [
+      {
+        "title": "Overview",
+        "text": "step1.md"
+      }
+    ],
+    "intro": {
+      "text": "steps/intro.md",
+      "courseData": "scripts/step1.sh",
+      "code": "scripts/foreground.sh"
+    },
+    "finish": {
+      "text": "steps/finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uieditorpath": "/workspace"
+  },
+  "backend": {
+    "imageid": "datadog-ubuntu"
+  }
+}
