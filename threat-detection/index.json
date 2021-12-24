@@ -11,19 +11,32 @@
       }
     ],
     "intro": {
-      "text": "steps/intro.md",
-      "courseData": "scripts/step1.sh",
-      "code": "scripts/foreground.sh"
+      "text": "intro.md",
+      "courseData": "background.sh",
+      "code": "foreground.sh"
     },
     "finish": {
-      "text": "steps/finish.md"
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+          {
+            "file": "main.tf",
+            "target": "/root/lab"
+          },
+          {
+            "file": "docker-compose.yml",
+            "target": "/root/lab"
+          }
+      ]
     }
   },
   "environment": {
     "uilayout": "terminal",
-    "uieditorpath": "/workspace"
+    "showide": "true",
+    "uieditorpath": "/root/lab" 
   },
   "backend": {
-    "imageid": "datadog-ubuntu"
+    "imageid": "datadog-base-v3"
   }
 }
